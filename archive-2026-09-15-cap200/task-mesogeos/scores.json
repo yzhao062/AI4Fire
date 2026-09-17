@@ -1,0 +1,70 @@
+[
+ {
+  "run": "claude-opus-5/bare",
+  "items": 386,
+  "parsed": 383,
+  "auprc": 0.6988743434293114,
+  "f1_fire": 0.25,
+  "f1_no_fire": 0.8143322475570033,
+  "positive_rate_called": 0.06005221932114883,
+  "positive_rate_true": 0.3368146214099217,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 1,
+  "tokens_in": 520233
+ },
+ {
+  "run": "claude-opus-5/grounded",
+  "items": 386,
+  "parsed": 384,
+  "auprc": 0.6816952100799936,
+  "f1_fire": 0.2840909090909091,
+  "f1_no_fire": 0.7871621621621622,
+  "positive_rate_called": 0.11979166666666667,
+  "positive_rate_true": 0.3385416666666667,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 625734
+ },
+ {
+  "run": "claude-opus-4.8/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5908069136073677,
+  "f1_fire": 0.5658536585365853,
+  "f1_no_fire": 0.8430335097001763,
+  "positive_rate_called": 0.19170984455958548,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 521580
+ },
+ {
+  "run": "claude-opus-4.8/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5790802543809427,
+  "f1_fire": 0.5357142857142857,
+  "f1_no_fire": 0.8102189781021898,
+  "positive_rate_called": 0.24093264248704663,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 625734
+ }
+]

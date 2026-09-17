@@ -1,0 +1,61 @@
+{
+  "metric": "AUPRC on the fire class (sklearn average_precision_score) and per-class F1; accuracy is reported only as a warning, since the classes run two to one",
+  "items": 4120,
+  "fire": 1369,
+  "no_fire": 2751,
+  "positive_share": 0.3323,
+  "holdout": "the published Mesogeos time holdout, target days in 2021 and 2022; train 2006 to 2019 and validation 2020 contribute no items",
+  "subsampling": "items.jsonl is in target-date order, so take a fold rather than a prefix; fold is sha256(item_id) mod 10 and each fold keeps the class balance and the season mix",
+  "naive": {
+    "constant_score": {
+      "auprc": 0.3323,
+      "note": "any constant probability; the AUPRC floor is the positive share"
+    },
+    "always_no_fire": {
+      "accuracy": 0.6677,
+      "f1_fire": 0.0,
+      "f1_no_fire": 0.8008,
+      "macro_f1": 0.4004
+    },
+    "always_fire": {
+      "accuracy": 0.3323,
+      "f1_fire": 0.4988,
+      "f1_no_fire": 0.0,
+      "macro_f1": 0.2494
+    },
+    "calendar_month_prior": {
+      "auprc": 0.541,
+      "best_f1_fire": 0.632,
+      "note": "positive rate per calendar month fit on the 2006 to 2019 training years only, applied to the holdout by month"
+    },
+    "last_day_t2m": {
+      "auprc": 0.6207,
+      "note": "the last day's maximum 2 m temperature as the score, sign chosen on the training years"
+    },
+    "modis_lst_day_count": {
+      "auprc": 0.5002,
+      "note": "count of window days with a MODIS daytime land surface temperature. Cloud drives the gaps, so missingness tracks fire weather; this is an artifact of the source worth stating, not a defect to engineer away"
+    }
+  },
+  "published_baselines": {
+    "LSTM": {
+      "precision": 0.763,
+      "recall": 0.812,
+      "f1": 0.786,
+      "auprc": 0.853
+    },
+    "Transformer": {
+      "precision": 0.802,
+      "recall": 0.759,
+      "f1": 0.78,
+      "auprc": 0.856
+    },
+    "GTN": {
+      "precision": 0.781,
+      "recall": 0.79,
+      "f1": 0.786,
+      "auprc": 0.858
+    }
+  },
+  "published_baseline_note": "kondylatos2023mesogeos Table 1, on the 2738-negative version of this same holdout. Comparable to within the 13 extra negatives kept here."
+}

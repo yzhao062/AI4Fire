@@ -1,0 +1,28 @@
+items 4120 | fire 1369 | no fire 2751 | positive share 0.3323
+target dates 2021-01-02 to 2022-09-30
+published holdout is 4107 = 1369 positives + 2738 negatives; the negative pool holds 2751, and the
+  release subsamples it with an unseeded np.random.choice, so the exact 2738 cannot be recovered.
+  Taking the whole pool is deterministic and differs from the paper's test set by 13 negatives.
+
+folds (sha256 of item_id mod 10): sizes 386 to 444, positive share 0.286 to 0.371
+
+daily gaps, share of cell-days with no observation:
+  lst_night   0.376
+  lst_day     0.322
+  smi         0.025
+  lai         0.017
+  ndvi        0.002
+slope in the release: p50 1.5494 rad (88.8 deg), p01 0.8152, max 1.5684; it is piled at pi/2 and carries
+  almost no terrain signal. It is kept because the published baselines used it.
+
+--- naive baselines on the 2021 to 2022 holdout ---
+constant score          AUPRC 0.3323  (the floor, equal to the positive share)
+always 'no fire'        accuracy 0.6677 | F1 fire 0.0000 | F1 no fire 0.8008 | macro F1 0.4004
+always 'fire'           accuracy 0.3323 | F1 fire 0.4988
+calendar month prior    AUPRC 0.5410 | best F1 fire 0.6320
+last day t2m            AUPRC 0.6207
+MODIS lst_day day count AUPRC 0.5002
+published baselines     AUPRC LSTM 0.853, Transformer 0.856, GTN 0.858
+A model scores against the 0.332 floor and the 0.621 best trivial strategy, under a 0.858 ceiling.
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\items.jsonl 22835570 bytes

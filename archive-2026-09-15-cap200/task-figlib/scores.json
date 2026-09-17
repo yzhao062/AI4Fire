@@ -1,0 +1,128 @@
+[
+ {
+  "run": "claude-opus-5/bare",
+  "items": 224,
+  "parsed": 220,
+  "accuracy": 0.8,
+  "recall_on_smoke": 0.6055045871559633,
+  "false_positive_rate": 0.009009009009009009,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.464,
+   "after 10 to 25 min": 0.667,
+   "after 25 min or more": 0.639,
+   "before 0 to 10 min": 1.0,
+   "before 10 to 25 min": 1.0,
+   "before 25 min or more": 0.982
+  },
+  "sequences_detected": "23 of 28",
+  "median_detection_offset_seconds": 301.0,
+  "errors": 0,
+  "tokens_in": 501760,
+  "tokens_out": 15447
+ },
+ {
+  "run": "claude-opus-5/grounded",
+  "items": 196,
+  "parsed": 192,
+  "accuracy": 0.78125,
+  "recall_on_smoke": 0.6396396396396397,
+  "false_positive_rate": 0.024691358024691357,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.5,
+   "after 10 to 25 min": 0.717,
+   "after 25 min or more": 0.649,
+   "before 0 to 10 min": 1.0,
+   "before 10 to 25 min": 0.973,
+   "before 25 min or more": 0.963
+  },
+  "sequences_detected": "24 of 28",
+  "median_detection_offset_seconds": 301.0,
+  "errors": 0,
+  "tokens_in": 862792,
+  "tokens_out": 13672
+ },
+ {
+  "run": "claude-opus-4.8/bare",
+  "items": 224,
+  "parsed": 224,
+  "accuracy": 0.7857142857142857,
+  "recall_on_smoke": 0.5714285714285714,
+  "false_positive_rate": 0.0,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.464,
+   "after 10 to 25 min": 0.596,
+   "after 25 min or more": 0.622,
+   "before 0 to 10 min": 1.0,
+   "before 10 to 25 min": 1.0,
+   "before 25 min or more": 1.0
+  },
+  "sequences_detected": "23 of 28",
+  "median_detection_offset_seconds": 301.0,
+  "errors": 0,
+  "tokens_in": 501760,
+  "tokens_out": 11205
+ },
+ {
+  "run": "claude-opus-4.8/grounded",
+  "items": 196,
+  "parsed": 196,
+  "accuracy": 0.7806122448979592,
+  "recall_on_smoke": 0.6160714285714286,
+  "false_positive_rate": 0.0,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.464,
+   "after 10 to 25 min": 0.66,
+   "after 25 min or more": 0.676,
+   "before 0 to 10 min": 1.0,
+   "before 10 to 25 min": 1.0,
+   "before 25 min or more": 1.0
+  },
+  "sequences_detected": "23 of 28",
+  "median_detection_offset_seconds": 301.0,
+  "errors": 0,
+  "tokens_in": 862792,
+  "tokens_out": 9713
+ },
+ {
+  "run": "gemini-3.1-pro/bare",
+  "items": 224,
+  "parsed": 220,
+  "accuracy": 0.7681818181818182,
+  "recall_on_smoke": 0.5321100917431193,
+  "false_positive_rate": 0.0,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.286,
+   "after 10 to 25 min": 0.6,
+   "after 25 min or more": 0.639,
+   "before 0 to 10 min": 1.0,
+   "before 10 to 25 min": 1.0,
+   "before 25 min or more": 1.0
+  },
+  "sequences_detected": "23 of 28",
+  "median_detection_offset_seconds": 899.0,
+  "errors": 0,
+  "tokens_in": 256256,
+  "tokens_out": 11482
+ },
+ {
+  "run": "gemini-3.1-pro/grounded",
+  "items": 196,
+  "parsed": 156,
+  "accuracy": 0.7564102564102564,
+  "recall_on_smoke": 0.8709677419354839,
+  "false_positive_rate": 0.4126984126984127,
+  "accuracy_by_bucket": {
+   "after 0 to 10 min": 0.857,
+   "after 10 to 25 min": 0.865,
+   "after 25 min or more": 0.886,
+   "before 0 to 10 min": 0.462,
+   "before 10 to 25 min": 0.567,
+   "before 25 min or more": 0.7
+  },
+  "sequences_detected": "27 of 28",
+  "median_detection_offset_seconds": 301.0,
+  "errors": 0,
+  "tokens_in": 439628,
+  "tokens_out": 38360
+ }
+]

@@ -1,0 +1,157 @@
+item_id,family,tier,answer_type,memorization_risk,answer,years,state
+tooluse-count_state_year-01,count_state_year,single lookup,integer,none,480,1992-1992,AK
+tooluse-count_state_year-02,count_state_year,single lookup,integer,none,3083,2013-2013,AZ
+tooluse-count_state_year-03,count_state_year,single lookup,integer,none,3912,1997-1997,FL
+tooluse-count_state_year-04,count_state_year,single lookup,integer,none,1318,2011-2011,ID
+tooluse-count_state_year-05,count_state_year,single lookup,integer,none,180,1995-1995,KY
+tooluse-count_state_year-06,count_state_year,single lookup,integer,none,483,2009-2009,ME
+tooluse-count_state_year-07,count_state_year,single lookup,integer,none,2012,2008-2008,MS
+tooluse-count_state_year-08,count_state_year,single lookup,integer,none,627,2000-2000,ND
+tooluse-count_state_year-09,count_state_year,single lookup,integer,none,1231,1999-1999,NM
+tooluse-count_state_year-10,count_state_year,single lookup,integer,none,812,1998-1998,OK
+tooluse-count_state_year-11,count_state_year,single lookup,integer,none,135,2008-2008,RI
+tooluse-count_state_year-12,count_state_year,single lookup,integer,none,2842,1996-1996,TX
+tooluse-count_state_year-13,count_state_year,single lookup,integer,none,1213,1995-1995,WA
+tooluse-count_cause_state_year-01,count_cause_state_year,filtered aggregate,integer,none,69,1992-1992,AK
+tooluse-count_cause_state_year-02,count_cause_state_year,filtered aggregate,integer,none,370,1995-1995,AZ
+tooluse-count_cause_state_year-03,count_cause_state_year,filtered aggregate,integer,none,1638,1998-1998,FL
+tooluse-count_cause_state_year-04,count_cause_state_year,filtered aggregate,integer,none,70,2017-2017,IL
+tooluse-count_cause_state_year-05,count_cause_state_year,filtered aggregate,integer,none,561,2002-2002,LA
+tooluse-count_cause_state_year-06,count_cause_state_year,filtered aggregate,integer,none,126,1992-1992,ME
+tooluse-count_cause_state_year-07,count_cause_state_year,filtered aggregate,integer,none,112,2000-2000,MS
+tooluse-count_cause_state_year-08,count_cause_state_year,filtered aggregate,integer,none,148,2010-2010,NE
+tooluse-count_cause_state_year-09,count_cause_state_year,filtered aggregate,integer,none,48,1998-1998,NV
+tooluse-count_cause_state_year-10,count_cause_state_year,filtered aggregate,integer,none,222,2011-2011,OK
+tooluse-count_cause_state_year-11,count_cause_state_year,filtered aggregate,integer,none,25,2011-2011,RI
+tooluse-count_cause_state_year-12,count_cause_state_year,filtered aggregate,integer,none,134,2005-2005,TX
+tooluse-count_cause_state_year-13,count_cause_state_year,filtered aggregate,integer,none,374,2002-2002,WA
+tooluse-count_county_year-01,count_county_year,filtered aggregate,integer,none,24,2003-2003,HI
+tooluse-count_county_year-02,count_county_year,filtered aggregate,integer,none,136,2007-2007,HI
+tooluse-count_county_year-03,count_county_year,filtered aggregate,integer,none,30,1993-1993,ME
+tooluse-count_county_year-04,count_county_year,filtered aggregate,integer,none,23,1994-1994,MI
+tooluse-count_county_year-05,count_county_year,filtered aggregate,integer,none,21,1996-1996,MI
+tooluse-count_county_year-06,count_county_year,filtered aggregate,integer,none,36,1994-1994,NH
+tooluse-count_county_year-07,count_county_year,filtered aggregate,integer,none,62,1994-1994,NJ
+tooluse-count_county_year-08,count_county_year,filtered aggregate,integer,none,204,1995-1995,NJ
+tooluse-count_county_year-09,count_county_year,filtered aggregate,integer,none,38,2001-2001,NY
+tooluse-count_county_year-10,count_county_year,filtered aggregate,integer,none,45,2008-2008,PA
+tooluse-count_county_year-11,count_county_year,filtered aggregate,integer,none,26,2010-2010,PA
+tooluse-count_county_year-12,count_county_year,filtered aggregate,integer,none,41,1995-1995,TX
+tooluse-count_county_year-13,count_county_year,filtered aggregate,integer,none,31,1995-1995,WV
+tooluse-count_season_window-01,count_season_window,filtered aggregate,integer,none,433,1994-1994,AK
+tooluse-count_season_window-02,count_season_window,filtered aggregate,integer,none,2081,2001-2001,AZ
+tooluse-count_season_window-03,count_season_window,filtered aggregate,integer,none,190,2018-2018,FL
+tooluse-count_season_window-04,count_season_window,filtered aggregate,integer,none,48,2015-2015,IA
+tooluse-count_season_window-05,count_season_window,filtered aggregate,integer,none,661,2008-2008,KY
+tooluse-count_season_window-06,count_season_window,filtered aggregate,integer,none,124,2007-2007,ME
+tooluse-count_season_window-07,count_season_window,filtered aggregate,integer,none,247,2018-2018,MO
+tooluse-count_season_window-08,count_season_window,filtered aggregate,integer,none,73,1995-1995,ND
+tooluse-count_season_window-09,count_season_window,filtered aggregate,integer,none,109,2002-2002,NJ
+tooluse-count_season_window-10,count_season_window,filtered aggregate,integer,none,517,2014-2014,OH
+tooluse-count_season_window-11,count_season_window,filtered aggregate,integer,none,47,2010-2010,PR
+tooluse-count_season_window-12,count_season_window,filtered aggregate,integer,none,204,2002-2002,TN
+tooluse-count_season_window-13,count_season_window,filtered aggregate,integer,none,203,2008-2008,WA
+tooluse-acres_state_year-01,acres_state_year,filtered aggregate,acres,none,601674.0,2003-2003,AK
+tooluse-acres_state_year-02,acres_state_year,filtered aggregate,acres,none,262152.6,1995-1995,AZ
+tooluse-acres_state_year-03,acres_state_year,filtered aggregate,acres,none,480111.5,2001-2001,FL
+tooluse-acres_state_year-04,acres_state_year,filtered aggregate,acres,none,7461.4,2011-2011,IA
+tooluse-acres_state_year-05,acres_state_year,filtered aggregate,acres,none,79367.1,2016-2016,KY
+tooluse-acres_state_year-06,acres_state_year,filtered aggregate,acres,none,12051.4,2010-2010,MI
+tooluse-acres_state_year-07,acres_state_year,filtered aggregate,acres,none,22015.9,2013-2013,MS
+tooluse-acres_state_year-08,acres_state_year,filtered aggregate,acres,none,89062.5,2006-2006,NE
+tooluse-acres_state_year-09,acres_state_year,filtered aggregate,acres,none,41767.1,2004-2004,NV
+tooluse-acres_state_year-10,acres_state_year,filtered aggregate,acres,none,389247.2,2001-2001,OR
+tooluse-acres_state_year-11,acres_state_year,filtered aggregate,acres,none,28609.6,1996-1996,SC
+tooluse-acres_state_year-12,acres_state_year,filtered aggregate,acres,none,585670.0,2009-2009,TX
+tooluse-acres_state_year-13,acres_state_year,filtered aggregate,acres,none,223780.1,2001-2001,WA
+tooluse-count_size_class_span-01,count_size_class_span,filtered aggregate,integer,none,80,1995-1999,AK
+tooluse-count_size_class_span-02,count_size_class_span,filtered aggregate,integer,none,24,2000-2004,AR
+tooluse-count_size_class_span-03,count_size_class_span,filtered aggregate,integer,none,51,2000-2004,CO
+tooluse-count_size_class_span-04,count_size_class_span,filtered aggregate,integer,none,28,2000-2004,GA
+tooluse-count_size_class_span-05,count_size_class_span,filtered aggregate,integer,none,147,2015-2019,ID
+tooluse-count_size_class_span-06,count_size_class_span,filtered aggregate,integer,none,41,2005-2009,LA
+tooluse-count_size_class_span-07,count_size_class_span,filtered aggregate,integer,none,54,2005-2009,MO
+tooluse-count_size_class_span-08,count_size_class_span,filtered aggregate,integer,none,23,2010-2014,NC
+tooluse-count_size_class_span-09,count_size_class_span,filtered aggregate,integer,none,62,2010-2014,NE
+tooluse-count_size_class_span-10,count_size_class_span,filtered aggregate,integer,none,315,2010-2014,OK
+tooluse-count_size_class_span-11,count_size_class_span,filtered aggregate,integer,none,25,2000-2004,SD
+tooluse-count_size_class_span-12,count_size_class_span,filtered aggregate,integer,none,20,1995-1999,TX
+tooluse-count_size_class_span-13,count_size_class_span,filtered aggregate,integer,none,59,2010-2014,WA
+tooluse-largest_fire_name-01,largest_fire_name,filtered aggregate,string,moderate,CARLA LAKE,1998-1998,AK
+tooluse-largest_fire_name-02,largest_fire_name,filtered aggregate,string,high,WOODBURY,2019-2019,AZ
+tooluse-largest_fire_name-03,largest_fire_name,filtered aggregate,string,low,SLAUGHTERBEACH,2002-2002,DE
+tooluse-largest_fire_name-04,largest_fire_name,filtered aggregate,string,low,NAPAU,2011-2011,HI
+tooluse-largest_fire_name-05,largest_fire_name,filtered aggregate,string,low,COYOTE FIRE,2007-2007,IN
+tooluse-largest_fire_name-06,largest_fire_name,filtered aggregate,string,low,TYLER WILDFIRE,2010-2010,MD
+tooluse-largest_fire_name-07,largest_fire_name,filtered aggregate,string,low,WHITEFEATHER LAKE,1996-1996,MN
+tooluse-largest_fire_name-08,largest_fire_name,filtered aggregate,string,moderate,FISH DAY,1994-1994,NC
+tooluse-largest_fire_name-09,largest_fire_name,filtered aggregate,string,low,FT. DIX FIRE,2010-2010,NJ
+tooluse-largest_fire_name-10,largest_fire_name,filtered aggregate,string,low,SHAWNEE COMPLEX,2009-2009,OH
+tooluse-largest_fire_name-11,largest_fire_name,filtered aggregate,string,low,PUERTO NEGRO,2013-2013,PR
+tooluse-largest_fire_name-12,largest_fire_name,filtered aggregate,string,low,PIGEON BRANCH,2007-2007,TN
+tooluse-largest_fire_name-13,largest_fire_name,filtered aggregate,string,high,PEARL HILL,2020-2020,WA
+tooluse-largest_fire_size_span-01,largest_fire_size_span,multi-step,acres,high,201808.2,2013-2015,AK
+tooluse-largest_fire_size_span-02,largest_fire_size_span,multi-step,acres,moderate,38179.0,2001-2003,AZ
+tooluse-largest_fire_size_span-03,largest_fire_size_span,multi-step,acres,moderate,26428.0,2013-2015,FL
+tooluse-largest_fire_size_span-04,largest_fire_size_span,multi-step,acres,low,7800.0,2009-2011,HI
+tooluse-largest_fire_size_span-05,largest_fire_size_span,multi-step,acres,low,7500.0,2001-2003,KY
+tooluse-largest_fire_size_span-06,largest_fire_size_span,multi-step,acres,moderate,11420.0,1993-1995,MN
+tooluse-largest_fire_size_span-07,largest_fire_size_span,multi-step,acres,low,8800.0,1997-1999,MT
+tooluse-largest_fire_size_span-08,largest_fire_size_span,multi-step,acres,moderate,48800.0,2005-2007,NE
+tooluse-largest_fire_size_span-09,largest_fire_size_span,multi-step,acres,moderate,20501.0,2017-2019,NM
+tooluse-largest_fire_size_span-10,largest_fire_size_span,multi-step,acres,moderate,11000.0,1997-1999,OK
+tooluse-largest_fire_size_span-11,largest_fire_size_span,multi-step,acres,moderate,17568.0,2001-2003,SD
+tooluse-largest_fire_size_span-12,largest_fire_size_span,multi-step,acres,low,6500.0,1993-1995,UT
+tooluse-largest_fire_size_span-13,largest_fire_size_span,multi-step,acres,low,7499.4,2013-2015,WI
+tooluse-top_cause_state_year-01,top_cause_state_year,multi-step,categorical,partial,Natural,1997-1997,AK
+tooluse-top_cause_state_year-02,top_cause_state_year,multi-step,categorical,partial,Natural,2000-2000,AZ
+tooluse-top_cause_state_year-03,top_cause_state_year,multi-step,categorical,partial,Arson/incendiarism,1992-1992,CT
+tooluse-top_cause_state_year-04,top_cause_state_year,multi-step,categorical,partial,Debris and open burning,2017-2017,IA
+tooluse-top_cause_state_year-05,top_cause_state_year,multi-step,categorical,partial,Debris and open burning,2014-2014,LA
+tooluse-top_cause_state_year-06,top_cause_state_year,multi-step,categorical,partial,Debris and open burning,2018-2018,ME
+tooluse-top_cause_state_year-07,top_cause_state_year,multi-step,categorical,partial,Arson/incendiarism,2003-2003,MO
+tooluse-top_cause_state_year-08,top_cause_state_year,multi-step,categorical,partial,Arson/incendiarism,2004-2004,ND
+tooluse-top_cause_state_year-09,top_cause_state_year,multi-step,categorical,partial,Natural,2000-2000,NM
+tooluse-top_cause_state_year-10,top_cause_state_year,multi-step,categorical,partial,Debris and open burning,2012-2012,OH
+tooluse-top_cause_state_year-11,top_cause_state_year,multi-step,categorical,partial,Natural,2008-2008,WA
+tooluse-top_cause_state_year-12,top_cause_state_year,multi-step,categorical,partial,Arson/incendiarism,2005-2005,AL
+tooluse-top_cause_state_year-13,top_cause_state_year,multi-step,categorical,partial,Equipment and vehicle use,1997-1997,CA
+tooluse-human_share_state_year-01,human_share_state_year,multi-step,percent,none,67.87,1993-1993,AK
+tooluse-human_share_state_year-02,human_share_state_year,multi-step,percent,none,37.42,2014-2014,AZ
+tooluse-human_share_state_year-03,human_share_state_year,multi-step,percent,none,65.82,1998-1998,FL
+tooluse-human_share_state_year-04,human_share_state_year,multi-step,percent,none,3.99,2009-2009,IA
+tooluse-human_share_state_year-05,human_share_state_year,multi-step,percent,none,99.24,2000-2000,KY
+tooluse-human_share_state_year-06,human_share_state_year,multi-step,percent,none,94.23,2003-2003,ME
+tooluse-human_share_state_year-07,human_share_state_year,multi-step,percent,none,87.65,2005-2005,MO
+tooluse-human_share_state_year-08,human_share_state_year,multi-step,percent,none,96.61,1994-1994,ND
+tooluse-human_share_state_year-09,human_share_state_year,multi-step,percent,none,98.95,2015-2015,NJ
+tooluse-human_share_state_year-10,human_share_state_year,multi-step,percent,none,99.1,2018-2018,OH
+tooluse-human_share_state_year-11,human_share_state_year,multi-step,percent,none,0.24,2009-2009,PR
+tooluse-human_share_state_year-12,human_share_state_year,multi-step,percent,none,97.97,2009-2009,TN
+tooluse-human_share_state_year-13,human_share_state_year,multi-step,percent,none,51.6,2004-2004,WA
+tooluse-peak_year_state-01,peak_year_state,multi-step,integer,none,1993,1992-2001,AK
+tooluse-peak_year_state-02,peak_year_state,multi-step,integer,none,2018,2011-2020,AZ
+tooluse-peak_year_state-03,peak_year_state,multi-step,integer,none,2011,2011-2020,FL
+tooluse-peak_year_state-04,peak_year_state,multi-step,integer,none,2006,2002-2011,ID
+tooluse-peak_year_state-05,peak_year_state,multi-step,integer,none,2006,2002-2011,KS
+tooluse-peak_year_state-06,peak_year_state,multi-step,integer,none,2002,2002-2011,ME
+tooluse-peak_year_state-07,peak_year_state,multi-step,integer,none,2000,1992-2001,MS
+tooluse-peak_year_state-08,peak_year_state,multi-step,integer,none,2006,2002-2011,ND
+tooluse-peak_year_state-09,peak_year_state,multi-step,integer,none,2011,2011-2020,NM
+tooluse-peak_year_state-10,peak_year_state,multi-step,integer,none,2011,2011-2020,OK
+tooluse-peak_year_state-11,peak_year_state,multi-step,integer,none,2005,2002-2011,PR
+tooluse-peak_year_state-12,peak_year_state,multi-step,integer,none,2016,2011-2020,TN
+tooluse-peak_year_state-13,peak_year_state,multi-step,integer,none,1994,1992-2001,WA
+tooluse-top_state_for_cause-01,top_state_for_cause,multi-step,categorical,partial,MS,1992-1992,MS
+tooluse-top_state_for_cause-02,top_state_for_cause,multi-step,categorical,partial,CA,2020-2020,CA
+tooluse-top_state_for_cause-03,top_state_for_cause,multi-step,categorical,partial,TX,2008-2008,TX
+tooluse-top_state_for_cause-04,top_state_for_cause,multi-step,categorical,partial,CA,1999-1999,CA
+tooluse-top_state_for_cause-05,top_state_for_cause,multi-step,categorical,partial,TX,2016-2016,TX
+tooluse-top_state_for_cause-06,top_state_for_cause,multi-step,categorical,partial,WA,2014-2014,WA
+tooluse-top_state_for_cause-07,top_state_for_cause,multi-step,categorical,partial,CA,2005-2005,CA
+tooluse-top_state_for_cause-08,top_state_for_cause,multi-step,categorical,partial,AZ,1995-1995,AZ
+tooluse-top_state_for_cause-09,top_state_for_cause,multi-step,categorical,partial,OR,2019-2019,OR
+tooluse-top_state_for_cause-10,top_state_for_cause,multi-step,categorical,partial,TX,2018-2018,TX
+tooluse-top_state_for_cause-11,top_state_for_cause,multi-step,categorical,partial,TX,2006-2006,TX
+tooluse-top_state_for_cause-12,top_state_for_cause,multi-step,categorical,partial,OR,2006-2006,OR
+tooluse-top_state_for_cause-13,top_state_for_cause,multi-step,categorical,partial,NC,2001-2001,NC

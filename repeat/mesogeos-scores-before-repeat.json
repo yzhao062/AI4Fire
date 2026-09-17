@@ -1,0 +1,172 @@
+[
+ {
+  "run": "claude-opus-4.8/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.6129663061701205,
+  "f1_fire": 0.5607476635514018,
+  "f1_no_fire": 0.8315412186379928,
+  "positive_rate_called": 0.21502590673575128,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 521580
+ },
+ {
+  "run": "claude-opus-4.8/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5814119211879285,
+  "f1_fire": 0.5462555066079295,
+  "f1_no_fire": 0.8110091743119267,
+  "positive_rate_called": 0.24870466321243523,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 625734
+ },
+ {
+  "run": "claude-opus-5/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.6875880355781095,
+  "f1_fire": 0.2692307692307692,
+  "f1_no_fire": 0.814935064935065,
+  "positive_rate_called": 0.06476683937823834,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 521580
+ },
+ {
+  "run": "claude-opus-5/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.6821928946024034,
+  "f1_fire": 0.31213872832369943,
+  "f1_no_fire": 0.8013355592654424,
+  "positive_rate_called": 0.10880829015544041,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 625734
+ },
+ {
+  "run": "gemini-3.1-pro/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.6972346122888057,
+  "f1_fire": 0.6066350710900474,
+  "f1_no_fire": 0.8520499108734403,
+  "positive_rate_called": 0.20725388601036268,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 532110
+ },
+ {
+  "run": "gemini-3.1-pro/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.6822894746972757,
+  "f1_fire": 0.5865384615384616,
+  "f1_no_fire": 0.8475177304964538,
+  "positive_rate_called": 0.19948186528497408,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 640096
+ },
+ {
+  "run": "bedrock:qwen.qwen3-vl-235b-a22b/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.48533633949099175,
+  "f1_fire": 0.5670886075949367,
+  "f1_no_fire": 0.5464190981432361,
+  "positive_rate_called": 0.6839378238341969,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 530566
+ },
+ {
+  "run": "bedrock:qwen.qwen3-vl-235b-a22b/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5359952953771231,
+  "f1_fire": 0.5530864197530864,
+  "f1_no_fire": 0.5068119891008175,
+  "positive_rate_called": 0.7098445595854922,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 638166
+ },
+ {
+  "run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5283469640335549,
+  "f1_fire": 0.5130434782608696,
+  "f1_no_fire": 0.7933579335793358,
+  "positive_rate_called": 0.25647668393782386,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 444694
+ },
+ {
+  "run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5145942397957689,
+  "f1_fire": 0.5241935483870968,
+  "f1_no_fire": 0.7748091603053435,
+  "positive_rate_called": 0.30310880829015546,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 531092
+ }
+]

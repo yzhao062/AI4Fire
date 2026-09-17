@@ -1,0 +1,279 @@
+{
+ "model": "claude-opus-5",
+ "frames": [
+  "figlib-20260128_Fire_wilson-s-mobo-c-1769641856_+02398",
+  "figlib-20260319_CrosleyFire_hp-w-mobo-c-1773947314_+02396",
+  "figlib-20260319_CrosleyFire_mpo-w-mobo-c-1773946433_+01500",
+  "figlib-20260319_CrosleyFire_mpo-w-mobo-c-1773947274_+02341",
+  "figlib-20260408_RainbowFir_rm-e-mobo-c-1775675826_+02400",
+  "figlib-20260428_LiveOakFire_rm-s-mobo-c-1777420446_+02398",
+  "figlib-20260502_MissionFire_rm-e-mobo-c-1777749306_+02400",
+  "figlib-20260502_MissionFire_rm-s-mobo-c-1777748167_+01501",
+  "figlib-20260502_MissionFire_rm-s-mobo-c-1777749008_+02342",
+  "figlib-20260519_TusilFire_mlo-s-mobo-c-1779221988_+01500",
+  "figlib-20260519_TusilFire_mlo-s-mobo-c-1779222888_+02400",
+  "figlib-20260618_MissionFire_rm-s-mobo-c-1781814727_+01501",
+  "figlib-20260618_MissionFire_rm-s-mobo-c-1781815567_+02341",
+  "figlib-20260622_BernardoFire_wc-w-mobo-c-1782168415_+01500",
+  "figlib-20260622_BernardoFire_wc-w-mobo-c-1782169315_+02400",
+  "figlib-20260629_JunctionFire_bm-e-mobo-c-1782779714_+01500",
+  "figlib-20260629_JunctionFire_bm-e-mobo-c-1782780614_+02400",
+  "figlib-20260629_JunctionFire_hp-e-mobo-c-1782780689_+02397",
+  "figlib-20260629_JunctionFire_hp-s-mobo-c-1782780691_+02399",
+  "figlib-20260629_JunctionFire_mg-e-mobo-c-1782780102_+01518",
+  "figlib-20260629_JunctionFire_mg-e-mobo-c-1782780942_+02358",
+  "figlib-20260629_JunctionFire_vo-n-mobo-c-1782779573_+01503",
+  "figlib-20260629_JunctionFire_vo-n-mobo-c-1782780470_+02400",
+  "figlib-20260629_JunctionFire_vo-w-mobo-c-1782779574_+01504",
+  "figlib-20260629_JunctionFire_vo-w-mobo-c-1782780412_+02342",
+  "figlib-20260715_ThornFire_ws-n-mobo-c-1784157302_+02400",
+  "figlib-20260722_CreelmanFire_bm-s-mobo-c-1784759236_+02400",
+  "figlib-20260722_CreelmanFire_cp-w-mobo-c-1784758527_+01501",
+  "figlib-20260722_CreelmanFire_cp-w-mobo-c-1784759366_+02340",
+  "figlib-20260722_CreelmanFire_mg-s-mobo-c-1784758425_+01501",
+  "figlib-20260722_CreelmanFire_mg-s-mobo-c-1784759323_+02399",
+  "figlib-20260722_RainbowFire_bh-w-mobo-c-1784740506_+01500",
+  "figlib-20260722_RainbowFire_bh-w-mobo-c-1784741406_+02400",
+  "figlib-20260722_RainbowFire_rm-e-mobo-c-1784740624_+01500",
+  "figlib-20260722_RainbowFire_rm-e-mobo-c-1784741465_+02341",
+  "figlib-20260807_BeaverFire_lp-w-mobo-c-1786139077_+01500",
+  "figlib-20260807_BeaverFire_lp-w-mobo-c-1786139977_+02400",
+  "figlib-20260816_SorrentoFire_sdsc-e-mobo-c-1786913533_+01500",
+  "figlib-20260816_SorrentoFire_sdsc-e-mobo-c-1786914432_+02399",
+  "figlib-20260817_Church2Fire_mlo-s-mobo-c-1787001827_+01501",
+  "figlib-20260817_Church2Fire_mlo-s-mobo-c-1787002726_+02400",
+  "figlib-20260820_ChiaFire_hp-n-mobo-c-1787255070_+02395",
+  "figlib-20260906_BrengleFire_rm-s-mobo-c-1788706686_+02399",
+  "figlib-20260909_GettyFire_wilson-w-mobo-c-1788997257_+01501",
+  "figlib-20260909_GettyFire_wilson-w-mobo-c-1788998156_+02400"
+ ],
+ "recall_1024": 0.5227272727272727,
+ "recall_1568": 0.6363636363636364,
+ "answers_1568": [
+  {
+   "item": "figlib-20260128_Fire_wilson-s-mobo-c-1769641856_+02398",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct dark plume rises from a point in the valley near center-left and drifts horizontally, unlike the surrounding flat haze layer.\"}"
+  },
+  {
+   "item": "figlib-20260319_CrosleyFire_hp-w-mobo-c-1773947314_+02396",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Clear blue sky over the ridgelines with only distant atmospheric haze near the horizon; no smoke plume visible.\"}"
+  },
+  {
+   "item": "figlib-20260319_CrosleyFire_mpo-w-mobo-c-1773946433_+01500",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Clear blue sky with only distant haze over the horizon; no smoke plume visible.\"}"
+  },
+  {
+   "item": "figlib-20260319_CrosleyFire_mpo-w-mobo-c-1773947274_+02341",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Clear blue sky over forested ridges with only distant horizon haze and no visible smoke plume.\"}"
+  },
+  {
+   "item": "figlib-20260408_RainbowFir_rm-e-mobo-c-1775675826_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct grayish plume rises from the valley floor left of center and drifts upward against the clear sky, consistent with smoke.\"}"
+  },
+  {
+   "item": "figlib-20260428_LiveOakFire_rm-s-mobo-c-1777420446_+02398",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The horizontal gray layer along the horizon is typical marine-layer haze/inversion, with no distinct plume rising from a source.\"}"
+  },
+  {
+   "item": "figlib-20260502_MissionFire_rm-e-mobo-c-1777749306_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct white plume rises from the valley behind the mid-ground ridge and drifts as a layered smoke haze across the distant hills, unlike uniform atmospheric haze.\"}"
+  },
+  {
+   "item": "figlib-20260502_MissionFire_rm-s-mobo-c-1777748167_+01501",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct gray plume rises from the hillside on the left and drifts across the valley, consistent with wildland fire smoke rather than uniform haze.\"}"
+  },
+  {
+   "item": "figlib-20260502_MissionFire_rm-s-mobo-c-1777749008_+02342",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct gray plume rises from the ridge on the left and drifts leftward, consistent with wildland fire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260519_TusilFire_mlo-s-mobo-c-1779221988_+01500",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct brown plume rises from the ridge near the horizon and drifts right, consistent with wildland fire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260519_TusilFire_mlo-s-mobo-c-1779222888_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct billowing plume rises above the ridgeline near center and drifts right as a brownish smoke layer, unlike the surrounding cirrus clouds.\"}"
+  },
+  {
+   "item": "figlib-20260618_MissionFire_rm-s-mobo-c-1781814727_+01501",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct white plume rises from the terrain at the left edge and drifts, inconsistent with haze or cloud.\"}"
+  },
+  {
+   "item": "figlib-20260618_MissionFire_rm-s-mobo-c-1781815567_+02341",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dense gray-brown plume rises from the hillside on the left and drifts upward, consistent with an active wildland fire.\"}"
+  },
+  {
+   "item": "figlib-20260622_BernardoFire_wc-w-mobo-c-1782168415_+01500",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The bright layer along the horizon is uniform marine haze/atmospheric haze with no localized plume rising from the terrain.\"}"
+  },
+  {
+   "item": "figlib-20260622_BernardoFire_wc-w-mobo-c-1782169315_+02400",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The bright band along the horizon is backlit haze/marine layer with no distinct plume rising from a source.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_bm-e-mobo-c-1782779714_+01500",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct grayish-white plume rises above the ridge near the left-center horizon, drifting laterally, consistent with wildfire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_bm-e-mobo-c-1782780614_+02400",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The blurry dark blob appears to be a lens obstruction/dirt on the dome, and the rest shows typical atmospheric haze rather than a smoke plume.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_hp-e-mobo-c-1782780689_+02397",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The distant valley shows layered haze and low clouds with no distinct rising plume, consistent with atmospheric haze rather than wildfire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_hp-s-mobo-c-1782780691_+02399",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Clear skies with only distant horizon haze and low marine clouds; no smoke plume visible.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_mg-e-mobo-c-1782780102_+01518",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A broad gray plume drifting above the distant ridgeline left of center appears denser and more layered than natural haze, consistent with wildfire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_mg-e-mobo-c-1782780942_+02358",
+   "smoke": null,
+   "raw": ""
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_vo-n-mobo-c-1782779573_+01503",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Clear blue sky with scattered cumulus clouds and sun glare; no smoke plume visible above the forested ridges.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_vo-n-mobo-c-1782780470_+02400",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Only cumulus clouds and distant atmospheric haze are visible; no distinct smoke plume rising from the terrain.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_vo-w-mobo-c-1782779574_+01504",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct gray plume rises from the ridgeline on the right side, separate from the surrounding cumulus clouds.\"}"
+  },
+  {
+   "item": "figlib-20260629_JunctionFire_vo-w-mobo-c-1782780412_+02342",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The scene shows backlit clouds and atmospheric haze over the ridges with no distinct smoke plume rising from the terrain.\"}"
+  },
+  {
+   "item": "figlib-20260715_ThornFire_ws-n-mobo-c-1784157302_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dark brown plume rises from a point on the horizon and drifts right across the sky, distinct from the white clouds.\"}"
+  },
+  {
+   "item": "figlib-20260722_CreelmanFire_bm-s-mobo-c-1784759236_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct dense white plume rises from a point source on the right horizon and drifts laterally, characteristic of wildfire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260722_CreelmanFire_cp-w-mobo-c-1784758527_+01501",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct billowing plume rises near the right-center horizon and drifts westward as a dense smoke layer, unlike the flat marine haze.\"}"
+  },
+  {
+   "item": "figlib-20260722_CreelmanFire_cp-w-mobo-c-1784759366_+02340",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dense billowing plume rises above the ridgeline right of center and drifts laterally, distinct from the flat marine layer haze.\"}"
+  },
+  {
+   "item": "figlib-20260722_CreelmanFire_mg-s-mobo-c-1784758425_+01501",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct convective smoke plume rises above the distant ridgeline near the horizon and drifts left as a gray layer, unlike uniform haze.\"}"
+  },
+  {
+   "item": "figlib-20260722_CreelmanFire_mg-s-mobo-c-1784759323_+02399",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dense white plume rises near the horizon right of center and drifts left, distinct from the clear blue sky and haze.\"}"
+  },
+  {
+   "item": "figlib-20260722_RainbowFire_bh-w-mobo-c-1784740506_+01500",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A localized gray plume rises above the ridgeline right of center, distinct from the flat horizontal haze layer.\"}"
+  },
+  {
+   "item": "figlib-20260722_RainbowFire_bh-w-mobo-c-1784741406_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct grayish plume rises above the valley near the right-center ridge, standing out from the uniform background haze layer.\"}"
+  },
+  {
+   "item": "figlib-20260722_RainbowFire_rm-e-mobo-c-1784740624_+01500",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dense bright plume with a darker column rises above the distant ridgeline near center-right, spreading laterally in a manner typical of wildfire smoke rather than cloud or haze.\"}"
+  },
+  {
+   "item": "figlib-20260722_RainbowFire_rm-e-mobo-c-1784741465_+02341",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A dense bright plume rises above the distant ridgeline near the horizon and drifts laterally, consistent with wildfire smoke rather than uniform haze.\"}"
+  },
+  {
+   "item": "figlib-20260807_BeaverFire_lp-w-mobo-c-1786139077_+01500",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct bright plume rises from a ridge on the right and spreads into a brown smoke column drifting across the sky.\"}"
+  },
+  {
+   "item": "figlib-20260807_BeaverFire_lp-w-mobo-c-1786139977_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A bright plume rises from the ridge on the right and spreads into a broad tan smoke layer drifting across the horizon.\"}"
+  },
+  {
+   "item": "figlib-20260816_SorrentoFire_sdsc-e-mobo-c-1786913533_+01500",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The horizon shows only typical urban haze and scattered clouds with no distinct smoke plume.\"}"
+  },
+  {
+   "item": "figlib-20260816_SorrentoFire_sdsc-e-mobo-c-1786914432_+02399",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"Urban skyline shows typical haze and scattered clouds with no distinct smoke plume.\"}"
+  },
+  {
+   "item": "figlib-20260817_Church2Fire_mlo-s-mobo-c-1787001827_+01501",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct grey plume rises from a bright source near the horizon and drifts left, consistent with wildfire smoke.\"}"
+  },
+  {
+   "item": "figlib-20260817_Church2Fire_mlo-s-mobo-c-1787002726_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct convective plume rises from the ridgeline near the horizon and drifts left as a gray smoke layer.\"}"
+  },
+  {
+   "item": "figlib-20260820_ChiaFire_hp-n-mobo-c-1787255070_+02395",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct grayish plume rises from the valley floor right of center and drifts across the distant mountains, distinct from the surrounding clouds.\"}"
+  },
+  {
+   "item": "figlib-20260906_BrengleFire_rm-s-mobo-c-1788706686_+02399",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The scene shows overcast cloud cover and low-level haze over the valley, with no distinct smoke plume rising from any point source.\"}"
+  },
+  {
+   "item": "figlib-20260909_GettyFire_wilson-w-mobo-c-1788997257_+01501",
+   "smoke": false,
+   "raw": "{\"smoke\": false, \"reasoning\": \"The distant valley shows layered haze and marine-layer cloud with sun glare, but no distinct plume rising from the terrain.\"}"
+  },
+  {
+   "item": "figlib-20260909_GettyFire_wilson-w-mobo-c-1788998156_+02400",
+   "smoke": true,
+   "raw": "{\"smoke\": true, \"reasoning\": \"A distinct bright white plume rises above the ridgeline left of center and drifts laterally, consistent with wildfire smoke rather than uniform haze.\"}"
+  }
+ ]
+}

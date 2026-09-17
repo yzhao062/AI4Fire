@@ -1,0 +1,11 @@
+# Raw sources: fetched by fetch_*.py or downloaded by hand; not redistributed here
+data/
+# FIgLib frames are served as-is with no formal license; items.jsonl carries a source_url per frame
+task-figlib/images/
+task-figlib/images-1568/
+# Derived outputs and caches
+analysis/*.json
+analysis/.analogue-pool-cache.json
+__pycache__/
+*.pyc
+.idea/

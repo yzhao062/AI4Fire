@@ -1,0 +1,33 @@
+{
+ "items": 381,
+ "positive_rate": 0.336,
+ "constant_score": 0.336,
+ "calendar_month_prior": 0.5609,
+ "last_day_t2m": 0.6419,
+ "models": {
+  "claude-opus-4.8-bare": {
+   "auprc": 0.5798,
+   "f1_fire": 0.5528,
+   "fire_call_rate": 0.1864,
+   "call_disagrees_with_half_threshold": 43
+  },
+  "claude-opus-4.8-grounded": {
+   "auprc": 0.5694,
+   "f1_fire": 0.5229,
+   "fire_call_rate": 0.2362,
+   "call_disagrees_with_half_threshold": 46
+  },
+  "claude-opus-5-bare": {
+   "auprc": 0.6965,
+   "f1_fire": 0.2517,
+   "fire_call_rate": 0.0604,
+   "call_disagrees_with_half_threshold": 11
+  },
+  "claude-opus-5-grounded": {
+   "auprc": 0.6726,
+   "f1_fire": 0.2775,
+   "fire_call_rate": 0.1181,
+   "call_disagrees_with_half_threshold": 35
+  }
+ }
+}

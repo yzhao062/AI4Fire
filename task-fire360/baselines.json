@@ -1,0 +1,54 @@
+{
+ "task": "fire360-structure-fire-qa",
+ "items": 100,
+ "multiple_choice_items": 50,
+ "free_text_items": 50,
+ "distinct_reference_answers": 44,
+ "grounded_in_media": false,
+ "naive": {
+  "mc_uniform_random_over_4_options": 25.0,
+  "mc_always_first_option": 50.0,
+  "mc_always_last_option": 0.0,
+  "mc_shortest_option": 24.0,
+  "mc_longest_option": 20.0,
+  "mc_always_majority_answer": 6.0,
+  "free_text_always_majority_answer": 6.0,
+  "free_text_copy_aligned_mc_key": 94.0,
+  "all_items_first_option_plus_free_text_majority": 28.0
+ },
+ "published_human": {
+  "vqa_top1_accuracy": 91.4,
+  "safety_checklist_accuracy": 94.6,
+  "tor_retrieval_accuracy": 83.5,
+  "temporal_captioning_agreement": 0.85
+ },
+ "published_models_vqa_equirectangular": {
+  "GPT-4o": 53.8,
+  "LLaVA-v1.5-13B": 50.3,
+  "Qwen-VL": 47.2,
+  "BLIP-2 (OPT-6.7B)": 42.7
+ },
+ "published_models_vqa_rectilinear": {
+  "GPT-4o": 62.4,
+  "LLaVA-1.5": 58.9,
+  "Qwen-VL": 55.6,
+  "BLIP-2": 48.2
+ },
+ "interval_half_width_95pct_at_p_half": {
+  "n_50": 13.9,
+  "n_100": 9.8
+ },
+ "source": {
+  "dataset": "Fire360",
+  "source_file": "prompt_templates.json",
+  "source_file_sha256": "27db98788971beb0b584b5e9cafb8e6e4d58ea409bda57f39eb6f778930eec19",
+  "box_shared_link": "https://uofi.box.com/v/fire360dataset",
+  "box_file_id": 1864246007803,
+  "box_file_modified_utc": "2025-05-16",
+  "paper": "arXiv:2506.02167",
+  "paper_v1_date": "2025-06-02",
+  "venue": "NeurIPS 2025 Datasets and Benchmarks",
+  "license_as_shipped": "MIT (LICENSE.txt in the Box folder, copyright 2025 Aditi Tiwari)",
+  "license_as_described_in_paper": "research-only MIT with added restrictions on surveillance, enforcement, behavioral profiling and nonconsensual monitoring"
+ }
+}

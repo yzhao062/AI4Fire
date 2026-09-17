@@ -1,0 +1,7 @@
+bedrock:qwen.qwen3-vl-235b-a22b allocation rc=0 332s
+bedrock:qwen.qwen3-vl-235b-a22b mesogeos rc=0 358s
+bedrock:qwen.qwen3-vl-235b-a22b figlib rc=0 325s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 allocation rc=0 136s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 mesogeos rc=0 129s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 figlib rc=0 235s
+ALL DONE

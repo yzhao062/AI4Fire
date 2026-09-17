@@ -1,0 +1,29 @@
+A wildfire incident filed an ICS-209 situation report for 2018-09-11.
+Report fields:
+- acres burned: 53928.0
+- new acres in the last period: 0.0
+- percent contained: 65.0
+- total personnel assigned today: 120.0
+- personnel on the last reported days, oldest first: [89.0, 92.0, 119.0, 120.0]
+- acres on those days: [53653.0, 53653.0, 53928.0, 53928.0]
+- aerial resources: 0.0
+- estimated cost to date: 87573202.0
+- projected final cost: 87573202.0
+- growth potential: None
+- terrain difficulty: None
+- fuel model: Timber (Litter and Understory)
+- structures destroyed so far: 2.0
+- evacuation in progress: None
+
+Historical analogues from earlier incidents in the same size, containment, and staffing band.
+Each line gives personnel today, personnel the next day, and the ratio.
+- 171 -> 171 (ratio 1.00; acres 65876.0, contained 75.0)
+- 125 -> 135 (ratio 1.08; acres 34936.0, contained 85.0)
+- 159 -> 159 (ratio 1.00; acres 25401.0, contained 80.0)
+- 109 -> 5 (ratio 0.05; acres 48671.9, contained 60.0)
+- 182 -> 35 (ratio 0.19; acres 34200.0, contained 75.0)
+- 91 -> 67 (ratio 0.74; acres 64083.0, contained 87.0)
+- median ratio in this band: 0.87
+- weather concerns: an upper level trough along the coast will move onshore late wednesday into thursday. isolated to scattered light showers  will spread into southern oregon and portions of northern california wednesday afternoon through wednesday night. isolated thunderstorms may develop wednesday afternoon and evening. friday will be dry and  warmer  then another front will move onshore this weekend. this one may be the strongest of the lot with more widespread precipitation and  gusty winds.
+
+Question: how many total personnel will this incident report as assigned on 2018-09-12, the next day?

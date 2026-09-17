@@ -1,0 +1,8 @@
+numpy
+pandas
+scipy
+scikit-learn
+httpx
+boto3
+botocore
+pillow

@@ -1,0 +1,64 @@
+valid records: 207195 | dropped: {'applicability missing or zero': 92, 'answer not an option': 11}
+pool after keeping burn 'Sycan': 25027 records over 738 images and 34 question ids
+
+items: 408 | question ids: 34 | categories: 6 | distinct images: 390 of 738 in the pool
+items by category: {'Classification': 72, 'Cross-Modal Reasoning': 48, 'Distribution and Segmentation': 96, 'Flight Planning': 48, 'Localization and Direction': 48, 'Presence and Detection': 96}
+items by unit and burn state: {'Sycan 2A/Fire': 201, 'Sycan 2D/Fire': 144, 'Sycan 2D/No Fire': 63}
+items by answer provenance: {'radiometric': 108, 'mllm_verified': 276, 'telemetry': 12, 'object_detector': 12}
+applicability: 1.0 on 284 items, below 1.0 on 124, minimum 0.1
+
+naive baselines on the 408 items
+  A uniform random over the options            0.290
+  B per-question-id majority class             0.627
+  C B, with the temp_summary rule on CL1,CMR4,DS7,DS8  0.664
+  B on the 360 items outside the near-degenerate question ids  0.583
+
+closed-form temp_summary rules, checked on all 738 pool records per question id:
+  CL1   1.0000   bin temp_summary.max at 50/80/200
+  CMR4  1.0000   bin temp_summary.max at 200/300/400/500, below 200 is 'No fire detected'
+  DS7   1.0000   'None' when temp_summary.max < 400, else bin temp_summary.pct_over_400 at 2/4/6
+  DS8   1.0000   'None' when temp_summary.max < 200, else bin temp_summary.pct_over_200 at 5/10/15
+
+answerable from temp_summary alone, with no image at all
+  closed form on CL1,CMR4,DS7,DS8: 48 items, rule agrees with the reference answer on 48
+  the no-fire branch of DS1,DS3,LD1,PD7 (temp_summary.max < 200): 13 items, right on 13
+  total 61 of 408 items = 0.150, runnable before the FLAME 3 imagery arrives
+  in the full release this is 24388 of 207298 questions on the 4 closed-form ids, plus the no-fire branch
+
+per question id: majority share on the pool, and share of the 12 sampled items it gets right
+  CL1   Classification               |opts|=4  pool majority 0.729 (Active fire)  sampled 9/12
+  CL2   Classification               |opts|=4  pool majority 0.866 (Coniferous forest)  sampled 11/12
+  CL3   Classification               |opts|=3  pool majority 0.608 (Dry/Cured)  sampled 10/12
+  CL4   Classification               |opts|=4  pool majority 0.771 (Dense/Closed)  sampled 10/12
+  CL5   Classification               |opts|=4  pool majority 0.451 (Mixed (no dominant type))  sampled 4/12
+  CL6   Classification               |opts|=4  pool majority 0.436 (No clear access)  sampled 7/12
+  CMR1  Cross-Modal Reasoning        |opts|=4  pool majority 0.614 (Partially obstructed)  sampled 6/12
+  CMR2  Cross-Modal Reasoning        |opts|=5  pool majority 0.621 (Smoke obstruction)  sampled 5/12
+  CMR3  Cross-Modal Reasoning        |opts|=4  pool majority 0.430 (Partially obstructed)  sampled 4/12
+  CMR4  Cross-Modal Reasoning        |opts|=6  pool majority 0.474 (>500)  sampled 6/12
+  DS1   Distribution and Segmentation |opts|=4  pool majority 0.598 (No active hotspots)  sampled 7/12
+  DS2   Distribution and Segmentation |opts|=3  pool majority 0.879 (Continuous)  sampled 10/12
+  DS3   Distribution and Segmentation |opts|=3  pool majority 0.598 (No active hotspots)  sampled 7/12
+  DS4   Distribution and Segmentation |opts|=4  pool majority 0.427 (1-25%)  sampled 5/12
+  DS5   Distribution and Segmentation |opts|=5  pool majority 0.326 (50-75%)  sampled 4/12
+  DS6   Distribution and Segmentation |opts|=5  pool majority 0.381 (25-50%)  sampled 4/12
+  DS7   Distribution and Segmentation |opts|=5  pool majority 0.653 (<2%)  sampled 9/12
+  DS8   Distribution and Segmentation |opts|=5  pool majority 0.729 (<5%)  sampled 9/12
+  FP1   Flight Planning              |opts|=2  pool majority 0.992 (Oblique (angled))  sampled 12/12  <-- near-degenerate
+  FP2   Flight Planning              |opts|=4  pool majority 0.643 (0-50 m)  sampled 6/12
+  FP3   Flight Planning              |opts|=4  pool majority 0.351 (Low risk)  sampled 3/12
+  FP4   Flight Planning              |opts|=4  pool majority 0.691 (Smoke columns)  sampled 8/12
+  LD1   Localization and Direction   |opts|=6  pool majority 0.271 (No hotspots)  sampled 3/12
+  LD2   Localization and Direction   |opts|=7  pool majority 0.463 (Uniformly distributed)  sampled 6/12
+  LD3   Localization and Direction   |opts|=7  pool majority 0.402 (Center)  sampled 5/12
+  LD4   Localization and Direction   |opts|=6  pool majority 0.993 (No structures visible)  sampled 12/12  <-- near-degenerate
+  PD1   Presence and Detection       |opts|=2  pool majority 0.598 (No)  sampled 5/12
+  PD2   Presence and Detection       |opts|=2  pool majority 0.843 (Yes)  sampled 10/12
+  PD3   Presence and Detection       |opts|=2  pool majority 0.806 (No)  sampled 9/12
+  PD4   Presence and Detection       |opts|=2  pool majority 0.902 (No)  sampled 10/12  <-- near-degenerate
+  PD5   Presence and Detection       |opts|=2  pool majority 0.721 (Yes)  sampled 11/12
+  PD6   Presence and Detection       |opts|=2  pool majority 0.798 (No)  sampled 9/12
+  PD7   Presence and Detection       |opts|=3  pool majority 0.598 (No fire)  sampled 8/12
+  PD8   Presence and Detection       |opts|=4  pool majority 0.997 (0)  sampled 12/12  <-- near-degenerate
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\items.jsonl (681203 bytes)
