@@ -75,10 +75,21 @@ def call(key, model, messages, **kw):
     return chat(key, model, messages, **kw)
 
 
+# The OpenAI reasoning models behind the gateway (gpt-5.x, gpt-6-astra, served through Azure) reject
+# max_tokens in favour of max_completion_tokens, and reject every temperature except their default of 1.
+# Probed on 2026-09-16: both rejections are HTTP 400 with an explicit message. The cap therefore counts
+# reasoning tokens for these models, which the stored usage records under completion_tokens_details.
+OPENAI_REASONING_PREFIXES = ("gpt-",)
+
+
 def chat(key, model, messages, temperature=0, max_tokens=512, timeout=180):
-    r = httpx.post(BASE + "/chat/completions", headers={"Authorization": "Bearer " + key},
-                   json={"model": model, "messages": messages, "temperature": temperature, "max_tokens": max_tokens},
-                   timeout=timeout)
+    body = {"model": model, "messages": messages}
+    if model.startswith(OPENAI_REASONING_PREFIXES):
+        body["max_completion_tokens"] = max_tokens
+    else:
+        body["temperature"] = temperature
+        body["max_tokens"] = max_tokens
+    r = httpx.post(BASE + "/chat/completions", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
     r.raise_for_status()
     d = r.json()
     return d["choices"][0]["message"]["content"], d.get("usage", {}), d.get("model", model)
