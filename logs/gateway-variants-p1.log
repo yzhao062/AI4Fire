@@ -1,0 +1,5 @@
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "claude-opus-5/bare-p1", "items": 386, "parsed": 386, "auprc": 0.7305105702491065, "f1_fire": 0.3076923076923077, "f1_no_fire": 0.8246753246753247, "positive_rate_called": 0.06476683937823834, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 557092}
+{"run": "gemini-3.1-pro/bare-p1", "items": 386, "parsed": 386, "auprc": 0.648043530696764, "f1_fire": 0.5492227979274611, "f1_no_fire": 0.8497409326424871, "positive_rate_called": 0.16062176165803108, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 554112}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json

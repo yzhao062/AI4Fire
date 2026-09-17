@@ -1,0 +1,6 @@
+items: 224 | smoke 112 | sequences 28 | reference frames 28
+buckets: {"before 25 min or more": 56, "before 10 to 25 min": 39, "after 0 to 10 min": 28, "after 10 to 25 min": 47, "after 25 min or more": 37, "before 0 to 10 min": 17}
+{"run": "gpt-6-astra/bare", "items": 224, "parsed": 223, "accuracy": 0.8071748878923767, "recall_on_smoke": 0.6396396396396397, "false_positive_rate": 0.026785714285714284, "accuracy_by_bucket": {"after 0 to 10 min": 0.464, "after 10 to 25 min": 0.702, "after 25 min or more": 0.694, "before 0 to 10 min": 1.0, "before 10 to 25 min": 0.974, "before 25 min or more": 0.964}, "sequences_detected": "24 of 28", "median_detection_offset_seconds": 309.5, "errors": 1, "tokens_in": 442432, "tokens_out": 9953}
+{"run": "gpt-6-astra/grounded", "items": 196, "parsed": 196, "accuracy": 0.8316326530612245, "recall_on_smoke": 0.7410714285714286, "false_positive_rate": 0.047619047619047616, "accuracy_by_bucket": {"after 0 to 10 min": 0.571, "after 10 to 25 min": 0.83, "after 25 min or more": 0.757, "before 0 to 10 min": 1.0, "before 10 to 25 min": 0.949, "before 25 min or more": 0.929}, "sequences_detected": "26 of 28", "median_detection_offset_seconds": 301.0, "errors": 0, "tokens_in": 766752, "tokens_out": 9529}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json

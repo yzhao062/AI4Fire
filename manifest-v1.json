@@ -1,0 +1,1066 @@
+{
+  "version": 1,
+  "description": "AI4Fire version-1 run manifest: reported response files, supporting repeat and repair files, and historic archives.",
+  "reported": [
+    {
+      "task": "allocation",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "bare",
+      "path": "task-allocation/responses-claude-opus-4.8-bare.jsonl",
+      "row_count": 300,
+      "sha256": "249bbff5fff34d3c04f79c93e857e52c4dacc7d7668d19046e919ddce3934186",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-15T23:18:17",
+        "latest": "2026-09-15T23:18:17",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "grounded",
+      "path": "task-allocation/responses-claude-opus-4.8-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "916fe69cf238bf9f6087fb3f9755ea50634ca00dc6e28623c5a787f95fe3b3b7",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-16T15:21:41",
+        "latest": "2026-09-16T15:21:41",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": true
+    },
+    {
+      "task": "allocation",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "bare",
+      "path": "task-allocation/responses-claude-opus-5-bare.jsonl",
+      "row_count": 300,
+      "sha256": "4f2c75c6261fe0481da182a0bf27b31c736c66558724092d62801a3a0ea1b7d5",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-15T23:24:22",
+        "latest": "2026-09-15T23:24:22",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "grounded",
+      "path": "task-allocation/responses-claude-opus-5-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "5861ec6dfd91432fbbe91aac5fcdecc6874ae989007263109f330434200c9f88",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-16T15:21:41",
+        "latest": "2026-09-16T15:21:41",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": true
+    },
+    {
+      "task": "allocation",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "bare",
+      "path": "task-allocation/responses-gemini-3.1-pro-bare.jsonl",
+      "row_count": 300,
+      "sha256": "ca9ddeb4864456cbf9143db66fe7a9fe9dbe9d66d3db2899bdd5de0bdd62db11",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-15T23:54:09",
+        "latest": "2026-09-15T23:54:09",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "grounded",
+      "path": "task-allocation/responses-gemini-3.1-pro-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "da40320214b4b94189bbc85954048cd17a78080b7f83c496a8941269b666c3cc",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-16T15:21:41",
+        "latest": "2026-09-16T15:21:41",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": true
+    },
+    {
+      "task": "allocation",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "bare",
+      "path": "task-allocation/responses-gpt-6-astra-bare.jsonl",
+      "row_count": 300,
+      "sha256": "2b41309d4c41a02620814bc8c368aea0aa68790758e39b0dbc200a6489598dd5",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T17:51:48",
+        "latest": "2026-09-16T17:51:48",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "grounded",
+      "path": "task-allocation/responses-gpt-6-astra-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "a947690d8f9f5e975594e0876ab5d171990f8651b5509f13646ced9603a73a8b",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T17:57:20",
+        "latest": "2026-09-16T17:57:20",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "bare",
+      "path": "task-allocation/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
+      "row_count": 300,
+      "sha256": "93eb9211564fa4a30a12ab89e6504762f20cd972e03c99d81d02ca76078f0e99",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:17:37",
+        "latest": "2026-09-16T13:17:37",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "grounded",
+      "path": "task-allocation/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "a5524f0ad4fa6e75b859458a77523533254ee8a20686bd690062279469c543a9",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T15:21:41",
+        "latest": "2026-09-16T15:21:41",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": true
+    },
+    {
+      "task": "allocation",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "bare",
+      "path": "task-allocation/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
+      "row_count": 300,
+      "sha256": "513e6f7e73e3a9b2b67c56f8dc579729c0c21dcde45afef611d016e3af2d416e",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:42:35",
+        "latest": "2026-09-16T13:42:35",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "allocation",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "grounded",
+      "path": "task-allocation/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded.jsonl",
+      "row_count": 300,
+      "sha256": "1dc3057678caf46a7eb97c8bc40a39db2159c48a0ffd06a439e6d16dd8231b3e",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T15:21:41",
+        "latest": "2026-09-16T15:21:41",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": true
+    },
+    {
+      "task": "figlib",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "bare",
+      "path": "task-figlib/responses-claude-opus-4.8-bare.jsonl",
+      "row_count": 224,
+      "sha256": "c6016151365ec9fe54c29ee3dd83989dcdc444917d4dcf42bae33c0a13d16828",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:56:51",
+        "latest": "2026-09-16T00:56:51",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "grounded",
+      "path": "task-figlib/responses-claude-opus-4.8-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "06f3f18b91f59558f8ee2468752d85e0f370dc35244f9da83e351d8ed29609d9",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:59:52",
+        "latest": "2026-09-16T00:59:52",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "bare",
+      "path": "task-figlib/responses-claude-opus-5-bare.jsonl",
+      "row_count": 224,
+      "sha256": "a778485d9c10d5c54758f728d5596d69c9f4a093aa3dc292c29dc03e2133c70f",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-16T01:03:55",
+        "latest": "2026-09-16T01:03:55",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "grounded",
+      "path": "task-figlib/responses-claude-opus-5-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "1e431fc6bfae01453165b1455552c5fd2ec1b800836ad725f3d9062152df5e13",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-16T01:08:10",
+        "latest": "2026-09-16T01:08:10",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "bare",
+      "path": "task-figlib/responses-gemini-3.1-pro-bare.jsonl",
+      "row_count": 224,
+      "sha256": "b6ca01fb0b255609fb0603d3743134e49c1dd2c088262e3bd8332b99e51566fb",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:00:48",
+        "latest": "2026-09-16T13:00:48",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "grounded",
+      "path": "task-figlib/responses-gemini-3.1-pro-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "ed55278906a7fd415617f37d6dcb77580d5a4867909ee9cfc47f57db5d64ad32",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:07:15",
+        "latest": "2026-09-16T13:07:15",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "bare",
+      "path": "task-figlib/responses-gpt-6-astra-bare.jsonl",
+      "row_count": 224,
+      "sha256": "aba097399bb7b3933c75476f78bee1a2385f23b9959cd3da6164493cef08b86f",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T18:26:32",
+        "latest": "2026-09-16T18:26:32",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "grounded",
+      "path": "task-figlib/responses-gpt-6-astra-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "62ba018bb848e207340e8ca60f180cab38e3c9841920e7cc5671560ec6416483",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T18:25:34",
+        "latest": "2026-09-16T18:25:34",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "bare",
+      "path": "task-figlib/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
+      "row_count": 224,
+      "sha256": "d8e4e21dbc5f308720dec6242834d24d273eefd700a8000ccb9c5ea7428bfa89",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:28:45",
+        "latest": "2026-09-16T13:28:45",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "grounded",
+      "path": "task-figlib/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "930317c8dffbbc6ff65f87fd9344003849bd46203dd83af85e2cc84e2cd5e9e9",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:31:42",
+        "latest": "2026-09-16T13:31:42",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "bare",
+      "path": "task-figlib/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
+      "row_count": 224,
+      "sha256": "71fb0a2c4c12a6851264f86a77d1268b4462bd931b5c26abc7a0a9941eacf2f7",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:37:37",
+        "latest": "2026-09-16T13:37:37",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "figlib",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "grounded",
+      "path": "task-figlib/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded.jsonl",
+      "row_count": 196,
+      "sha256": "1de1cebe1c5ea077ac67af3b53c3dff55845bb879659af4a20a3effd2567cdbd",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:40:02",
+        "latest": "2026-09-16T13:40:02",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-claude-opus-4.8-bare.jsonl",
+      "row_count": 386,
+      "sha256": "b0362d37cc8278500dd268505ccceec9a7eb34b9c4384b6adc60355ba6401ea7",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:07:31",
+        "latest": "2026-09-16T00:07:31",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "claude-opus-4.8",
+      "model_token": "claude-opus-4.8",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-claude-opus-4.8-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "35be62146bda4d8ae8c0bf810f45de73d7895aa7e841a55a26a9bd3d468225bd",
+      "served_model": [
+        "claude-opus-4.8"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:11:49",
+        "latest": "2026-09-16T00:11:49",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-claude-opus-5-bare.jsonl",
+      "row_count": 386,
+      "sha256": "bb4caa6943e5f3edd4ce629c2c2ff99d065535889b80b3a73734f646eefe8c33",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:19:17",
+        "latest": "2026-09-16T00:19:17",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "claude-opus-5",
+      "model_token": "claude-opus-5",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-claude-opus-5-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "5b62ec018c6baad98e3d1e0dff1e848736fba9fd741647ff305c41758a7b1015",
+      "served_model": [
+        "claude-opus-5"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:26:44",
+        "latest": "2026-09-16T00:26:44",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-gemini-3.1-pro-bare.jsonl",
+      "row_count": 386,
+      "sha256": "f9e65da3558a91902855f58da7e7c69facde8ceea85124e08895e6ac5a798f8e",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:39:35",
+        "latest": "2026-09-16T00:39:35",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "gemini-3.1-pro",
+      "model_token": "gemini-3.1-pro",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-gemini-3.1-pro-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "5c1580374df551367d683bc22bc48e70af1ee47579b7d2fba8fe19ccf5ab306c",
+      "served_model": [
+        "gemini-3.1-pro"
+      ],
+      "written": {
+        "earliest": "2026-09-16T00:53:25",
+        "latest": "2026-09-16T00:53:25",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-gpt-6-astra-bare.jsonl",
+      "row_count": 386,
+      "sha256": "0e13cec0c996bf9c7c7cd620b00ad6ff352df20564f1df8b1f928db4c96a61d2",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T18:06:02",
+        "latest": "2026-09-16T18:06:02",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "gpt-6-astra",
+      "model_token": "gpt-6-astra",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-gpt-6-astra-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "631bd2e38b03a857de8cbf94799dbb377217dfb1c53105179cf63bc8320e17b1",
+      "served_model": [
+        "gpt-6-astra"
+      ],
+      "written": {
+        "earliest": "2026-09-16T18:14:38",
+        "latest": "2026-09-16T18:14:38",
+        "source": "file mtime"
+      },
+      "serving_path": "gateway",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
+      "row_count": 386,
+      "sha256": "49e5d24b2d356338744e7f16b9d2e90da5305db39b468200b5cda3424aef4297",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:23:21",
+        "latest": "2026-09-16T13:23:21",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "Qwen3-VL-235B-A22B",
+      "model_token": "bedrock_qwen.qwen3-vl-235b-a22b",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "61e995c4fb964a531a54697ce6e57daebc1e319ef0bf3b473146f507f893528a",
+      "served_model": [
+        "qwen.qwen3-vl-235b-a22b"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:26:17",
+        "latest": "2026-09-16T13:26:17",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "bare",
+      "path": "task-mesogeos/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
+      "row_count": 386,
+      "sha256": "064a8d1572adba3fabbaea0d32111f0a8e92d7a585f2a4233af5374061bc4991",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:35:04",
+        "latest": "2026-09-16T13:35:04",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    },
+    {
+      "task": "mesogeos",
+      "model_name": "Llama 4 Maverick",
+      "model_token": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+      "condition": "grounded",
+      "path": "task-mesogeos/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded.jsonl",
+      "row_count": 386,
+      "sha256": "307af08240eaf48e958886caf25f0df0f11b276d8d1a4910e6843da81350e57a",
+      "served_model": [
+        "us.meta.llama4-maverick-17b-instruct-v1:0"
+      ],
+      "written": {
+        "earliest": "2026-09-16T13:36:08",
+        "latest": "2026-09-16T13:36:08",
+        "source": "file mtime"
+      },
+      "serving_path": "bedrock",
+      "skew_override": false
+    }
+  ],
+  "supporting": [
+    {
+      "path": "repeat/allocation-gpt-6-astra-bare-run1.jsonl",
+      "sha256": "2b41309d4c41a02620814bc8c368aea0aa68790758e39b0dbc200a6489598dd5",
+      "section": "repeat",
+      "row_count": 300
+    },
+    {
+      "path": "repeat/allocation-gpt-6-astra-bare-run2.jsonl",
+      "sha256": "7af5a1912b0a764a4a29a4bee3343763c52e54d0a068101899ce3f0f0be4b904",
+      "section": "repeat",
+      "row_count": 300
+    },
+    {
+      "path": "repeat/allocation-llama4-maverick-bare-run1.jsonl",
+      "sha256": "741aac849a02d518d3185c55593a4bb6e72a31a8ae84f760a8a3d4ad2a464abe",
+      "section": "repeat",
+      "row_count": 300
+    },
+    {
+      "path": "repeat/allocation-scores-before-llama-bare-rerun.json",
+      "sha256": "134d4b53ea6df8818ba5aa695c75fd5d0ecc49f1a232e3f5436e39ca8a3ace83",
+      "section": "repeat",
+      "row_count": null
+    },
+    {
+      "path": "repeat/figlib-qwen3-vl-bare-run1.jsonl",
+      "sha256": "d8e4e21dbc5f308720dec6242834d24d273eefd700a8000ccb9c5ea7428bfa89",
+      "section": "repeat",
+      "row_count": 224
+    },
+    {
+      "path": "repeat/figlib-qwen3-vl-bare-run2.jsonl",
+      "sha256": "82c3bcc818a19d116aebc237037254a0abc05e009aac73bac27b7896ab13070b",
+      "section": "repeat",
+      "row_count": 224
+    },
+    {
+      "path": "repeat/figlib-scores-before-repeat.json",
+      "sha256": "61122a4fbfbf0b9418e41fbf4f2b24e7030f48036178ca189ad227a1da32fc58",
+      "section": "repeat",
+      "row_count": null
+    },
+    {
+      "path": "repeat/mesogeos-qwen3-vl-bare-run1.jsonl",
+      "sha256": "49e5d24b2d356338744e7f16b9d2e90da5305db39b468200b5cda3424aef4297",
+      "section": "repeat",
+      "row_count": 386
+    },
+    {
+      "path": "repeat/mesogeos-qwen3-vl-bare-run2.jsonl",
+      "sha256": "29e7b19d1517eb1b5e9be732b631af42a738a9bb1a47dada31640271b4406c7f",
+      "section": "repeat",
+      "row_count": 386
+    },
+    {
+      "path": "repeat/mesogeos-scores-before-repeat.json",
+      "sha256": "ae8131e069ec128eb6edfd004730018b9bb5f235336809549f19de3b6d14b825",
+      "section": "repeat",
+      "row_count": null
+    },
+    {
+      "path": "task-allocation/b4-rerun/prompt-grounded-alloc-2018_9144638_MILES-2018-09-11.txt",
+      "sha256": "02aba1dd947be952148c8937050dc1c138b93ee6a63e97d6417c5a931340ab6c",
+      "section": "b4-rerun",
+      "row_count": null
+    },
+    {
+      "path": "task-allocation/b4-rerun/replaced-rows.jsonl",
+      "sha256": "ddf784f5bd0c4772257eacc5db039a7d427a1c85763547d33d94e0b085455f46",
+      "section": "b4-rerun",
+      "row_count": 5
+    },
+    {
+      "path": "task-allocation/b4-rerun/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded.jsonl",
+      "sha256": "7669a55a23ff84fa6a6b1026c1679285fd22461d78023f64f9f89efa534e8803",
+      "section": "b4-rerun",
+      "row_count": 1
+    },
+    {
+      "path": "task-allocation/b4-rerun/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded.jsonl",
+      "sha256": "bf8f462ae40b03b6153f641084d5e45899d5b36bfd828f37f8f6d21f7f4f803a",
+      "section": "b4-rerun",
+      "row_count": 1
+    },
+    {
+      "path": "task-allocation/b4-rerun/responses-claude-opus-4.8-grounded.jsonl",
+      "sha256": "a21cf6e73030d00f7654dce7d47f65e0db9df29eab25144e6ff73b746ac0da42",
+      "section": "b4-rerun",
+      "row_count": 1
+    },
+    {
+      "path": "task-allocation/b4-rerun/responses-claude-opus-5-grounded.jsonl",
+      "sha256": "779d3c116336ddfa40405c041479044a24d36ac43a86df7ff3bf2f6b8e61c24e",
+      "section": "b4-rerun",
+      "row_count": 1
+    },
+    {
+      "path": "task-allocation/b4-rerun/responses-gemini-3.1-pro-grounded.jsonl",
+      "sha256": "802b3b9238ab23b9031a738c15183349d3cee84d8cf00f27d89f5c3b544863d1",
+      "section": "b4-rerun",
+      "row_count": 1
+    }
+  ],
+  "historic": [
+    {
+      "archive": "archive-2026-09-15-cap200",
+      "reason": "Earlier runs kept as evidence of the output-cap defect: runs executed under a 200-token completion cap before the cap was raised to 1536 tokens across tasks.",
+      "files": [
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-bare.jsonl",
+          "sha256": "302fa45b59e50df0508284c0463604c1b96fc73985cc624c0b99991ae73570ec"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-grounded.jsonl",
+          "sha256": "3fffc8ff92c847d79c8c72957c15a4aaba95306f9f715ebe4ff9d171da271f67"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-claude-opus-4.8-bare.jsonl",
+          "sha256": "4588ded94b9f9783c48efdad75b5e512f521830bc035968b36f900ba075467c4"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-claude-opus-4.8-grounded.jsonl",
+          "sha256": "008fee83c4d5c0c164b61a24021f439d65ce233fce1e0ff10448f6716ff388d3"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-claude-opus-5-bare.jsonl",
+          "sha256": "47e069b88929074af6430ed553cc21487862c6df00ab1e22e062bb418b41a3da"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/responses-claude-opus-5-grounded.jsonl",
+          "sha256": "f73908e93ce1ccf049952ce1979eab66e73969162db9f5007cfdc7a8cca27a19"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-allocation/scores.json",
+          "sha256": "8baaacf0425392212541c3e6d850626bca48401d75a50a541d5e0b1363d36b34"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-4.8-bare.jsonl",
+          "sha256": "c60d8a072dfedc08256d787315bb4a7268ebb38c9ba63f1ae75b0e2be8bd09ad"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-4.8-grounded.jsonl",
+          "sha256": "1a56feaf701f598b23b9f958b00f6cabd2069e965f80a526e537282531d96a4e"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-5-bare-1024px.jsonl",
+          "sha256": "86a2ab40b6f201742e5668b0ced9ee6c67ba095d14973a663cecf3a52792469e"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-5-bare.jsonl",
+          "sha256": "2b9ab5a54359fca3179953607a50c3f4aeaea52db7c8f3467c9fa5bf0630ed7e"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-5-grounded-1024px.jsonl",
+          "sha256": "7272714c77c832f727b911dbac6887912ea89eb8ba7eca4fcbdb3539c2c7ebb7"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-claude-opus-5-grounded.jsonl",
+          "sha256": "ed04482fd181929cea2682069167620a9d5fe9d551e7ee1fa9f6e7446beca495"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-gemini-3.1-pro-bare.jsonl",
+          "sha256": "1f6631d8f52c086a4454733c3d43375f035cdbe7c230b1d3786bbbd4e666cc4f"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/responses-gemini-3.1-pro-grounded.jsonl",
+          "sha256": "cf354d41100d5d167ce932bcde8a6a49a69c4ce1d1fd8b1fc7eb4ac3fe41dfbc"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-figlib/scores.json",
+          "sha256": "7681eb19cc5962bbb4e09e4870b618f14812c81ed42fcf8cb2abc1e7e81c0671"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-mesogeos/responses-claude-opus-4.8-bare.jsonl",
+          "sha256": "bdef3cee25438d38f96c80542fd2344d6a3c0c1ed7c52174137dd48b85754796"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-mesogeos/responses-claude-opus-4.8-grounded.jsonl",
+          "sha256": "f9e671efa06d382374425e27e58609e64d0f8327f9172df8d06b2473057bbc3f"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-mesogeos/responses-claude-opus-5-bare.jsonl",
+          "sha256": "f2ff581dbb42fd1b8bac05e73a06e27e4e1585fcd37b14a1aca31a20135bdd6f"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-mesogeos/responses-claude-opus-5-grounded.jsonl",
+          "sha256": "6b8665eddf51c5944b4b5219f4a2724e19baee8656e94314fa463e1f2034e2d4"
+        },
+        {
+          "path": "archive-2026-09-15-cap200/task-mesogeos/scores.json",
+          "sha256": "c9bec855cf0e3a927a70ae200675c42bdff4a16032131ac38d22ce37583bff32"
+        }
+      ]
+    },
+    {
+      "archive": "archive-2026-09-15-prefix",
+      "reason": "Earlier runs kept as evidence of the first analogue pool: grounded allocation runs conducted before the eligibility rule required both analogue days to precede the report day.",
+      "files": [
+        {
+          "path": "archive-2026-09-15-prefix/responses-claude-opus-4.8-grounded.jsonl",
+          "sha256": "709af4b3fad01a338043cd4abc3d4496b2198556d8487b866d5f0ec6e0f607f8"
+        },
+        {
+          "path": "archive-2026-09-15-prefix/responses-claude-opus-5-grounded.jsonl",
+          "sha256": "8886e99ed38319e47a5ccfdfa5dc102aa2db13a03addd516359472d7a217ecd2"
+        },
+        {
+          "path": "archive-2026-09-15-prefix/scores.json",
+          "sha256": "b4ccb8d40c092043c811cc6b9100c3a9316eb80596b6b79fa8148348587b0f88"
+        }
+      ]
+    }
+  ],
+  "excluded_from_reported": [
+    {
+      "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-bare.jsonl",
+      "sha256": "302fa45b59e50df0508284c0463604c1b96fc73985cc624c0b99991ae73570ec",
+      "row_count": 10,
+      "reason": "10-item Llama 3 probe run to verify Bedrock credentials before the main benchmark."
+    },
+    {
+      "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-grounded.jsonl",
+      "sha256": "3fffc8ff92c847d79c8c72957c15a4aaba95306f9f715ebe4ff9d171da271f67",
+      "row_count": 10,
+      "reason": "10-item Llama 3 probe run to verify Bedrock credentials before the main benchmark."
+    },
+    {
+      "path": "task-figlib/responses-claude-opus-5-bare-1024px.jsonl",
+      "sha256": "86a2ab40b6f201742e5668b0ced9ee6c67ba095d14973a663cecf3a52792469e",
+      "row_count": 224,
+      "reason": "Historic 1024-pixel resolution arm run during resolution sensitivity checks before standardizing on native 1568-pixel frames."
+    },
+    {
+      "path": "task-figlib/responses-claude-opus-5-grounded-1024px.jsonl",
+      "sha256": "7272714c77c832f727b911dbac6887912ea89eb8ba7eca4fcbdb3539c2c7ebb7",
+      "row_count": 196,
+      "reason": "Historic 1024-pixel resolution arm run during resolution sensitivity checks before standardizing on native 1568-pixel frames."
+    }
+  ],
+  "baselines": {
+    "reason": "Trained non-LLM baselines on the same items and the same displayed information; written by baselines/mesogeos_trained.py and baselines/allocation_trained.py.",
+    "files": [
+      {
+        "path": "task-allocation/responses-baseline-gbdt-analogue-bare.jsonl",
+        "row_count": 300,
+        "sha256": "c3150dc95a42f3817f865cf94b38042f010cd824e7dccace7280a1adbc89e495",
+        "served_model": [],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-baseline-gbdt-bare.jsonl",
+        "row_count": 300,
+        "sha256": "cc0d06ab0391b7d28ae2572d73f96c495f15029cff97ec8edd0470e9a647f07c",
+        "served_model": [],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-baseline-gbdt-count-bare.jsonl",
+        "row_count": 300,
+        "sha256": "602d0df1c01b519c9783c5a4657a75b7bd878f7269c82f685ada4f9104b2e00d",
+        "served_model": [],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-baseline-ridge-bare.jsonl",
+        "row_count": 300,
+        "sha256": "d76916959a6689b13f4f0e22b1dc2e9cb52fa8d88d76f7a7b417aac662dc5f4e",
+        "served_model": [],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-baseline-gbdt-prompt-bare.jsonl",
+        "row_count": 386,
+        "sha256": "59e5b4fb8b5511d96a814ec03f81b10fecae3d30c8eee676addf2e6fe4ee94fe",
+        "served_model": [
+          "HistGradientBoostingClassifier"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-baseline-gbdt-window-bare.jsonl",
+        "row_count": 386,
+        "sha256": "a36d93ff7d040786ad0c93989188ac5996152339da128328ce937e66f9694806",
+        "served_model": [
+          "HistGradientBoostingClassifier"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-baseline-logit-prompt-bare.jsonl",
+        "row_count": 386,
+        "sha256": "ca19ef1f86417adc71af8340c6cdb4d28f2131bd8d1c26fc5b8ac70f01340d70",
+        "served_model": [
+          "LogisticRegression"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-baseline-logit-window-bare.jsonl",
+        "row_count": 386,
+        "sha256": "3315f3a5427bb942e3b302447a0f3146b27cef7d2729ea4013640c562003dcd4",
+        "served_model": [
+          "LogisticRegression"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:58:56",
+          "latest": "2026-09-16T22:58:56",
+          "source": "file mtime"
+        }
+      }
+    ]
+  },
+  "prompt_variants": {
+    "reason": "Prompt-sensitivity runs of run_mesogeos.py --variant p1 and p2, bare condition; scored by analysis/prompt_sensitivity.py.",
+    "files": [
+      {
+        "path": "task-mesogeos/responses-claude-opus-5-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "dfa55edcc45c1d40d0e26fd8a00d3760d9514821afd2d8c039d65d92daa37bff",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:52:01",
+          "latest": "2026-09-16T22:52:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-gemini-3.1-pro-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "0db3f131e13e2d32b78b9461a4c9a7a1718262080f65f698a0b517d4b111ed99",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-16T22:59:03",
+          "latest": "2026-09-16T22:59:03",
+          "source": "file mtime"
+        }
+      }
+    ]
+  },
+  "retrieval_v2": {
+    "reason": "Grounded allocation runs under the movement-conditioned analogue rule (run_allocation.py --rule v2); scored by analysis/retrieval_v2.py.",
+    "files": []
+  }
+}

@@ -1,0 +1,4399 @@
+[
+ {
+  "title": "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean",
+  "panels": {
+   "claude": {
+    "title": "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean",
+    "first_author": "Spyridon Kondylatos",
+    "year": "2023",
+    "venue_or_arxiv": "NeurIPS 2023 Datasets and Benchmarks Track (Oral)",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/9ee3ed2dd656402f954ef9dc37e39f48-Abstract-Datasets_and_Benchmarks.html",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "short-term fire danger forecasting",
+     "final burned-area estimation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "17-year Mediterranean datacube; NeurIPS oral defines two tracks (danger, burned area) with baselines and a landscape section."
+   },
+   "agy": {
+    "title": "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean",
+    "first_author": "Spyros Kondylatos",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2306.05144",
+    "url": "https://arxiv.org/abs/2306.05144",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "short-term wildfire danger forecasting",
+     "final burned area estimation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Mediterranean datacube benchmark establishing two distinct tracks: short-term danger forecasting and final burned area estimation."
+   }
+  },
+  "rec": {
+   "title": "Mesogeos: A multi-purpose dataset for data-driven wildfire modeling in the Mediterranean",
+   "first_author": "Spyridon Kondylatos",
+   "year": "2023",
+   "venue_or_arxiv": "NeurIPS 2023 Datasets and Benchmarks Track (Oral)",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/9ee3ed2dd656402f954ef9dc37e39f48-Abstract-Datasets_and_Benchmarks.html",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "short-term fire danger forecasting",
+    "final burned-area estimation"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "17-year Mediterranean datacube; NeurIPS oral defines two tracks (danger, burned area) with baselines and a landscape section."
+  }
+ },
+ {
+  "title": "SeasFire cube - a multivariate dataset for global wildfire modeling",
+  "panels": {
+   "claude": {
+    "title": "SeasFire cube - a multivariate dataset for global wildfire modeling",
+    "first_author": "Ilektra Karasante",
+    "year": "2023",
+    "venue_or_arxiv": "Scientific Data (2025); arXiv:2312.07199",
+    "url": "https://arxiv.org/abs/2312.07199",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "fire danger/driver analysis",
+     "sub-seasonal fire pattern prediction"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Global 59-variable, 0.25-degree datacube for seasonal fire drivers; demonstrates one DL model, no model comparison."
+   },
+   "agy": {
+    "title": "SeasFire cube - a multivariate dataset for global wildfire modeling",
+    "first_author": "Ioanna Karasante",
+    "year": "2025",
+    "venue_or_arxiv": "Nature Scientific Data",
+    "url": "https://doi.org/10.1038/s41597-025-04546-3",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "fire danger and risk forecasting",
+     "burned-area mapping"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Global 21-year Earth system datacube integrating 59 variables for subseasonal burned area forecasting and wildfire modeling."
+   }
+  },
+  "rec": {
+   "title": "SeasFire cube - a multivariate dataset for global wildfire modeling",
+   "first_author": "Ioanna Karasante",
+   "year": "2025",
+   "venue_or_arxiv": "Nature Scientific Data",
+   "url": "https://doi.org/10.1038/s41597-025-04546-3",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "fire danger and risk forecasting",
+    "burned-area mapping"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "Global 21-year Earth system datacube integrating 59 variables for subseasonal burned area forecasting and wildfire modeling."
+  }
+ },
+ {
+  "title": "TS-SatFire: A Multi-Task Satellite Image Time-Series Dataset for Wildfire Detection and Prediction",
+  "panels": {
+   "claude": {
+    "title": "TS-SatFire: A Multi-Task Satellite Image Time-Series Dataset for Wildfire Detection and Prediction",
+    "first_author": "Yu Zhao",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2412.11555",
+    "url": "https://arxiv.org/abs/2412.11555",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "active fire detection",
+     "daily burned-area mapping",
+     "wildfire progression prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Dataset spanning 3 fire tasks with baseline benchmarks; a multi-task fire benchmark but with no landscape survey of the wider field."
+   },
+   "agy": {
+    "title": "TS-SatFire: A Multi-Task Satellite Image Time-Series Dataset for Wildfire Detection and Prediction",
+    "first_author": "Yu Zhao",
+    "year": "2025",
+    "venue_or_arxiv": "Scientific Data",
+    "url": "https://doi.org/10.1038/s41597-025-06271-3",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "active fire detection",
+     "daily burned area mapping",
+     "wildfire progression prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Multi-task satellite wildfire benchmark bridging active fire detection, burned area mapping, and next-day progression prediction."
+   }
+  },
+  "rec": {
+   "title": "TS-SatFire: A Multi-Task Satellite Image Time-Series Dataset for Wildfire Detection and Prediction",
+   "first_author": "Yu Zhao",
+   "year": "2025",
+   "venue_or_arxiv": "Scientific Data",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12630597/",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "active-fire detection",
+    "burned-area mapping",
+    "next-day fire progression prediction"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "179 US events, 71GB; benchmarks 11 temporal/spatial/spatiotemporal models across 3 tasks with a landscape section."
+  }
+ },
+ {
+  "title": "Empowering LLM Agents with Geospatial Awareness: Toward Grounded Reasoning for Wildfire Response",
+  "panels": {
+   "claude": {
+    "title": "Empowering LLM Agents with Geospatial Awareness: Toward Grounded Reasoning for Wildfire Response",
+    "first_author": "Yiheng Chen",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2510.12061",
+    "url": "https://arxiv.org/abs/2510.12061",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "daily personnel-requirement prediction",
+     "daily budget-allocation prediction for active wildfires"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Grounds 13+ LLMs (GPT-4o/4.1/5, Gemini 2.5, o3, DeepSeek) in geodata to predict resources for 14 CA wildfires; has related-work landscape section."
+   },
+   "agy": {
+    "title": "Empowering LLM Agents with Geospatial Awareness: Toward Grounded Reasoning for Wildfire Response",
+    "first_author": "Yiheng Chen",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2510.12061",
+    "url": "https://arxiv.org/abs/2510.12061",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "wildfire emergency response",
+     "personnel allocation",
+     "budget assignment",
+     "grounded risk reasoning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Evaluates LLM agents augmented with geospatial data for wildfire emergency resource allocation; restricted to operational response reasoning."
+   }
+  },
+  "rec": {
+   "title": "Empowering LLM Agents with Geospatial Awareness: Toward Grounded Reasoning for Wildfire Response",
+   "first_author": "Yiheng Chen",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2510.12061",
+   "url": "https://arxiv.org/abs/2510.12061",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "daily personnel-requirement prediction",
+    "daily budget-allocation prediction for active wildfires"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "Grounds 13+ LLMs (GPT-4o/4.1/5, Gemini 2.5, o3, DeepSeek) in geodata to predict resources for 14 CA wildfires; has related-work landscape section."
+  }
+ },
+ {
+  "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well? (introduces WILDFIRE-FM)",
+  "panels": {
+   "claude": {
+    "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well? (introduces WILDFIRE-FM)",
+    "first_author": "Yangshuang Xu",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2605.18911",
+    "url": "https://arxiv.org/abs/2605.18911",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "fire occupancy",
+     "fire spread",
+     "burned-area regression",
+     "analog retrieval",
+     "smoke PM2.5",
+     "extreme heat"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Benchmarks WildFIRE-FM plus 10 Earth-FM baselines across 6 task forms; related work is narrow/methodological, not a fire landscape survey. Closest match found."
+   }
+  },
+  "rec": {
+   "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well? (introduces WILDFIRE-FM)",
+   "first_author": "Yangshuang Xu",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2605.18911",
+   "url": "https://arxiv.org/abs/2605.18911",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "fire occupancy",
+    "fire spread",
+    "burned-area regression",
+    "analog retrieval",
+    "smoke PM2.5",
+    "extreme heat"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "Benchmarks WildFIRE-FM plus 10 Earth-FM baselines across 6 task forms; related work is narrow/methodological, not a fire landscape survey. Closest match found."
+  }
+ },
+ {
+  "title": "Wildfire Detection Via Transfer Learning: A Survey",
+  "panels": {
+   "agy": {
+    "title": "Wildfire Detection Via Transfer Learning: A Survey",
+    "first_author": "Hong",
+    "year": "2023",
+    "venue_or_arxiv": "Research Square",
+    "url": "https://doi.org/10.21203/rs.3.rs-3137242/v1",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "optical camera wildfire detection",
+     "smoke and flame classification"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "full",
+    "closeness": 2,
+    "note": "Surveys transfer-learning models for camera-based wildfire detection and evaluates multiple neural architectures on wildfire images; limited to single detection task."
+   }
+  },
+  "rec": {
+   "title": "Wildfire Detection Via Transfer Learning: A Survey",
+   "first_author": "Hong",
+   "year": "2023",
+   "venue_or_arxiv": "Research Square",
+   "url": "https://doi.org/10.21203/rs.3.rs-3137242/v1",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "optical camera wildfire detection",
+    "smoke and flame classification"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "full",
+   "closeness": 2,
+   "note": "Surveys transfer-learning models for camera-based wildfire detection and evaluates multiple neural architectures on wildfire images; limited to single detection task."
+  }
+ },
+ {
+  "title": "Deep Learning Approaches for Wildfire Severity Prediction: A Comparative Study of Image Segmentation Networks and Visual Transformers on the EO4WildFires Dataset",
+  "panels": {
+   "agy": {
+    "title": "Deep Learning Approaches for Wildfire Severity Prediction: A Comparative Study of Image Segmentation Networks and Visual Transformers on the EO4WildFires Dataset",
+    "first_author": "Dimitrios Sykas",
+    "year": "2024",
+    "venue_or_arxiv": "MDPI Preprints",
+    "url": "https://doi.org/10.20944/preprints202409.0702.v1",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "active-fire detection",
+     "burned-area mapping",
+     "wildfire severity prediction"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 2,
+    "note": "Multi-task Earth observation benchmark spanning 31,730 fire events, evaluating numerous segmentation networks and Vision Transformers for wildfire severity."
+   }
+  },
+  "rec": {
+   "title": "Deep Learning Approaches for Wildfire Severity Prediction: A Comparative Study of Image Segmentation Networks and Visual Transformers on the EO4WildFires Dataset",
+   "first_author": "Dimitrios Sykas",
+   "year": "2024",
+   "venue_or_arxiv": "MDPI Preprints",
+   "url": "https://doi.org/10.20944/preprints202409.0702.v1",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "active-fire detection",
+    "burned-area mapping",
+    "wildfire severity prediction"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 2,
+   "note": "Multi-task Earth observation benchmark spanning 31,730 fire events, evaluating numerous segmentation networks and Vision Transformers for wildfire severity."
+  }
+ },
+ {
+  "title": "A review of machine learning applications in wildfire science and management",
+  "panels": {
+   "claude": {
+    "title": "A review of machine learning applications in wildfire science and management",
+    "first_author": "Piyush Jain",
+    "year": "2020",
+    "venue_or_arxiv": "Environmental Reviews 28(4):478-505 / arXiv:2003.00646",
+    "url": "https://arxiv.org/abs/2003.00646",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fuels characterization & fire detection/mapping",
+     "fire weather & climate change",
+     "fire occurrence/susceptibility/risk",
+     "fire behavior/spread prediction",
+     "fire effects",
+     "fire management"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Classic broad survey spanning 6 fire-science problem domains; still the widest fire task-landscape review found, but runs no original benchmarking."
+   },
+   "agy": {
+    "title": "A review of machine learning applications in wildfire science and management",
+    "first_author": "Piyush Jain",
+    "year": "2020",
+    "venue_or_arxiv": "Environmental Reviews",
+    "url": "https://doi.org/10.1139/er-2020-0019",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fuels characterization",
+     "fire detection and mapping",
+     "fire weather",
+     "fire occurrence and susceptibility",
+     "fire behavior prediction",
+     "fire effects",
+     "fire management"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Comprehensive survey of 300 papers structuring wildfire ML across six problem domains; contains no empirical benchmarking."
+   }
+  },
+  "rec": {
+   "title": "A review of machine learning applications in wildfire science and management",
+   "first_author": "Piyush Jain",
+   "year": "2020",
+   "venue_or_arxiv": "Environmental Reviews; arXiv:2003.00646",
+   "url": "https://arxiv.org/abs/2003.00646",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "fuels characterization & mapping",
+    "fire detection",
+    "fire weather/climate change",
+    "occurrence/susceptibility/risk",
+    "fire behavior/spread prediction",
+    "fire effects",
+    "fire management"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Landmark scoping review of 298 studies across six wildfire-ML domains, fuels to management; foundational taxonomy, no original experiments."
+  }
+ },
+ {
+  "title": "A Systematic Review of Applications of Machine Learning Techniques for Wildfire Management Decision Support",
+  "panels": {
+   "claude": {
+    "title": "A Systematic Review of Applications of Machine Learning Techniques for Wildfire Management Decision Support",
+    "first_author": "Karol Bot",
+    "year": "2022",
+    "venue_or_arxiv": "Inventions 7(1):15 (DOI:10.3390/inventions7010015)",
+    "url": "https://doi.org/10.3390/inventions7010015",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "pre-fire prevention",
+     "fire detection",
+     "fire behavior/spread prediction",
+     "post-fire effects & management decision support"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Systematic review of 135 studies classifying wildfire ML applications by phase, method, and reported performance metric; compiles, does not re-run, results."
+   },
+   "agy": {
+    "title": "A Systematic Review of Applications of Machine Learning Techniques for Wildfire Management Decision Support",
+    "first_author": "Bot",
+    "year": "2022",
+    "venue_or_arxiv": "Inventions",
+    "url": "https://doi.org/10.3390/inventions7010015",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "pre-fire hazard mapping",
+     "wildfire susceptibility",
+     "fire detection",
+     "fire spread prediction",
+     "post-fire burn severity"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "PRISMA-guided review synthesizing 90+ papers across the fire management cycle; purely a literature survey without benchmarking experiments."
+   }
+  },
+  "rec": {
+   "title": "A Systematic Review of Applications of Machine Learning Techniques for Wildfire Management Decision Support",
+   "first_author": "Karol Bot",
+   "year": "2022",
+   "venue_or_arxiv": "Inventions (MDPI)",
+   "url": "https://doi.org/10.3390/inventions7010015",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "pre-fire prevention/fuel modeling/risk assessment",
+    "active wildfire spread/detection/dispatch",
+    "post-fire restoration/severity"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Classifies 135 studies by fire-management phase, ML method, location, and metric; pure literature synthesis, no models tested."
+  }
+ },
+ {
+  "title": "A Survey of Machine Learning Algorithms Based Forest Fires Prediction and Detection Systems",
+  "panels": {
+   "claude": {
+    "title": "A Survey of Machine Learning Algorithms Based Forest Fires Prediction and Detection Systems",
+    "first_author": "Faroudja Abid",
+    "year": "2020",
+    "venue_or_arxiv": "Fire Technology (Springer)",
+    "url": "https://doi.org/10.1007/s10694-020-01056-z",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "detection (sensor/UAV/image)",
+     "risk/ignition prediction",
+     "burned area estimation"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys ~74 papers on ML/DL for forest-fire prediction and detection systems; taxonomy only, no original benchmarking."
+   },
+   "agy": {
+    "title": "A Survey of Machine Learning Algorithms Based Forest Fires Prediction and Detection Systems",
+    "first_author": "Abid",
+    "year": "2021",
+    "venue_or_arxiv": "Fire Technology",
+    "url": "https://doi.org/10.1007/s10694-020-01056-z",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "forest fire prediction",
+     "fire susceptibility",
+     "weather/meteorological risk modeling",
+     "fire detection"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Taxonomizes ML techniques for forest fire prediction and detection from meteorological and sensor inputs; does not perform experimental benchmarks."
+   }
+  },
+  "rec": {
+   "title": "A Survey of Machine Learning Algorithms Based Forest Fires Prediction and Detection Systems",
+   "first_author": "Faroudja Abid",
+   "year": "2020",
+   "venue_or_arxiv": "Fire Technology (Springer)",
+   "url": "https://doi.org/10.1007/s10694-020-01056-z",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "detection (sensor/UAV/image)",
+    "risk/ignition prediction",
+    "burned area estimation"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Surveys ~74 papers on ML/DL for forest-fire prediction and detection systems; taxonomy only, no original benchmarking."
+  }
+ },
+ {
+  "title": "A comprehensive survey of research towards AI-enabled unmanned aerial systems in pre-, active-, and post-wildfire management",
+  "panels": {
+   "claude": {
+    "title": "A comprehensive survey of research towards AI-enabled unmanned aerial systems in pre-, active-, and post-wildfire management",
+    "first_author": "Sayed Pedram Haeri Boroujeni",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2401.02456",
+    "url": "https://arxiv.org/abs/2401.02456",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "pre-fire fuel monitoring & prevention",
+     "active-fire detection/segmentation/classification/monitoring",
+     "post-fire evacuation planning",
+     "post-fire damage assessment"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "UAV-centric survey of pre/active/post-fire AI tasks; systematic literature review only, no empirical comparison of models across tasks."
+   },
+   "agy": {
+    "title": "A comprehensive survey of research towards AI-enabled unmanned aerial systems in pre-, active-, and post-wildfire management",
+    "first_author": "Boroujeni",
+    "year": "2024",
+    "venue_or_arxiv": "Information Fusion",
+    "url": "https://doi.org/10.1016/j.inffus.2024.102369",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "pre-fire fuel mapping",
+     "active fire flame and smoke detection",
+     "spread monitoring",
+     "UAV path planning",
+     "post-fire damage assessment"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Broad multi-task survey of AI and autonomous drones across pre-, active-, and post-wildfire phases, but provides no unified experimental benchmark."
+   }
+  },
+  "rec": {
+   "title": "A comprehensive survey of research towards AI-enabled unmanned aerial systems in pre-, active-, and post-wildfire management",
+   "first_author": "Sayed Pedram Haeri Boroujeni",
+   "year": "2024",
+   "venue_or_arxiv": "Information Fusion; arXiv:2401.02456",
+   "url": "https://arxiv.org/abs/2401.02456",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "pre-fire fuel/risk/hazard prediction",
+    "active-fire detection/classification/segmentation/monitoring",
+    "post-fire recovery/damage assessment"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "345-reference survey of AI-enabled UAVs across pre-, active-, and post-wildfire phases; systematic review, no new experiments."
+  }
+ },
+ {
+  "title": "Deep Learning Approaches for Wildland Fires Remote Sensing: Classification, Detection, and Segmentation",
+  "panels": {
+   "claude": {
+    "title": "Deep Learning Approaches for Wildland Fires Remote Sensing: Classification, Detection, and Segmentation",
+    "first_author": "Rafik Ghali",
+    "year": "2023",
+    "venue_or_arxiv": "Remote Sensing (MDPI)",
+    "url": "https://doi.org/10.3390/rs15071821",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "classification",
+     "detection",
+     "segmentation"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Remote-sensing-centered review of deep learning, incl. vision transformers, for wildfire classification/detection/segmentation; compares published results only."
+   }
+  },
+  "rec": {
+   "title": "Deep Learning Approaches for Wildland Fires Remote Sensing: Classification, Detection, and Segmentation",
+   "first_author": "Rafik Ghali",
+   "year": "2023",
+   "venue_or_arxiv": "Remote Sensing (MDPI)",
+   "url": "https://doi.org/10.3390/rs15071821",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "classification",
+    "detection",
+    "segmentation"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Remote-sensing-centered review of deep learning, incl. vision transformers, for wildfire classification/detection/segmentation; compares published results only."
+  }
+ },
+ {
+  "title": "Trending and emerging prospects of physics-based and ML-based wildfire spread models: a comprehensive review",
+  "panels": {
+   "claude": {
+    "title": "Trending and emerging prospects of physics-based and ML-based wildfire spread models: a comprehensive review",
+    "first_author": "Harikesh Singh",
+    "year": "2024",
+    "venue_or_arxiv": "Journal of Forestry Research (Springer)",
+    "url": "https://doi.org/10.1007/s11676-024-01783-x",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fire susceptibility prediction",
+     "fire spread/behavior modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Reviews physical, semi-empirical, cellular-automata, and ML spread models; recommends hybrid data-assimilation approaches; no own experiments run."
+   }
+  },
+  "rec": {
+   "title": "Trending and emerging prospects of physics-based and ML-based wildfire spread models: a comprehensive review",
+   "first_author": "Harikesh Singh",
+   "year": "2024",
+   "venue_or_arxiv": "Journal of Forestry Research (Springer)",
+   "url": "https://doi.org/10.1007/s11676-024-01783-x",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "fire susceptibility prediction",
+    "fire spread/behavior modeling"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Reviews physical, semi-empirical, cellular-automata, and ML spread models; recommends hybrid data-assimilation approaches; no own experiments run."
+  }
+ },
+ {
+  "title": "Deep Learning for Wildfire Risk Prediction: Integrating Remote Sensing and Environmental Data",
+  "panels": {
+   "claude": {
+    "title": "Deep Learning for Wildfire Risk Prediction: Integrating Remote Sensing and Environmental Data",
+    "first_author": "Zhengsen Xu",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2405.01607 (also Remote Sensing of Environment, 2025)",
+    "url": "https://arxiv.org/abs/2405.01607",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "risk prediction via time-series forecasting",
+     "image segmentation",
+     "spatiotemporal prediction"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys deep learning for wildfire risk prediction via time-series, segmentation, and spatiotemporal paradigms; synthesis only, no experiments."
+   }
+  },
+  "rec": {
+   "title": "Deep Learning for Wildfire Risk Prediction: Integrating Remote Sensing and Environmental Data",
+   "first_author": "Zhengsen Xu",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2405.01607 (also Remote Sensing of Environment, 2025)",
+   "url": "https://arxiv.org/abs/2405.01607",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "risk prediction via time-series forecasting",
+    "image segmentation",
+    "spatiotemporal prediction"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Surveys deep learning for wildfire risk prediction via time-series, segmentation, and spatiotemporal paradigms; synthesis only, no experiments."
+  }
+ },
+ {
+  "title": "Leveraging the power of internet of things and artificial intelligence in forest fire prevention, detection, and restoration: A comprehensive survey",
+  "panels": {
+   "claude": {
+    "title": "Leveraging the power of internet of things and artificial intelligence in forest fire prevention, detection, and restoration: A comprehensive survey",
+    "first_author": "Sofia Giannakidou",
+    "year": "2024",
+    "venue_or_arxiv": "Internet of Things (Elsevier)",
+    "url": "https://doi.org/10.1016/j.iot.2024.101171",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "prevention",
+     "detection",
+     "restoration"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Reviews IoT+AI across forest-fire prevention, detection, and restoration phases; evaluates published models' accuracy/limitations, not its own."
+   }
+  },
+  "rec": {
+   "title": "Leveraging the power of internet of things and artificial intelligence in forest fire prevention, detection, and restoration: A comprehensive survey",
+   "first_author": "Sofia Giannakidou",
+   "year": "2024",
+   "venue_or_arxiv": "Internet of Things (Elsevier)",
+   "url": "https://doi.org/10.1016/j.iot.2024.101171",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "prevention",
+    "detection",
+    "restoration"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Reviews IoT+AI across forest-fire prevention, detection, and restoration phases; evaluates published models' accuracy/limitations, not its own."
+  }
+ },
+ {
+  "title": "Vision-based fire management system using autonomous unmanned aerial vehicles: a comprehensive survey",
+  "panels": {
+   "claude": {
+    "title": "Vision-based fire management system using autonomous unmanned aerial vehicles: a comprehensive survey",
+    "first_author": "Sufyan Danish",
+    "year": "2025",
+    "venue_or_arxiv": "Artificial Intelligence Review (Springer)",
+    "url": "https://doi.org/10.1007/s10462-025-11415-3",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "UAV-based fire/smoke detection",
+     "classification",
+     "segmentation"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys CNN/attention/YOLO/GAN/transformer architectures for UAV vision-based fire tasks; no original model benchmarking performed."
+   }
+  },
+  "rec": {
+   "title": "Vision-based fire management system using autonomous unmanned aerial vehicles: a comprehensive survey",
+   "first_author": "Sufyan Danish",
+   "year": "2025",
+   "venue_or_arxiv": "Artificial Intelligence Review (Springer)",
+   "url": "https://doi.org/10.1007/s10462-025-11415-3",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "UAV-based fire/smoke detection",
+    "classification",
+    "segmentation"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Surveys CNN/attention/YOLO/GAN/transformer architectures for UAV vision-based fire tasks; no original model benchmarking performed."
+  }
+ },
+ {
+  "title": "Recent Advances and Emerging Directions in Fire Detection Systems Based on Machine Learning Algorithms",
+  "panels": {
+   "claude": {
+    "title": "Recent Advances and Emerging Directions in Fire Detection Systems Based on Machine Learning Algorithms",
+    "first_author": "Bogdan Diaconu",
+    "year": "2023",
+    "venue_or_arxiv": "Fire (MDPI)",
+    "url": "https://doi.org/10.3390/fire6110441",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fire detection",
+     "fire prevention",
+     "propagation/spread modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Scientometric review of 2332 Scopus documents plus critique of 14 detection datasets; bibliometrics only, no model runs."
+   }
+  },
+  "rec": {
+   "title": "Recent Advances and Emerging Directions in Fire Detection Systems Based on Machine Learning Algorithms",
+   "first_author": "Bogdan Diaconu",
+   "year": "2023",
+   "venue_or_arxiv": "Fire (MDPI)",
+   "url": "https://doi.org/10.3390/fire6110441",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "fire detection",
+    "fire prevention",
+    "propagation/spread modeling"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Scientometric review of 2332 Scopus documents plus critique of 14 detection datasets; bibliometrics only, no model runs."
+  }
+ },
+ {
+  "title": "Global review of wildfire prediction using spatio artificial intelligence models",
+  "panels": {
+   "claude": {
+    "title": "Global review of wildfire prediction using spatio artificial intelligence models",
+    "first_author": "Alisha Sinha",
+    "year": "2026",
+    "venue_or_arxiv": "Discover Forests (Springer)",
+    "url": "https://doi.org/10.1007/s44415-026-00083-y",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "susceptibility/risk mapping",
+     "occurrence prediction/forecasting",
+     "danger/hazard modeling",
+     "burned area detection/monitoring",
+     "real-time detection"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "200-reference global review of spatio-AI models spanning susceptibility, occurrence, danger, burned-area, and detection tasks; pure synthesis."
+   },
+   "agy": {
+    "title": "Global review of wildfire prediction using spatio artificial intelligence models",
+    "first_author": "Sinha",
+    "year": "2026",
+    "venue_or_arxiv": "Discover Forests",
+    "url": "https://doi.org/10.1007/s44415-026-00083-y",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire susceptibility mapping",
+     "ignition prediction",
+     "spatial fire hazard assessment"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Systematically reviews 143 spatial AI wildfire prediction studies and highlights evaluation metric inconsistencies, but runs no experiments of its own."
+   }
+  },
+  "rec": {
+   "title": "Global review of wildfire prediction using spatio artificial intelligence models",
+   "first_author": "Alisha Sinha",
+   "year": "2026",
+   "venue_or_arxiv": "Discover Forests (Springer)",
+   "url": "https://doi.org/10.1007/s44415-026-00083-y",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "susceptibility/risk mapping",
+    "occurrence prediction/forecasting",
+    "danger/hazard modeling",
+    "burned area detection/monitoring",
+    "real-time detection"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "200-reference global review of spatio-AI models spanning susceptibility, occurrence, danger, burned-area, and detection tasks; pure synthesis."
+  }
+ },
+ {
+  "title": "Machine Learning and Deep Learning for Wildfire Prediction: A Systematic and Bibliometric Review of Methods, Data Practices, and Reproducibility (2020-2025)",
+  "panels": {
+   "claude": {
+    "title": "Machine Learning and Deep Learning for Wildfire Prediction: A Systematic and Bibliometric Review of Methods, Data Practices, and Reproducibility (2020–2025)",
+    "first_author": "Kevin Manuel Galván Lara",
+    "year": "2026",
+    "venue_or_arxiv": "Fire (MDPI) (DOI:10.3390/fire9050204)",
+    "url": "https://doi.org/10.3390/fire9050204",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire occurrence/spread prediction"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Bibliometric/systematic review of 341 wildfire-prediction studies on methods and reproducibility; no new experiments, notes only 7.7% shared code."
+   }
+  },
+  "rec": {
+   "title": "Machine Learning and Deep Learning for Wildfire Prediction: A Systematic and Bibliometric Review of Methods, Data Practices, and Reproducibility (2020-2025)",
+   "first_author": "Kevin Manuel Galván Lara",
+   "year": "2026",
+   "venue_or_arxiv": "Fire (MDPI)",
+   "url": "https://doi.org/10.3390/fire9050204",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "wildfire occurrence/spread prediction (methods/data/reproducibility lens)"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "PRISMA-EcoEvo bibliometric review of 341 studies (2020-2025) quantifying methods, data practices, and reproducibility gaps; no new models."
+  }
+ },
+ {
+  "title": "From Ecological Monitoring to Prevention Decision Support: A Critical Review of Artificial Intelligence for Forest Fire Prevention",
+  "panels": {
+   "claude": {
+    "title": "From Ecological Monitoring to Prevention Decision Support: A Critical Review of Artificial Intelligence for Forest Fire Prevention",
+    "first_author": "Shu-Wei Feng",
+    "year": "2026",
+    "venue_or_arxiv": "Forests (MDPI)",
+    "url": "https://doi.org/10.3390/f17070817",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "multimodal sensing",
+     "smoke/fire detection",
+     "susceptibility mapping",
+     "short-horizon forecasting"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "179-reference critical review linking ecological monitoring to fire-prevention decision support; flags AI maturity gaps, runs no experiments."
+   }
+  },
+  "rec": {
+   "title": "From Ecological Monitoring to Prevention Decision Support: A Critical Review of Artificial Intelligence for Forest Fire Prevention",
+   "first_author": "Shu-Wei Feng",
+   "year": "2026",
+   "venue_or_arxiv": "Forests (MDPI)",
+   "url": "https://doi.org/10.3390/f17070817",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "multimodal sensing",
+    "smoke/fire detection",
+    "susceptibility mapping",
+    "short-horizon forecasting"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "179-reference critical review linking ecological monitoring to fire-prevention decision support; flags AI maturity gaps, runs no experiments."
+  }
+ },
+ {
+  "title": "Artificial intelligence and remote sensing frameworks for wildfire monitoring and risk analysis across multiple ecosystems: a review",
+  "panels": {
+   "claude": {
+    "title": "Artificial intelligence and remote sensing frameworks for wildfire monitoring and risk analysis across multiple ecosystems: a review",
+    "first_author": "Keval H. Jodhani",
+    "year": "2026",
+    "venue_or_arxiv": "AIMS Environmental Science",
+    "url": "https://doi.org/10.3934/environsci.2026004",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "monitoring",
+     "risk analysis across forest/grassland/shrubland/WUI ecosystems"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Reviews AI plus remote-sensing frameworks for wildfire monitoring/risk across multiple ecosystems; synthesizes datasets and models only."
+   }
+  },
+  "rec": {
+   "title": "Artificial intelligence and remote sensing frameworks for wildfire monitoring and risk analysis across multiple ecosystems: a review",
+   "first_author": "Keval H. Jodhani",
+   "year": "2026",
+   "venue_or_arxiv": "AIMS Environmental Science",
+   "url": "https://doi.org/10.3934/environsci.2026004",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "monitoring",
+    "risk analysis across forest/grassland/shrubland/WUI ecosystems"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Reviews AI plus remote-sensing frameworks for wildfire monitoring/risk across multiple ecosystems; synthesizes datasets and models only."
+  }
+ },
+ {
+  "title": "Artificial intelligence for wildfire detection and management",
+  "panels": {
+   "claude": {
+    "title": "Artificial intelligence for wildfire detection and management",
+    "first_author": "Erik Karger",
+    "year": "2026",
+    "venue_or_arxiv": "Discover Artificial Intelligence (Springer)",
+    "url": "https://doi.org/10.1007/s44163-026-01087-5",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "geospatial/climatic analysis",
+     "detection/monitoring",
+     "prediction/risk assessment/behavior modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Bibliometric analysis of 1,985 papers across geospatial, detection, and prediction themes in AI wildfire management; no own evaluation."
+   },
+   "agy": {
+    "title": "Artificial intelligence for wildfire detection and management",
+    "first_author": "Erik Karger",
+    "year": "2026",
+    "venue_or_arxiv": "Discover Artificial Intelligence",
+    "url": "https://doi.org/10.1007/s44163-026-01087-5",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "geospatial and climatic analysis",
+     "wildfire detection and monitoring",
+     "risk assessment",
+     "fire behavior modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Recent 2026 survey reviewing 1,985 publications to classify AI applications across wildfire management without experimental benchmarking."
+   }
+  },
+  "rec": {
+   "title": "Artificial intelligence for wildfire detection and management",
+   "first_author": "Erik Karger",
+   "year": "2026",
+   "venue_or_arxiv": "Discover Artificial Intelligence (Springer)",
+   "url": "https://doi.org/10.1007/s44163-026-01087-5",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "geospatial/climatic analysis",
+    "detection/monitoring",
+    "prediction/risk assessment/behavior modeling"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Bibliometric analysis of 1,985 papers across geospatial, detection, and prediction themes in AI wildfire management; no own evaluation."
+  }
+ },
+ {
+  "title": "Artificial Intelligence for Geospatial Decision Support in Rural Wildfire Management: A Configurational Mapping Review",
+  "panels": {
+   "claude": {
+    "title": "Artificial Intelligence for Geospatial Decision Support in Rural Wildfire Management: A Configurational Mapping Review",
+    "first_author": "João Costa",
+    "year": "2026",
+    "venue_or_arxiv": "Fire (MDPI)",
+    "url": "https://doi.org/10.3390/fire9030131",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "detection",
+     "spread/evolution prediction (within decision-support architectures)"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Configurational mapping review coding 27 studies into 168 algorithm-decision-function triplets for rural wildfire support; literature coding, not experiments."
+   },
+   "agy": {
+    "title": "Artificial Intelligence for Geospatial Decision Support in Rural Wildfire Management: A Configurational Mapping Review",
+    "first_author": "Costa",
+    "year": "2026",
+    "venue_or_arxiv": "Fire",
+    "url": "https://doi.org/10.3390/fire9030131",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire detection",
+     "fire susceptibility prediction",
+     "remote sensing monitoring",
+     "emergency response decision support"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "PRISMA-ScR review mapping how AI methods integrate into geospatial decision-support architectures for rural wildfire management; performs no experimental evaluation."
+   }
+  },
+  "rec": {
+   "title": "Artificial Intelligence for Geospatial Decision Support in Rural Wildfire Management: A Configurational Mapping Review",
+   "first_author": "João Costa",
+   "year": "2026",
+   "venue_or_arxiv": "Fire (MDPI)",
+   "url": "https://doi.org/10.3390/fire9030131",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "detection",
+    "spread/evolution prediction (within decision-support architectures)"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Configurational mapping review coding 27 studies into 168 algorithm-decision-function triplets for rural wildfire support; literature coding, not experiments."
+  }
+ },
+ {
+  "title": "A comprehensive survey of the machine learning pipeline for wildfire risk prediction and assessment",
+  "panels": {
+   "claude": {
+    "title": "A comprehensive survey of the machine learning pipeline for wildfire risk prediction and assessment",
+    "first_author": "Naveed Ejaz",
+    "year": "2025",
+    "venue_or_arxiv": "Ecological Informatics (DOI:10.1016/j.ecoinf.2025.103325)",
+    "url": "https://doi.org/10.1016/j.ecoinf.2025.103325",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire risk prediction",
+     "susceptibility mapping",
+     "uncertainty quantification"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "End-to-end ML pipeline survey (data, features, models, post-processing) for wildfire risk; organizes literature, runs no original benchmarking."
+   },
+   "agy": {
+    "title": "A comprehensive survey of the machine learning pipeline for wildfire risk prediction and assessment",
+    "first_author": "Ejaz",
+    "year": "2025",
+    "venue_or_arxiv": "Ecological Informatics",
+    "url": "https://doi.org/10.1016/j.ecoinf.2025.103325",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "data acquisition and preprocessing",
+     "feature engineering",
+     "wildfire susceptibility mapping",
+     "risk assessment"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys the end-to-end ML pipeline for wildfire risk modeling, reviewing feature engineering and algorithms without conducting experimental evaluations."
+   }
+  },
+  "rec": {
+   "title": "A comprehensive survey of the machine learning pipeline for wildfire risk prediction and assessment",
+   "first_author": "Naveed Ejaz",
+   "year": "2025",
+   "venue_or_arxiv": "Ecological Informatics (Elsevier)",
+   "url": "https://doi.org/10.1016/j.ecoinf.2025.103325",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "data acquisition/feature engineering",
+    "risk modeling",
+    "susceptibility mapping",
+    "uncertainty quantification"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "End-to-end ML-pipeline survey for wildfire risk, from data acquisition to susceptibility mapping and uncertainty; no new models tested."
+  }
+ },
+ {
+  "title": "Three Decades of GeoAI for Wildfire Science: A Systematic and Meta-Analysis Review",
+  "panels": {
+   "claude": {
+    "title": "Three Decades of GeoAI for Wildfire Science: A Systematic and Meta-Analysis Review",
+    "first_author": "Mohammad Marjani",
+    "year": "2026",
+    "venue_or_arxiv": "Remote Sensing (MDPI)",
+    "url": "https://doi.org/10.3390/rs18121874",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "burned area mapping",
+     "wildfire detection",
+     "susceptibility mapping",
+     "fuel mapping (flagged gap)",
+     "recovery (flagged gap)"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "30-year meta-analysis of 449 GeoAI papers on burned-area mapping, detection, and susceptibility; quantifies literature trends, not new models."
+   }
+  },
+  "rec": {
+   "title": "Three Decades of GeoAI for Wildfire Science: A Systematic and Meta-Analysis Review",
+   "first_author": "Mohammad Marjani",
+   "year": "2026",
+   "venue_or_arxiv": "Remote Sensing (MDPI)",
+   "url": "https://doi.org/10.3390/rs18121874",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "burned area mapping",
+    "wildfire detection",
+    "susceptibility mapping",
+    "fuel mapping (flagged gap)",
+    "recovery (flagged gap)"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "30-year meta-analysis of 449 GeoAI papers on burned-area mapping, detection, and susceptibility; quantifies literature trends, not new models."
+  }
+ },
+ {
+  "title": "AI for Wildfire Management: From Prediction to Detection, Simulation, and Impact Analysis-Bridging Lab Metrics and Real-World Validation",
+  "panels": {
+   "claude": {
+    "title": "AI for Wildfire Management: From Prediction to Detection, Simulation, and Impact Analysis—Bridging Lab Metrics and Real-World Validation",
+    "first_author": "Nicolas Caron",
+    "year": "2025",
+    "venue_or_arxiv": "AI (MDPI) 6(10):253 (DOI:10.3390/ai6100253)",
+    "url": "https://doi.org/10.3390/ai6100253",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "susceptibility mapping",
+     "prediction",
+     "detection",
+     "simulation",
+     "damage/impact assessment"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Broadest recent fire-AI survey (5 domains) with dataset taxonomy and lab-to-real-world evaluation guidance; abstract shows no original benchmark table."
+   }
+  },
+  "rec": {
+   "title": "AI for Wildfire Management: From Prediction to Detection, Simulation, and Impact Analysis-Bridging Lab Metrics and Real-World Validation",
+   "first_author": "Nicolas Caron",
+   "year": "2025",
+   "venue_or_arxiv": "AI (MDPI)",
+   "url": "https://doi.org/10.3390/ai6100253",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "susceptibility mapping",
+    "prediction",
+    "detection",
+    "simulation",
+    "impact assessment"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Broadest recent survey (5 task domains) adding dataset tables, evaluation guidance, and a deployment checklist; still runs zero own experiments."
+  }
+ },
+ {
+  "title": "Land8Fire: A Complete Study on Wildfire Segmentation Through Comprehensive Review, Human-Annotated Multispectral Dataset, and Extensive Benchmarking",
+  "panels": {
+   "claude": {
+    "title": "Land8Fire: A Complete Study on Wildfire Segmentation Through Comprehensive Review, Human-Annotated Multispectral Dataset, and Extensive Benchmarking",
+    "first_author": "unknown",
+    "year": "2025",
+    "venue_or_arxiv": "Remote Sensing (MDPI), doi:10.3390/rs17162776",
+    "url": "https://github.com/UARK-AICV/Land8Fire",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "active-fire/wildfire segmentation"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "20k+ Landsat-8 patches; reviews prior segmentation work and benchmarks UNet, DeepLabV3+, SegFormer, Mask2Former on one task."
+   }
+  },
+  "rec": {
+   "title": "Land8Fire: A Complete Study on Wildfire Segmentation Through Comprehensive Review, Human-Annotated Multispectral Dataset, and Extensive Benchmarking",
+   "first_author": "Anh Tran",
+   "year": "2025",
+   "venue_or_arxiv": "Remote Sensing (MDPI)",
+   "url": "https://doi.org/10.3390/rs17162776",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire segmentation"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Rare hybrid: a real literature review plus its own benchmarking (UNet, DeepLabV3+, SegFormer, Mask2Former) - but confined to one task."
+  }
+ },
+ {
+  "title": "WildfireSpreadTS: A dataset of multi-modal time series for wildfire spread prediction",
+  "panels": {
+   "claude": {
+    "title": "WildfireSpreadTS: A dataset of multi-modal time series for wildfire spread prediction",
+    "first_author": "Sebastian Gerard",
+    "year": "2023",
+    "venue_or_arxiv": "NeurIPS 2023 Datasets and Benchmarks Track",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/ebd545176bdaa9cd5d45954947bd74b7-Abstract-Datasets_and_Benchmarks.html",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "next-day wildfire spread prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "607 US fire events, 23-channel daily time series for 24h spread; dataset-focused paper with only light baseline validation."
+   },
+   "agy": {
+    "title": "WildfireSpreadTS: A dataset of multi-modal time series for wildfire spread prediction",
+    "first_author": "Sebastian Gerard",
+    "year": "2023",
+    "venue_or_arxiv": "NeurIPS 2023 Track on Datasets and Benchmarks",
+    "url": "https://github.com/SebastianGer/WildfireSpreadTS",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire progression prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "NeurIPS benchmark providing multi-modal time-series dataset and baselines specifically for next-day wildfire spread prediction."
+   }
+  },
+  "rec": {
+   "title": "WildfireSpreadTS: A dataset of multi-modal time series for wildfire spread prediction",
+   "first_author": "Sebastian Gerard",
+   "year": "2023",
+   "venue_or_arxiv": "NeurIPS 2023 Datasets and Benchmarks Track",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/ebd545176bdaa9cd5d45954947bd74b7-Abstract-Datasets_and_Benchmarks.html",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "next-day wildfire spread prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "607 US fire events, 23-channel daily time series for 24h spread; dataset-focused paper with only light baseline validation."
+  }
+ },
+ {
+  "title": "Next Day Wildfire Spread: A Machine Learning Dataset to Predict Wildfire Spreading From Remote-Sensing Data",
+  "panels": {
+   "claude": {
+    "title": "Next Day Wildfire Spread: A Machine Learning Dataset to Predict Wildfire Spreading From Remote-Sensing Data",
+    "first_author": "Fantine Huot",
+    "year": "2021",
+    "venue_or_arxiv": "IEEE Transactions on Geoscience and Remote Sensing; arXiv:2112.02447",
+    "url": "https://arxiv.org/abs/2112.02447",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "next-day wildfire spread prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Widely-used 64x64 US grid dataset; compares only a spatial neural net, logistic regression, and random forest."
+   }
+  },
+  "rec": {
+   "title": "Next Day Wildfire Spread: A Machine Learning Dataset to Predict Wildfire Spreading From Remote-Sensing Data",
+   "first_author": "Fantine Huot",
+   "year": "2021",
+   "venue_or_arxiv": "IEEE Transactions on Geoscience and Remote Sensing; arXiv:2112.02447",
+   "url": "https://arxiv.org/abs/2112.02447",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "next-day wildfire spread prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Widely-used 64x64 US grid dataset; compares only a spatial neural net, logistic regression, and random forest."
+  }
+ },
+ {
+  "title": "WildfireDB: An Open-Source Dataset Connecting Wildfire Occurrence with Relevant Determinants",
+  "panels": {
+   "claude": {
+    "title": "WildfireDB: An Open-Source Dataset Connecting Wildfire Occurrence with Relevant Determinants",
+    "first_author": "Samriddhi Singla",
+    "year": "2021",
+    "venue_or_arxiv": "NeurIPS 2021 Datasets and Benchmarks Track",
+    "url": "https://par.nsf.gov/biblio/10355140-wildfiredb-open-source-dataset-connecting-wildfire-occurrence-relevant-determinants",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "wildfire spread prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "17M-point US dataset linking weather, vegetation and topography to fire spread; reports a few baseline models."
+   }
+  },
+  "rec": {
+   "title": "WildfireDB: An Open-Source Dataset Connecting Wildfire Occurrence with Relevant Determinants",
+   "first_author": "Samriddhi Singla",
+   "year": "2021",
+   "venue_or_arxiv": "NeurIPS 2021 Datasets and Benchmarks Track",
+   "url": "https://par.nsf.gov/biblio/10355140-wildfiredb-open-source-dataset-connecting-wildfire-occurrence-relevant-determinants",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "wildfire spread prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "17M-point US dataset linking weather, vegetation and topography to fire spread; reports a few baseline models."
+  }
+ },
+ {
+  "title": "Improved Wildfire Spread Prediction with Time-Series Data and the WSTS+ Benchmark",
+  "panels": {
+   "claude": {
+    "title": "Improved Wildfire Spread Prediction with Time-Series Data and the WSTS+ Benchmark",
+    "first_author": "Saad Lahrichi",
+    "year": "2025",
+    "venue_or_arxiv": "WACV 2026; arXiv:2502.12003",
+    "url": "https://arxiv.org/abs/2502.12003",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "next-day / time-series wildfire spread prediction"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Doubles WildfireSpreadTS's years and geographic scope; benchmarks many existing spread strategies but only one task."
+   },
+   "agy": {
+    "title": "Improved Wildfire Spread Prediction with Time-Series Data and the WSTS+ Benchmark",
+    "first_author": "Saad Lahrichi",
+    "year": "2025",
+    "venue_or_arxiv": "IEEE/CVF WACV 2026",
+    "url": "https://arxiv.org/abs/2502.12003",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "spread prediction"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Extends WildfireSpreadTS into WSTS+, systematically benchmarking numerous recurrent, convolutional, and attention architectures for wildfire spread."
+   }
+  },
+  "rec": {
+   "title": "Improved Wildfire Spread Prediction with Time-Series Data and the WSTS+ Benchmark",
+   "first_author": "Saad Lahrichi",
+   "year": "2025",
+   "venue_or_arxiv": "WACV 2026; arXiv:2502.12003",
+   "url": "https://arxiv.org/abs/2502.12003",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "next-day / time-series wildfire spread prediction"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Doubles WildfireSpreadTS's years and geographic scope; benchmarks many existing spread strategies but only one task."
+  }
+ },
+ {
+  "title": "FireSentry: A Multi-Modal Spatio-temporal Benchmark Dataset for Fine-Grained Wildfire Spread Forecasting",
+  "panels": {
+   "claude": {
+    "title": "FireSentry: A Multi-Modal Spatio-temporal Benchmark Dataset for Fine-Grained Wildfire Spread Forecasting",
+    "first_author": "Nan Zhou",
+    "year": "2025",
+    "venue_or_arxiv": "KDD 2026 (ACM SIGKDD); arXiv:2512.03369",
+    "url": "https://arxiv.org/abs/2512.03369",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "fine-grained wildfire spread forecasting",
+     "fire-mask segmentation"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Sub-meter UAV video dataset; benchmarks physics-based, data-driven and generative spread models, single fire-behavior task."
+   },
+   "agy": {
+    "title": "FireSentry: A Multi-Modal Spatio-temporal Benchmark Dataset for Fine-Grained Wildfire Spread Forecasting",
+    "first_author": "Nan Zhou",
+    "year": "2025",
+    "venue_or_arxiv": "ACM SIGKDD 2026 (Datasets and Benchmarks Track)",
+    "url": "https://arxiv.org/abs/2512.03369",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "spread prediction",
+     "active-fire detection"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "High-resolution UAV thermal/RGB dataset benchmarking physics-based, data-driven, and generative diffusion models for fine-grained fire spread."
+   }
+  },
+  "rec": {
+   "title": "FireSentry: A Multi-Modal Spatio-temporal Benchmark Dataset for Fine-Grained Wildfire Spread Forecasting",
+   "first_author": "Nan Zhou",
+   "year": "2025",
+   "venue_or_arxiv": "KDD 2026 (ACM SIGKDD); arXiv:2512.03369",
+   "url": "https://arxiv.org/abs/2512.03369",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "fine-grained wildfire spread forecasting",
+    "fire-mask segmentation"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Sub-meter UAV video dataset; benchmarks physics-based, data-driven and generative spread models, single fire-behavior task."
+  }
+ },
+ {
+  "title": "Sen2Fire: A Challenging Benchmark Dataset for Wildfire Detection using Sentinel Data",
+  "panels": {
+   "claude": {
+    "title": "Sen2Fire: A Challenging Benchmark Dataset for Wildfire Detection using Sentinel Data",
+    "first_author": "Yonghao Xu",
+    "year": "2024",
+    "venue_or_arxiv": "IGARSS 2024; arXiv:2403.17884",
+    "url": "https://arxiv.org/abs/2403.17884",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "active-fire detection"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "2,466 Sentinel-2/5P patches for fire detection; evaluates spectral bands/indices rather than multiple learned models."
+   },
+   "agy": {
+    "title": "SEN2FIRE: A Challenging Benchmark Dataset for Wildfire Detection Using Sentinel Data",
+    "first_author": "Yonghao Xu",
+    "year": "2024",
+    "venue_or_arxiv": "IGARSS 2024",
+    "url": "https://doi.org/10.1109/igarss53475.2024.10641441",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire detection"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Benchmark dataset and deep learning baselines focusing specifically on satellite-based active wildfire detection using Sentinel-2."
+   }
+  },
+  "rec": {
+   "title": "Sen2Fire: A Challenging Benchmark Dataset for Wildfire Detection using Sentinel Data",
+   "first_author": "Yonghao Xu",
+   "year": "2024",
+   "venue_or_arxiv": "IGARSS 2024; arXiv:2403.17884",
+   "url": "https://arxiv.org/abs/2403.17884",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "active-fire detection"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "2,466 Sentinel-2/5P patches for fire detection; evaluates spectral bands/indices rather than multiple learned models."
+  }
+ },
+ {
+  "title": "Constructing a Real-World Benchmark for Early Wildfire Detection with the New PYRONEAR-2025 Dataset",
+  "panels": {
+   "claude": {
+    "title": "Constructing a Real-World Benchmark for Early Wildfire Detection with the New PYRONEAR-2025 Dataset",
+    "first_author": "Mateo Lostanlen",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2402.05349",
+    "url": "https://arxiv.org/abs/2402.05349",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "early wildfire/smoke detection"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "150k annotations across 640 real wildfires from camera networks for early smoke detection; tests one detector."
+   }
+  },
+  "rec": {
+   "title": "Constructing a Real-World Benchmark for Early Wildfire Detection with the New PYRONEAR-2025 Dataset",
+   "first_author": "Mateo Lostanlen",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2402.05349",
+   "url": "https://arxiv.org/abs/2402.05349",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "early wildfire/smoke detection"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "150k annotations across 640 real wildfires from camera networks for early smoke detection; tests one detector."
+  }
+ },
+ {
+  "title": "FASDD: An Open-access 100,000-level Flame and Smoke Detection Dataset for Deep Learning in Fire Detection",
+  "panels": {
+   "claude": {
+    "title": "FASDD: An Open-access 100,000-level Flame and Smoke Detection Dataset for Deep Learning in Fire Detection",
+    "first_author": "Ming Wang",
+    "year": "2023",
+    "venue_or_arxiv": "Earth System Science Data (ESSD) preprint",
+    "url": "https://essd.copernicus.org/preprints/essd-2023-73/",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "flame and smoke detection"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "120k+ CV/UAV/satellite images for flame-smoke object detection; benchmarks a handful of detectors including YOLOv5x."
+   }
+  },
+  "rec": {
+   "title": "FASDD: An Open-access 100,000-level Flame and Smoke Detection Dataset for Deep Learning in Fire Detection",
+   "first_author": "Ming Wang",
+   "year": "2023",
+   "venue_or_arxiv": "Earth System Science Data (ESSD) preprint",
+   "url": "https://essd.copernicus.org/preprints/essd-2023-73/",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "flame and smoke detection"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "120k+ CV/UAV/satellite images for flame-smoke object detection; benchmarks a handful of detectors including YOLOv5x."
+  }
+ },
+ {
+  "title": "SmokeBench: Evaluating Multimodal Large Language Models for Wildfire Smoke Detection",
+  "panels": {
+   "claude": {
+    "title": "SmokeBench: Evaluating Multimodal Large Language Models for Wildfire Smoke Detection",
+    "first_author": "Tianye Qi",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2512.11215; IEEE",
+    "url": "https://arxiv.org/abs/2512.11215",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "smoke classification",
+     "tile-based smoke localization",
+     "grid-based smoke localization",
+     "smoke detection"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Tests 7 MLLMs (GPT-4o, Gemini-2.5-Pro, Qwen2.5-VL, InternVL3, Idefics2, Unified-IO2, Grounding DINO) on smoke tasks; all fail at localization."
+   }
+  },
+  "rec": {
+   "title": "SmokeBench: Evaluating Multimodal Large Language Models for Wildfire Smoke Detection",
+   "first_author": "Tianye Qi",
+   "year": "2025",
+   "venue_or_arxiv": "WACV 2026; arXiv:2512.11215",
+   "url": "https://arxiv.org/abs/2512.11215",
+   "verified_by_fetch": true,
+   "kind": "llm-eval",
+   "fire_tasks": [
+    "wildfire smoke classification and localization"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Evaluates 7 MLLMs (GPT-4o, Gemini-2.5 Pro, Qwen2.5-VL, etc.) on smoke classification/localization; single task."
+  }
+ },
+ {
+  "title": "FLOGA: A machine learning ready dataset, a benchmark and a novel deep learning model for burnt area mapping with Sentinel-2",
+  "panels": {
+   "claude": {
+    "title": "FLOGA: A machine learning ready dataset, a benchmark and a novel deep learning model for burnt area mapping with Sentinel-2",
+    "first_author": "Maria Sdraka",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2311.03339",
+    "url": "https://arxiv.org/abs/2311.03339",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "burned-area mapping (change detection)"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Greece Sentinel-2/MODIS burnt-area change-detection dataset; benchmarks many ML/DL methods plus a new model, single task."
+   }
+  },
+  "rec": {
+   "title": "FLOGA: A machine learning ready dataset, a benchmark and a novel deep learning model for burnt area mapping with Sentinel-2",
+   "first_author": "Maria Sdraka",
+   "year": "2023",
+   "venue_or_arxiv": "arXiv:2311.03339",
+   "url": "https://arxiv.org/abs/2311.03339",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "burned-area mapping (change detection)"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Greece Sentinel-2/MODIS burnt-area change-detection dataset; benchmarks many ML/DL methods plus a new model, single task."
+  }
+ },
+ {
+  "title": "A Dataset for Burned Area Delineation and Severity Estimation from Satellite Imagery",
+  "panels": {
+   "claude": {
+    "title": "A Dataset for Burned Area Delineation and Severity Estimation from Satellite Imagery",
+    "first_author": "Luca Colomba",
+    "year": "2022",
+    "venue_or_arxiv": "CIKM 2022 (31st ACM Intl. Conf. on Information and Knowledge Management)",
+    "url": "https://zenodo.org/records/6597139",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "burned-area delineation",
+     "burn severity estimation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "73 Sentinel-1/2 acquisitions for burned-area delineation and severity; ships a UNet baseline, no broader model sweep."
+   }
+  },
+  "rec": {
+   "title": "A Dataset for Burned Area Delineation and Severity Estimation from Satellite Imagery",
+   "first_author": "Luca Colomba",
+   "year": "2022",
+   "venue_or_arxiv": "CIKM 2022 (31st ACM Intl. Conf. on Information and Knowledge Management)",
+   "url": "https://zenodo.org/records/6597139",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "burned-area delineation",
+    "burn severity estimation"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "73 Sentinel-1/2 acquisitions for burned-area delineation and severity; ships a UNet baseline, no broader model sweep."
+  }
+ },
+ {
+  "title": "Deep Learning Methods for Daily Wildfire Danger Forecasting",
+  "panels": {
+   "claude": {
+    "title": "Deep Learning Methods for Daily Wildfire Danger Forecasting",
+    "first_author": "Ioannis Prapas",
+    "year": "2021",
+    "venue_or_arxiv": "NeurIPS 2021 Workshop on AI for Humanitarian Assistance and Disaster Response; arXiv:2111.02736",
+    "url": "https://arxiv.org/abs/2111.02736",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "daily fire danger forecasting"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Greece-wide daily danger forecasting; compares RF baseline to spatial/temporal/spatiotemporal DL models, single task."
+   }
+  },
+  "rec": {
+   "title": "Deep Learning Methods for Daily Wildfire Danger Forecasting",
+   "first_author": "Ioannis Prapas",
+   "year": "2021",
+   "venue_or_arxiv": "NeurIPS 2021 Workshop on AI for Humanitarian Assistance and Disaster Response; arXiv:2111.02736",
+   "url": "https://arxiv.org/abs/2111.02736",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "daily fire danger forecasting"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Greece-wide daily danger forecasting; compares RF baseline to spatial/temporal/spatiotemporal DL models, single task."
+  }
+ },
+ {
+  "title": "BCWildfire: A Long-term Multi-factor Dataset and Deep Learning Benchmark for Boreal Wildfire Risk Prediction",
+  "panels": {
+   "claude": {
+    "title": "BCWildfire: A Long-term Multi-factor Dataset and Deep Learning Benchmark for Boreal Wildfire Risk Prediction",
+    "first_author": "Zhengsen Xu",
+    "year": "2025",
+    "venue_or_arxiv": "AAAI-26 / arXiv:2511.17597",
+    "url": "https://arxiv.org/abs/2511.17597",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "next-day wildfire risk/occurrence prediction"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "25-year, 2.4M-sample dataset benchmarking CNN/linear/Transformer/Mamba architectures on one task, next-day wildfire risk; no survey component."
+   },
+   "agy": {
+    "title": "BCWildfire: A Long-term Multi-factor Dataset and Deep Learning Benchmark for Boreal Wildfire Risk Prediction",
+    "first_author": "Zhengsen Xu",
+    "year": "2026",
+    "venue_or_arxiv": "AAAI 2026",
+    "url": "https://doi.org/10.1609/aaai.v40i46.41299",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "fire danger and risk forecasting"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "A 25-year multi-factor benchmark evaluating CNN, Transformer, and Mamba architectures for boreal wildfire risk forecasting."
+   }
+  },
+  "rec": {
+   "title": "BCWildfire: A Long-term Multi-factor Dataset and Deep Learning Benchmark for Boreal Wildfire Risk Prediction",
+   "first_author": "Zhengsen Xu",
+   "year": "2025",
+   "venue_or_arxiv": "AAAI 2026; arXiv:2511.17597",
+   "url": "https://arxiv.org/abs/2511.17597",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "boreal wildfire risk prediction"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "25-year, 38-covariate British Columbia dataset; benchmarks CNN, linear, Transformer and Mamba models, single risk task."
+  }
+ },
+ {
+  "title": "Advanced Wildfire Prediction in Morocco: Developing a Deep Learning Dataset from Multisource Observations",
+  "panels": {
+   "claude": {
+    "title": "Advanced Wildfire Prediction in Morocco: Developing a Deep Learning Dataset from Multisource Observations",
+    "first_author": "Ayoub Jadouli",
+    "year": "2024",
+    "venue_or_arxiv": "IEEE Access; arXiv:2411.06202",
+    "url": "https://arxiv.org/abs/2411.06202",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "next-day wildfire occurrence prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Multisource Morocco dataset for next-day occurrence; compares ML/DL models against traditional baselines, single task."
+   }
+  },
+  "rec": {
+   "title": "Advanced Wildfire Prediction in Morocco: Developing a Deep Learning Dataset from Multisource Observations",
+   "first_author": "Ayoub Jadouli",
+   "year": "2024",
+   "venue_or_arxiv": "IEEE Access; arXiv:2411.06202",
+   "url": "https://arxiv.org/abs/2411.06202",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "next-day wildfire occurrence prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Multisource Morocco dataset for next-day occurrence; compares ML/DL models against traditional baselines, single task."
+  }
+ },
+ {
+  "title": "A Nationwide Benchmark for Wildfire Initial Attack Failure Prediction with Public Environmental Data",
+  "panels": {
+   "claude": {
+    "title": "A Nationwide Benchmark for Wildfire Initial Attack Failure Prediction with Public Environmental Data",
+    "first_author": "Runyang Xu",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2606.15529",
+    "url": "https://arxiv.org/abs/2606.15529",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "initial-attack failure / fire-escape risk prediction at discovery time"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "38,128 US fires from FPA-FOD/FIRMS/gridMET/LANDFIRE; evaluates 16 models on one occurrence-adjacent task."
+   },
+   "agy": {
+    "title": "A Nationwide Benchmark for Wildfire Initial Attack Failure Prediction with Public Environmental Data",
+    "first_author": "Runyang Xu",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv",
+    "url": "https://arxiv.org/abs/2606.15529",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "ignition and occurrence",
+     "fire suppression and containment"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "First nationwide machine learning benchmark for predicting wildfire initial attack failure using open environmental and topography covariates."
+   }
+  },
+  "rec": {
+   "title": "A Nationwide Benchmark for Wildfire Initial Attack Failure Prediction with Public Environmental Data",
+   "first_author": "Runyang Xu",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2606.15529",
+   "url": "https://arxiv.org/abs/2606.15529",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "initial-attack failure / fire-escape risk prediction at discovery time"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "38,128 US fires from FPA-FOD/FIRMS/gridMET/LANDFIRE; evaluates 16 models on one occurrence-adjacent task."
+  }
+ },
+ {
+  "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well?",
+  "panels": {
+   "claude": {
+    "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well?",
+    "first_author": "Yangshuang Xu",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2605.18911",
+    "url": "https://arxiv.org/abs/2605.18911",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "fire occupancy prediction",
+     "fire spread prediction",
+     "fire-relevant retrieval",
+     "fire regression tasks"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Introduces WildFIRE-FM, first wildfire-pretrained FM; compared vs 10 Earth-FM baselines across 4 wildfire task families with fixed-contract evaluation."
+   }
+  },
+  "rec": {
+   "title": "Does Your Wildfire Prediction Model Actually Work, or Just Score Well?",
+   "first_author": "Yangshuang Xu",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2605.18911",
+   "url": "https://arxiv.org/abs/2605.18911",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "fire occupancy prediction",
+    "spread prediction",
+    "retrieval",
+    "regression (spread-derived formulations)"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Introduces WILDFIRE-FM; rigorously benchmarks it against 10 Earth-FM baselines across 4 task formulations, but no landscape survey."
+  }
+ },
+ {
+  "title": "CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale",
+  "panels": {
+   "claude": {
+    "title": "CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale",
+    "first_author": "Jonathan Hyun",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2507.05178",
+    "url": "https://arxiv.org/abs/2507.05178",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "multi-agent wildfire-response coordination",
+     "spatial task allocation under partial observability",
+     "long-horizon planning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Procedural multi-agent wildfire-response simulator; 4 collaboration frameworks tested, all on GPT-4o only; related work surveys agent benchmarks, not fire tasks."
+   }
+  },
+  "rec": {
+   "title": "CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale",
+   "first_author": "Jonathan Hyun",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2507.05178",
+   "url": "https://arxiv.org/abs/2507.05178",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "multi-agent wildfire-response coordination",
+    "spatial task allocation under partial observability",
+    "long-horizon planning"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Procedural multi-agent wildfire-response simulator; 4 collaboration frameworks tested, all on GPT-4o only; related work surveys agent benchmarks, not fire tasks."
+  }
+ },
+ {
+  "title": "WildfireGPT: Tailored Large Language Model for Wildfire Analysis",
+  "panels": {
+   "claude": {
+    "title": "WildfireGPT: Tailored Large Language Model for Wildfire Analysis",
+    "first_author": "Yangxinyu Xie",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2402.07877",
+    "url": "https://arxiv.org/abs/2402.07877",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "wildfire risk decision-support Q&A for infrastructure/mitigation planning"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "GPT-4-based wildfire risk assistant; 4 expert case studies scored on correctness/relevance/entailment/accessibility (>93%); no cross-model comparison."
+   }
+  },
+  "rec": {
+   "title": "WildfireGPT: Tailored Large Language Model for Wildfire Analysis",
+   "first_author": "Yangxinyu Xie",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2402.07877",
+   "url": "https://arxiv.org/abs/2402.07877",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "wildfire risk decision-support Q&A for infrastructure/mitigation planning"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "GPT-4-based wildfire risk assistant; 4 expert case studies scored on correctness/relevance/entailment/accessibility (>93%); no cross-model comparison."
+  }
+ },
+ {
+  "title": "A RAG-Based Multi-Agent LLM System for Natural Hazard Resilience and Adaptation",
+  "panels": {
+   "claude": {
+    "title": "A RAG-Based Multi-Agent LLM System for Natural Hazard Resilience and Adaptation",
+    "first_author": "Yangxinyu Xie",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2504.17200; published as MARSHA, npj Climate Action 4:70 (2025)",
+    "url": "https://arxiv.org/abs/2504.17200",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "multi-hazard (incl. wildfire) risk decision-support case studies"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Multi-agent RAG extension of WildfireGPT (rebranded MARSHA); 10 expert-led case studies show it outperforms existing single-agent LLM hazard solutions."
+   }
+  },
+  "rec": {
+   "title": "A RAG-Based Multi-Agent LLM System for Natural Hazard Resilience and Adaptation",
+   "first_author": "Yangxinyu Xie",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2504.17200; published as MARSHA, npj Climate Action 4:70 (2025)",
+   "url": "https://arxiv.org/abs/2504.17200",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "multi-hazard (incl. wildfire) risk decision-support case studies"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Multi-agent RAG extension of WildfireGPT (rebranded MARSHA); 10 expert-led case studies show it outperforms existing single-agent LLM hazard solutions."
+  }
+ },
+ {
+  "title": "Assessing WildfireGPT: a comparative analysis of AI models for quantitative wildfire spread prediction",
+  "panels": {
+   "claude": {
+    "title": "Assessing WildfireGPT: a comparative analysis of AI models for quantitative wildfire spread prediction",
+    "first_author": "Meghana Ramesh",
+    "year": "2025",
+    "venue_or_arxiv": "Natural Hazards 121 (DOI:10.1007/s11069-025-07344-7)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12276125/",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "quantitative wildfire spread / fire radiative power prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Compares WildfireGPT against TabNet/Random Forest/XGBoost/LightGBM on one task, FRP spread prediction; no fire task-landscape survey."
+   }
+  },
+  "rec": {
+   "title": "Assessing WildfireGPT: a comparative analysis of AI models for quantitative wildfire spread prediction",
+   "first_author": "Meghana Ramesh",
+   "year": "2025",
+   "venue_or_arxiv": "Natural Hazards (Dordrecht)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12276125/",
+   "verified_by_fetch": true,
+   "kind": "llm-eval",
+   "fire_tasks": [
+    "quantitative fire radiative power (FRP) spread prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Third-party test: WildfireGPT vs TabNet/RandomForest/XGBoost/LightGBM on FRP; WildfireGPT far worse (MAE 14.8 vs 0.055), warns against over-reliance."
+  }
+ },
+ {
+  "title": "Large Language Models in Fire Engineering: An Examination of Technical Questions Against Domain Knowledge",
+  "panels": {
+   "claude": {
+    "title": "Large Language Models in Fire Engineering: An Examination of Technical Questions Against Domain Knowledge",
+    "first_author": "Haley Hostetter",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2403.04795",
+    "url": "https://arxiv.org/abs/2403.04795",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "fire-protection-exam-style technical Q&A: structural fire design, prevention, evacuation, code compliance, suppression"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Compares ChatGPT vs Bard on fire-engineering technical questions resembling the Fire Protection Exam; ChatGPT scored higher on domain accuracy."
+   }
+  },
+  "rec": {
+   "title": "Large Language Models in Fire Engineering: An Examination of Technical Questions Against Domain Knowledge",
+   "first_author": "Haley Hostetter",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2403.04795",
+   "url": "https://arxiv.org/abs/2403.04795",
+   "verified_by_fetch": true,
+   "kind": "llm-eval",
+   "fire_tasks": [
+    "fire-protection-exam-style technical Q&A: structural fire design, prevention, evacuation, code compliance, suppression"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Compares ChatGPT vs Bard on fire-engineering technical questions resembling the Fire Protection Exam; ChatGPT scored higher on domain accuracy."
+  }
+ },
+ {
+  "title": "WildFireVQA: A Large-Scale Radiometric Thermal VQA Benchmark for Aerial Wildfire Monitoring",
+  "panels": {
+   "claude": {
+    "title": "WildFireVQA: A Large-Scale Radiometric Thermal VQA Benchmark for Aerial Wildfire Monitoring",
+    "first_author": "Mobin Habibpour",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2604.20190",
+    "url": "https://arxiv.org/abs/2604.20190",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "presence/detection",
+     "classification",
+     "distribution/segmentation",
+     "localization/direction",
+     "cross-modal RGB-thermal reasoning",
+     "UAV flight planning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "207K MCQs over 6,097 RGB-thermal UAV images spanning 6 wildfire-task categories; evaluates representative MLLMs, no fire-AI landscape survey."
+   }
+  },
+  "rec": {
+   "title": "WildFireVQA: A Large-Scale Radiometric Thermal VQA Benchmark for Aerial Wildfire Monitoring",
+   "first_author": "Mobin Habibpour",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2604.20190",
+   "url": "https://arxiv.org/abs/2604.20190",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "presence/detection",
+    "classification",
+    "distribution/segmentation",
+    "localization/direction",
+    "cross-modal RGB-thermal reasoning",
+    "UAV flight planning"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "207K MCQs over 6,097 RGB-thermal UAV images spanning 6 wildfire-task categories; evaluates representative MLLMs, no fire-AI landscape survey."
+  }
+ },
+ {
+  "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
+  "panels": {
+   "claude": {
+    "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
+    "first_author": "Mobin Habibpour",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2606.27128",
+    "url": "https://arxiv.org/abs/2606.27128",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "fire detection",
+     "localization",
+     "distribution/coverage estimation",
+     "cross-modal thermal-RGB reasoning",
+     "flight planning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "34 MCQs/image across 6 operational categories for UAV wildfire scenes; MLLM baselines struggle with smoke-obscured fires and burn-area coverage."
+   },
+   "agy": {
+    "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
+    "first_author": "Mobin Habibpour",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv",
+    "url": "https://arxiv.org/abs/2606.27128",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "active-fire detection",
+     "smoke detection",
+     "fire danger and risk forecasting"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Physically-grounded UAV visual question answering benchmark evaluating multimodal LLMs on fire detection, flame intensity, and smoke reasoning."
+   }
+  },
+  "rec": {
+   "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
+   "first_author": "Mobin Habibpour",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2606.27128",
+   "url": "https://arxiv.org/abs/2606.27128",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "fire detection",
+    "localization",
+    "distribution/coverage estimation",
+    "cross-modal thermal-RGB reasoning",
+    "flight planning"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "34 MCQs/image across 6 operational categories for UAV wildfire scenes; MLLM baselines struggle with smoke-obscured fires and burn-area coverage."
+  }
+ },
+ {
+  "title": "FireMM-IR: An Infrared-Enhanced Multi-Modal Large Language Model for Comprehensive Scene Understanding in Remote Sensing Forest Fire Monitoring",
+  "panels": {
+   "claude": {
+    "title": "FireMM-IR: An Infrared-Enhanced Multi-Modal Large Language Model for Comprehensive Scene Understanding in Remote Sensing Forest Fire Monitoring",
+    "first_author": "Jinghao Cao",
+    "year": "2026",
+    "venue_or_arxiv": "Sensors (Basel) 26(2):390",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12845588/",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "pixel-level fire/smoke segmentation",
+     "fire-scene captioning",
+     "spread-direction reasoning",
+     "instruction-driven fire detection"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "New RGB-IR fire MLLM plus 83K-pair instruct dataset; benchmarked vs 5 MLLMs (LLaVA-1.5, GeoChat, Mini-Gemini...) and 4 segmentation models."
+   },
+   "agy": {
+    "title": "FireMM-IR: An Infrared-Enhanced Multi-Modal Large Language Model for Comprehensive Scene Understanding in Remote Sensing Forest Fire Monitoring",
+    "first_author": "J. Cao",
+    "year": "2026",
+    "venue_or_arxiv": "Sensors",
+    "url": "https://doi.org/10.3390/s26020390",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "wildfire detection",
+     "fire scene understanding",
+     "cross-modal reasoning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Multimodal LLM benchmark and architecture evaluating cross-modal reasoning, fire scene understanding, and infrared perception."
+   }
+  },
+  "rec": {
+   "title": "FireMM-IR: An Infrared-Enhanced Multi-Modal Large Language Model for Comprehensive Scene Understanding in Remote Sensing Forest Fire Monitoring",
+   "first_author": "Jinghao Cao",
+   "year": "2026",
+   "venue_or_arxiv": "Sensors (Basel) 26(2):390",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12845588/",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "pixel-level fire/smoke segmentation",
+    "fire-scene captioning",
+    "spread-direction reasoning",
+    "instruction-driven fire detection"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "New RGB-IR fire MLLM plus 83K-pair instruct dataset; benchmarked vs 5 MLLMs (LLaVA-1.5, GeoChat, Mini-Gemini...) and 4 segmentation models."
+  }
+ },
+ {
+  "title": "Inaugural MOASEI Competition at AAMAS'2025: A Technical Report",
+  "panels": {
+   "claude": {
+    "title": "Inaugural MOASEI Competition at AAMAS'2025: A Technical Report",
+    "first_author": "Ceferino Patino",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2507.05469",
+    "url": "https://arxiv.org/abs/2507.05469",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "multi-agent wildfire-suppression resource allocation under dynamic agent/task openness"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "AAMAS'25 wildfire-track competition; 11 teams, 4 submitted solutions (GNN, CNN, predictive modeling, LLM-driven meta-optimization)."
+   }
+  },
+  "rec": {
+   "title": "Inaugural MOASEI Competition at AAMAS'2025: A Technical Report",
+   "first_author": "Ceferino Patino",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2507.05469",
+   "url": "https://arxiv.org/abs/2507.05469",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "multi-agent wildfire-suppression resource allocation under dynamic agent/task openness"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "AAMAS'25 wildfire-track competition; 11 teams, 4 submitted solutions (GNN, CNN, predictive modeling, LLM-driven meta-optimization)."
+  }
+ },
+ {
+  "title": "PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models",
+  "panels": {
+   "claude": {
+    "title": "PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models",
+    "first_author": "Valerio Marsocci",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2412.04204",
+    "url": "https://arxiv.org/abs/2412.04204",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire burn-scar segmentation (HLS Burn Scars)"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Multi-domain GFM benchmark: 9 GFMs plus 2 supervised baselines across 11 datasets; wildfire burn-scar segmentation is 1 of 11 tasks."
+   }
+  },
+  "rec": {
+   "title": "PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models",
+   "first_author": "Valerio Marsocci",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2412.04204",
+   "url": "https://arxiv.org/abs/2412.04204",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire burn-scar segmentation (HLS Burn Scars)"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Multi-domain GFM benchmark: 9 GFMs plus 2 supervised baselines across 11 datasets; wildfire burn-scar segmentation is 1 of 11 tasks."
+  }
+ },
+ {
+  "title": "ExEBench: Benchmarking Foundation Models on Extreme Earth Events",
+  "panels": {
+   "claude": {
+    "title": "ExEBench: Benchmarking Foundation Models on Extreme Earth Events",
+    "first_author": "Shan Zhao",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2505.08529",
+    "url": "https://arxiv.org/abs/2505.08529",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire detection/monitoring (one of 7 extreme-event categories)"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Multi-hazard foundation-model benchmark (7 extreme-event categories, 9 models); wildfire is one minor slice, not a dedicated fire survey or benchmark."
+   }
+  },
+  "rec": {
+   "title": "ExEBench: Benchmarking Foundation Models on Extreme Earth Events",
+   "first_author": "Shan Zhao",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2505.08529",
+   "url": "https://arxiv.org/abs/2505.08529",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire burn-scar segmentation (HLS Burn Scars)"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "7 extreme-event categories incl. wildfire; 9 foundation models (Prithvi, Prithvi-2, DOFA, SatMAE, ClimaX, AURORA...) evaluated, not all per task."
+  }
+ },
+ {
+  "title": "Geospatial Foundation Models to Enable Progress on Sustainable Development Goals",
+  "panels": {
+   "claude": {
+    "title": "Geospatial Foundation Models to Enable Progress on Sustainable Development Goals",
+    "first_author": "Pedram Ghamisi",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2505.24528",
+    "url": "https://arxiv.org/abs/2505.24528",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire impact / burn-scar assessment (HLS Burn Scar Scenes)"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "SustainFM: 17-SDG-aligned benchmark; 10 GFMs plus 2 baselines across 16 tasks; wildfire assessment is 1 of 16 sustainability tasks (SDG-13)."
+   }
+  },
+  "rec": {
+   "title": "Geospatial Foundation Models to Enable Progress on Sustainable Development Goals",
+   "first_author": "Pedram Ghamisi",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2505.24528",
+   "url": "https://arxiv.org/abs/2505.24528",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire impact / burn-scar assessment (HLS Burn Scar Scenes)"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "SustainFM: 17-SDG-aligned benchmark; 10 GFMs plus 2 baselines across 16 tasks; wildfire assessment is 1 of 16 sustainability tasks (SDG-13)."
+  }
+ },
+ {
+  "title": "Evaluating the Generalizability of Foundation Models for Extreme Environmental Events: Case Study of California Wildfire PM2.5",
+  "panels": {
+   "claude": {
+    "title": "Evaluating the Generalizability of Foundation Models for Extreme Environmental Events: Case Study of California Wildfire PM2.5",
+    "first_author": "Yongcan Huang",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2607.07951",
+    "url": "https://arxiv.org/abs/2607.07951",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire-smoke PM2.5 concentration forecasting"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "6 time-series FM configs (TimesFM, Chronos-2, Moirai-2, Time-MoE) vs LSTM/BiLSTM/Transformer on 1,375 CA wildfire incidents; FMs underperform."
+   },
+   "agy": {
+    "title": "Evaluating the Generalizability of Foundation Models for Extreme Environmental Events: Case Study of California Wildfire PM2.5",
+    "first_author": "Yongcan Huang",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2607.07951",
+    "url": "https://arxiv.org/abs/2607.07951",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire smoke PM2.5 forecasting",
+     "air quality threshold exceedance prediction"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Benchmarks six time-series foundation model variants against neural baselines across 1,375 California wildfire incidents; restricted to smoke forecasting."
+   }
+  },
+  "rec": {
+   "title": "Evaluating the Generalizability of Foundation Models for Extreme Environmental Events: Case Study of California Wildfire PM2.5",
+   "first_author": "Yongcan Huang",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2607.07951",
+   "url": "https://arxiv.org/abs/2607.07951",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire-smoke PM2.5 concentration forecasting"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "6 time-series FM configs (TimesFM, Chronos-2, Moirai-2, Time-MoE) vs LSTM/BiLSTM/Transformer on 1,375 CA wildfire incidents; FMs underperform."
+  }
+ },
+ {
+  "title": "Artificial intelligence in wildland–urban interface wildfire management: a two‑phase review combining bibliometric mapping and thematic analysis",
+  "panels": {
+   "agy": {
+    "title": "Artificial intelligence in wildland–urban interface wildfire management: a two‑phase review combining bibliometric mapping and thematic analysis",
+    "first_author": "Silva",
+    "year": "2026",
+    "venue_or_arxiv": "Natural Hazards",
+    "url": "https://doi.org/10.1007/s11069-026-08131-8",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "risk and vulnerability",
+     "human behavior and evacuation",
+     "fuel and vegetation",
+     "fire detection and monitoring",
+     "fire behavior and spread"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys 3,500+ AI wildfire publications and categorizes 52 WUI studies across five management themes, but conducts no empirical benchmarking."
+   }
+  },
+  "rec": {
+   "title": "Artificial intelligence in wildland–urban interface wildfire management: a two‑phase review combining bibliometric mapping and thematic analysis",
+   "first_author": "Silva",
+   "year": "2026",
+   "venue_or_arxiv": "Natural Hazards",
+   "url": "https://doi.org/10.1007/s11069-026-08131-8",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "risk and vulnerability",
+    "human behavior and evacuation",
+    "fuel and vegetation",
+    "fire detection and monitoring",
+    "fire behavior and spread"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Surveys 3,500+ AI wildfire publications and categorizes 52 WUI studies across five management themes, but conducts no empirical benchmarking."
+  }
+ },
+ {
+  "title": "A Review on Forest Fire Detection Techniques: Past, Present, and Sustainable Future",
+  "panels": {
+   "agy": {
+    "title": "A Review on Forest Fire Detection Techniques: Past, Present, and Sustainable Future",
+    "first_author": "Khan",
+    "year": "2026",
+    "venue_or_arxiv": "Sensors",
+    "url": "https://doi.org/10.3390/s26051609",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "early fire flame detection",
+     "smoke detection",
+     "optical sensor surveillance",
+     "UAV surveillance",
+     "satellite remote sensing"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Reviews historical to modern optical, IoT, UAV, and satellite forest fire detection methods; comprehensive taxonomy without running model benchmarks."
+   }
+  },
+  "rec": {
+   "title": "A Review on Forest Fire Detection Techniques: Past, Present, and Sustainable Future",
+   "first_author": "Khan",
+   "year": "2026",
+   "venue_or_arxiv": "Sensors",
+   "url": "https://doi.org/10.3390/s26051609",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "early fire flame detection",
+    "smoke detection",
+    "optical sensor surveillance",
+    "UAV surveillance",
+    "satellite remote sensing"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Reviews historical to modern optical, IoT, UAV, and satellite forest fire detection methods; comprehensive taxonomy without running model benchmarks."
+  }
+ },
+ {
+  "title": "A Comprehensive Review of Empirical and Dynamic Wildfire Simulators and Machine Learning Techniques used for the Prediction of Wildfire in Australia",
+  "panels": {
+   "agy": {
+    "title": "A Comprehensive Review of Empirical and Dynamic Wildfire Simulators and Machine Learning Techniques used for the Prediction of Wildfire in Australia",
+    "first_author": "Singh",
+    "year": "2025",
+    "venue_or_arxiv": "Technology, Knowledge and Learning",
+    "url": "https://doi.org/10.1007/s10758-025-09839-5",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire spread prediction",
+     "fire behavior modeling",
+     "operational simulation",
+     "spread rate forecasting"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Compares empirical/dynamic simulators (PHOENIX, SPARK) against ML models for wildfire spread in Australia, but performs no benchmarking experiments."
+   }
+  },
+  "rec": {
+   "title": "A Comprehensive Review of Empirical and Dynamic Wildfire Simulators and Machine Learning Techniques used for the Prediction of Wildfire in Australia",
+   "first_author": "Singh",
+   "year": "2025",
+   "venue_or_arxiv": "Technology, Knowledge and Learning",
+   "url": "https://doi.org/10.1007/s10758-025-09839-5",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "wildfire spread prediction",
+    "fire behavior modeling",
+    "operational simulation",
+    "spread rate forecasting"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Compares empirical/dynamic simulators (PHOENIX, SPARK) against ML models for wildfire spread in Australia, but performs no benchmarking experiments."
+  }
+ },
+ {
+  "title": "Challenges and Opportunities in Remote Sensing-Based Fuel Load Estimation for Wildfire Behavior and Management: A Comprehensive Review",
+  "panels": {
+   "agy": {
+    "title": "Challenges and Opportunities in Remote Sensing-Based Fuel Load Estimation for Wildfire Behavior and Management: A Comprehensive Review",
+    "first_author": "Abdollahi",
+    "year": "2025",
+    "venue_or_arxiv": "Remote Sensing",
+    "url": "https://doi.org/10.3390/rs17030415",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fuel load estimation",
+     "fuel type classification",
+     "fuel moisture assessment",
+     "biomass estimation"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Centering on wildfire fuel inputs, reviews optical, LiDAR, and radar remote sensing inversion and ML models without empirical benchmark trials."
+   }
+  },
+  "rec": {
+   "title": "Challenges and Opportunities in Remote Sensing-Based Fuel Load Estimation for Wildfire Behavior and Management: A Comprehensive Review",
+   "first_author": "Abdollahi",
+   "year": "2025",
+   "venue_or_arxiv": "Remote Sensing",
+   "url": "https://doi.org/10.3390/rs17030415",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "fuel load estimation",
+    "fuel type classification",
+    "fuel moisture assessment",
+    "biomass estimation"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Centering on wildfire fuel inputs, reviews optical, LiDAR, and radar remote sensing inversion and ML models without empirical benchmark trials."
+  }
+ },
+ {
+  "title": "Machine Learning and Deep Learning for Wildfire Spread Prediction: A Review",
+  "panels": {
+   "agy": {
+    "title": "Machine Learning and Deep Learning for Wildfire Spread Prediction: A Review",
+    "first_author": "Andrianarivony",
+    "year": "2024",
+    "venue_or_arxiv": "Fire",
+    "url": "https://doi.org/10.3390/fire7120482",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "wildfire spread prediction",
+     "fire perimeter propagation",
+     "rate of spread modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Thoroughly reviews ML and DL approaches for wildfire spread prediction and perimeter modeling, but does not conduct original benchmarking experiments."
+   }
+  },
+  "rec": {
+   "title": "Machine Learning and Deep Learning for Wildfire Spread Prediction: A Review",
+   "first_author": "Andrianarivony",
+   "year": "2024",
+   "venue_or_arxiv": "Fire",
+   "url": "https://doi.org/10.3390/fire7120482",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "wildfire spread prediction",
+    "fire perimeter propagation",
+    "rate of spread modeling"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Thoroughly reviews ML and DL approaches for wildfire spread prediction and perimeter modeling, but does not conduct original benchmarking experiments."
+  }
+ },
+ {
+  "title": "Review of Modern Forest Fire Detection Techniques: Innovations in Image Processing and Deep Learning",
+  "panels": {
+   "agy": {
+    "title": "Review of Modern Forest Fire Detection Techniques: Innovations in Image Processing and Deep Learning",
+    "first_author": "Özel",
+    "year": "2024",
+    "venue_or_arxiv": "Information",
+    "url": "https://doi.org/10.3390/info15090538",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "forest fire detection",
+     "smoke detection",
+     "flame segmentation",
+     "visual sensor monitoring"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Reviews computer vision, CNN architectures, and object detection frameworks for early forest fire detection without running standardized comparative benchmarks."
+   }
+  },
+  "rec": {
+   "title": "Review of Modern Forest Fire Detection Techniques: Innovations in Image Processing and Deep Learning",
+   "first_author": "Özel",
+   "year": "2024",
+   "venue_or_arxiv": "Information",
+   "url": "https://doi.org/10.3390/info15090538",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "forest fire detection",
+    "smoke detection",
+    "flame segmentation",
+    "visual sensor monitoring"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Reviews computer vision, CNN architectures, and object detection frameworks for early forest fire detection without running standardized comparative benchmarks."
+  }
+ },
+ {
+  "title": "A Brief Review of Machine Learning Algorithms in Forest Fires Science",
+  "panels": {
+   "agy": {
+    "title": "A Brief Review of Machine Learning Algorithms in Forest Fires Science",
+    "first_author": "Alkhatib",
+    "year": "2023",
+    "venue_or_arxiv": "Applied Sciences",
+    "url": "https://doi.org/10.3390/app13148275",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "forest fire susceptibility",
+     "ignition prediction",
+     "fire detection",
+     "fire behavior modeling"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Synthesizes machine learning algorithms used in forest fire prediction, detection, and susceptibility mapping, but runs no experiments."
+   }
+  },
+  "rec": {
+   "title": "A Brief Review of Machine Learning Algorithms in Forest Fires Science",
+   "first_author": "Alkhatib",
+   "year": "2023",
+   "venue_or_arxiv": "Applied Sciences",
+   "url": "https://doi.org/10.3390/app13148275",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "forest fire susceptibility",
+    "ignition prediction",
+    "fire detection",
+    "fire behavior modeling"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Synthesizes machine learning algorithms used in forest fire prediction, detection, and susceptibility mapping, but runs no experiments."
+  }
+ },
+ {
+  "title": "A review on early wildfire detection from unmanned aerial vehicles using deep learning-based computer vision algorithms",
+  "panels": {
+   "agy": {
+    "title": "A review on early wildfire detection from unmanned aerial vehicles using deep learning-based computer vision algorithms",
+    "first_author": "Bouguettaya",
+    "year": "2022",
+    "venue_or_arxiv": "Signal Processing",
+    "url": "https://doi.org/10.1016/j.sigpro.2021.108309",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "UAV fire detection",
+     "flame detection",
+     "smoke detection",
+     "aerial vision classification and segmentation"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Systematically reviews deep learning object detection and segmentation algorithms on UAV platforms for fire detection; compiles datasets but runs no tests."
+   }
+  },
+  "rec": {
+   "title": "A review on early wildfire detection from unmanned aerial vehicles using deep learning-based computer vision algorithms",
+   "first_author": "Bouguettaya",
+   "year": "2022",
+   "venue_or_arxiv": "Signal Processing",
+   "url": "https://doi.org/10.1016/j.sigpro.2021.108309",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "UAV fire detection",
+    "flame detection",
+    "smoke detection",
+    "aerial vision classification and segmentation"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Systematically reviews deep learning object detection and segmentation algorithms on UAV platforms for fire detection; compiles datasets but runs no tests."
+  }
+ },
+ {
+  "title": "A Review on Early Forest Fire Detection Systems Using Optical Remote Sensing",
+  "panels": {
+   "agy": {
+    "title": "A Review on Early Forest Fire Detection Systems Using Optical Remote Sensing",
+    "first_author": "Barmpoutis",
+    "year": "2020",
+    "venue_or_arxiv": "Sensors",
+    "url": "https://doi.org/10.3390/s20226442",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "optical remote sensing fire detection",
+     "smoke detection",
+     "flame detection",
+     "terrestrial and aerial early warning"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Surveys optical remote sensing and early computer vision detection systems (terrestrial, UAV, satellite); taxonomy only with no comparative experiments."
+   }
+  },
+  "rec": {
+   "title": "A Review on Early Forest Fire Detection Systems Using Optical Remote Sensing",
+   "first_author": "Barmpoutis",
+   "year": "2020",
+   "venue_or_arxiv": "Sensors",
+   "url": "https://doi.org/10.3390/s20226442",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "optical remote sensing fire detection",
+    "smoke detection",
+    "flame detection",
+    "terrestrial and aerial early warning"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Surveys optical remote sensing and early computer vision detection systems (terrestrial, UAV, satellite); taxonomy only with no comparative experiments."
+  }
+ },
+ {
+  "title": "A Review of the Applications of Remote Sensing in Fire Ecology",
+  "panels": {
+   "agy": {
+    "title": "A Review of the Applications of Remote Sensing in Fire Ecology",
+    "first_author": "Szpakowski",
+    "year": "2019",
+    "venue_or_arxiv": "Remote Sensing",
+    "url": "https://doi.org/10.3390/rs11222638",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "fuel condition and moisture",
+     "active fire detection and radiative power",
+     "burn severity",
+     "burned area mapping",
+     "post-fire vegetation recovery"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 1,
+    "note": "Comprehensive remote-sensing review covering pre-, active-, and post-fire ecological applications and satellite indices, without machine learning benchmarking."
+   }
+  },
+  "rec": {
+   "title": "A Review of the Applications of Remote Sensing in Fire Ecology",
+   "first_author": "Szpakowski",
+   "year": "2019",
+   "venue_or_arxiv": "Remote Sensing",
+   "url": "https://doi.org/10.3390/rs11222638",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "fuel condition and moisture",
+    "active fire detection and radiative power",
+    "burn severity",
+    "burned area mapping",
+    "post-fire vegetation recovery"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 1,
+   "note": "Comprehensive remote-sensing review covering pre-, active-, and post-fire ecological applications and satellite indices, without machine learning benchmarking."
+  }
+ },
+ {
+  "title": "From Benchmark Reuse to Benchmark Audit: A Version-Aware Re-Evaluation of a Public MODIS Wildfire Benchmark with Uncertainty, Sensitivity, and Calibration Analysis",
+  "panels": {
+   "agy": {
+    "title": "From Benchmark Reuse to Benchmark Audit: A Version-Aware Re-Evaluation of a Public MODIS Wildfire Benchmark with Uncertainty, Sensitivity, and Calibration Analysis",
+    "first_author": "guo",
+    "year": "2026",
+    "venue_or_arxiv": "Research Square",
+    "url": "https://doi.org/10.21203/rs.3.rs-10476655/v1",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire occurrence classification",
+     "remote sensing fire prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Audits a public MODIS wildfire occurrence benchmark dataset with sensitivity and calibration analysis, but focuses narrowly on a single occurrence task."
+   }
+  },
+  "rec": {
+   "title": "From Benchmark Reuse to Benchmark Audit: A Version-Aware Re-Evaluation of a Public MODIS Wildfire Benchmark with Uncertainty, Sensitivity, and Calibration Analysis",
+   "first_author": "guo",
+   "year": "2026",
+   "venue_or_arxiv": "Research Square",
+   "url": "https://doi.org/10.21203/rs.3.rs-10476655/v1",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire occurrence classification",
+    "remote sensing fire prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Audits a public MODIS wildfire occurrence benchmark dataset with sensitivity and calibration analysis, but focuses narrowly on a single occurrence task."
+  }
+ },
+ {
+  "title": "Next Day Wildfire Spread: A Machine Learning Data Set to Predict Wildfire Spreading from Remote-Sensing Data",
+  "panels": {
+   "agy": {
+    "title": "Next Day Wildfire Spread: A Machine Learning Data Set to Predict Wildfire Spreading from Remote-Sensing Data",
+    "first_author": "Fantine Huot",
+    "year": "2021",
+    "venue_or_arxiv": "arXiv:2112.02447",
+    "url": "https://arxiv.org/abs/2112.02447",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "wildfire progression prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Influential 2D wildfire spread benchmark integrating satellite fire masks with weather, topography, and vegetation explanatory variables."
+   }
+  },
+  "rec": {
+   "title": "Next Day Wildfire Spread: A Machine Learning Data Set to Predict Wildfire Spreading from Remote-Sensing Data",
+   "first_author": "Fantine Huot",
+   "year": "2022",
+   "venue_or_arxiv": "IEEE Transactions on Geoscience and Remote Sensing",
+   "url": "https://arxiv.org/abs/2112.02447",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "spread prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Foundational remote sensing dataset establishing the next-day fire spread prediction formulation with CNN and classical ML baselines."
+  }
+ },
+ {
+  "title": "Aerial Imagery Pile burn detection using Deep Learning: the FLAME dataset",
+  "panels": {
+   "agy": {
+    "title": "Aerial imagery pile burn detection using deep learning: The FLAME dataset",
+    "first_author": "Alireza Shamsoshoara",
+    "year": "2021",
+    "venue_or_arxiv": "Computer Networks",
+    "url": "https://doi.org/10.1016/j.comnet.2021.108001",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "wildfire detection",
+     "fire segmentation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "UAV aerial imaging dataset and baseline CNN evaluations for fire detection and flame segmentation during prescribed burns."
+   }
+  },
+  "rec": {
+   "title": "Aerial Imagery Pile burn detection using Deep Learning: the FLAME dataset",
+   "first_author": "Alireza Shamsoshoara",
+   "year": "2021",
+   "venue_or_arxiv": "Computer Networks",
+   "url": "https://arxiv.org/abs/2012.14036",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "active-fire detection",
+    "smoke detection"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Pioneering UAV aerial imagery dataset and benchmark providing video frames and pixel-level masks for fire and smoke segmentation."
+  }
+ },
+ {
+  "title": "Boreal Forest Fire: UAV-collected Wildfire Detection and Smoke Segmentation Dataset",
+  "panels": {
+   "agy": {
+    "title": "Boreal Forest Fire: UAV-collected Wildfire Detection and Smoke Segmentation Dataset",
+    "first_author": "Joonas Pesonen",
+    "year": "2025",
+    "venue_or_arxiv": "Scientific Data",
+    "url": "https://doi.org/10.1038/s41597-025-05634-0",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "wildfire detection",
+     "smoke segmentation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "UAV dataset and benchmark for boreal forest fire flame detection and smoke segmentation with foundation model assisted annotations."
+   }
+  },
+  "rec": {
+   "title": "Boreal Forest Fire: UAV-collected Wildfire Detection and Smoke Segmentation Dataset",
+   "first_author": "Jesse Pesonen",
+   "year": "2025",
+   "venue_or_arxiv": "Nature Scientific Data",
+   "url": "https://doi.org/10.1038/s41597-025-05634-0",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "active-fire detection",
+    "smoke detection"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "UAV-collected boreal dataset providing bounding boxes and segmentation masks for early wildfire detection and smoke delineation."
+  }
+ },
+ {
+  "title": "A high-resolution spatiotemporal wildfire propagation dataset for the Mediterranean and Europe",
+  "panels": {
+   "agy": {
+    "title": "A high-resolution spatiotemporal wildfire propagation dataset for the Mediterranean and Europe",
+    "first_author": "Sarah Müller",
+    "year": "2026",
+    "venue_or_arxiv": "Nature Scientific Data",
+    "url": "https://doi.org/10.1038/s41597-026-06965-2",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "burned-area mapping",
+     "spread prediction"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "High-resolution spatiotemporal dataset of 320 consecutive burned area perimeters across 103 Mediterranean wildfire events."
+   }
+  },
+  "rec": {
+   "title": "A high-resolution spatiotemporal wildfire propagation dataset for the Mediterranean and Europe",
+   "first_author": "Sarah Müller",
+   "year": "2026",
+   "venue_or_arxiv": "Nature Scientific Data",
+   "url": "https://doi.org/10.1038/s41597-026-06965-2",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "burned-area mapping",
+    "spread prediction"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "High-resolution spatiotemporal dataset of 320 consecutive burned area perimeters across 103 Mediterranean wildfire events."
+  }
+ },
+ {
+  "title": "Wildfire-S1S2-Canada: A Large-Scale Sentinel-1/2 Wildfire Burned Area Mapping Dataset Based on the 2017–2019 Wildfires in Canada",
+  "panels": {
+   "agy": {
+    "title": "Wildfire-S1S2-Canada: A Large-Scale Sentinel-1/2 Wildfire Burned Area Mapping Dataset Based on the 2017–2019 Wildfires in Canada",
+    "first_author": "Zheng Zhang",
+    "year": "2022",
+    "venue_or_arxiv": "IEEE IGARSS 2022",
+    "url": "https://doi.org/10.1109/igarss46834.2022.9884275",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "burned-area mapping"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Sentinel-1/2 fusion dataset covering Canadian wildfires, benchmarking deep segmentation networks for burned area delineation."
+   }
+  },
+  "rec": {
+   "title": "Wildfire-S1S2-Canada: A Large-Scale Sentinel-1/2 Wildfire Burned Area Mapping Dataset Based on the 2017–2019 Wildfires in Canada",
+   "first_author": "Zheng Zhang",
+   "year": "2022",
+   "venue_or_arxiv": "IEEE IGARSS 2022",
+   "url": "https://doi.org/10.1109/igarss46834.2022.9884275",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "burned-area mapping"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Sentinel-1/2 fusion dataset covering Canadian wildfires, benchmarking deep segmentation networks for burned area delineation."
+  }
+ },
+ {
+  "title": "WildfireVLM: AI-powered Analysis for Early Wildfire Detection and Risk Assessment Using Satellite Imagery",
+  "panels": {
+   "agy": {
+    "title": "WildfireVLM: AI-powered Analysis for Early Wildfire Detection and Risk Assessment Using Satellite Imagery",
+    "first_author": "Aydin Ayanzadeh",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2602.13305",
+    "url": "https://arxiv.org/abs/2602.13305",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "early wildfire detection",
+     "smoke plume detection",
+     "language-driven risk assessment",
+     "response recommendation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Combines YOLOv12 satellite detection with MLLM risk reasoning evaluated via LLM-as-judge; lacks cross-model benchmarking and multi-phase survey."
+   }
+  },
+  "rec": {
+   "title": "WildfireVLM: AI-powered Analysis for Early Wildfire Detection and Risk Assessment Using Satellite Imagery",
+   "first_author": "Aydin Ayanzadeh",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2602.13305",
+   "url": "https://arxiv.org/abs/2602.13305",
+   "verified_by_fetch": true,
+   "kind": "llm-eval",
+   "fire_tasks": [
+    "early wildfire detection",
+    "smoke plume detection",
+    "language-driven risk assessment",
+    "response recommendation"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Combines YOLOv12 satellite detection with MLLM risk reasoning evaluated via LLM-as-judge; lacks cross-model benchmarking and multi-phase survey."
+  }
+ },
+ {
+  "title": "Context-Aware Multi-Agent Architecture for Wildfire Insights",
+  "panels": {
+   "agy": {
+    "title": "Context-Aware Multi-Agent Architecture for Wildfire Insights",
+    "first_author": "Ashen Sandeep",
+    "year": "2026",
+    "venue_or_arxiv": "Sensors",
+    "url": "https://doi.org/10.3390/s26031070",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "wildfire visual question answering",
+     "predictive fire patterns",
+     "risk assessment",
+     "multimodal environmental data orchestration"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Multi-agent system evaluating large multimodal models with RAG on wildfire visual question answering across sensor and satellite inputs."
+   }
+  },
+  "rec": {
+   "title": "Context-Aware Multi-Agent Architecture for Wildfire Insights",
+   "first_author": "Ashen Sandeep",
+   "year": "2026",
+   "venue_or_arxiv": "Sensors",
+   "url": "https://doi.org/10.3390/s26031070",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "wildfire visual question answering",
+    "predictive fire patterns",
+    "risk assessment",
+    "multimodal environmental data orchestration"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Multi-agent system evaluating large multimodal models with RAG on wildfire visual question answering across sensor and satellite inputs."
+  }
+ },
+ {
+  "title": "WildfireKR: An LLM-Agent Decision Support Framework for Autonomous Wildfire Spread Simulation in South Korea",
+  "panels": {
+   "agy": {
+    "title": "WildfireKR: An LLM-Agent Decision Support Framework for Autonomous Wildfire Spread Simulation in South Korea",
+    "first_author": "Eungyu Park",
+    "year": "2026",
+    "venue_or_arxiv": "IEEE Access",
+    "url": "https://doi.org/10.1109/access.2026.3683905",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "autonomous wildfire spread simulation",
+     "LLM-agent decision support",
+     "wildfire behavior prediction"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "LLM-agent framework driving wildfire spread simulation and decision support in South Korea; focuses on simulation workflow rather than comparative benchmarking."
+   }
+  },
+  "rec": {
+   "title": "WildfireKR: An LLM-Agent Decision Support Framework for Autonomous Wildfire Spread Simulation in South Korea",
+   "first_author": "Eungyu Park",
+   "year": "2026",
+   "venue_or_arxiv": "IEEE Access",
+   "url": "https://doi.org/10.1109/access.2026.3683905",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "autonomous wildfire spread simulation",
+    "LLM-agent decision support",
+    "wildfire behavior prediction"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "LLM-agent framework driving wildfire spread simulation and decision support in South Korea; focuses on simulation workflow rather than comparative benchmarking."
+  }
+ },
+ {
+  "title": "Knowledge-Guided Large Language Models for Enhancing Agent-Based Wildfire Spatial Simulation",
+  "panels": {
+   "agy": {
+    "title": "Knowledge-Guided Large Language Models for Enhancing Agent-Based Wildfire Spatial Simulation",
+    "first_author": "Ying Nie",
+    "year": "2025",
+    "venue_or_arxiv": "Proceedings of the 8th ACM SIGSPATIAL International Workshop on Geospatial Simulation",
+    "url": "https://doi.org/10.1145/3764921.3770152",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "agent-based wildfire spatial simulation",
+     "knowledge-guided simulation",
+     "spatial behavior modeling"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Explores knowledge-guided LLMs to parameterize and steer agent-based spatial wildfire simulation; single-application proof-of-concept."
+   }
+  },
+  "rec": {
+   "title": "Knowledge-Guided Large Language Models for Enhancing Agent-Based Wildfire Spatial Simulation",
+   "first_author": "Ying Nie",
+   "year": "2025",
+   "venue_or_arxiv": "Proceedings of the 8th ACM SIGSPATIAL International Workshop on Geospatial Simulation",
+   "url": "https://doi.org/10.1145/3764921.3770152",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "agent-based wildfire spatial simulation",
+    "knowledge-guided simulation",
+    "spatial behavior modeling"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Explores knowledge-guided LLMs to parameterize and steer agent-based spatial wildfire simulation; single-application proof-of-concept."
+  }
+ },
+ {
+  "title": "WFDroneBench: A Benchmark for Sensor Placement and Drone Routing for Wildfire Detection",
+  "panels": {
+   "agy": {
+    "title": "WFDroneBench: A Benchmark for Sensor Placement and Drone Routing for Wildfire Detection",
+    "first_author": "Romain Puech",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2609.11829",
+    "url": "https://arxiv.org/abs/2609.11829",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "early wildfire detection",
+     "drone routing in dynamic fire zones",
+     "sensor placement optimization"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Benchmarking library with 7,746 simulated fire scenarios evaluating sensor placement and drone routing algorithms; optimization-centric, not foundation model focused."
+   }
+  },
+  "rec": {
+   "title": "WFDroneBench: A Benchmark for Sensor Placement and Drone Routing for Wildfire Detection",
+   "first_author": "Romain Puech",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2609.11829",
+   "url": "https://arxiv.org/abs/2609.11829",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "early wildfire detection",
+    "drone routing in dynamic fire zones",
+    "sensor placement optimization"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Benchmarking library with 7,746 simulated fire scenarios evaluating sensor placement and drone routing algorithms; optimization-centric, not foundation model focused."
+  }
+ },
+ {
+  "title": "Multi-Agent Reinforcement Learning for Autonomous UAV Exploration in Wildfire Response",
+  "panels": {
+   "agy": {
+    "title": "Multi-Agent Reinforcement Learning for Autonomous UAV Exploration in Wildfire Response",
+    "first_author": "Caden Chandra",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2609.10433",
+    "url": "https://arxiv.org/abs/2609.10433",
+    "verified_by_fetch": true,
+    "kind": "agent-benchmark",
+    "fire_tasks": [
+     "UAV navigation in simulated fire",
+     "fire-boundary tracking",
+     "autonomous wildfire exploration"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Deep reinforcement learning benchmark for multi-UAV navigation and fire-boundary tracking in simulated wildfire environments."
+   }
+  },
+  "rec": {
+   "title": "Multi-Agent Reinforcement Learning for Autonomous UAV Exploration in Wildfire Response",
+   "first_author": "Caden Chandra",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2609.10433",
+   "url": "https://arxiv.org/abs/2609.10433",
+   "verified_by_fetch": true,
+   "kind": "agent-benchmark",
+   "fire_tasks": [
+    "UAV navigation in simulated fire",
+    "fire-boundary tracking",
+    "autonomous wildfire exploration"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Deep reinforcement learning benchmark for multi-UAV navigation and fire-boundary tracking in simulated wildfire environments."
+  }
+ },
+ {
+  "title": "Damage-TriageFormer: A Foundation-Model Framework for Typology-Based Building Damage Assessment from Mono-Temporal Imagery",
+  "panels": {
+   "agy": {
+    "title": "Damage-TriageFormer: A Foundation-Model Framework for Typology-Based Building Damage Assessment from Mono-Temporal Imagery",
+    "first_author": "Yiming Xiao",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2606.12248",
+    "url": "https://arxiv.org/abs/2606.12248",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "post-wildfire building damage triage",
+     "structural damage classification from mono-temporal imagery"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Foundation-model framework evaluated on post-disaster imagery including the 2025 Los Angeles wildfire complex for building damage triage."
+   }
+  },
+  "rec": {
+   "title": "Damage-TriageFormer: A Foundation-Model Framework for Typology-Based Building Damage Assessment from Mono-Temporal Imagery",
+   "first_author": "Yiming Xiao",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2606.12248",
+   "url": "https://arxiv.org/abs/2606.12248",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "post-wildfire building damage triage",
+    "structural damage classification from mono-temporal imagery"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Foundation-model framework evaluated on post-disaster imagery including the 2025 Los Angeles wildfire complex for building damage triage."
+  }
+ },
+ {
+  "title": "Multilingual Agent System for Inclusive Wildfire Evacuation Guidance",
+  "panels": {
+   "agy": {
+    "title": "Multilingual Agent System for Inclusive Wildfire Evacuation Guidance",
+    "first_author": "Shruti Kulkarni",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2609.03301",
+    "url": "https://arxiv.org/abs/2609.03301",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "wildfire evacuation guidance",
+     "fire danger level prediction",
+     "polygon-avoidant routing",
+     "multilingual conversational guidance"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "none",
+    "closeness": 1,
+    "note": "Context-aware multilingual agent system (BEACON) for real-time wildfire evacuation guidance, combining danger prediction with conversational interaction."
+   }
+  },
+  "rec": {
+   "title": "Multilingual Agent System for Inclusive Wildfire Evacuation Guidance",
+   "first_author": "Shruti Kulkarni",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2609.03301",
+   "url": "https://arxiv.org/abs/2609.03301",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "wildfire evacuation guidance",
+    "fire danger level prediction",
+    "polygon-avoidant routing",
+    "multilingual conversational guidance"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "none",
+   "closeness": 1,
+   "note": "Context-aware multilingual agent system (BEACON) for real-time wildfire evacuation guidance, combining danger prediction with conversational interaction."
+  }
+ },
+ {
+  "title": "Proof of Concept: Multi-Target Wildfire Risk Prediction and Large Language Model Synthesis",
+  "panels": {
+   "agy": {
+    "title": "Proof of Concept: Multi-Target Wildfire Risk Prediction and Large Language Model Synthesis",
+    "first_author": "Nicolas Caron",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2601.11686",
+    "url": "https://arxiv.org/abs/2601.11686",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "multi-target wildfire risk prediction",
+     "operational report synthesis",
+     "resource mobilization reasoning"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 1,
+    "note": "Hybrid proof-of-concept coupling multi-target risk prediction models with LLMs to generate structured decision reports for firefighters."
+   }
+  },
+  "rec": {
+   "title": "Proof of Concept: Multi-Target Wildfire Risk Prediction and Large Language Model Synthesis",
+   "first_author": "Nicolas Caron",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2601.11686",
+   "url": "https://arxiv.org/abs/2601.11686",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "multi-target wildfire risk prediction",
+    "operational report synthesis",
+    "resource mobilization reasoning"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "Hybrid proof-of-concept coupling multi-target risk prediction models with LLMs to generate structured decision reports for firefighters."
+  }
+ },
+ {
+  "title": "DisasterBench: A Multimodal Benchmark for UAV-Based Disaster Response in Complex Environments",
+  "panels": {
+   "claude": {
+    "title": "DisasterBench: A Multimodal Benchmark for UAV-Based Disaster Response in Complex Environments",
+    "first_author": "Tan Zhang",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2606.06217",
+    "url": "https://arxiv.org/abs/2606.06217",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Task taxonomy over 14 disaster scenes/9 stages plus benchmark of 21 MLLMs and a new DisasterVL model. Closest adjacent-domain hybrid; not fire."
+   }
+  },
+  "rec": {
+   "title": "DisasterBench: A Multimodal Benchmark for UAV-Based Disaster Response in Complex Environments",
+   "first_author": "Tan Zhang",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2606.06217",
+   "url": "https://arxiv.org/abs/2606.06217",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "fire/disaster scene understanding",
+    "causal attribution",
+    "propagation prediction",
+    "damage analysis",
+    "decision-oriented response reasoning"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "UAV disaster-response benchmark, 14 scene types incl. fire, 9 tasks, 21 MLLMs (Qwen2-VL, GPT, Claude, Gemini) evaluated; fire is one of many hazards."
+  }
+ },
+ {
+  "title": "Harnessing Large Language Models for Disaster Management: A Survey",
+  "panels": {
+   "claude": {
+    "title": "Harnessing Large Language Models for Disaster Management: A Survey",
+    "first_author": "Zhenyu Lei",
+    "year": "2025",
+    "venue_or_arxiv": "ACL Findings 2025; arXiv:2501.06932",
+    "url": "https://arxiv.org/abs/2501.06932",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [
+     "none confirmed fire-specific; general disaster-phase taxonomy"
+    ],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 0,
+    "note": "Pure LLM-for-disaster-management taxonomy/survey; no experiments, no per-task model results; wildfire not specifically confirmed in content."
+   }
+  },
+  "rec": {
+   "title": "Harnessing Large Language Models for Disaster Management: A Survey",
+   "first_author": "Zhenyu Lei",
+   "year": "2025",
+   "venue_or_arxiv": "ACL Findings 2025; arXiv:2501.06932",
+   "url": "https://arxiv.org/abs/2501.06932",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [
+    "none confirmed fire-specific; general disaster-phase taxonomy"
+   ],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 0,
+   "note": "Pure LLM-for-disaster-management taxonomy/survey; no experiments, no per-task model results; wildfire not specifically confirmed in content."
+  }
+ },
+ {
+  "title": "DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management",
+  "panels": {
+   "claude": {
+    "title": "DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management",
+    "first_author": "Zhitong Chen",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2601.03670",
+    "url": "https://arxiv.org/abs/2601.03670",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "disaster QA under noisy/conflicting evidence across 8 general categories (meteorological, geophysical, hydrological, climatological, biological, technological, extraterrestrial, conflict); wildfire not explicitly named"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "3,000-question disaster-QA benchmark, 20 LLMs (GPT-5.2, Gemini-3-Pro, Llama-3, Qwen-3...); adjacent general-disaster template, fire coverage unconfirmed."
+   }
+  },
+  "rec": {
+   "title": "DisastQA: A Comprehensive Benchmark for Evaluating Question Answering in Disaster Management",
+   "first_author": "Zhitong Chen",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2601.03670",
+   "url": "https://arxiv.org/abs/2601.03670",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "disaster QA under noisy/conflicting evidence across 8 general categories (meteorological, geophysical, hydrological, climatological, biological, technological, extraterrestrial, conflict); wildfire not explicitly named"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "3,000-question disaster-QA benchmark, 20 LLMs (GPT-5.2, Gemini-3-Pro, Llama-3, Qwen-3...); adjacent general-disaster template, fire coverage unconfirmed."
+  }
+ },
+ {
+  "title": "DisastIR: A Comprehensive Information Retrieval Benchmark for Disaster Management",
+  "panels": {
+   "claude": {
+    "title": "DisastIR: A Comprehensive Information Retrieval Benchmark for Disaster Management",
+    "first_author": "Kai Yin",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2505.15856",
+    "url": "https://arxiv.org/abs/2505.15856",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "disaster information retrieval across 48 tasks/8 categories/301 event types; wildfire not explicitly confirmed"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "none",
+    "closeness": 0,
+    "note": "30 retrieval models, 9,600 queries, 1.3M query-passage pairs across general disaster categories; adjacent template, no confirmed wildfire task."
+   }
+  },
+  "rec": {
+   "title": "DisastIR: A Comprehensive Information Retrieval Benchmark for Disaster Management",
+   "first_author": "Kai Yin",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2505.15856",
+   "url": "https://arxiv.org/abs/2505.15856",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "disaster information retrieval across 48 tasks/8 categories/301 event types; wildfire not explicitly confirmed"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "none",
+   "closeness": 0,
+   "note": "30 retrieval models, 9,600 queries, 1.3M query-passage pairs across general disaster categories; adjacent template, no confirmed wildfire task."
+  }
+ },
+ {
+  "title": "EarthNets: Empowering AI in Earth Observation",
+  "panels": {
+   "claude": {
+    "title": "EarthNets: Empowering AI in Earth Observation",
+    "first_author": "Zhitong Xiong",
+    "year": "2022",
+    "venue_or_arxiv": "arXiv:2210.04936",
+    "url": "https://arxiv.org/abs/2210.04936",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "full",
+    "closeness": 0,
+    "note": "Reviews 500+ Earth-observation datasets, then builds a 12-task benchmark evaluating many DL models. Strongest adjacent-domain template; no fire content."
+   }
+  },
+  "rec": {
+   "title": "EarthNets: Empowering AI in Earth Observation",
+   "first_author": "Zhitong Xiong",
+   "year": "2022",
+   "venue_or_arxiv": "arXiv:2210.04936",
+   "url": "https://arxiv.org/abs/2210.04936",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "full",
+   "closeness": 0,
+   "note": "Reviews 500+ Earth-observation datasets, then builds a 12-task benchmark evaluating many DL models. Strongest adjacent-domain template; no fire content."
+  }
+ },
+ {
+  "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
+  "panels": {
+   "claude": {
+    "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
+    "first_author": "Alexandre Lacoste",
+    "year": "2023",
+    "venue_or_arxiv": "NeurIPS 2023 (Datasets & Benchmarks) / arXiv:2306.03831",
+    "url": "https://arxiv.org/abs/2306.03831",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "12-task EO benchmark (6 classification+6 segmentation), 20 baselines; light related-work only, no task-landscape survey. Adjacent-domain template, no fire."
+   },
+   "agy": {
+    "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
+    "first_author": "Alexandre Lacoste",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2306.03831",
+    "url": "https://arxiv.org/abs/2306.03831",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Earth observation benchmark curating 12 tasks across remote sensing and evaluating 20 foundation and baseline models."
+   }
+  },
+  "rec": {
+   "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
+   "first_author": "Alexandre Lacoste",
+   "year": "2023",
+   "venue_or_arxiv": "NeurIPS 2023 (Datasets & Benchmarks) / arXiv:2306.03831",
+   "url": "https://arxiv.org/abs/2306.03831",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "12-task EO benchmark (6 classification+6 segmentation), 20 baselines; light related-work only, no task-landscape survey. Adjacent-domain template, no fire."
+  }
+ },
+ {
+  "title": "ChaosBench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate Prediction",
+  "panels": {
+   "claude": {
+    "title": "ChaosBench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate Prediction",
+    "first_author": "Juan Nathaniel",
+    "year": "2024",
+    "venue_or_arxiv": "NeurIPS 2024 (Oral) / arXiv:2402.00712",
+    "url": "https://arxiv.org/abs/2402.00712",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "S2S climate benchmark comparing 4 data-driven emulators plus national-agency physics baselines; light related-work, no landscape survey. No fire content."
+   }
+  },
+  "rec": {
+   "title": "ChaosBench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate Prediction",
+   "first_author": "Juan Nathaniel",
+   "year": "2024",
+   "venue_or_arxiv": "NeurIPS 2024 (Oral) / arXiv:2402.00712",
+   "url": "https://arxiv.org/abs/2402.00712",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "S2S climate benchmark comparing 4 data-driven emulators plus national-agency physics baselines; light related-work, no landscape survey. No fire content."
+  }
+ },
+ {
+  "title": "AI Foundation Models for Weather and Climate: Applications, Design, and Implementation",
+  "panels": {
+   "claude": {
+    "title": "AI Foundation Models for Weather and Climate: Applications, Design, and Implementation",
+    "first_author": "S. Karthik Mukkavilli",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2309.10808",
+    "url": "https://arxiv.org/abs/2309.10808",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 0,
+    "note": "Design/perspective survey of weather-climate foundation models; wildfire forecasting named only as one of many downstream applications, no experiments."
+   }
+  },
+  "rec": {
+   "title": "AI Foundation Models for Weather and Climate: Applications, Design, and Implementation",
+   "first_author": "S. Karthik Mukkavilli",
+   "year": "2023",
+   "venue_or_arxiv": "arXiv:2309.10808",
+   "url": "https://arxiv.org/abs/2309.10808",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 0,
+   "note": "Design/perspective survey of weather-climate foundation models; wildfire forecasting named only as one of many downstream applications, no experiments."
+  }
+ },
+ {
+  "title": "A Comprehensive Survey on Deep Learning Solutions for 3D Flood Mapping",
+  "panels": {
+   "claude": {
+    "title": "A Comprehensive Survey on Deep Learning Solutions for 3D Flood Mapping",
+    "first_author": "Wenfeng Jia",
+    "year": "2025",
+    "venue_or_arxiv": "PAKDD 2025 / arXiv:2506.13201",
+    "url": "https://arxiv.org/abs/2506.13201",
+    "verified_by_fetch": true,
+    "kind": "survey",
+    "fire_tasks": [],
+    "models_benchmarked": "none",
+    "survey_component": "full",
+    "closeness": 0,
+    "note": "Literature survey categorizing deep-learning techniques and data sources for 3D flood mapping; no original multi-model benchmark. Hydrology template, no fire."
+   }
+  },
+  "rec": {
+   "title": "A Comprehensive Survey on Deep Learning Solutions for 3D Flood Mapping",
+   "first_author": "Wenfeng Jia",
+   "year": "2025",
+   "venue_or_arxiv": "PAKDD 2025 / arXiv:2506.13201",
+   "url": "https://arxiv.org/abs/2506.13201",
+   "verified_by_fetch": true,
+   "kind": "survey",
+   "fire_tasks": [],
+   "models_benchmarked": "none",
+   "survey_component": "full",
+   "closeness": 0,
+   "note": "Literature survey categorizing deep-learning techniques and data sources for 3D flood mapping; no original multi-model benchmark. Hydrology template, no fire."
+  }
+ },
+ {
+  "title": "Foundation Models for Generalist Geospatial Artificial Intelligence",
+  "panels": {
+   "agy": {
+    "title": "Foundation Models for Generalist Geospatial Artificial Intelligence",
+    "first_author": "Johannes Jakubik",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2310.18660",
+    "url": "https://arxiv.org/abs/2310.18660",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "wildfire scar segmentation"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Geospatial foundation model evaluated across four downstream tasks including wildfire scar segmentation."
+   }
+  },
+  "rec": {
+   "title": "Foundation Models for Generalist Geospatial Artificial Intelligence",
+   "first_author": "Johannes Jakubik",
+   "year": "2023",
+   "venue_or_arxiv": "arXiv:2310.18660",
+   "url": "https://arxiv.org/abs/2310.18660",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "wildfire scar segmentation"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 1,
+   "note": "NASA-IBM HLS foundation model fine-tuned and benchmarked on wildfire burn scar segmentation alongside flood mapping and crop segmentation."
+  }
+ },
+ {
+  "title": "GEO-Bench-2: From Performance to Capability, Rethinking Evaluation in Geospatial AI",
+  "panels": {
+   "agy": {
+    "title": "GEO-Bench-2: From Performance to Capability, Rethinking Evaluation in Geospatial AI",
+    "first_author": "Naomi Simumba",
+    "year": "2025",
+    "venue_or_arxiv": "arXiv:2511.15658",
+    "url": "https://arxiv.org/abs/2511.15658",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [
+     "disaster response",
+     "multispectral hazard segmentation"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Capability-aware benchmark evaluating diverse EO foundation models across 19 datasets; covers general disaster response, not specialized for wildfire lifecycle."
+   }
+  },
+  "rec": {
+   "title": "GEO-Bench-2: From Performance to Capability, Rethinking Evaluation in Geospatial AI",
+   "first_author": "Naomi Simumba",
+   "year": "2025",
+   "venue_or_arxiv": "arXiv:2511.15658",
+   "url": "https://arxiv.org/abs/2511.15658",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [
+    "disaster response",
+    "multispectral hazard segmentation"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Capability-aware benchmark evaluating diverse EO foundation models across 19 datasets; covers general disaster response, not specialized for wildfire lifecycle."
+  }
+ },
+ {
+  "title": "GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
+  "panels": {
+   "agy": {
+    "title": "GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
+    "first_author": "Muhammad Sohail Danish",
+    "year": "2024",
+    "venue_or_arxiv": "arXiv:2411.19325",
+    "url": "https://arxiv.org/abs/2411.19325",
+    "verified_by_fetch": true,
+    "kind": "llm-eval",
+    "fire_tasks": [
+     "disaster management",
+     "environmental monitoring",
+     "temporal change detection"
+    ],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Evaluates frontier VLMs on 31 geospatial tasks including disaster and environmental monitoring; lacks dedicated wildfire task evaluation."
+   }
+  },
+  "rec": {
+   "title": "GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
+   "first_author": "Muhammad Sohail Danish",
+   "year": "2024",
+   "venue_or_arxiv": "arXiv:2411.19325",
+   "url": "https://arxiv.org/abs/2411.19325",
+   "verified_by_fetch": true,
+   "kind": "llm-eval",
+   "fire_tasks": [
+    "disaster management",
+    "environmental monitoring",
+    "temporal change detection"
+   ],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Evaluates frontier VLMs on 31 geospatial tasks including disaster and environmental monitoring; lacks dedicated wildfire task evaluation."
+  }
+ },
+ {
+  "title": "HASTE: A Platform for Rapid Post-Disaster Building Damage Assessment",
+  "panels": {
+   "agy": {
+    "title": "HASTE: A Platform for Rapid Post-Disaster Building Damage Assessment",
+    "first_author": "Caleb Robinson",
+    "year": "2026",
+    "venue_or_arxiv": "arXiv:2607.11838",
+    "url": "https://arxiv.org/abs/2607.11838",
+    "verified_by_fetch": true,
+    "kind": "system",
+    "fire_tasks": [
+     "rapid post-wildfire building damage assessment",
+     "foundation model footprint embedding scoring"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Microsoft platform evaluating foundation-model embeddings for rapid post-disaster building damage assessment across wildfire and weather disasters."
+   }
+  },
+  "rec": {
+   "title": "HASTE: A Platform for Rapid Post-Disaster Building Damage Assessment",
+   "first_author": "Caleb Robinson",
+   "year": "2026",
+   "venue_or_arxiv": "arXiv:2607.11838",
+   "url": "https://arxiv.org/abs/2607.11838",
+   "verified_by_fetch": true,
+   "kind": "system",
+   "fire_tasks": [
+    "rapid post-wildfire building damage assessment",
+    "foundation model footprint embedding scoring"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Microsoft platform evaluating foundation-model embeddings for rapid post-disaster building damage assessment across wildfire and weather disasters."
+  }
+ },
+ {
+  "title": "WeatherBench 2: A benchmark for the next generation of data-driven global weather models",
+  "panels": {
+   "agy": {
+    "title": "WeatherBench 2: A benchmark for the next generation of data-driven global weather models",
+    "first_author": "Stephan Rasp",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2308.15560",
+    "url": "https://arxiv.org/abs/2308.15560",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Global weather forecasting benchmark establishing evaluation protocols and comparing physical vs data-driven models."
+   }
+  },
+  "rec": {
+   "title": "WeatherBench 2: A benchmark for the next generation of data-driven global weather models",
+   "first_author": "Stephan Rasp",
+   "year": "2023",
+   "venue_or_arxiv": "arXiv:2308.15560",
+   "url": "https://arxiv.org/abs/2308.15560",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Global weather forecasting benchmark establishing evaluation protocols and comparing physical vs data-driven models."
+  }
+ },
+ {
+  "title": "ClimateBench v1.0: A Benchmark for Data-Driven Climate Projections",
+  "panels": {
+   "agy": {
+    "title": "ClimateBench v1.0: A Benchmark for Data-Driven Climate Projections",
+    "first_author": "Duncan Watson-Parris",
+    "year": "2022",
+    "venue_or_arxiv": "Journal of Advances in Modeling Earth Systems",
+    "url": "https://github.com/duncanwp/ClimateBench",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Climate emulation benchmark surveying forcing scenarios and evaluating ML emulators across projection variables."
+   }
+  },
+  "rec": {
+   "title": "ClimateBench v1.0: A Benchmark for Data-Driven Climate Projections",
+   "first_author": "Duncan Watson-Parris",
+   "year": "2022",
+   "venue_or_arxiv": "Journal of Advances in Modeling Earth Systems",
+   "url": "https://github.com/duncanwp/ClimateBench",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Climate emulation benchmark surveying forcing scenarios and evaluating ML emulators across projection variables."
+  }
+ },
+ {
+  "title": "ClimateLearn: Benchmarking Machine Learning for Weather and Climate Modeling",
+  "panels": {
+   "agy": {
+    "title": "ClimateLearn: Benchmarking Machine Learning for Weather and Climate Modeling",
+    "first_author": "Tung Nguyen",
+    "year": "2023",
+    "venue_or_arxiv": "arXiv:2307.01909",
+    "url": "https://arxiv.org/abs/2307.01909",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "PyTorch benchmark platform surveying weather/climate tasks and evaluating baseline architectures for forecasting and downscaling."
+   }
+  },
+  "rec": {
+   "title": "ClimateLearn: Benchmarking Machine Learning for Weather and Climate Modeling",
+   "first_author": "Tung Nguyen",
+   "year": "2023",
+   "venue_or_arxiv": "arXiv:2307.01909",
+   "url": "https://arxiv.org/abs/2307.01909",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "PyTorch benchmark platform surveying weather/climate tasks and evaluating baseline architectures for forecasting and downscaling."
+  }
+ },
+ {
+  "title": "Dataset4EO: EarthNets Platform for Earth Observation",
+  "panels": {
+   "agy": {
+    "title": "Dataset4EO: EarthNets Platform for Earth Observation",
+    "first_author": "Aoran Xiao",
+    "year": "2024",
+    "venue_or_arxiv": "IEEE Geoscience and Remote Sensing Magazine",
+    "url": "https://github.com/EarthNets/Dataset4EO",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Earth observation platform organizing 400+ datasets into task-oriented pipelines and benchmarking cutting-edge computer vision backbones."
+   }
+  },
+  "rec": {
+   "title": "Dataset4EO: EarthNets Platform for Earth Observation",
+   "first_author": "Aoran Xiao",
+   "year": "2024",
+   "venue_or_arxiv": "IEEE Geoscience and Remote Sensing Magazine",
+   "url": "https://github.com/EarthNets/Dataset4EO",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Earth observation platform organizing 400+ datasets into task-oriented pipelines and benchmarking cutting-edge computer vision backbones."
+  }
+ },
+ {
+  "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+  "panels": {
+   "agy": {
+    "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+    "first_author": "Yi Wang",
+    "year": "2022",
+    "venue_or_arxiv": "arXiv:2211.07044",
+    "url": "https://arxiv.org/abs/2211.07044",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Large-scale multimodal remote sensing pre-training benchmark evaluating self-supervised models across diverse downstream EO tasks."
+   }
+  },
+  "rec": {
+   "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+   "first_author": "Yi Wang",
+   "year": "2022",
+   "venue_or_arxiv": "arXiv:2211.07044",
+   "url": "https://arxiv.org/abs/2211.07044",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Large-scale multimodal remote sensing pre-training benchmark evaluating self-supervised models across diverse downstream EO tasks."
+  }
+ },
+ {
+  "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery",
+  "panels": {
+   "agy": {
+    "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery",
+    "first_author": "Ritwik Gupta",
+    "year": "2019",
+    "venue_or_arxiv": "arXiv:1911.09296",
+    "url": "https://arxiv.org/abs/1911.09296",
+    "verified_by_fetch": true,
+    "kind": "dataset",
+    "fire_tasks": [
+     "wildfire building damage assessment"
+    ],
+    "models_benchmarked": "few",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Disaster response benchmark covering building damage assessment across natural hazards including wildfires."
+   }
+  },
+  "rec": {
+   "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery",
+   "first_author": "Ritwik Gupta",
+   "year": "2019",
+   "venue_or_arxiv": "arXiv:1911.09296",
+   "url": "https://arxiv.org/abs/1911.09296",
+   "verified_by_fetch": true,
+   "kind": "dataset",
+   "fire_tasks": [
+    "wildfire building damage assessment"
+   ],
+   "models_benchmarked": "few",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Disaster response benchmark covering building damage assessment across natural hazards including wildfires."
+  }
+ },
+ {
+  "title": "FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding",
+  "panels": {
+   "agy": {
+    "title": "FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding",
+    "first_author": "Maryam Rahnemoonfar",
+    "year": "2020",
+    "venue_or_arxiv": "arXiv:2012.02951",
+    "url": "https://arxiv.org/abs/2012.02951",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Post-disaster UAV benchmark establishing multi-task evaluation for classification, semantic segmentation, and visual question answering."
+   }
+  },
+  "rec": {
+   "title": "FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding",
+   "first_author": "Maryam Rahnemoonfar",
+   "year": "2020",
+   "venue_or_arxiv": "arXiv:2012.02951",
+   "url": "https://arxiv.org/abs/2012.02951",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Post-disaster UAV benchmark establishing multi-task evaluation for classification, semantic segmentation, and visual question answering."
+  }
+ },
+ {
+  "title": "Benchmarking a Catchment-Aware Long Short-Term Memory Network (LSTM) for Large-Scale Hydrological Modeling",
+  "panels": {
+   "agy": {
+    "title": "Benchmarking a Catchment-Aware Long Short-Term Memory Network (LSTM) for Large-Scale Hydrological Modeling",
+    "first_author": "Frederik Kratzert",
+    "year": "2019",
+    "venue_or_arxiv": "Hydrology and Earth System Sciences",
+    "url": "https://doi.org/10.5194/hess-23-5089-2019",
+    "verified_by_fetch": true,
+    "kind": "benchmark",
+    "fire_tasks": [],
+    "models_benchmarked": "many",
+    "survey_component": "light",
+    "closeness": 0,
+    "note": "Continental hydrology benchmark comparing deep learning against conceptual hydrological models across 531 basins."
+   }
+  },
+  "rec": {
+   "title": "Benchmarking a Catchment-Aware Long Short-Term Memory Network (LSTM) for Large-Scale Hydrological Modeling",
+   "first_author": "Frederik Kratzert",
+   "year": "2019",
+   "venue_or_arxiv": "Hydrology and Earth System Sciences",
+   "url": "https://doi.org/10.5194/hess-23-5089-2019",
+   "verified_by_fetch": true,
+   "kind": "benchmark",
+   "fire_tasks": [],
+   "models_benchmarked": "many",
+   "survey_component": "light",
+   "closeness": 0,
+   "note": "Continental hydrology benchmark comparing deep learning against conceptual hydrological models across 531 basins."
+  }
+ }
+]

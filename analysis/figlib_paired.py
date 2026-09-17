@@ -6,6 +6,7 @@ score both conditions on exactly that item set.
 
 Reads only. Writes a single JSON file next to this script.
 """
+import argparse
 import collections
 import datetime
 import json
@@ -16,7 +17,7 @@ import sys
 TASK_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "task-figlib")
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "figlib-paired.json")
 
-MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
+MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "gpt-6-astra", "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
 CONDITIONS = ["bare", "grounded"]
 PAIR_WINDOW_MIN = 60.0
 TOKEN_CAP = 1536
@@ -108,6 +109,22 @@ def score(rows_by_id, ids):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=str, default=None, help="Path to manifest JSON restricting response files.")
+    args = parser.parse_args()
+
+    models = MODELS
+    if args.manifest:
+        with open(args.manifest, encoding="utf-8") as fh:
+            manifest = json.load(fh)
+        reported = manifest.get("reported", [])
+        manifest_models = []
+        for r in reported:
+            if r.get("task") in ("figlib", "task-figlib") and r.get("condition") == "bare":
+                manifest_models.append(r["model_token"])
+        if manifest_models:
+            models = manifest_models
+
     items = read_jsonl(os.path.join(TASK_DIR, "items.jsonl"))
     items_by_id = {r["item_id"]: r for r in items}
     assert len(items_by_id) == len(items), "duplicate item_id in items.jsonl"
@@ -130,7 +147,7 @@ def main():
     }
 
     loaded = {}
-    for m in MODELS:
+    for m in models:
         for c in CONDITIONS:
             path = os.path.join(TASK_DIR, f"responses-{m}-{c}.jsonl")
             rows = read_jsonl(path)
@@ -167,7 +184,7 @@ def main():
 
     # Pairing by modification time.
     pairing_ok = True
-    for m in MODELS:
+    for m in models:
         pb = os.path.join(TASK_DIR, f"responses-{m}-bare.jsonl")
         pg = os.path.join(TASK_DIR, f"responses-{m}-grounded.jsonl")
         delta_min = abs(os.stat(pb).st_mtime - os.stat(pg).st_mtime) / 60.0
@@ -183,7 +200,7 @@ def main():
     out["pairing_ok"] = pairing_ok
 
     # Paired scoring.
-    for m in MODELS:
+    for m in models:
         bare = loaded[(m, "bare")]
         grounded = loaded[(m, "grounded")]
         paired_ids = sorted(
@@ -291,7 +308,7 @@ def main():
     if os.path.exists(scores_path):
         with open(scores_path, encoding="utf-8") as fh:
             scores = {s["run"]: s for s in json.load(fh)}
-        for m in MODELS:
+        for m in models:
             for c in CONDITIONS:
                 rows = loaded[(m, c)].values()
                 tout = sum((r.get("usage") or {}).get("completion_tokens", 0) for r in rows)

@@ -3,16 +3,36 @@
 Prints one row per file in the paper's column order: AUPRC, F1 on fire, call rate, omitted. Also reports
 the modification time of each file so bare and grounded can be checked for same-run pairing.
 """
+import argparse
 import datetime
 import json
+import os
 import pathlib
 
 import run_mesogeos as rm
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--manifest", type=str, default=None, help="Path to manifest JSON restricting response files.")
+args = parser.parse_args()
+
 TASK = rm.TASK
-for path in sorted(TASK.glob("responses-*.jsonl")):
+if args.manifest:
+    with open(args.manifest, encoding="utf-8") as f:
+        manifest = json.load(f)
+    reported = manifest.get("reported", [])
+    root_dir = pathlib.Path(__file__).resolve().parent
+    allowed_rel = {
+        os.path.normpath(r["path"])
+        for r in reported
+        if r.get("task") in ("mesogeos", "task-mesogeos")
+    }
+    paths = [p for p in sorted(TASK.glob("responses-*.jsonl")) if os.path.normpath(p.resolve().relative_to(root_dir)) in allowed_rel]
+else:
+    paths = sorted(TASK.glob("responses-*.jsonl"))
+
+for path in paths:
     rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines()]
-    if len(rows) < 100:
+    if not args.manifest and len(rows) < 100:
         continue
     s = rm.score(rows, path.stem.replace("responses-", ""))
     omitted = sum(1 for r in rows if r.get("call") is None and r.get("probability") is not None)

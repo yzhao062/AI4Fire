@@ -41,3 +41,13 @@ y = np.array([a[i]["target"] for i in ids]); s = np.array([a[i]["fire_mean"] for
 pa = np.array([a[i]["prediction"] for i in ids]); pb = np.array([b[i]["prediction"] for i in ids])
 print("allocation llama bare: n=%d nMAE run1 %.3f run2 %.3f | mean |dpred| %.2f persons | items changed %d"
       % (len(ids), (np.abs(y - pa) / s).mean(), (np.abs(y - pb) / s).mean(), np.abs(pa - pb).mean(), (pa != pb).sum()))
+
+# gpt-6-astra runs at its endpoint's default temperature of 1 (the only value it accepts), so its repeat is the
+# one measurement of run-to-run variation at that setting. The main file is run 1; the repeat is run 2.
+a = load(R / "allocation-gpt-6-astra-bare-run1.jsonl")
+b = load(R / "allocation-gpt-6-astra-bare-run2.jsonl")
+ids = [i for i in a if i in b and a[i].get("prediction") is not None and b[i].get("prediction") is not None]
+y = np.array([a[i]["target"] for i in ids]); s = np.array([a[i]["fire_mean"] for i in ids])
+pa = np.array([a[i]["prediction"] for i in ids]); pb = np.array([b[i]["prediction"] for i in ids])
+print("allocation gpt-6-astra bare (temperature 1): n=%d nMAE run1 %.4f run2 %.4f | mean |dpred| %.2f persons | items changed %d"
+      % (len(ids), (np.abs(y - pa) / s).mean(), (np.abs(y - pb) / s).mean(), np.abs(pa - pb).mean(), (pa != pb).sum()))

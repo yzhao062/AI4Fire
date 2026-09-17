@@ -1,0 +1,157 @@
+============================================================================================================================
+CLUSTER-ROBUST UNCERTAINTY FOR THE BARE-AGAINST-GROUNDED CONTRAST   (TMLR round-1 objection A)
+============================================================================================================================
+repo      : C:\Users\yuezh\PycharmProjects\fire-bench
+bootstrap : 20000 replicates per interval, 95% percentile, base seed 20260915
+pairing   : each contrast is scored only on the items BOTH conditions answered, and one
+            resampled index set is scored under both conditions, which keeps it paired
+ratios    : contrast ratio applies to the bare-minus-grounded difference; level ratio applies
+            to each condition's own headline metric.  They differ because pairing already
+            cancels the shared cluster-level difficulty.  Quote the level ratio when
+            defending a per-arm number and the contrast ratio when defending a contrast.
+freshness : an arm whose two condition files were written more than 100000 min apart is flagged
+            CROSS-RUN and excluded from every median, since the rerun replaced one side only
+
+----------------------------------------------------------------------------------------------------------------------------
+FIgLib  |  primary metric: recall on smoke  |  resampling unit: fire, derived from the sequence name
+----------------------------------------------------------------------------------------------------------------------------
+  cluster structure on the largest arm (bedrock_qwen.qwen3-vl-235b-a22b): 17 fires over 196 paired items, mean 11.53 and max 42 items per fire, 100% of items share their fire with a neighbour
+  small-cluster note: 17 fires is few enough that a percentile cluster bootstrap undercovers.  Scaling by sqrt(G/(G-1)) and reading the quantile off t with 16 degrees of freedom would widen the cluster interval by 11%.  The width ratios below are close to unaffected; the cluster interval itself is optimistic by about that much, and the paper should say so.
+
+  PAIRED CONTRAST   diff = bare minus grounded in recall on smoke; grounded helps when diff < 0
+  arm                            bare_n  grd_n pair_n n_fire     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22    224    196    196     17   0.5446   0.6161  -0.0714  [-0.1210,-0.0288] [-0.1225,-0.0270]   0.97
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:28, grounded 2026-09-16 13:31 (3 min apart)
+  bedrock_us.meta.llama4-maveric    224    196    196     17   0.5089   0.5536  -0.0446  [-0.0857, 0.0000] [-0.0874,-0.0092]   1.10
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:37, grounded 2026-09-16 13:40 (2 min apart)
+  claude-opus-4.8                   224    196    196     17   0.5536   0.6161  -0.0625  [-0.1204,-0.0197] [-0.1111,-0.0194]   1.10
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 00:56, grounded 2026-09-16 00:59 (3 min apart)
+  claude-opus-5                     224    196    196     17   0.6071   0.6429  -0.0357  [-0.0687, 0.0000] [-0.0741,-0.0084]   1.05
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 01:03, grounded 2026-09-16 01:08 (4 min apart)
+  claude-opus-5-1024px              224    196    193     17   0.5229   0.5872  -0.0642  [-0.1000,-0.0333] [-0.1134,-0.0202]   0.72
+                                   note: smoke frames scored: 109
+                                   note: written bare 2026-09-15 18:38, grounded 2026-09-15 18:38 (0 min apart)
+  gemini-3.1-pro                    224    196    196     17   0.5446   0.7321  -0.1875  [-0.2386,-0.1364] [-0.2593,-0.1176]   0.72
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:00, grounded 2026-09-16 13:07 (6 min apart)
+  gpt-6-astra                       224    196    196     17   0.6429   0.7411  -0.0982  [-0.1630,-0.0515] [-0.1565,-0.0467]   1.02
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 18:26, grounded 2026-09-16 18:25 (1 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own recall on smoke, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22          1.76          1.80
+  bedrock_us.meta.llama4-maveric          2.00          1.80
+  claude-opus-4.8                         1.97          2.05
+  claude-opus-5                           1.98          1.88
+  claude-opus-5-1024px                    1.95          2.01
+  gemini-3.1-pro                          1.57          1.58
+  gpt-6-astra                             1.80          1.71
+
+  WIDTH RATIO, FIgLib, contrast : median 1.02x over 7 arms (range 0.72x to 1.10x)
+  WIDTH RATIO, FIgLib, levels   : median 1.84x over 14 arm-conditions (range 1.57x to 2.05x)
+
+----------------------------------------------------------------------------------------------------------------------------
+allocation  |  primary metric: normalised MAE  |  resampling unit: incident (incident_id from items.jsonl)
+----------------------------------------------------------------------------------------------------------------------------
+  cluster structure on the largest arm (bedrock_qwen.qwen3-vl-235b-a22b): 245 incidents over 300 paired items, mean 1.22 and max 2 items per incident, 37% of items share their incident with a neighbour
+
+  PAIRED CONTRAST   diff = bare minus grounded in normalised MAE; grounded helps when diff > 0
+  arm                            bare_n  grd_n pair_n n_inci     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22    300    300    300    245   0.1613   0.2484  -0.0871  [-0.1353,-0.0470] [-0.1347,-0.0469]   1.00
+                                   note: written bare 2026-09-16 13:17, grounded 2026-09-16 15:21 (124 min apart)
+  bedrock_us.meta.llama3-1-8b-in     10     10     10      9   0.0827   0.1660  -0.0833  [-0.1748,-0.0048] [-0.1753,-0.0028]   0.99  <- only 9 incidents / 10 paired items, below --min-clusters 5 or --min-pair 30
+                                   note: written bare 2026-09-15 18:06, grounded 2026-09-15 18:06 (0 min apart)
+  bedrock_us.meta.llama4-maveric    300    300    300    245   0.1926   0.2456  -0.0529  [-0.1009,-0.0115] [-0.1013,-0.0116]   1.00
+                                   note: written bare 2026-09-16 13:42, grounded 2026-09-16 15:21 (99 min apart)
+  claude-opus-4.8                   300    300    300    245   0.1568   0.1701  -0.0132  [-0.0283, 0.0028] [-0.0282, 0.0031]   0.99
+                                   note: written bare 2026-09-15 23:18, grounded 2026-09-16 15:21 (963 min apart)
+  claude-opus-5                     300    300    300    245   0.1654   0.1730  -0.0076  [-0.0241, 0.0083] [-0.0235, 0.0077]   1.04
+                                   note: written bare 2026-09-15 23:24, grounded 2026-09-16 15:21 (957 min apart)
+  gemini-3.1-pro                    300    300    300    245   0.1786   0.1772   0.0013  [-0.0146, 0.0174] [-0.0145, 0.0171]   1.01
+                                   note: written bare 2026-09-15 23:54, grounded 2026-09-16 15:21 (928 min apart)
+  gpt-6-astra                       300    300    300    245   0.1614   0.2196  -0.0581  [-0.1026,-0.0234] [-0.1004,-0.0231]   1.03
+                                   note: written bare 2026-09-16 17:51, grounded 2026-09-16 17:57 (6 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own normalised MAE, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22          1.04          1.01
+  bedrock_us.meta.llama3-1-8b-in          1.02          0.99   <- not trusted, see above
+  bedrock_us.meta.llama4-maveric          1.02          1.03
+  claude-opus-4.8                         1.05          1.06
+  claude-opus-5                           1.05          1.07
+  gemini-3.1-pro                          1.07          1.07
+  gpt-6-astra                             1.05          1.02
+
+  WIDTH RATIO, allocation, contrast : median 1.01x over 6 arms (range 0.99x to 1.04x)
+  WIDTH RATIO, allocation, levels   : median 1.05x over 12 arm-conditions (range 1.01x to 1.07x)
+
+----------------------------------------------------------------------------------------------------------------------------
+Mesogeos  |  primary metric: average precision  |  resampling unit: spatial-temporal block, 1.00 deg cell x calendar month
+----------------------------------------------------------------------------------------------------------------------------
+  cluster structure on the largest arm (bedrock_qwen.qwen3-vl-235b-a22b): 352 blocks over 386 paired items, mean 1.10 and max 4 items per block, 16% of items share their block with a neighbour
+  metric check: average precision matches sklearn to 1e-9 on the live data
+
+  PAIRED CONTRAST   diff = bare minus grounded in average precision; grounded helps when diff < 0
+  arm                            bare_n  grd_n pair_n n_bloc     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22    386    386    386    352   0.4853   0.5360  -0.0507  [-0.0920,-0.0060] [-0.0916,-0.0060]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 13:23, grounded 2026-09-16 13:26 (3 min apart)
+  bedrock_us.meta.llama4-maveric    386    386    386    352   0.5283   0.5146   0.0138  [-0.0368, 0.0632] [-0.0350, 0.0623]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 13:35, grounded 2026-09-16 13:36 (1 min apart)
+  claude-opus-4.8                   386    386    386    352   0.6130   0.5814   0.0316  [-0.0097, 0.0727] [-0.0091, 0.0721]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:07, grounded 2026-09-16 00:11 (4 min apart)
+  claude-opus-5                     386    386    386    352   0.6876   0.6822   0.0054  [-0.0210, 0.0296] [-0.0211, 0.0313]   0.97
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:19, grounded 2026-09-16 00:26 (7 min apart)
+  gemini-3.1-pro                    386    386    386    352   0.6972   0.6823   0.0149  [-0.0177, 0.0504] [-0.0181, 0.0490]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:39, grounded 2026-09-16 00:53 (14 min apart)
+  gpt-6-astra                       386    386    386    352   0.6205   0.5898   0.0307  [-0.0258, 0.0857] [-0.0256, 0.0869]   0.99
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 18:06, grounded 2026-09-16 18:14 (9 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own average precision, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_qwen.qwen3-vl-235b-a22          1.09          1.07
+  bedrock_us.meta.llama4-maveric          1.08          1.06
+  claude-opus-4.8                         1.03          1.07
+  claude-opus-5                           1.15          1.14
+  gemini-3.1-pro                          1.10          1.11
+  gpt-6-astra                             1.15          1.11
+
+  WIDTH RATIO, Mesogeos, contrast : median 1.01x over 6 arms (range 0.97x to 1.03x)
+  WIDTH RATIO, Mesogeos, levels   : median 1.09x over 12 arm-conditions (range 1.03x to 1.15x)
+  BLOCKING SENSITIVITY: at a deliberately coarse 2.00 deg x quarter block (250 blocks), contrast 1.04x and levels 1.22x
+
+============================================================================================================================
+SUMMARY, interval-width inflation from resampling the right unit
+============================================================================================================================
+  task         unit        contrast ratio    level ratio  cross-run arms excluded
+  --------------------------------------------------------------------------------
+  FIgLib       fire                 1.02x          1.84x  
+  allocation   incident             1.01x          1.05x  
+  Mesogeos     block                1.01x          1.09x  
+
+  A ratio above 1 means the cluster bootstrap is wider, that is, the frame-level and
+  day-level intervals in the round-1 submission overstated precision by that factor.
+  A contrast ratio at or below 1 is a real result, not a bug: when the two arms disagree
+  on only a few items and those disagreements are spread across clusters, the paired
+  difference carries almost no cluster-level variance for the resampling to recover.
+
+  PROVISIONAL.  Every number above was computed from the responses-*.jsonl files present at
+  run time.  A full model rerun is in progress and will overwrite those files.  Re-execute
+  this script unchanged afterwards; the numbers it prints then supersede these.
+

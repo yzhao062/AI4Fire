@@ -539,6 +539,8 @@ def main():
                     help="second bar, against the best coverage anywhere in the task, which catches a short "
                          "run that is alone in its arm and so passes --min-coverage trivially (default 0.50; "
                          "a legitimately smaller grounded arm sits near 0.88)")
+    ap.add_argument("--manifest", default=None,
+                    help="path to manifest-v1.json restricting to reported files")
     args = ap.parse_args()
 
     root = args.root
@@ -551,6 +553,12 @@ def main():
 
     report = {"root": root, "flag_rate": args.flag_rate, "tasks": {}}
     all_results, tests_for_holm = [], []
+
+    manifest_paths = None
+    if args.manifest:
+        with open(args.manifest, encoding="utf-8") as fh:
+            manifest = json.load(fh)
+        manifest_paths = {os.path.normpath(r["path"]) for r in manifest.get("reported", [])}
 
     for task, spec in TASKS.items():
         task_dir = os.path.join(root, task)
@@ -565,6 +573,8 @@ def main():
         uni_name, universe = load_universe(task_dir, spec["universe_files"])
         cap_declared = declared_cap(root, spec["runner"])
         runs = find_runs(task_dir)
+        if manifest_paths is not None:
+            runs = [p for p in runs if os.path.normpath(os.path.relpath(p, root)) in manifest_paths]
         print("  item universe file : %s (%d items)" % (uni_name or "none found", len(universe)))
         print("  runner             : %s (declares MAX_OUT = %s)"
               % (spec["runner"], cap_declared if cap_declared else "not found"))

@@ -1,0 +1,1 @@
+{"model": "gpt-6-astra", "condition": "bare", "replaced": {"item_id": "figlib-20260629_JunctionFire_vo-w-mobo-c-1782779574_+01504", "sequence": "20260629_JunctionFire_vo-w-mobo-c", "label": "smoke", "offset_seconds": 1504, "bucket": "after 25 min or more", "error": "[WinError 10054] An existing connection was forcibly closed by the remote host", "prediction": null}}

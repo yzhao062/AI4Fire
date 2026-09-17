@@ -614,6 +614,15 @@ def run_task(spec, cfg, problems):
         return None
 
     arms = discover_arms(task_dir)
+    if cfg.manifest_files is not None:
+        filtered_arms = collections.defaultdict(dict)
+        for arm, have in arms.items():
+            if "bare" in have and os.path.normpath(os.path.relpath(have["bare"], cfg.repo)) not in cfg.manifest_files:
+                continue
+            if "grounded" in have and os.path.normpath(os.path.relpath(have["grounded"], cfg.repo)) not in cfg.manifest_files:
+                continue
+            filtered_arms[arm] = have
+        arms = filtered_arms
     if not arms:
         problems.append("%s: no responses-*.jsonl files found in %s" % (spec["name"], task_dir))
         print("  SKIPPED, no responses-*.jsonl files\n")
@@ -630,7 +639,7 @@ def run_task(spec, cfg, problems):
             msg = ("%s: arm '%s' has only the %s condition, %s is missing"
                    % (spec["name"], arm, present,
                       os.path.join(task_dir, expected_filename(have["_parts"], missing))))
-            if cfg.allow_unpaired:
+            if cfg.allow_unpaired or arm.startswith("baseline-"):
                 print("  warning: " + msg)
             else:
                 problems.append(msg)
@@ -657,6 +666,9 @@ def run_task(spec, cfg, problems):
         m_grd = os.path.getmtime(arms[arm]["grounded"])
         skew_min = abs(m_bare - m_grd) / 60.0
         stale = skew_min > cfg.max_skew_min
+        grd_rel = os.path.normpath(os.path.relpath(arms[arm]["grounded"], cfg.repo))
+        if cfg.manifest_skew_overrides and grd_rel in cfg.manifest_skew_overrides:
+            stale = False
 
         prep = spec["prepare"](items, bare_rows, grd_rows, cfg)
         notes = []
@@ -864,7 +876,21 @@ def main():
     parser.add_argument("--allow-unpaired", action="store_true",
                         help="warn instead of failing when an arm has only one of the two conditions, "
                              "or when a condition file exists but holds no usable row")
+    parser.add_argument("--manifest", type=str, default=None,
+                        help="path to manifest JSON restricting response files to reported runs and specifying skew overrides")
     cfg = parser.parse_args()
+
+    cfg.manifest_files = None
+    cfg.manifest_skew_overrides = set()
+    if cfg.manifest:
+        with open(cfg.manifest, encoding="utf-8") as f:
+            m_data = json.load(f)
+        cfg.manifest_files = set()
+        for r in m_data.get("reported", []):
+            norm_p = os.path.normpath(r["path"])
+            cfg.manifest_files.add(norm_p)
+            if r.get("skew_override"):
+                cfg.manifest_skew_overrides.add(norm_p)
 
     if cfg.resamples < MIN_RESAMPLES:
         print("note: raising --resamples from %d to the %d minimum" % (cfg.resamples, MIN_RESAMPLES))

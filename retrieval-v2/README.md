@@ -1,0 +1,3 @@
+# Retrieval rule v2: the design record
+
+Development set, harness, brief, and the three design families (A recent-dynamics matching, B nearest-neighbour ranking, C stability-aware stratified draw) produced on 2026-09-16 for the movement-conditioned analogue rule. The judge's decision, the frozen rule inside run_allocation.py (--rule v2), and the six-model grounded reruns follow; until they land, nothing here changes a reported number. Each design-<letter>/report.md states its family, every variant's development numbers, and the frozen choice. Pool caches and pickled models are not stored; run.py rebuilds them.

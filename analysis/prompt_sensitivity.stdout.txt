@@ -1,0 +1,14 @@
+
+== claude-opus-5, bare, p0, p1, p2
+  p0  n=386  auprc 0.688  f1 0.269  call 0.065  omitted 46
+  p1  n=386  auprc 0.731  f1 0.308  call 0.065  omitted 0
+  p2  n=386  auprc 0.703  f1 0.240  call 0.049  omitted 4
+  p1 - p0 on 386 items, 352 blocks: AUPRC +0.043 [+0.009, +0.080]; fire F1 +0.038 [-0.050, +0.130]; Spearman(prob) 0.920; calls changed 20
+  p2 - p0 on 386 items, 352 blocks: AUPRC +0.015 [-0.018, +0.049]; fire F1 -0.029 [-0.118, +0.057]; Spearman(prob) 0.926; calls changed 20
+
+== gemini-3.1-pro, bare, p0, p1, p2
+  p0  n=386  auprc 0.697  f1 0.607  call 0.207  omitted 0
+  p1  n=386  auprc 0.648  f1 0.549  call 0.161  omitted 0
+  p2  n=386  auprc 0.672  f1 0.452  call 0.119  omitted 0
+  p1 - p0 on 386 items, 352 blocks: AUPRC -0.049 [-0.093, -0.009]; fire F1 -0.057 [-0.117, -0.001]; Spearman(prob) 0.772; calls changed 24
+  p2 - p0 on 386 items, 352 blocks: AUPRC -0.026 [-0.075, +0.020]; fire F1 -0.155 [-0.231, -0.085]; Spearman(prob) 0.698; calls changed 34
