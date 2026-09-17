@@ -1,6 +1,8 @@
-# FireAIBench
+# AI4Fire
 
-The execution record behind *Large Language Models and AI Agents on Fire Tasks: A Survey and Benchmark*: the version-1 task builders, the item manifests, every stored model response, and the scripts that turn those responses into the numbers the paper reports.
+Work in progress: two of the five tasks have not run, and the benchmark is still being extended.
+
+The execution record behind *AI4Fire: A Survey and Benchmark of Large Language Models and AI Agents on Fire Tasks*: the version-1 task builders, the item manifests, every stored model response, and the scripts that turn those responses into the numbers the paper reports.
 
 Version 1 specifies five wildfire tasks that score without a human in the loop. Three have run, bare and grounded, on five models; two are built and waiting.
 
