@@ -933,11 +933,11 @@
       {
         "path": "task-allocation/responses-baseline-gbdt-analogue-bare.jsonl",
         "row_count": 300,
-        "sha256": "c3150dc95a42f3817f865cf94b38042f010cd824e7dccace7280a1adbc89e495",
+        "sha256": "81d5bad69575e37c501a9177cae8a0fc64874493b14847d950d917c30bb281d4",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:17:05",
+          "latest": "2026-09-17T11:17:05",
           "source": "file mtime"
         }
       },
@@ -947,8 +947,8 @@
         "sha256": "cc0d06ab0391b7d28ae2572d73f96c495f15029cff97ec8edd0470e9a647f07c",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:17:05",
+          "latest": "2026-09-17T11:17:05",
           "source": "file mtime"
         }
       },
@@ -958,32 +958,32 @@
         "sha256": "602d0df1c01b519c9783c5a4657a75b7bd878f7269c82f685ada4f9104b2e00d",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:17:05",
+          "latest": "2026-09-17T11:17:05",
           "source": "file mtime"
         }
       },
       {
         "path": "task-allocation/responses-baseline-ridge-bare.jsonl",
         "row_count": 300,
-        "sha256": "d76916959a6689b13f4f0e22b1dc2e9cb52fa8d88d76f7a7b417aac662dc5f4e",
+        "sha256": "16b432ff49a80a5b1f722ac2eb39d0d5e8a9a6dde80283cab96313db3aec5975",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:17:05",
+          "latest": "2026-09-17T11:17:05",
           "source": "file mtime"
         }
       },
       {
         "path": "task-mesogeos/responses-baseline-gbdt-prompt-bare.jsonl",
         "row_count": 386,
-        "sha256": "59e5b4fb8b5511d96a814ec03f81b10fecae3d30c8eee676addf2e6fe4ee94fe",
+        "sha256": "ca04f47fe8208346c5d6cdeced53d1626b8520fe470e3041d77291fc78726b21",
         "served_model": [
           "HistGradientBoostingClassifier"
         ],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:13:23",
+          "latest": "2026-09-17T11:13:23",
           "source": "file mtime"
         }
       },
@@ -995,34 +995,34 @@
           "HistGradientBoostingClassifier"
         ],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:13:41",
+          "latest": "2026-09-17T11:13:41",
           "source": "file mtime"
         }
       },
       {
         "path": "task-mesogeos/responses-baseline-logit-prompt-bare.jsonl",
         "row_count": 386,
-        "sha256": "ca19ef1f86417adc71af8340c6cdb4d28f2131bd8d1c26fc5b8ac70f01340d70",
+        "sha256": "0e73ad3351f8c3337f56a7572a81ee3f1c2f4abe2cef66eb7d8372f9fb8e7ddf",
         "served_model": [
           "LogisticRegression"
         ],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:13:43",
+          "latest": "2026-09-17T11:13:43",
           "source": "file mtime"
         }
       },
       {
         "path": "task-mesogeos/responses-baseline-logit-window-bare.jsonl",
         "row_count": 386,
-        "sha256": "3315f3a5427bb942e3b302447a0f3146b27cef7d2729ea4013640c562003dcd4",
+        "sha256": "f1de4f37f6fa91dd97e798bac4f8b090a39236ba2d806efc555d39c2996e7c6d",
         "served_model": [
           "LogisticRegression"
         ],
         "written": {
-          "earliest": "2026-09-16T22:58:56",
-          "latest": "2026-09-16T22:58:56",
+          "earliest": "2026-09-17T11:13:46",
+          "latest": "2026-09-17T11:13:46",
           "source": "file mtime"
         }
       }
@@ -1045,6 +1045,19 @@
         }
       },
       {
+        "path": "task-mesogeos/responses-claude-opus-5-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "9c86a59aedff926488fdae091ae6a85a99439d03e360ce265c7a4bf18e027fbd",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-16T23:02:39",
+          "latest": "2026-09-16T23:02:39",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-mesogeos/responses-gemini-3.1-pro-bare-p1.jsonl",
         "row_count": 386,
         "sha256": "0db3f131e13e2d32b78b9461a4c9a7a1718262080f65f698a0b517d4b111ed99",
@@ -1056,11 +1069,103 @@
           "latest": "2026-09-16T22:59:03",
           "source": "file mtime"
         }
+      },
+      {
+        "path": "task-mesogeos/responses-gemini-3.1-pro-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "8b27428ac88bc5fc090fab010c66ad1f6d81cd90b5eda06bdc3c9352596e3f50",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-16T23:08:44",
+          "latest": "2026-09-16T23:08:44",
+          "source": "file mtime"
+        }
       }
     ]
   },
   "retrieval_v2": {
     "reason": "Grounded allocation runs under the movement-conditioned analogue rule (run_allocation.py --rule v2); scored by analysis/retrieval_v2.py.",
-    "files": []
+    "files": [
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "bb775e87d710253fa85fea8c0524e06a42f3f2e737e4fdbb453a4e8a58b99791",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:20:44",
+          "latest": "2026-09-17T08:20:44",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "0c5dd80ca8bb9a4dff937f15d5caae26111c9f9d3dee1db66e0fcc09a5586fb6",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:22:10",
+          "latest": "2026-09-17T08:22:10",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-claude-opus-4.8-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "e4ed01adf3653a463c0479f1acbc0545a3e843025960f3b47b06b920701cbbc5",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:20:00",
+          "latest": "2026-09-17T08:20:00",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-claude-opus-5-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "c167a0ee83faa18257d7955804e8eed582e9340da4573907f7e0c02a286102ab",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:21:31",
+          "latest": "2026-09-17T08:21:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-gemini-3.1-pro-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "da06fb3e2f154bc5ef476e21fed693e23be5d48fe647805d1bb79ecc9e27b957",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:26:06",
+          "latest": "2026-09-17T08:26:06",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-gpt-6-astra-grounded-v2.jsonl",
+        "row_count": 300,
+        "sha256": "731615578b22c264e52141727928091f4411b84bc2fa9f732243f947897915b7",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-17T08:29:36",
+          "latest": "2026-09-17T08:29:36",
+          "source": "file mtime"
+        }
+      }
+    ]
   }
 }

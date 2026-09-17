@@ -27,6 +27,9 @@ repeat/                repeat runs used for the run-to-run variation numbers
 archive-2026-09-15-*/  earlier runs kept as evidence: the output-cap defect (cap200) and the first analogue pool
 logs/                  runner logs; root-level run-*.log and .err files are the gateway runs
 analysis/              interval, comparator, pairing, and failure scripts (see below)
+figures/               the paper's data figures: each make_<name>.py draws one from the response files and the
+                       analysis outputs, prints its numbers beside the paper's, and writes <name>.pdf and .png;
+                       figstyle.py holds the shared palette and type sizes
 survey/                the two search passes (138 kept works with the 31 re-check records), the scoping summary
                        they re-checked, the 34-source data availability check, and the script behind Appendix A's counts
 build_items_*.py       task builders; fetch_*.py downloads the two sources that allow it
@@ -57,7 +60,15 @@ python analysis/retrieval_v2.py            # grounded runs under analogue rule v
 python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
 python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
 python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum
+python figures/make_grounding_effects.py   # grounded minus bare on the three tasks, with the cluster intervals
+python figures/make_survey_landscape.py    # the 138 kept works by kind and task category, and models tested
+python figures/make_allocation_analogues.py   # copies of the displayed analogue median; spread of the next-day ratio
+python figures/make_figlib_timeline.py     # smoke detection accuracy by time since the plume, bare and grounded
+python figures/make_calibration.py         # reliability diagrams per model beside the calendar-month prior
+python figures/make_prompt_sensitivity.py  # stated probabilities under the paper's prompt against two paraphrases
 ```
+
+Each figure script reads the same files as the analysis script it follows. Before writing the figure it prints every number it draws beside the paper's, with a match flag per row. `make_allocation_analogues.py` rebuilds the analogue pool from the SIT record, which takes about half a minute.
 
 ### Reported runs
 
@@ -67,11 +78,11 @@ The 36 reported response files (three tasks x six models x two conditions) are l
 
 ### Trained baselines, prompt paraphrases, and the second analogue rule
 
-`baselines/mesogeos_trained.py` fits a histogram gradient-boosted classifier and a logistic regression on the 2006 to 2019 training years, on two feature sets: the 121 numbers the bare prompt shows (last six daily values plus window mean, minimum, and maximum per driver, the static fields, and the month) and all 30 daily values per driver. The learning rate and iteration count are chosen on 2020, and the fits are scored on the 386 items and on the full 2021 to 2022 holdout; `baselines/mesogeos_trained.json` holds every number. `baselines/allocation_trained.py` fits a gradient-boosted regressor of the next-day personnel ratio (and count and ridge variants) on 30,869 fire-days from 1,499 incidents disjoint from the evaluation incidents, reading the 23 report fields of the bare prompt, with hyperparameters chosen by five-fold cross-validation grouped by incident; `baselines/allocation_trained.json` holds the cross-validation table, the 300-item scores, and the incident-clustered intervals. Both scripts write `responses-baseline-<fit>-bare.jsonl` in the task directory in the runner's row format, so the paper's scorers read them like a model run; `cluster_uncertainty.py` treats a `baseline-` arm as legitimately unpaired.
+`baselines/mesogeos_trained.py` fits a histogram gradient-boosted classifier and a logistic regression on the 2006 to 2019 training years, on two feature sets: the 121 numbers the bare prompt prints, at the four significant figures it prints them (last six daily values plus window mean, minimum, and maximum per driver, the static fields, and the month; the script asserts the 386 evaluation rows against the item file) and all 30 daily values per driver at source precision. The learning rate and iteration count are chosen on 2020, and the fits are scored on the 386 items and on the full 2021 to 2022 holdout; `baselines/mesogeos_trained.json` holds every number. `baselines/allocation_trained.py` fits a gradient-boosted regressor of the next-day personnel ratio (and count and ridge variants) on 30,869 fire-days from 1,499 incidents disjoint from the evaluation incidents, reading the 23 report fields of the bare prompt, with hyperparameters chosen by five-fold cross-validation grouped by incident; its analogue ablation draws the six analogues with the runner's own rule and asserts the draw against the saved prompts on all 300 items; `baselines/allocation_trained.json` holds the cross-validation table, the 300-item scores, and the incident-clustered intervals. Both scripts write `responses-baseline-<fit>-bare.jsonl` in the task directory in the runner's row format, so the paper's scorers read them like a model run; `cluster_uncertainty.py` treats a `baseline-` arm as legitimately unpaired.
 
 `run_mesogeos.py --variant p1` and `--variant p2` run two paraphrases of the fire danger prompt that carry the same numbers and the same answer schema (an analyst framing with the drivers named in words, and a question-first table layout). They write `responses-<model>-bare-p1.jsonl` and `-p2.jsonl` and never replace the reported `p0` files; `analysis/prompt_sensitivity.py` scores them against `p0` with a paired block-by-month bootstrap.
 
-`run_allocation.py --rule v2` draws the six analogues under the movement-conditioned rule described in `RULE-V2.md` (designed and frozen on development incidents disjoint from the evaluation set) and writes `responses-<model>-grounded-v2.jsonl`; `analysis/retrieval_v2.py` scores those runs beside bare and rule v1.
+`run_allocation.py --rule v2` draws the six analogues under the frozen nearest-neighbour rule of `retrieval-v2/DECISION.md` (family B's `nn_pers_chg`, designed on 599 development items from incidents disjoint from the evaluation set and selected by the rule fixed in `retrieval-v2/BRIEF.md`), with its fourteen standardization constants in `task-allocation/rule-v2-scales.json`. It writes `responses-<model>-grounded-v2.jsonl` and the draws to `task-allocation/rule-v2-draws.jsonl`, and never touches a v1 file; `retrieval-v2/check_v2_transfer.py` confirms that the v1 draws are unchanged and that the runner's v2 draws equal the harness's on all 300 items; `analysis/retrieval_v2.py` scores the v2 runs beside bare and rule v1 with incident-paired intervals, including the two analogue-only rules against persistence and against each other, all joined by item id.
 
 `cluster_uncertainty.py` flags a bare-and-grounded pair whose files were written more than 60 minutes apart. The grounded allocation files of the five models that ran before the analogue-date repair were rewritten on 2026-09-16 to replace one repaired item (below; `gpt-6-astra` ran under the final rule), so for allocation pass `--max-skew-min 100000`; the pairing is by item id and was checked.
 

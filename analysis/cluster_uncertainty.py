@@ -639,7 +639,10 @@ def run_task(spec, cfg, problems):
             msg = ("%s: arm '%s' has only the %s condition, %s is missing"
                    % (spec["name"], arm, present,
                       os.path.join(task_dir, expected_filename(have["_parts"], missing))))
-            if cfg.allow_unpaired or arm.startswith("baseline-"):
+            # One-sided by design, scored by their own scripts: the trained baselines (bare only), the
+            # prompt paraphrases (bare only, analysis/prompt_sensitivity.py), and the rule-v2 grounded runs
+            # (analysis/retrieval_v2.py). They are reported as a warning rather than a missing file.
+            if cfg.allow_unpaired or arm.startswith("baseline-") or arm.endswith(("-v2", "-p1", "-p2")):
                 print("  warning: " + msg)
             else:
                 problems.append(msg)

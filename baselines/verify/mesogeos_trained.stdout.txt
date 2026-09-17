@@ -3,28 +3,28 @@ Verifying 100% data traceability between items.jsonl and source CSVs...
 Traceability confirmed: 386 items x 12 drivers x 30 days match CSVs with 0 errors.
 Constructing prompt and full-window feature tables...
 Dataset split sizes: Train (2006-2019) = 19504 | Val (2020) = 2292 | Holdout (2021-2022) = 4120
+Prompt precision confirmed: the 386 evaluation rows equal the 121 numbers the bare prompt prints.
 Gemini-3.1-pro bare: AUPRC = 0.6972, 95% Cluster CI = [0.6089, 0.7765] (352 clusters)
 
 --- Tuning HistGradientBoosting on 2020 validation set ---
-Best HGB prompt: lr=0.1, max_iter=200 -> Val AUPRC = 0.8989
+Best HGB prompt: lr=0.2, max_iter=150 -> Val AUPRC = 0.8956
 Best HGB window: lr=0.05, max_iter=200 -> Val AUPRC = 0.8768
 
 --- Fitting models on 2006-2019 and evaluating ---
-[gbdt-prompt  ] 386 Items: AUPRC=0.860 [0.792, 0.913] | F1=0.789 | Call=0.298 | Brier=0.106
-                Full Holdout: AUPRC=0.874 | F1=0.789 | Call=0.299 | Brier=0.099
+[gbdt-prompt  ] 386 Items: AUPRC=0.851 [0.780, 0.907] | F1=0.783 | Call=0.316 | Brier=0.108
+                Full Holdout: AUPRC=0.874 | F1=0.780 | Call=0.295 | Brier=0.101
   Wrote response file: responses-baseline-gbdt-prompt-bare.jsonl (386 items)
 [gbdt-window  ] 386 Items: AUPRC=0.837 [0.764, 0.898] | F1=0.737 | Call=0.321 | Brier=0.114
                 Full Holdout: AUPRC=0.866 | F1=0.767 | Call=0.296 | Brier=0.102
   Wrote response file: responses-baseline-gbdt-window-bare.jsonl (386 items)
-[logit-prompt ] 386 Items: AUPRC=0.768 [0.683, 0.842] | F1=0.697 | Call=0.285 | Brier=0.140
-                Full Holdout: AUPRC=0.779 | F1=0.705 | Call=0.300 | Brier=0.135
+[logit-prompt ] 386 Items: AUPRC=0.768 [0.684, 0.843] | F1=0.697 | Call=0.285 | Brier=0.140
+                Full Holdout: AUPRC=0.779 | F1=0.706 | Call=0.301 | Brier=0.135
   Wrote response file: responses-baseline-logit-prompt-bare.jsonl (386 items)
-[logit-window ] 386 Items: AUPRC=0.747 [0.657, 0.828] | F1=0.667 | Call=0.298 | Brier=0.147
+[logit-window ] 386 Items: AUPRC=0.747 [0.656, 0.828] | F1=0.672 | Call=0.293 | Brier=0.147
                 Full Holdout: AUPRC=0.766 | F1=0.680 | Call=0.300 | Brier=0.141
   Wrote response file: responses-baseline-logit-window-bare.jsonl (386 items)
 
 Paired contrast (gbdt-prompt minus gemini-3.1-pro bare):
-  Difference in AUPRC = +0.162, 95% Cluster CI = [+0.095, +0.234]
+  Difference in AUPRC = +0.154, 95% Cluster CI = [+0.084, +0.227]
 
 Wrote full metrics and configuration to C:\Users\yuezh\PycharmProjects\fire-bench\baselines\mesogeos_trained.json
-meso exit 0

@@ -1,0 +1,9 @@
+evaluation items: 300 | incidents: 245 | states: 19
+historical analogue bands: 179 | analogue day pairs: 60428
+items with at least three analogues: 1.00
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:qwen.qwen3-vl-235b-a22b/grounded-v2", "items": 300, "parsed": 300, "mae": 15.98, "mae_norm": 0.18689077208818886, "within_25pct": 0.7633333333333333, "median_abs_log_ratio": 0.07847161544149525, "mae_norm_on_moving_days": 0.3152637470801121, "beats_persistence_share": 0.25333333333333335, "errors": 0, "tokens_in": 182000, "tokens_out": 18691}
+{"run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/grounded-v2", "items": 300, "parsed": 300, "mae": 16.11, "mae_norm": 0.2372836932214536, "within_25pct": 0.7633333333333333, "median_abs_log_ratio": 0.07847161544149521, "mae_norm_on_moving_days": 0.31754017962186176, "beats_persistence_share": 0.25666666666666665, "errors": 0, "tokens_in": 163555, "tokens_out": 16777}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json

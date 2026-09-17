@@ -105,7 +105,11 @@ def main():
     out = {}
 
     print(HEADER)
-    # The two analogue-only rules on the 300 items, from the stored draws of any model's grounded file.
+    # The two analogue-only rules on the 300 items, from the stored draws of any model's grounded file. Their
+    # contrasts with persistence and with each other are paired by item id here, like the model contrasts
+    # below; the first version of this round's prose quoted a v2-minus-persistence interval computed with the
+    # two error vectors in different orders (round-4 review, 2026-09-17).
+    rule_err = {}
     for rule, pattern in (("v1", "responses-claude-opus-5-grounded.jsonl"), ("v2", "responses-claude-opus-5-grounded-v2.jsonl")):
         path = TASK / pattern
         if not path.exists():
@@ -121,6 +125,20 @@ def main():
         out["rule-" + rule] = {k: v for k, v in m.items() if k != "err"}
         out["rule-" + rule]["items"] = len(ids)
         out["rule-" + rule]["median_ratio_iqr"] = [float(np.percentile(med, 25)), float(np.percentile(med, 75))]
+        groups_r = [incident[i] for i in ids]
+        berr = np.array([abs(rr[i]["target"] - rr[i]["persistence"]) / rr[i]["fire_mean"] for i in ids])
+        lo, hi = paired(berr, m["err"], groups_r, args.resamples, cu.stable_seed(args.seed, "rule-" + rule, "minus-persistence"))
+        print("   rule %s minus persistence %+.4f [%+.4f, %+.4f], paired by item, clustered by incident (persistence %.4f)"
+              % (rule, m["nmae"] - float(np.mean(berr)), lo, hi, float(np.mean(berr))))
+        out["rule-" + rule]["minus_persistence"] = [m["nmae"] - float(np.mean(berr)), lo, hi]
+        rule_err[rule] = (ids, groups_r, m["err"])
+    if "v1" in rule_err and "v2" in rule_err:
+        ids1, groups_r, err1 = rule_err["v1"]
+        ids2, _, err2 = rule_err["v2"]
+        assert ids1 == ids2
+        lo, hi = paired(err1, err2, groups_r, args.resamples, cu.stable_seed(args.seed, "rule-v2", "minus-rule-v1"))
+        print("   rule v2 minus rule v1 %+.4f [%+.4f, %+.4f]" % (float(np.mean(err2) - np.mean(err1)), lo, hi))
+        out["rule-v2"]["minus_rule_v1"] = [float(np.mean(err2) - np.mean(err1)), lo, hi]
 
     for model in MODELS:
         files = {"bare": TASK / ("responses-%s-bare.jsonl" % model), "v1": TASK / ("responses-%s-grounded.jsonl" % model),

@@ -3,19 +3,20 @@ P2-allocation: Trained non-LLM baselines
 ================================================================================
 Loaded 300 evaluation items across 245 incidents.
 Building training set from ICS-209-PLUS...
-Training set: 30869 fire-days across 1499 incidents (built in 45.44s).
+Training set: 30869 fire-days across 1499 incidents (built in 45.51s).
 Assertion passed: Disjoint population strictly confirmed (0 overlapping incidents).
 Extracting features...
-Building historical analogue pool...
-Computing analogue median ratios...
-Computed analogue ratios in 3.40s.
+Building the runner's analogue pool...
+Computing displayed analogue medians...
+Computed analogue medians in 89.57s.
+Assertion passed: the drawn analogues equal the saved prompt draw on 300 of 300 items.
 
 Running 5-fold GroupKFold Cross-Validation on training set...
   HGBR-ratio (L1, default)                   | CV MAE: 50.724 | CV NMAE: 0.1617
   HGBR-ratio (L1, tuned lr=0.05, min_leaf=50) | CV MAE: 50.581 | CV NMAE: 0.1603
   HGBR-count (L1)                            | CV MAE: 56.460 | CV NMAE: 0.2212
   Ridge (count, alpha=100)                   | CV MAE: 60.539 | CV NMAE: 0.4211
-  HGBR-analogue (ratio, tuned)               | CV MAE: 50.596 | CV NMAE: 0.1605
+  HGBR-analogue (ratio, tuned)               | CV MAE: 50.603 | CV NMAE: 0.1605
 
 Headline model selection:
 HGBR on ratio (CV NMAE: 0.1603, MAE: 50.581) wins over HGBR on raw count (CV NMAE: 0.1797, MAE: 55.184).
@@ -33,14 +34,13 @@ claude-opus-4.8-bare        14.31  0.1568   0.290  0.0606  0.3095   0.136   0.65
 gbdt                        12.97  0.1441   0.483  0.0347  0.3175   0.027   0.931   0.716   0.793
 gbdt-count                  13.68  0.2007   0.423  0.1263  0.3186   0.141   0.810   0.664   0.743
 ridge                       19.05  0.4163   0.280  0.4122  0.4228   0.625   0.474   0.569   0.543
-gbdt-analogue               13.00  0.1442   0.460  0.0347  0.3179   0.027   0.931   0.698   0.793
+gbdt-analogue               13.03  0.1447   0.480  0.0352  0.3185   0.027   0.940   0.707   0.793
 
 --- Incident-clustered 95% bootstrap intervals (20,000 resamples, seed 20260915) ---
   gbdt vs persistence: point diff = -0.0024 | 95% CI: [-0.0080, +0.0033]
   gbdt-count vs persistence: point diff = +0.0542 | 95% CI: [+0.0136, +0.1093]
   ridge vs persistence: point diff = +0.2699 | 95% CI: [+0.1601, +0.4129]
-  gbdt-analogue vs persistence: point diff = -0.0022 | 95% CI: [-0.0076, +0.0033]
+  gbdt-analogue vs persistence: point diff = -0.0017 | 95% CI: [-0.0075, +0.0043]
   gbdt vs claude-opus-4.8-bare: point diff = -0.0128 | 95% CI: [-0.0281, +0.0008]
 
 Wrote results to C:\Users\yuezh\PycharmProjects\fire-bench\baselines\allocation_trained.json
-alloc exit 0

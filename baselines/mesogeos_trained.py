@@ -11,10 +11,18 @@ Outputs:
   - task-mesogeos/responses-baseline-logit-window-bare.jsonl
   - baselines/mesogeos_trained.json
 """
+import os
+
+# The lbfgs solver and the BLAS calls under it sum in a thread-dependent order, so the logistic fits changed
+# with the machine's thread count (291, 285, and 276 iterations at 1, 4, and 8 threads on the same data;
+# round-4 review, 2026-09-17). One thread makes every number in this script reproducible.
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+    os.environ[_v] = "1"
+
 import json
 import math
-import os
 import pathlib
+import statistics
 import sys
 import warnings
 import zlib
@@ -53,6 +61,54 @@ def r_sigfig(x):
     if x is None or (isinstance(x, float) and math.isnan(x)):
         return None
     return float("%.6g" % x)
+
+
+def r4(x):
+    """The four significant figures the bare prompt prints (run_mesogeos.summarise uses %.4g)."""
+    return x if x is None or (isinstance(x, float) and math.isnan(x)) else float("%.4g" % x)
+
+
+def sig_arr(a, fmt):
+    """Round every finite entry of an array to the given printf precision, leaving NaN in place."""
+    out = np.array(a, dtype=float, copy=True)
+    m = np.isfinite(out)
+    out[m] = [float(fmt % v) for v in out[m]]
+    return out
+
+
+def row_fmean(d):
+    """Mean of the observed values in each row, summed as run_mesogeos.summarise sums them (statistics.fmean)."""
+    out = np.full(d.shape[0], np.nan)
+    for i, row in enumerate(d):
+        vals = [v for v in row if not math.isnan(v)]
+        if vals:
+            out[i] = statistics.fmean(vals)
+    return out
+
+
+def prompt_features_of_item(it):
+    """The 121 prompt numbers of one item, recomputed from the item file the prompt is rendered from."""
+    c = it["context"]
+    feats = []
+    for col in DYNAMIC:
+        series = c["daily"][col]
+        vals = [v for v in series if v is not None]
+        feats += [np.nan if v is None else r4(v) for v in series[-6:]]
+        feats += [r4(statistics.fmean(vals)), r4(min(vals)), r4(max(vals))] if vals else [np.nan] * 3
+    feats += [np.nan if c["static"].get(s) is None else r4(c["static"][s]) for s in STATIC]
+    feats.append(float(pd.Timestamp(c["window_end"]).month))
+    return np.array(feats, dtype=float)
+
+
+def verify_prompt_precision(items_386, X_prompt, order_386):
+    """Assert that the 386 evaluation rows of the prompt table equal the numbers the prompt prints."""
+    bad = 0
+    for it, row_idx in zip(items_386, order_386):
+        a, b = X_prompt[row_idx], prompt_features_of_item(it)
+        if not np.array_equal(a, b, equal_nan=True):
+            bad += 1
+    assert bad == 0, f"{bad} of 386 evaluation rows differ from the printed prompt numbers"
+    print("Prompt precision confirmed: the 386 evaluation rows equal the 121 numbers the bare prompt prints.")
 
 
 def load_and_verify_items():
@@ -114,18 +170,20 @@ def build_tables(df_pos, df_neg):
         static_mat = np.hstack([df[c].to_numpy(dtype=float).reshape(n, LAG)[:, 0:1] for c in STATIC])
         daily_mat = {c: df[c].to_numpy(dtype=float).reshape(n, LAG) for c in DYNAMIC}
 
+        # The prompt table carries the numbers as the prompt prints them: the item file keeps six significant
+        # figures, the prompt prints four, and the window statistics are computed on the six-figure values.
         prompt_parts = []
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", category=RuntimeWarning)
             for c in DYNAMIC:
-                d = daily_mat[c]
-                last6 = d[:, -6:]
-                mean_val = np.nanmean(d, axis=1, keepdims=True)
-                min_val = np.nanmin(d, axis=1, keepdims=True)
-                max_val = np.nanmax(d, axis=1, keepdims=True)
+                d6 = sig_arr(daily_mat[c], "%.6g")
+                last6 = sig_arr(d6[:, -6:], "%.4g")
+                mean_val = sig_arr(row_fmean(d6), "%.4g")[:, None]
+                min_val = sig_arr(np.nanmin(d6, axis=1), "%.4g")[:, None]
+                max_val = sig_arr(np.nanmax(d6, axis=1), "%.4g")[:, None]
                 prompt_parts.extend([last6, mean_val, min_val, max_val])
 
-        prompt_mat = np.hstack(prompt_parts + [static_mat, months[:, None]])
+        prompt_mat = np.hstack(prompt_parts + [sig_arr(sig_arr(static_mat, "%.6g"), "%.4g"), months[:, None]])
         window_mat = np.hstack([daily_mat[c] for c in DYNAMIC] + [static_mat, months[:, None]])
 
         all_prompt.append(prompt_mat)
@@ -198,6 +256,7 @@ def main():
 
     y_386 = np.array([it["label"] for it in items_386], dtype=int)
     assert (y[order_386] == y_386).all(), "Label alignment failure between CSV and items.jsonl"
+    verify_prompt_precision(items_386, X_prompt, order_386)
 
     # Build cluster blocks for the 386 items
     groups_386 = []

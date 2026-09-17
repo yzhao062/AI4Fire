@@ -1,0 +1,11 @@
+evaluation items: 300 | incidents: 245 | states: 19
+historical analogue bands: 179 | analogue day pairs: 60428
+items with at least three analogues: 1.00
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "claude-opus-4.8/grounded-v2", "items": 300, "parsed": 297, "mae": 14.94949494949495, "mae_norm": 0.16315591517227337, "within_25pct": 0.797979797979798, "median_abs_log_ratio": 0.07696104113612832, "mae_norm_on_moving_days": 0.2924346644880927, "beats_persistence_share": 0.3063973063973064, "errors": 3, "tokens_in": 210404, "tokens_out": 21352}
+{"run": "claude-opus-5/grounded-v2", "items": 300, "parsed": 300, "mae": 14.723333333333333, "mae_norm": 0.165586079991289, "within_25pct": 0.7933333333333333, "median_abs_log_ratio": 0.08146518373965206, "mae_norm_on_moving_days": 0.2918110282037544, "beats_persistence_share": 0.30666666666666664, "errors": 0, "tokens_in": 212721, "tokens_out": 25758}
+{"run": "gemini-3.1-pro/grounded-v2", "items": 300, "parsed": 300, "mae": 15.493333333333334, "mae_norm": 0.16641807351607038, "within_25pct": 0.7866666666666666, "median_abs_log_ratio": 0.07987795238431192, "mae_norm_on_moving_days": 0.30964998932500787, "beats_persistence_share": 0.22, "errors": 0, "tokens_in": 180677, "tokens_out": 142232}
+{"run": "gpt-6-astra/grounded-v2", "items": 300, "parsed": 300, "mae": 15.75, "mae_norm": 0.17580708719589686, "within_25pct": 0.7733333333333333, "median_abs_log_ratio": 0.07480194072021128, "mae_norm_on_moving_days": 0.3117017425362379, "beats_persistence_share": 0.27, "errors": 0, "tokens_in": 155654, "tokens_out": 23802}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json

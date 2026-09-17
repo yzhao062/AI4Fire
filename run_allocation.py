@@ -3,9 +3,18 @@ gateway, and score against the filed next-day personnel count.
 
     python run_allocation.py --dry-run                 renders one prompt per condition and prints the baselines
     python run_allocation.py --models claude-opus-5    runs the named models, both conditions
+    python run_allocation.py --models claude-opus-5 --conditions grounded --rule v2
+                                                       the grounded arm under the movement-conditioned rule v2
 
 The grounded condition adds retrieved analogues from a historical pool that shares no incident with the evaluation
 set: fires that started before 2015, or in California. Retrieval keys on acres, containment, and personnel bands.
+
+Rule v2 (2026-09-17, retrieval-v2/DECISION.md) keeps the pool, the eligibility filter, the six-row budget, and the
+displayed fields, and changes only which six rows are shown: the six eligible rows in the item's personnel band
+nearest to the item on seven standardized report-day features, with the recent staffing change weighted most. It
+was designed and frozen on 599 development items from incidents disjoint from the evaluation set (retrieval-v2/),
+and its fourteen constants live in task-allocation/rule-v2-scales.json. A v2 run writes
+responses-<model>-grounded-v2.jsonl and never touches a v1 file.
 """
 import argparse
 import collections
@@ -79,7 +88,8 @@ def build_pool(eval_incidents):
     as late as 2020, so a row here can post-date the day an item asks about. Each row therefore carries its own
     date, and analogues() drops the rows whose outcome day is on or after the item's report day.
     """
-    cols = ["INCIDENT_ID", "POO_STATE", "START_YEAR", "REPORT_TO_DATE", "TOTAL_PERSONNEL", "ACRES", "PCT_CONTAINED_COMPLETED"]
+    cols = ["INCIDENT_ID", "POO_STATE", "START_YEAR", "REPORT_TO_DATE", "TOTAL_PERSONNEL", "ACRES", "PCT_CONTAINED_COMPLETED",
+            "NEW_ACRES", "TOTAL_AERIAL"]
     sit = pd.read_csv(SIT, usecols=cols, low_memory=False)
     sit["date"] = pd.to_datetime(sit["REPORT_TO_DATE"], errors="coerce", format="mixed").dt.normalize()
     sit["TOTAL_PERSONNEL"] = pd.to_numeric(sit["TOTAL_PERSONNEL"], errors="coerce")
@@ -88,19 +98,28 @@ def build_pool(eval_incidents):
     sit = sit[(sit["START_YEAR"] < 2015) | (sit["POO_STATE"] == "CA")]
     sit = sit.sort_values(["INCIDENT_ID", "date"]).groupby(["INCIDENT_ID", "date"], as_index=False).last()
     pool = collections.defaultdict(list)
+    f = lambda v: None if pd.isna(v) else float(v)
     for iid, g in sit.groupby("INCIDENT_ID"):
         g = g.sort_values("date").reset_index(drop=True)
         gaps = g["date"].diff().dt.days.fillna(1)
+        run_start = 0
         for t in range(len(g) - 1):
+            if gaps.iloc[t] != 1:
+                run_start = t
             if gaps.iloc[t + 1] != 1:
                 continue
             row, nxt = g.loc[t], g.loc[t + 1]
+            prev = g.loc[t - 1] if t > 0 and gaps.iloc[t] == 1 else None
             pool[key_of(row["ACRES"], row["PCT_CONTAINED_COMPLETED"], row["TOTAL_PERSONNEL"])].append(
                 {"analogue_id": "%s@%s" % (iid, row["date"].date()),
                  "date": row["date"],
                  "today": float(row["TOTAL_PERSONNEL"]), "next": float(nxt["TOTAL_PERSONNEL"]),
                  "acres": float(row["ACRES"]) if not pd.isna(row["ACRES"]) else None,
-                 "pct": float(row["PCT_CONTAINED_COMPLETED"]) if not pd.isna(row["PCT_CONTAINED_COMPLETED"]) else None})
+                 "pct": float(row["PCT_CONTAINED_COMPLETED"]) if not pd.isna(row["PCT_CONTAINED_COMPLETED"]) else None,
+                 # the fields below are read by rule v2 only; v1 keys on the band and samples at random
+                 "incident_id": iid, "prev": None if prev is None else float(prev["TOTAL_PERSONNEL"]),
+                 "new_acres": f(row["NEW_ACRES"]), "aerial": f(row["TOTAL_AERIAL"]),
+                 "day_of_run": int(t - run_start + 1)})
     return pool
 
 
@@ -121,6 +140,78 @@ def analogues(pool, item, k=6):
             if r["date"] + pd.Timedelta(days=1) < report]
     seed = int.from_bytes(hashlib.blake2b(item["item_id"].encode("utf-8"), digest_size=8).digest(), "big")
     return random.Random(seed).sample(hits, min(k, len(hits)))
+
+
+V2_FEATURES = ["pers", "acres", "pct", "day", "change", "new", "aerial"]
+V2_WEIGHTS = np.array([1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 1.0])  # the recent-change features weigh most
+V2_SCALES = TASK / "rule-v2-scales.json"
+
+
+def _isnum(v):
+    return v is not None and not (isinstance(v, float) and math.isnan(v))
+
+
+def v2_row_features(r):
+    """The seven report-day quantities of a pool row, unstandardized; NaN where the row lacks the field."""
+    return [math.log(max(r["today"], 1.0)),
+            math.log1p(max(r["acres"], 0.0)) if _isnum(r["acres"]) else math.nan,
+            min(max(float(r["pct"]), 0.0), 100.0) if _isnum(r["pct"]) else math.nan,
+            math.log(max(r["day_of_run"], 1)),
+            math.log(max(r["today"], 1.0) / max(r["prev"], 1.0)) if _isnum(r["prev"]) else math.nan,
+            math.log1p(max(r["new_acres"], 0.0)) if _isnum(r["new_acres"]) else math.nan,
+            math.log1p(max(r["aerial"], 0.0)) if _isnum(r["aerial"]) else math.nan]
+
+
+def v2_item_features(item):
+    c = item["context"]
+    hist = c.get("personnel_last_days") or []
+    today = float(c["personnel_today"])
+    change = math.log(max(today, 1.0) / max(float(hist[-2]), 1.0)) if len(hist) >= 2 and _isnum(hist[-2]) else math.nan
+    return [math.log(max(today, 1.0)),
+            math.log1p(max(c["acres"], 0.0)) if _isnum(c["acres"]) else math.nan,
+            min(max(float(c["percent_contained"]), 0.0), 100.0) if _isnum(c["percent_contained"]) else math.nan,
+            math.log(max(int(item["day_of_run"]), 1)),
+            change,
+            math.log1p(max(c["new_acres"], 0.0)) if _isnum(c["new_acres"]) else math.nan,
+            math.log1p(max(c["aerial_resources"], 0.0)) if _isnum(c["aerial_resources"]) else math.nan]
+
+
+class RuleV2:
+    """Frozen rule v2: the six eligible rows in the item's personnel band nearest on seven standardized features.
+
+    The pool rows of a personnel band are standardized once with the constants of rule-v2-scales.json (means and
+    standard deviations fitted on pool rows dated before 2015-01-01 by retrieval-v2/design-B/fit_scales.py). A pool
+    row missing a feature sits at the fitted mean; an item missing a feature drops it from the distance. Ties in
+    distance are broken by analogue_id, so the draw is a deterministic function of the item and the pool.
+    """
+
+    def __init__(self, pool):
+        sc = json.loads(V2_SCALES.read_text(encoding="utf-8"))
+        self.mean = np.array([sc["mean"][k] for k in V2_FEATURES])
+        self.std = np.array([sc["std"][k] for k in V2_FEATURES])
+        self.bands = {}
+        for key, rows in pool.items():
+            self.bands.setdefault(key[2], []).extend(rows)
+        self.z = {}
+        for pb, rows in self.bands.items():
+            rows.sort(key=lambda r: r["analogue_id"])  # id order first, so the stable sort below breaks ties by id
+            z = (np.array([v2_row_features(r) for r in rows], dtype=float) - self.mean) / self.std
+            z[np.isnan(z)] = 0.0
+            self.z[pb] = z
+
+    def draw(self, item, k=6):
+        c = item["context"]
+        report = pd.Timestamp(item["report_date"])
+        pb = band(c["personnel_today"], PERS_EDGES)
+        rows, z = self.bands.get(pb, []), self.z.get(pb)
+        if not rows:
+            return []
+        zi = (np.array(v2_item_features(item), dtype=float) - self.mean) / self.std
+        w = np.where(np.isnan(zi), 0.0, V2_WEIGHTS)
+        d = ((z - np.nan_to_num(zi)) ** 2 * w).sum(axis=1)
+        eligible = np.array([r["date"] + pd.Timedelta(days=1) < report for r in rows])
+        order = [i for i in np.argsort(d, kind="stable") if eligible[i]][:k]
+        return [rows[i] for i in order]
 
 
 SYSTEM = ("You forecast wildfire resource filings. You answer with one JSON object and nothing else: "
@@ -155,10 +246,13 @@ def render(item, extra=None):
     return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": "\n".join(lines)}]
 
 
-def grounded_block(rows):
+def grounded_block(rows, rule="v1"):
     if not rows:
         return ["", "Historical analogues: none matched this band."]
-    out = ["", "Historical analogues from earlier incidents in the same size, containment, and staffing band.",
+    # Under v2 only 44 percent of the drawn rows share the item's acres and containment band, so the header names
+    # the one band every row does share; the rest of the block is byte-identical to v1.
+    band_text = ("same size, containment, and staffing band" if rule == "v1" else "same staffing band")
+    out = ["", "Historical analogues from earlier incidents in the %s." % band_text,
            "Each line gives personnel today, personnel the next day, and the ratio."]
     for r in rows:
         today, nxt = r["today"], r["next"]
@@ -205,7 +299,10 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--rule", default="v1", choices=["v1", "v2"],
+                    help="analogue retrieval rule for the grounded arm; v1 is the paper's, v2 the frozen nearest-neighbour rule")
     args = ap.parse_args()
+    suffix = "" if args.rule == "v1" else "-" + args.rule
 
     items = sample_items()
     if args.limit:
@@ -222,7 +319,15 @@ def main():
 
     pool = build_pool({i["incident_id"] for i in items})
     print("historical analogue bands: %d | analogue day pairs: %d" % (len(pool), sum(len(v) for v in pool.values())))
-    ana = {it["item_id"]: analogues(pool, it) for it in items}
+    if args.rule == "v1":
+        ana = {it["item_id"]: analogues(pool, it) for it in items}
+    else:
+        v2 = RuleV2(pool)
+        ana = {it["item_id"]: v2.draw(it) for it in items}
+        draws = [{"item_id": it["item_id"], "rule": args.rule, "analogue_ids": [r["analogue_id"] for r in ana[it["item_id"]]],
+                  "median_ratio_displayed": float("%.2f" % float(np.median([r["next"] / max(r["today"], 1) for r in ana[it["item_id"]]])))
+                  if ana[it["item_id"]] else None} for it in items]
+        (TASK / ("rule-%s-draws.jsonl" % args.rule)).write_text("\n".join(json.dumps(d) for d in draws) + "\n", encoding="utf-8")
     print("items with at least three analogues: %.2f" % float(np.mean([len(ana[i["item_id"]]) >= 3 for i in items])))
 
     base_rows = [{"target": it["target_personnel"], "prediction": it["baseline_persistence"],
@@ -232,7 +337,7 @@ def main():
     if args.dry_run:
         it = items[0]
         print("\n--- bare prompt\n" + render(it)[1]["content"])
-        print("\n--- grounded addition\n" + "\n".join(grounded_block(ana[it["item_id"]])))
+        print("\n--- grounded addition\n" + "\n".join(grounded_block(ana[it["item_id"]], args.rule)))
         print("\ntarget personnel:", it["target_personnel"], "| persistence:", it["baseline_persistence"])
         return
 
@@ -241,7 +346,7 @@ def main():
     for model in args.models:
         for cond in args.conditions:
             def one(it):
-                msgs = render(it, grounded_block(ana[it["item_id"]]) if cond == "grounded" else None)
+                msgs = render(it, grounded_block(ana[it["item_id"]], args.rule) if cond == "grounded" else None)
                 try:
                     text, usage, served = gw.call(key, model, msgs, max_tokens=MAX_OUT)
                 except Exception as exc:  # a failed call is recorded, never silently dropped
@@ -253,13 +358,14 @@ def main():
                         "persistence": it["baseline_persistence"], "fire_mean": fire_mean[it["incident_id"]],
                         # The drawn analogues are part of the input, so the record keeps them; without this the
                         # grounded prompt of a past run cannot be rebuilt.
-                        "analogue_ids": [r["analogue_id"] for r in ana[it["item_id"]]] if cond == "grounded" else []}
+                        "analogue_ids": [r["analogue_id"] for r in ana[it["item_id"]]] if cond == "grounded" else [],
+                        "rule": args.rule if cond == "grounded" else None}
 
             with ThreadPoolExecutor(max_workers=args.workers) as ex:
                 rows = list(ex.map(one, items))
-            label = "%s/%s" % (model, cond)
+            label = "%s/%s%s" % (model, cond, suffix if cond == "grounded" else "")
             safe = re.sub(r"[^A-Za-z0-9._-]", "_", model)  # Bedrock ids carry colons, which Windows rejects in a path
-            out = TASK / ("responses-%s-%s.jsonl" % (safe, cond))
+            out = TASK / ("responses-%s-%s%s.jsonl" % (safe, cond, suffix if cond == "grounded" else ""))
             out.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
             s = score(rows, label)
             s["errors"] = sum(1 for r in rows if r.get("error"))

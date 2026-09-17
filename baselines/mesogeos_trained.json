@@ -10,27 +10,27 @@
   "hgb_validation_tuning": {
     "prompt": {
       "best_params": {
-        "learning_rate": 0.1,
-        "max_iter": 200
+        "learning_rate": 0.2,
+        "max_iter": 150
       },
-      "best_val_auprc": 0.8988564998901359,
+      "best_val_auprc": 0.8955698835854604,
       "grid": {
-        "lr=0.03_iter=50": 0.8415592096938684,
-        "lr=0.03_iter=100": 0.8610638937119782,
-        "lr=0.03_iter=150": 0.8773144122428385,
-        "lr=0.03_iter=200": 0.887008124353831,
-        "lr=0.05_iter=50": 0.8560348496468266,
-        "lr=0.05_iter=100": 0.8827326593039485,
-        "lr=0.05_iter=150": 0.8926431478935238,
-        "lr=0.05_iter=200": 0.8969736252633129,
-        "lr=0.1_iter=50": 0.8836502147736064,
-        "lr=0.1_iter=100": 0.8956038946420282,
-        "lr=0.1_iter=150": 0.8977334087870025,
-        "lr=0.1_iter=200": 0.8988564998901359,
-        "lr=0.2_iter=50": 0.8893019785130372,
-        "lr=0.2_iter=100": 0.8928380636381231,
-        "lr=0.2_iter=150": 0.8928380636381231,
-        "lr=0.2_iter=200": 0.8928380636381231
+        "lr=0.03_iter=50": 0.8410959688320362,
+        "lr=0.03_iter=100": 0.8615940165062935,
+        "lr=0.03_iter=150": 0.8764377235574676,
+        "lr=0.03_iter=200": 0.885443222474221,
+        "lr=0.05_iter=50": 0.8541207516601519,
+        "lr=0.05_iter=100": 0.8793024004413096,
+        "lr=0.05_iter=150": 0.8896875142008017,
+        "lr=0.05_iter=200": 0.8927121377419861,
+        "lr=0.1_iter=50": 0.8798415490724651,
+        "lr=0.1_iter=100": 0.8924921868351616,
+        "lr=0.1_iter=150": 0.8939641474697739,
+        "lr=0.1_iter=200": 0.8951965643851947,
+        "lr=0.2_iter=50": 0.8918678431218092,
+        "lr=0.2_iter=100": 0.8947859401018108,
+        "lr=0.2_iter=150": 0.8955698835854604,
+        "lr=0.2_iter=200": 0.8955698835854604
       }
     },
     "window": {
@@ -65,26 +65,26 @@
       "feature_set": "prompt",
       "model_class": "HistGradientBoostingClassifier",
       "hyperparameters": {
-        "learning_rate": 0.1,
-        "max_iter": 200
+        "learning_rate": 0.2,
+        "max_iter": 150
       },
       "eval_386": {
         "n_items": 386,
-        "auprc": 0.8597,
-        "f1_fire": 0.7886,
-        "call_rate": 0.2979,
-        "brier_score": 0.1062,
+        "auprc": 0.8509,
+        "f1_fire": 0.7826,
+        "call_rate": 0.3161,
+        "brier_score": 0.1079,
         "cluster_95_ci": [
-          0.7921,
-          0.9128
+          0.7802,
+          0.9074
         ]
       },
       "eval_full_holdout": {
         "n_items": 4120,
-        "auprc": 0.8744,
-        "f1_fire": 0.7892,
-        "call_rate": 0.2988,
-        "brier_score": 0.099
+        "auprc": 0.8739,
+        "f1_fire": 0.7802,
+        "call_rate": 0.2949,
+        "brier_score": 0.1012
       }
     },
     "gbdt-window": {
@@ -126,20 +126,20 @@
       },
       "eval_386": {
         "n_items": 386,
-        "auprc": 0.7675,
+        "auprc": 0.7683,
         "f1_fire": 0.6971,
         "call_rate": 0.285,
-        "brier_score": 0.1402,
+        "brier_score": 0.1401,
         "cluster_95_ci": [
-          0.6834,
-          0.8418
+          0.6843,
+          0.8425
         ]
       },
       "eval_full_holdout": {
         "n_items": 4120,
-        "auprc": 0.7792,
-        "f1_fire": 0.7051,
-        "call_rate": 0.2998,
+        "auprc": 0.7791,
+        "f1_fire": 0.7063,
+        "call_rate": 0.3007,
         "brier_score": 0.1352
       }
     },
@@ -155,20 +155,20 @@
       },
       "eval_386": {
         "n_items": 386,
-        "auprc": 0.7473,
-        "f1_fire": 0.6667,
-        "call_rate": 0.2979,
+        "auprc": 0.7468,
+        "f1_fire": 0.6721,
+        "call_rate": 0.2927,
         "brier_score": 0.1469,
         "cluster_95_ci": [
-          0.6567,
-          0.8284
+          0.6563,
+          0.8279
         ]
       },
       "eval_full_holdout": {
         "n_items": 4120,
-        "auprc": 0.7658,
-        "f1_fire": 0.6805,
-        "call_rate": 0.3005,
+        "auprc": 0.7657,
+        "f1_fire": 0.6802,
+        "call_rate": 0.3,
         "brier_score": 0.1411
       }
     }
@@ -182,10 +182,10 @@
     ]
   },
   "paired_contrast_best_classical_minus_gemini_bare": {
-    "diff_auprc": 0.1624,
+    "diff_auprc": 0.1536,
     "cluster_95_ci": [
-      0.0949,
-      0.2337
+      0.0843,
+      0.2275
     ]
   }
 }

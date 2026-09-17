@@ -20,13 +20,19 @@
       "cv_nmae": 0.22118809776010417
     },
     "Ridge (count, alpha=100)": {
-      "cv_mae": 60.538820542224286,
-      "cv_nmae": 0.4210568362191526
+      "cv_mae": 60.5388205422243,
+      "cv_nmae": 0.4210568362191558
     },
     "HGBR-analogue (ratio, tuned)": {
-      "cv_mae": 50.59565613863623,
-      "cv_nmae": 0.16045435736581912
+      "cv_mae": 50.602636270408105,
+      "cv_nmae": 0.16049317652038866
     }
+  },
+  "analogue_feature": {
+    "source": "run_allocation.build_pool and run_allocation.analogues, the grounded arm's own draw",
+    "value": "median next-day ratio of the drawn analogues at the two decimals the prompt prints",
+    "training_rows": "same seeded draw with the row's own incident removed from the eligible rows",
+    "evaluation_items_matching_saved_draw": 300
   },
   "headline_model": {
     "name": "gbdt",
@@ -87,25 +93,25 @@
       "w25": 0.7433333333333333
     },
     "ridge": {
-      "mae": 19.050577274450273,
-      "nmae": 0.41633771700902494,
+      "mae": 19.050577274449378,
+      "nmae": 0.41633771700899513,
       "beatp": 0.28,
-      "stable": 0.41224810487725116,
-      "moving": 0.4228246879766661,
+      "stable": 0.4122481048772137,
+      "moving": 0.4228246879766485,
       "falsemv": 0.625,
       "missmv": 0.47413793103448276,
       "dirok": 0.5689655172413793,
       "w25": 0.5433333333333333
     },
     "gbdt-analogue": {
-      "mae": 12.999178865249132,
-      "nmae": 0.1442255874565022,
-      "beatp": 0.46,
-      "stable": 0.03474113940985322,
-      "moving": 0.31789057401325593,
+      "mae": 13.030475195684716,
+      "nmae": 0.14471942259835746,
+      "beatp": 0.48,
+      "stable": 0.03515458365340895,
+      "moving": 0.3185119257524137,
       "falsemv": 0.02717391304347826,
-      "missmv": 0.9310344827586207,
-      "dirok": 0.6982758620689655,
+      "missmv": 0.9396551724137931,
+      "dirok": 0.7068965517241379,
       "w25": 0.7933333333333333
     }
   },
@@ -125,17 +131,17 @@
       ]
     },
     "ridge_vs_persistence": {
-      "point": 0.2698709513541544,
+      "point": 0.26987095135412453,
       "ci_95": [
-        0.16008235020613296,
-        0.41287233606299706
+        0.1600823502061134,
+        0.4128723360629537
       ]
     },
     "gbdt-analogue_vs_persistence": {
-      "point": -0.00224117819836836,
+      "point": -0.001747343056513112,
       "ci_95": [
-        -0.00761237708006565,
-        0.003264056651335509
+        -0.007488714588157775,
+        0.00425569535055296
       ]
     },
     "gbdt_vs_claude_opus_4_8_bare": {

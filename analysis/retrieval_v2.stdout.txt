@@ -1,0 +1,21 @@
+run                                               mae    nmae  beatp  stable  moving  false missed  dirok
+analogue-only rule v1 (300 items)               19.88  0.2487  0.227  0.1750  0.3655  0.397  0.595  0.457   median-ratio IQR [0.93, 1.07] actual [0.93, 1.02]
+   rule v1 minus persistence +0.1022 [+0.0630, +0.1507], paired by item, clustered by incident (persistence 0.1465)
+analogue-only rule v2 (300 items)               16.16  0.1902  0.260  0.1106  0.3163  0.201  0.707  0.500   median-ratio IQR [0.96, 1.02] actual [0.93, 1.02]
+   rule v2 minus persistence +0.0437 [+0.0187, +0.0719], paired by item, clustered by incident (persistence 0.1465)
+   rule v2 minus rule v1 -0.0585 [-0.1115, -0.0121]
+
+claude-opus-4.8 bare                            14.31  0.1568  0.290  0.0606  0.3095  0.136  0.655  0.552
+claude-opus-4.8 grounded v1                     15.28  0.1701  0.287  0.0886  0.2992  0.293  0.586  0.586
+claude-opus-4.8 grounded v2                     15.17  0.1664  0.307  0.0838  0.2975  0.217  0.552  0.629
+  300 items, 245 incidents: v2 - bare +0.0096 [-0.0019, +0.0228]; v2 - v1 -0.0036 [-0.0200, +0.0140]; equals displayed-median rule on 145 of 300 (0.483)
+
+claude-opus-5 bare                              15.12  0.1654  0.333  0.0837  0.2949  0.250  0.491  0.672
+claude-opus-5 grounded v1                       14.52  0.1730  0.317  0.0993  0.2899  0.272  0.526  0.629
+claude-opus-5 grounded v2                       14.72  0.1656  0.307  0.0860  0.2918  0.201  0.534  0.647
+  300 items, 245 incidents: v2 - bare +0.0002 [-0.0108, +0.0111]; v2 - v1 -0.0074 [-0.0218, +0.0062]; equals displayed-median rule on 93 of 300 (0.310)
+
+gemini-3.1-pro bare                             16.17  0.1786  0.187  0.0903  0.3185  0.228  0.543  0.431
+gemini-3.1-pro grounded v1                      16.07  0.1772  0.213  0.0895  0.3163  0.288  0.543  0.491
+gemini-3.1-pro grounded v2                      15.49  0.1664  0.220  0.0761  0.3096  0.196  0.612  0.466
+  300 items, 245 incidents: v2 - bare -0.0121 [-0.0258, +0.0

@@ -7,7 +7,14 @@ structured metrics to baselines/allocation_trained.json.
 """
 from __future__ import annotations
 
-import bisect
+import os
+
+# The lbfgs solver and the BLAS calls under it sum in a thread-dependent order, so the logistic fits changed
+# with the machine's thread count (291, 285, and 276 iterations at 1, 4, and 8 threads on the same data;
+# round-4 review, 2026-09-17). One thread makes every number in this script reproducible.
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+    os.environ[_v] = "1"
+
 import collections
 import hashlib
 import json
@@ -171,56 +178,52 @@ def extract_features(item: Dict[str, Any]) -> List[float]:
     return feats
 
 
-def build_analogue_pool(pool_sit: pd.DataFrame) -> Tuple[Dict[Any, List[Dict[str, Any]]], Dict[Any, List[pd.Timestamp]]]:
-    """Build keyed analogue pool pre-sorted by outcome date for fast querying."""
-    pool = collections.defaultdict(list)
-    for iid, g in pool_sit.groupby("INCIDENT_ID"):
-        g = g.sort_values("date").reset_index(drop=True)
-        gaps = g["date"].diff().dt.days.fillna(1)
-        for t in range(len(g) - 1):
-            if gaps.iloc[t + 1] != 1:
-                continue
-            row, nxt = g.loc[t], g.loc[t + 1]
-            pool[R.key_of(row["ACRES"], row["PCT_CONTAINED_COMPLETED"], row["TOTAL_PERSONNEL"])].append({
-                "analogue_id": "%s@%s" % (iid, row["date"].date()),
-                "incident_id": iid,
-                "date": row["date"],
-                "outcome_date": row["date"] + pd.Timedelta(days=1),
-                "today": float(row["TOTAL_PERSONNEL"]),
-                "next": float(nxt["TOTAL_PERSONNEL"]),
-                "ratio": float(nxt["TOTAL_PERSONNEL"]) / max(float(row["TOTAL_PERSONNEL"]), 1.0),
-                "acres": float(row["ACRES"]) if not pd.isna(row["ACRES"]) else None,
-                "pct": float(row["PCT_CONTAINED_COMPLETED"]) if not pd.isna(row["PCT_CONTAINED_COMPLETED"]) else None
-            })
+def build_analogue_pool(eval_iids: set[str]):
+    """The runner's own pool (run_allocation.build_pool), in the runner's own row order.
 
-    bucket_dates = {}
-    for k in pool:
-        pool[k].sort(key=lambda x: x["outcome_date"])
-        bucket_dates[k] = [x["outcome_date"] for x in pool[k]]
-    return pool, bucket_dates
+    The first version of this script rebuilt the pool and sorted every bucket by outcome date before the seeded
+    draw. The runner draws from the bucket in its own order, so the same seed picked different rows: the sets
+    differed on 299 of 300 evaluation items and the medians on 261 (round-4 review, 2026-09-17). The feature is
+    now computed by the runner's draw, and main() asserts it against the analogue ids the response files saved.
+    """
+    return R.build_pool(eval_iids)
 
 
-def get_analogue_median_ratio(item: Dict[str, Any], pool: Dict[Any, List[Dict[str, Any]]],
-                              bucket_dates: Dict[Any, List[pd.Timestamp]], is_train: bool = False) -> float:
-    """Draw deterministic analogues and compute their median next-day ratio."""
-    c = item["context"]
-    key = R.key_of(c["acres"], c["percent_contained"], c["personnel_today"])
-    candidates = pool.get(key, [])
-    if not candidates:
-        return 1.0
-    report = pd.Timestamp(item["report_date"])
-    dates = bucket_dates[key]
-    idx = bisect.bisect_left(dates, report)
-    if idx == 0:
-        return 1.0
-    cand_subset = candidates[:idx]
-    if is_train:
-        cand_subset = [r for r in cand_subset if r["incident_id"] != item["incident_id"]]
-        if not cand_subset:
-            return 1.0
-    seed = int.from_bytes(hashlib.blake2b(item["item_id"].encode("utf-8"), digest_size=8).digest(), "big")
-    sample = random.Random(seed).sample(cand_subset, min(6, len(cand_subset)))
-    return float(np.median([r["ratio"] for r in sample])) if sample else 1.0
+def displayed_median(rows: List[Dict[str, Any]]) -> float:
+    """The median ratio as the grounded block prints it, at two decimals (run_allocation.grounded_block)."""
+    ratios = [r["next"] / max(r["today"], 1) for r in rows]
+    return float("%.2f" % float(np.median(ratios)))
+
+
+def get_analogue_median_ratio(item: Dict[str, Any], pool, is_train: bool = False) -> Tuple[float, List[str]]:
+    """Draw the runner's analogues for the item and return the displayed median and the drawn ids.
+
+    Evaluation items use run_allocation.analogues unchanged. Training rows sit in the pool themselves, so their
+    own incident is removed from the eligible rows before the same seeded draw; the runner never meets this case
+    because no evaluation incident is in the pool.
+    """
+    if not is_train:
+        rows = R.analogues(pool, item)
+    else:
+        c = item["context"]
+        report = pd.Timestamp(item["report_date"])
+        hits = [r for r in pool.get(R.key_of(c["acres"], c["percent_contained"], c["personnel_today"]), [])
+                if r["date"] + pd.Timedelta(days=1) < report and r["incident_id"] != item["incident_id"]]
+        seed = int.from_bytes(hashlib.blake2b(item["item_id"].encode("utf-8"), digest_size=8).digest(), "big")
+        rows = random.Random(seed).sample(hits, min(6, len(hits)))
+    if not rows:
+        return 1.0, []
+    return displayed_median(rows), [r["analogue_id"] for r in rows]
+
+
+def saved_analogue_ids(path: pathlib.Path) -> Dict[str, List[str]]:
+    """The analogue ids a grounded response file saved for each item (every v1 file carries the same draw)."""
+    out = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            r = json.loads(line)
+            out[r["item_id"]] = list(r.get("analogue_ids") or [])
+    return out
 
 
 def compute_metrics(y: np.ndarray, p: np.ndarray, b: np.ndarray, s: np.ndarray) -> Dict[str, float]:
@@ -318,13 +321,19 @@ def main() -> None:
     eval_incidents = [r["incident_id"] for r in eval_items]
 
     # 4. Analogue feature extraction
-    print("Building historical analogue pool...")
-    pool, bucket_dates = build_analogue_pool(pool_sit)
-    print("Computing analogue median ratios...")
+    print("Building the runner's analogue pool...")
+    pool = build_analogue_pool(eval_iids)
+    print("Computing displayed analogue medians...")
     t0 = time.time()
-    eval_ana_ratios = np.array([get_analogue_median_ratio(it, pool, bucket_dates, is_train=False) for it in eval_items], dtype=float)
-    train_ana_ratios = np.array([get_analogue_median_ratio(it, pool, bucket_dates, is_train=True) for it in training_rows], dtype=float)
-    print(f"Computed analogue ratios in {time.time() - t0:.2f}s.")
+    eval_draws = [get_analogue_median_ratio(it, pool, is_train=False) for it in eval_items]
+    train_draws = [get_analogue_median_ratio(it, pool, is_train=True) for it in training_rows]
+    eval_ana_ratios = np.array([d[0] for d in eval_draws], dtype=float)
+    train_ana_ratios = np.array([d[0] for d in train_draws], dtype=float)
+    print(f"Computed analogue medians in {time.time() - t0:.2f}s.")
+    saved = saved_analogue_ids(TASK_DIR / "responses-claude-opus-5-grounded.jsonl")
+    n_match = sum(1 for it, d in zip(eval_items, eval_draws) if saved.get(it["item_id"]) == d[1])
+    assert n_match == len(eval_items), f"analogue draw differs from the saved prompts on {len(eval_items) - n_match} items"
+    print(f"Assertion passed: the drawn analogues equal the saved prompt draw on {n_match} of {len(eval_items)} items.")
 
     X_train_ana = np.column_stack([X_train, train_ana_ratios])
     X_eval_ana = np.column_stack([X_eval, eval_ana_ratios])
@@ -457,6 +466,12 @@ def main() -> None:
             "disjoint_assertion": True,
         },
         "cross_validation": cv_results,
+        "analogue_feature": {
+            "source": "run_allocation.build_pool and run_allocation.analogues, the grounded arm's own draw",
+            "value": "median next-day ratio of the drawn analogues at the two decimals the prompt prints",
+            "training_rows": "same seeded draw with the row's own incident removed from the eligible rows",
+            "evaluation_items_matching_saved_draw": int(n_match),
+        },
         "headline_model": {
             "name": "gbdt",
             "model_type": "HistGradientBoostingRegressor",
