@@ -1,0 +1,5462 @@
+{
+ "Sycan/Sycan 2A/Fire/00001": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00289",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00289.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00289.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00289.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00001.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 15.979,
+   "std": 31.33
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00062": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00142",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00142.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00142.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00142.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00062.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 11.636,
+   "std": 32.668
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00124": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00368",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00368.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00368.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00368.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00124.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 582.376,
+   "mean": 31.145,
+   "std": 45.148
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00185": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00149",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00149.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00149.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00149.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00185.jpg",
+  "fingerprint": {
+   "min": -7.3,
+   "max": 595.594,
+   "mean": 23.012,
+   "std": 39.395
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00247": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00250",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00250.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00250.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00250.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00247.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 293.211,
+   "mean": 3.415,
+   "std": 20.132
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00308": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00129",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00129.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00129.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00129.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00308.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 456.733,
+   "mean": 15.591,
+   "std": 20.571
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00006": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00322",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00322.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00322.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00322.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00006.jpg",
+  "fingerprint": {
+   "min": -9.22,
+   "max": 187.424,
+   "mean": 14.257,
+   "std": 21.303
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00067": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00070",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00070.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00070.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00070.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00067.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.447,
+   "std": 15.914
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00129": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00171",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00171.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00171.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00171.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00129.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 519.206,
+   "mean": 1.513,
+   "std": 17.701
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00190": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00403",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00403.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00403.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00403.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00190.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 17.324,
+   "std": 39.285
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00252": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00602",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00602.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00602.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00602.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00252.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 488.831,
+   "mean": 5.149,
+   "std": 17.037
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00055": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00016",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00016.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00016.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00016.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00055.jpg",
+  "fingerprint": {
+   "min": -19.203,
+   "max": 17.107,
+   "mean": 12.179,
+   "std": 2.935
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00002": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00435",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00435.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00435.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00435.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00002.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 16.854,
+   "std": 31.082
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00063": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00158",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00158.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00158.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00158.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00063.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.187,
+   "std": 34.54
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00125": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00019",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00019.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00019.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00019.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00125.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 547.937,
+   "mean": 19.422,
+   "std": 37.755
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00190": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00170",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00170.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00170.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00170.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00190.jpg",
+  "fingerprint": {
+   "min": -0.077,
+   "max": 566.885,
+   "mean": 28.544,
+   "std": 41.161
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00251": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00582",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00582.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00582.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00582.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00251.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 305.936,
+   "mean": 3.765,
+   "std": 20.692
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00312": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00165",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00165.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00165.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00165.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00312.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 268.748,
+   "mean": 15.234,
+   "std": 14.227
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00009": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00194",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00194.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00194.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00194.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00009.jpg",
+  "fingerprint": {
+   "min": -7.864,
+   "max": 187.424,
+   "mean": 16.804,
+   "std": 27.832
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00070": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00251",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00251.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00251.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00251.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00070.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.672,
+   "std": 15.576
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00132": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00559",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00559.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00559.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00559.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00132.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 505.555,
+   "mean": 3.27,
+   "std": 16.849
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00193": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00327",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00327.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00327.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00327.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00193.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 608.69,
+   "mean": 17.445,
+   "std": 39.012
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00253": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00169",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00169.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00169.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00169.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00253.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 487.697,
+   "mean": 4.697,
+   "std": 17.065
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00056": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00037",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00037.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00037.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00037.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00056.jpg",
+  "fingerprint": {
+   "min": 3.006,
+   "max": 27.095,
+   "mean": 12.021,
+   "std": 3.194
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00004": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00409",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00409.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00409.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00409.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00004.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 17.866,
+   "std": 31.56
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00065": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00514",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00514.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00514.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00514.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00065.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 602.897,
+   "mean": 11.632,
+   "std": 39.226
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00128": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00568",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00568.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00568.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00568.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00128.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 507.074,
+   "mean": 16.348,
+   "std": 34.878
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00192": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00580",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00580.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00580.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00580.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00192.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 509.772,
+   "mean": 12.941,
+   "std": 27.022
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00252": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00329",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00329.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00329.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00329.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00252.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 286.357,
+   "mean": 4.455,
+   "std": 20.514
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00313": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00308",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00308.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00308.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00308.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00313.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 403.763,
+   "mean": 17.723,
+   "std": 17.773
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00010": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00187",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00187.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00187.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00187.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00010.jpg",
+  "fingerprint": {
+   "min": -7.143,
+   "max": 187.424,
+   "mean": 17.15,
+   "std": 29.122
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00071": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00510",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00510.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00510.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00510.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00071.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.213,
+   "std": 15.498
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00133": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00072",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00072.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00072.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00072.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00133.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 503.674,
+   "mean": 3.151,
+   "std": 16.718
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00194": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00587",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00587.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00587.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00587.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00194.jpg",
+  "fingerprint": {
+   "min": -12.836,
+   "max": 608.69,
+   "mean": 15.521,
+   "std": 31.68
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00254": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00298",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00298.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00298.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00298.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00254.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 501.541,
+   "mean": 4.465,
+   "std": 17.913
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00057": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00044",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00044.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00044.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00044.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00057.jpg",
+  "fingerprint": {
+   "min": 2.314,
+   "max": 32.13,
+   "mean": 11.866,
+   "std": 4.233
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00006": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00617",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00617.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00617.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00617.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00006.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 17.117,
+   "std": 30.301
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00067": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00291",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00291.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00291.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00291.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00067.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 527.883,
+   "mean": 5.835,
+   "std": 22.797
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00129": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00288",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00288.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00288.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00288.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00129.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 522.85,
+   "mean": 15.197,
+   "std": 33.248
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00011": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00105",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00105.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00105.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00105.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00011.jpg",
+  "fingerprint": {
+   "min": -0.654,
+   "max": 187.424,
+   "mean": 16.156,
+   "std": 27.692
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00072": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00450",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00450.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00450.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00450.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00072.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.805,
+   "std": 14.717
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00134": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00364",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00364.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00364.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00364.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00134.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 527.81,
+   "mean": 3.016,
+   "std": 16.673
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00195": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00180",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00180.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00180.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00180.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00195.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 608.69,
+   "mean": 16.094,
+   "std": 31.357
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00257": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00545",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00545.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00545.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00545.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00257.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 486.96,
+   "mean": 3.274,
+   "std": 16.908
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00060": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00029",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00029.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00029.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00029.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00060.jpg",
+  "fingerprint": {
+   "min": -9.039,
+   "max": 37.436,
+   "mean": 9.631,
+   "std": 4.154
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00008": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00354",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00354.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00354.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00354.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00008.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 16.051,
+   "std": 29.764
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00068": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00127",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00127.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00127.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00127.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00068.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 501.071,
+   "mean": 4.106,
+   "std": 16.641
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00130": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00024",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00024.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00024.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00024.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00130.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 550.766,
+   "mean": 15.152,
+   "std": 33.454
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00195": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00092",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00092.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00092.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00092.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00195.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 566.525,
+   "mean": 18.511,
+   "std": 24.629
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00256": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00350",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00350.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00350.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00350.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00256.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 537.134,
+   "mean": 18.541,
+   "std": 34.73
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00316": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00271",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00271.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00271.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00271.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00316.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 385.412,
+   "mean": 18.712,
+   "std": 19.653
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00013": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00077",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00077.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00077.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00077.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00013.jpg",
+  "fingerprint": {
+   "min": -1.535,
+   "max": 187.424,
+   "mean": 14.477,
+   "std": 25.502
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00074": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00614",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00614.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00614.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00614.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00074.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.391,
+   "std": 14.157
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00137": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00384",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00384.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00384.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00384.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00137.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 500.168,
+   "mean": 3.13,
+   "std": 16.746
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00197": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00207",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00207.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00207.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00207.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00197.jpg",
+  "fingerprint": {
+   "min": -12.836,
+   "max": 608.69,
+   "mean": 17.604,
+   "std": 35.602
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00258": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00484",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00484.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00484.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00484.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00258.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 418.006,
+   "mean": 1.776,
+   "std": 14.24
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00061": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00092",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00092.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00092.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00092.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00061.jpg",
+  "fingerprint": {
+   "min": -0.566,
+   "max": 39.751,
+   "mean": 9.691,
+   "std": 3.706
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00009": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00280",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00280.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00280.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00280.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00009.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 608.69,
+   "mean": 14.402,
+   "std": 28.114
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00070": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00179",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00179.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00179.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00179.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00070.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 456.572,
+   "mean": 3.589,
+   "std": 17.931
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00133": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00305",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00305.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00305.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00305.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00133.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 477.175,
+   "mean": 14.801,
+   "std": 29.998
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00198": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00319",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00319.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00319.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00319.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00198.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 516.663,
+   "mean": 29.325,
+   "std": 40.818
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00259": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00040",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00040.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00040.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00040.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00259.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 489.065,
+   "mean": 14.106,
+   "std": 29.374
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00320": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00491",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00491.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00491.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00491.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00320.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 424.556,
+   "mean": 19.889,
+   "std": 17.872
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00017": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00499",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00499.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00499.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00499.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00017.jpg",
+  "fingerprint": {
+   "min": -10.31,
+   "max": 187.424,
+   "mean": 11.378,
+   "std": 5.569
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00078": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00408",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00408.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00408.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00408.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00078.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.033,
+   "std": 12.928
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00139": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00106",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00106.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00106.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00106.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00139.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 516.211,
+   "mean": 4.551,
+   "std": 15.806
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00200": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00622",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00622.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00622.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00622.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00200.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 574.713,
+   "mean": 13.465,
+   "std": 24.021
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00003": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00089",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00089.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00089.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00089.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00003.jpg",
+  "fingerprint": {
+   "min": -7.864,
+   "max": 25.131,
+   "mean": 10.002,
+   "std": 5.535
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00064": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00094",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00094.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00094.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00094.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00064.jpg",
+  "fingerprint": {
+   "min": -13.976,
+   "max": 21.592,
+   "mean": 10.891,
+   "std": 2.583
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00011": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00223",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00223.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00223.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00223.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00011.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 564.921,
+   "mean": 11.272,
+   "std": 17.918
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00073": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00166",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00166.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00166.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00166.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00073.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 438.477,
+   "mean": 4.638,
+   "std": 19.913
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00134": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00352",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00352.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00352.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00352.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00134.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 442.241,
+   "mean": 13.795,
+   "std": 25.478
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00196": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00401",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00401.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00401.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00401.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00196.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 576.081,
+   "mean": 23.221,
+   "std": 32.948
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00257": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00007",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00007.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00007.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00007.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00257.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 475.902,
+   "mean": 14.117,
+   "std": 30.84
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00319": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00473",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00473.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00473.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00473.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00319.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 361.967,
+   "mean": 19.819,
+   "std": 17.735
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00016": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00181",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00181.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00181.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00181.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00016.jpg",
+  "fingerprint": {
+   "min": 0.052,
+   "max": 187.424,
+   "mean": 14.246,
+   "std": 22.23
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00201": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00497",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00497.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00497.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00497.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00201.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.437,
+   "std": 19.179
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00004": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00045",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00045.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00045.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00045.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00004.jpg",
+  "fingerprint": {
+   "min": -8.586,
+   "max": 26.605,
+   "mean": 8.634,
+   "std": 5.716
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00066": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00018",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00018.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00018.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00018.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00066.jpg",
+  "fingerprint": {
+   "min": -23.877,
+   "max": 18.358,
+   "mean": 10.975,
+   "std": 3.293
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00013": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00023",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00023.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00023.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00023.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00013.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 514.173,
+   "mean": 11.117,
+   "std": 16.203
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00075": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00153",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00153.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00153.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00153.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00075.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 483.743,
+   "mean": 4.779,
+   "std": 16.914
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00136": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00249",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00249.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00249.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00249.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00136.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 446.329,
+   "mean": 13.351,
+   "std": 24.516
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00321": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00081",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00081.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00081.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00081.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00321.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 481.426,
+   "mean": 18.211,
+   "std": 15.614
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00018": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00447",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00447.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00447.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00447.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00018.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 3.257,
+   "std": 13.582
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00080": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00021",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00021.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00021.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00021.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00080.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.043,
+   "std": 13.989
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00141": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00216",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00216.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00216.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00216.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00141.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 482.396,
+   "mean": 4.859,
+   "std": 15.056
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00203": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00465",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00465.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00465.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00465.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00203.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 383.945,
+   "mean": 12.479,
+   "std": 13.818
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00006": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00028",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00028.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00028.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00028.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00006.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 27.829,
+   "mean": -2.1,
+   "std": 16.897
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00068": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00054",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00054.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00054.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00054.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00068.jpg",
+  "fingerprint": {
+   "min": -7.954,
+   "max": 32.13,
+   "mean": 9.636,
+   "std": 4.06
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00015": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00442",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00442.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00442.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00442.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00015.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 522.345,
+   "mean": 11.577,
+   "std": 15.829
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00076": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00620",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00620.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00620.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00620.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00076.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 486.655,
+   "mean": 5.367,
+   "std": 16.763
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00138": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00325",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00325.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00325.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00325.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00138.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 496.613,
+   "mean": 19.844,
+   "std": 29.326
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00199": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00235",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00235.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00235.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00235.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00199.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 508.794,
+   "mean": 27.592,
+   "std": 37.034
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00261": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00286",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00286.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00286.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00286.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00261.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 443.869,
+   "mean": 18.312,
+   "std": 29.087
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00322": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00390",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00390.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00390.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00390.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00322.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 388.346,
+   "mean": 24.154,
+   "std": 21.93
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00020": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00028",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00028.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00028.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00028.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00020.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 185.135,
+   "mean": 3.152,
+   "std": 13.249
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00081": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00313",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00313.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00313.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00313.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00081.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.562,
+   "std": 13.228
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00143": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00433",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00433.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00433.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00433.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00143.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 521.1,
+   "mean": 8.179,
+   "std": 14.685
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00204": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00212",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00212.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00212.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00212.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00204.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 501.071,
+   "mean": 9.123,
+   "std": 18.989
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00008": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00090",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00090.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00090.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00090.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00008.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 26.932,
+   "mean": 2.229,
+   "std": 10.525
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00069": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00058",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00058.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00058.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00058.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00069.jpg",
+  "fingerprint": {
+   "min": -9.946,
+   "max": 40.626,
+   "mean": 10.791,
+   "std": 4.927
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00017": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00232",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00232.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00232.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00232.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00017.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 567.986,
+   "mean": 8.751,
+   "std": 23.048
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00078": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00460",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00460.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00460.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00460.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00078.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 467.006,
+   "mean": 6.004,
+   "std": 15.409
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00140": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00591",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00591.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00591.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00591.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00140.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 522.345,
+   "mean": 23.174,
+   "std": 33.236
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00201": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00099",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00099.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00099.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00099.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00201.jpg",
+  "fingerprint": {
+   "min": -3.152,
+   "max": 608.69,
+   "mean": 38.178,
+   "std": 48.153
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00263": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00224",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00224.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00224.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00224.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00263.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 557.257,
+   "mean": 15.639,
+   "std": 30.725
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00324": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00150",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00150.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00150.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00150.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00324.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 363.058,
+   "mean": 19.65,
+   "std": 15.223
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00022": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00459",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00459.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00459.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00459.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00022.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 2.836,
+   "std": 12.212
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00083": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00255",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00255.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00255.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00255.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00083.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 608.69,
+   "mean": 13.795,
+   "std": 27.303
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00145": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00597",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00597.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00597.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00597.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00145.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 543.338,
+   "mean": 9.006,
+   "std": 17.131
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00206": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00273",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00273.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00273.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00273.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00206.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 485.774,
+   "mean": 9.659,
+   "std": 17.064
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00010": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00069",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00069.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00069.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00069.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00010.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 24.393,
+   "mean": 2.026,
+   "std": 11.228
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00071": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00114",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00114.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00114.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00114.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00071.jpg",
+  "fingerprint": {
+   "min": -0.303,
+   "max": 36.155,
+   "mean": 12.183,
+   "std": 4.664
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00019": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00201",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00201.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00201.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00201.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00019.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 11.814,
+   "std": 33.669
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00080": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00405",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00405.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00405.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00405.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00080.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 318.638,
+   "mean": 6.277,
+   "std": 12.398
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00142": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00525",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00525.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00525.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00525.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00142.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 567.698,
+   "mean": 25.622,
+   "std": 39.858
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00203": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00140",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00140.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00140.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00140.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00203.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 608.69,
+   "mean": 35.186,
+   "std": 43.943
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00265": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00071",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00071.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00071.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00071.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00265.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 567.194,
+   "mean": 19.507,
+   "std": 31.776
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00326": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00382",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00382.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00382.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00382.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00326.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 455.754,
+   "mean": 24.685,
+   "std": 22.094
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00024": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00146",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00146.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00146.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00146.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00024.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 186.78,
+   "mean": 2.541,
+   "std": 15.035
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00085": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00395",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00395.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00395.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00395.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00085.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 601.077,
+   "mean": 13.479,
+   "std": 27.68
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00147": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00087",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00087.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00087.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00087.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00147.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.217,
+   "std": 26.959
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00208": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00031",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00031.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00031.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00031.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00208.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 472.695,
+   "mean": 10.336,
+   "std": 17.129
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00012": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00103",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00103.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00103.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00103.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00012.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 26.605,
+   "mean": 2.666,
+   "std": 11.591
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00073": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00004",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00004.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00004.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00004.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00073.jpg",
+  "fingerprint": {
+   "min": 0.836,
+   "max": 29.782,
+   "mean": 13.421,
+   "std": 2.97
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00020": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00321",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00321.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00321.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00321.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00020.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 11.64,
+   "std": 34.744
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00082": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00011",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00011.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00011.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00011.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00082.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 339.774,
+   "mean": 7.956,
+   "std": 13.239
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00144": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00393",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00393.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00393.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00393.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00144.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 592.601,
+   "mean": 24.426,
+   "std": 45.732
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00206": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00369",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00369.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00369.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00369.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00206.jpg",
+  "fingerprint": {
+   "min": 4.634,
+   "max": 608.69,
+   "mean": 40.549,
+   "std": 50.907
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00267": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00297",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00297.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00297.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00297.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00267.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 18.339,
+   "std": 34.528
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00328": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00145",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00145.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00145.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00145.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00328.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 226.537,
+   "mean": 10.765,
+   "std": 9.863
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00026": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00124",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00124.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00124.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00124.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00026.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 4.587,
+   "std": 16.182
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00087": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00190",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00190.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00190.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00190.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00087.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 576.318,
+   "mean": 11.325,
+   "std": 22.299
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00149": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00123",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00123.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00123.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00123.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00149.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 9.725,
+   "std": 24.262
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00210": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00566",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00566.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00566.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00566.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00210.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 608.69,
+   "mean": 35.662,
+   "std": 62.952
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00014": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00026",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00026.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00026.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00026.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00014.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 34.871,
+   "mean": 4.396,
+   "std": 10.482
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00075": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00011",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00011.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00011.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00011.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00075.jpg",
+  "fingerprint": {
+   "min": -2.241,
+   "max": 42.372,
+   "mean": 10.006,
+   "std": 4.669
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00022": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00589",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00589.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00589.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00589.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00022.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 11.234,
+   "std": 34.921
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00084": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00557",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00557.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00557.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00557.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00084.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 321.704,
+   "mean": 8.893,
+   "std": 12.141
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00145": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00515",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00515.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00515.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00515.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00145.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 544.727,
+   "mean": 25.184,
+   "std": 45.252
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00207": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00592",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00592.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00592.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00592.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00207.jpg",
+  "fingerprint": {
+   "min": 5.552,
+   "max": 608.69,
+   "mean": 43.166,
+   "std": 56.88
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00268": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00293",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00293.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00293.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00293.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00268.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 535.601,
+   "mean": 9.773,
+   "std": 27.474
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00330": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00043",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00043.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00043.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00043.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00330.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 427.505,
+   "mean": 21.209,
+   "std": 26.617
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00027": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00468",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00468.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00468.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00468.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00027.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 6.209,
+   "std": 17.961
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00089": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00355",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00355.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00355.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00355.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00089.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 529.272,
+   "mean": 9.162,
+   "std": 17.226
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00150": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00539",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00539.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00539.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00539.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00150.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 531.165,
+   "mean": 8.575,
+   "std": 18.175
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00212": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00256",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00256.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00256.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00256.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00212.jpg",
+  "fingerprint": {
+   "min": -6.258,
+   "max": 594.277,
+   "mean": 22.142,
+   "std": 44.972
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00015": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00046",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00046.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00046.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00046.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00015.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 35.513,
+   "mean": 5.433,
+   "std": 10.488
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00077": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00079",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00079.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00079.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00079.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00077.jpg",
+  "fingerprint": {
+   "min": -1.182,
+   "max": 44.982,
+   "mean": 11.429,
+   "std": 4.76
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00024": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00047",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00047.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00047.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00047.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00024.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 10.301,
+   "std": 35.741
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00085": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00267",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00267.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00267.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00267.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00085.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 429.894,
+   "mean": 8.997,
+   "std": 14.071
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00147": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00284",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00284.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00284.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00284.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00147.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 28.952,
+   "std": 48.766
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00210": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00226",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00226.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00226.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00226.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00210.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 603.854,
+   "mean": 38.337,
+   "std": 39.981
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00271": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00618",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00618.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00618.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00618.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00271.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 547.773,
+   "mean": 9.236,
+   "std": 20.602
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00333": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00422",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00422.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00422.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00422.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00333.jpg",
+  "fingerprint": {
+   "min": -12.228,
+   "max": 187.424,
+   "mean": 26.846,
+   "std": 28.348
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00030": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00006",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00006.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00006.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00006.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00030.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 6.622,
+   "std": 14.559
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00091": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00294",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00294.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00294.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00294.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00091.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 6.507,
+   "std": 14.026
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00153": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00581",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00581.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00581.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00581.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00153.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 381.839,
+   "mean": 8.417,
+   "std": 13.697
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00214": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00428",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00428.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00428.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00428.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00214.jpg",
+  "fingerprint": {
+   "min": -8.434,
+   "max": 608.69,
+   "mean": 17.169,
+   "std": 36.413
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00017": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00075",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00075.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00075.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00075.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00017.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 24.146,
+   "mean": 2.982,
+   "std": 10.264
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00079": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00047",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00047.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00047.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00047.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00079.jpg",
+  "fingerprint": {
+   "min": 0.14,
+   "max": 24.885,
+   "mean": 13.763,
+   "std": 3.319
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00026": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00616",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00616.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00616.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00616.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00026.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 8.959,
+   "std": 34.938
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00087": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00005",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00005.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00005.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00005.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00087.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 556.681,
+   "mean": 14.085,
+   "std": 15.527
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00148": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00508",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00508.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00508.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00508.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00148.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 28.36,
+   "std": 46.115
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00212": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00102",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00102.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00102.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00102.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00212.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 608.69,
+   "mean": 42.425,
+   "std": 48.687
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00273": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00574",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00574.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00574.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00574.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00273.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 483.51,
+   "mean": 12.901,
+   "std": 19.797
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00334": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00437",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00437.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00437.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00437.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00334.jpg",
+  "fingerprint": {
+   "min": -7.864,
+   "max": 187.424,
+   "mean": 28.242,
+   "std": 28.325
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00032": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00335",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00335.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00335.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00335.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00032.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 6.33,
+   "std": 12.008
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00093": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00370",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00370.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00370.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00370.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00093.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 7.034,
+   "std": 13.789
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00154": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00049",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00049.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00049.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00049.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00154.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 608.69,
+   "mean": 9.395,
+   "std": 18.646
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00216": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00075",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00075.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00075.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00075.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00216.jpg",
+  "fingerprint": {
+   "min": -4.184,
+   "max": 608.69,
+   "mean": 14.559,
+   "std": 31.438
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00019": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00085",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00085.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00085.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00085.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00019.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 22.418,
+   "mean": 2.918,
+   "std": 13.546
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00080": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00096",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00096.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00096.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00096.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00080.jpg",
+  "fingerprint": {
+   "min": 5.592,
+   "max": 20.516,
+   "mean": 13.896,
+   "std": 1.319
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00028": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00469",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00469.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00469.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00469.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00028.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 13.175,
+   "std": 29.539
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00089": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00311",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00311.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00311.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00311.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00089.jpg",
+  "fingerprint": {
+   "min": 6.469,
+   "max": 608.69,
+   "mean": 16.947,
+   "std": 21.699
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00151": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00164",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00164.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00164.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00164.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00151.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 532.915,
+   "mean": 34.646,
+   "std": 46.071
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00274": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00500",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00500.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00500.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00500.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00274.jpg",
+  "fingerprint": {
+   "min": -0.077,
+   "max": 488.831,
+   "mean": 14.839,
+   "std": 21.287
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00335": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00014",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00014.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00014.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00014.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00335.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 449.256,
+   "mean": 30.033,
+   "std": 29.031
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00033": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00112",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00112.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00112.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00112.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00033.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 10.277,
+   "std": 18.16
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00094": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00309",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00309.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00309.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00309.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00094.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 369.167,
+   "mean": 6.286,
+   "std": 13.845
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00156": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00175",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00175.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00175.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00175.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00156.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 608.69,
+   "mean": 9.855,
+   "std": 13.973
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00217": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00381",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00381.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00381.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00381.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00217.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 608.69,
+   "mean": 14.349,
+   "std": 31.377
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00021": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00008",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00008.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00008.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00008.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00021.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 39.113,
+   "mean": 5.031,
+   "std": 10.971
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00082": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00082",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00082.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00082.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00082.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00082.jpg",
+  "fingerprint": {
+   "min": 2.226,
+   "max": 18.774,
+   "mean": 12.753,
+   "std": 1.329
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00029": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00585",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00585.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00585.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00585.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00029.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 585.369,
+   "mean": 11.12,
+   "std": 21.887
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00091": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00004",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00004.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00004.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00004.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00091.jpg",
+  "fingerprint": {
+   "min": 7.383,
+   "max": 497.335,
+   "mean": 18.801,
+   "std": 22.229
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00152": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00479",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00479.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00479.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00479.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00152.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 530.713,
+   "mean": 34.663,
+   "std": 46.397
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00214": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00230",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00230.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00230.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00230.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00214.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 594.946,
+   "mean": 39.429,
+   "std": 47.82
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00275": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00338",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00338.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00338.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00338.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00275.jpg",
+  "fingerprint": {
+   "min": -6.258,
+   "max": 528.243,
+   "mean": 19.985,
+   "std": 28.306
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00337": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00481",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00481.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00481.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00481.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00337.jpg",
+  "fingerprint": {
+   "min": -0.077,
+   "max": 504.143,
+   "mean": 31.575,
+   "std": 28.637
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00034": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00556",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00556.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00556.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00556.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00034.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.935,
+   "std": 17.848
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00096": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00277",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00277.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00277.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00277.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00096.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 420.962,
+   "mean": 6.037,
+   "std": 11.184
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00157": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00061",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00061.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00061.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00061.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00157.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 590.471,
+   "mean": 9.614,
+   "std": 14.029
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00219": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00111",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00111.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00111.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00111.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00219.jpg",
+  "fingerprint": {
+   "min": -6.258,
+   "max": 608.69,
+   "mean": 17.487,
+   "std": 34.605
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00022": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00030",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00030.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00030.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00030.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00022.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 18.024,
+   "mean": 5.629,
+   "std": 14.289
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00084": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00076",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00076.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00076.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00076.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00084.jpg",
+  "fingerprint": {
+   "min": 0.836,
+   "max": 21.179,
+   "mean": 13.039,
+   "std": 1.903
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00031": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00027",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00027.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00027.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00027.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00031.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 605.984,
+   "mean": 10.891,
+   "std": 22.894
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00093": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00296",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00296.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00296.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00296.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00093.jpg",
+  "fingerprint": {
+   "min": 9.205,
+   "max": 518.394,
+   "mean": 19.377,
+   "std": 20.436
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00154": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00586",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00586.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00586.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00586.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00154.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 519.134,
+   "mean": 32.529,
+   "std": 39.612
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00216": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00168",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00168.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00168.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00168.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00216.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 608.69,
+   "mean": 34.364,
+   "std": 43.68
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00277": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00400",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00400.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00400.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00400.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00277.jpg",
+  "fingerprint": {
+   "min": 9.205,
+   "max": 511.892,
+   "mean": 31.211,
+   "std": 30.88
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00339": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00339",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00339.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00339.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00339.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00339.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 462.7,
+   "mean": 30.073,
+   "std": 27.023
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00036": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00449",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00449.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00449.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00449.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00036.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 7.407,
+   "std": 14.348
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00098": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00331",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00331.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00331.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00331.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00098.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 478.232,
+   "mean": 5.987,
+   "std": 13.693
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00159": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00136",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00136.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00136.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00136.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00159.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 534.52,
+   "mean": 12.056,
+   "std": 18.968
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00221": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00391",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00391.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00391.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00391.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00221.jpg",
+  "fingerprint": {
+   "min": -7.3,
+   "max": 608.69,
+   "mean": 18.654,
+   "std": 37.735
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00024": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00020",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00020.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00020.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00020.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00024.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 23.324,
+   "mean": 4.956,
+   "std": 14.94
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00086": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00099",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00099.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00099.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00099.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00086.jpg",
+  "fingerprint": {
+   "min": 0.836,
+   "max": 19.106,
+   "mean": 11.975,
+   "std": 1.355
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00033": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00521",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00521.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00521.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00521.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00033.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 13.104,
+   "std": 26.875
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00095": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00417",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00417.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00417.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00417.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00095.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 510.841,
+   "mean": 13.66,
+   "std": 20.902
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00156": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00379",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00379.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00379.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00379.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00156.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 510.28,
+   "mean": 40.692,
+   "std": 37.733
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00218": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00451",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00451.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00451.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00451.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00218.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 560.467,
+   "mean": 18.716,
+   "std": 37.616
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00279": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00506",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00506.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00506.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00506.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00279.jpg",
+  "fingerprint": {
+   "min": 8.295,
+   "max": 506.839,
+   "mean": 25.043,
+   "std": 25.958
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00341": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00420",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00420.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00420.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00420.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00341.jpg",
+  "fingerprint": {
+   "min": 8.295,
+   "max": 377.715,
+   "mean": 27.756,
+   "std": 25.465
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00038": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00337",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00337.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00337.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00337.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00038.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.281,
+   "std": 16.088
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00100": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00474",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00474.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00474.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00474.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00100.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 441.57,
+   "mean": 7.09,
+   "std": 13.53
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00161": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00462",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00462.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00462.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00462.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00161.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 14.498,
+   "std": 26.753
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00223": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00022",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00022.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00022.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00022.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00223.jpg",
+  "fingerprint": {
+   "min": -2.124,
+   "max": 608.69,
+   "mean": 15.373,
+   "std": 28.63
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00026": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00083",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00083.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00083.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00083.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00026.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 19.272,
+   "mean": 5.384,
+   "std": 14.435
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00088": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00042",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00042.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00042.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00042.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00088.jpg",
+  "fingerprint": {
+   "min": 2.401,
+   "max": 20.434,
+   "mean": 12.365,
+   "std": 1.002
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00035": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00018",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00018.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00018.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00018.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00035.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 529.488,
+   "mean": 14.827,
+   "std": 26.479
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00096": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00093",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00093.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00093.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00093.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00096.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 518.25,
+   "mean": 14.084,
+   "std": 20.283
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00158": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00281",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00281.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00281.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00281.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00158.jpg",
+  "fingerprint": {
+   "min": 10.032,
+   "max": 551.146,
+   "mean": 48.704,
+   "std": 46.619
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00222": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00485",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00485.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00485.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00485.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00222.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 503.42,
+   "mean": 8.904,
+   "std": 27.389
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00283": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00186",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00186.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00186.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00186.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00283.jpg",
+  "fingerprint": {
+   "min": -8.434,
+   "max": 493.368,
+   "mean": 21.256,
+   "std": 19.966
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00345": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00176",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00176.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00176.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00176.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00345.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 481.678,
+   "mean": 26.185,
+   "std": 21.248
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00042": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00448",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00448.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00448.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00448.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00042.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 10.389,
+   "std": 17.272
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00103": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00264",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00264.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00264.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00264.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00103.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 588.579,
+   "mean": 9.924,
+   "std": 21.105
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00164": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00228",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00228.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00228.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00228.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00164.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 581.995,
+   "mean": 14.93,
+   "std": 23.989
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00225": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00380",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00380.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00380.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00380.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00225.jpg",
+  "fingerprint": {
+   "min": -2.124,
+   "max": 535.673,
+   "mean": 13.113,
+   "std": 19.84
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00028": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00074",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00074.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00074.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00074.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00028.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 21.179,
+   "mean": 5.374,
+   "std": 14.276
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00090": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00057",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00057.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00057.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00057.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00090.jpg",
+  "fingerprint": {
+   "min": 2.573,
+   "max": 21.344,
+   "mean": 12.979,
+   "std": 1.206
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00037": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00392",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00392.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00392.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00392.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00037.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 528.459,
+   "mean": 13.773,
+   "std": 22.654
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00098": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00343",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00343.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00343.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00343.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00098.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 540.056,
+   "mean": 14.835,
+   "std": 19.657
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00160": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00507",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00507.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00507.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00507.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00160.jpg",
+  "fingerprint": {
+   "min": 15.933,
+   "max": 608.69,
+   "mean": 51.268,
+   "std": 50.957
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00221": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00371",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00371.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00371.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00371.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00221.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 490.108,
+   "mean": 8.397,
+   "std": 27.413
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00344": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00162",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00162.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00162.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00162.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00344.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 492.143,
+   "mean": 26.38,
+   "std": 22.059
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00165": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00385",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00385.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00385.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00385.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00165.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 16.221,
+   "std": 25.133
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00226": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00131",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00131.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00131.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00131.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00226.jpg",
+  "fingerprint": {
+   "min": -0.077,
+   "max": 562.74,
+   "mean": 13.584,
+   "std": 19.704
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00030": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00111",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00111.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00111.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00111.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00030.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 22.665,
+   "mean": 5.635,
+   "std": 14.405
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00091": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00088",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00088.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00088.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00088.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00091.jpg",
+  "fingerprint": {
+   "min": 2.226,
+   "max": 24.639,
+   "mean": 14.393,
+   "std": 1.279
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00038": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00225",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00225.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00225.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00225.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00038.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 462.236,
+   "mean": 14.624,
+   "std": 25.281
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00100": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00578",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00578.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00578.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00578.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00100.jpg",
+  "fingerprint": {
+   "min": 4.634,
+   "max": 606.2,
+   "mean": 17.01,
+   "std": 30.246
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00161": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00189",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00189.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00189.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00189.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00161.jpg",
+  "fingerprint": {
+   "min": 16.747,
+   "max": 608.69,
+   "mean": 50.197,
+   "std": 52.144
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00223": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00100",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00100.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00100.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00100.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00223.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 524.239,
+   "mean": 12.66,
+   "std": 34.953
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00284": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00375",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00375.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00375.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00375.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00284.jpg",
+  "fingerprint": {
+   "min": -11.332,
+   "max": 528.531,
+   "mean": 18.982,
+   "std": 18.366
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00346": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00115",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00115.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00115.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00115.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00346.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 480.708,
+   "mean": 26.616,
+   "std": 21.477
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00043": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00569",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00569.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00569.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00569.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00043.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 10.094,
+   "std": 16.787
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00105": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00326",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00326.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00326.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00326.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00105.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 596.407,
+   "mean": 10.923,
+   "std": 22.223
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00166": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00412",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00412.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00412.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00412.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00166.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 558.79,
+   "mean": 15.284,
+   "std": 20.47
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00228": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00222",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00222.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00222.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00222.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00228.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 524.456,
+   "mean": 14.713,
+   "std": 22.456
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00031": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00038",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00038.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00038.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00038.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00031.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 18.024,
+   "mean": 5.868,
+   "std": 14.91
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00093": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00087",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00087.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00087.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00087.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00093.jpg",
+  "fingerprint": {
+   "min": -0.303,
+   "max": 27.176,
+   "mean": 13.803,
+   "std": 2.387
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00040": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00260",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00260.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00260.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00260.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00040.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 499.374,
+   "mean": 14.012,
+   "std": 26.014
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00102": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00266",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00266.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00266.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00266.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00102.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 516.591,
+   "mean": 15.846,
+   "std": 21.51
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00163": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00466",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00466.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00466.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00466.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00163.jpg",
+  "fingerprint": {
+   "min": 10.032,
+   "max": 608.69,
+   "mean": 45.211,
+   "std": 52.006
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00225": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00347",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00347.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00347.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00347.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00225.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 501.071,
+   "mean": 8.844,
+   "std": 27.896
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00286": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00231",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00231.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00231.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00231.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00286.jpg",
+  "fingerprint": {
+   "min": -11.332,
+   "max": 547.865,
+   "mean": 17.155,
+   "std": 13.849
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00348": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00427",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00427.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00427.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00427.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00348.jpg",
+  "fingerprint": {
+   "min": 4.634,
+   "max": 507.835,
+   "mean": 28.258,
+   "std": 22.011
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00045": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00544",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00544.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00544.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00544.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00045.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.586,
+   "std": 15.105
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00107": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00080",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00080.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00080.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00080.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00107.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.333,
+   "std": 27.748
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00168": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00349",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00349.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00349.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00349.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00168.jpg",
+  "fingerprint": {
+   "min": -17.673,
+   "max": 597.342,
+   "mean": 18.308,
+   "std": 30.107
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00230": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00163",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00163.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00163.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00163.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00230.jpg",
+  "fingerprint": {
+   "min": -2.124,
+   "max": 577.542,
+   "mean": 15.23,
+   "std": 23.605
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00033": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00055",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00055.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00055.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00055.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00033.jpg",
+  "fingerprint": {
+   "min": -39.197,
+   "max": 31.241,
+   "mean": 7.619,
+   "std": 10.473
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00095": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00002",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00002.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00002.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00002.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00095.jpg",
+  "fingerprint": {
+   "min": -1.094,
+   "max": 35.111,
+   "mean": 12.623,
+   "std": 3.042
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00042": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00336",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00336.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00336.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00336.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00042.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 585.801,
+   "mean": 15.66,
+   "std": 25.918
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00103": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00480",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00480.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00480.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00480.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00103.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 520.0,
+   "mean": 15.8,
+   "std": 20.902
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00165": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00330",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00330.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00330.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00330.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00165.jpg",
+  "fingerprint": {
+   "min": 10.032,
+   "max": 608.69,
+   "mean": 44.904,
+   "std": 50.972
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00229": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00366",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00366.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00366.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00366.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00229.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 412.191,
+   "mean": 8.448,
+   "std": 23.555
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00290": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00199",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00199.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00199.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00199.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00290.jpg",
+  "fingerprint": {
+   "min": 7.383,
+   "max": 495.964,
+   "mean": 18.528,
+   "std": 16.921
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00351": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00511",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00511.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00511.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00511.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00351.jpg",
+  "fingerprint": {
+   "min": 4.634,
+   "max": 439.943,
+   "mean": 30.365,
+   "std": 23.636
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00048": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00418",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00418.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00418.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00418.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00048.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.039,
+   "std": 14.764
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00110": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00067",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00067.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00067.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00067.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00110.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 569.375,
+   "mean": 10.798,
+   "std": 17.601
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00171": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00599",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00599.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00599.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00599.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00171.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 521.749,
+   "mean": 9.522,
+   "std": 19.337
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00232": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00344",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00344.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00344.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00344.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00232.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 535.457,
+   "mean": 12.527,
+   "std": 20.963
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00035": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00112",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00112.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00112.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00112.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00035.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 20.599,
+   "mean": 7.524,
+   "std": 11.585
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00097": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00033",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00033.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00033.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00033.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00097.jpg",
+  "fingerprint": {
+   "min": -1.976,
+   "max": 37.276,
+   "mean": 11.62,
+   "std": 4.822
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00044": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00615",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00615.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00615.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00615.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00044.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 589.391,
+   "mean": 15.028,
+   "std": 23.735
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00105": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00549",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00549.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00549.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00549.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00105.jpg",
+  "fingerprint": {
+   "min": 6.469,
+   "max": 528.676,
+   "mean": 17.775,
+   "std": 24.697
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00167": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00432",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00432.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00432.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00432.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00167.jpg",
+  "fingerprint": {
+   "min": 9.205,
+   "max": 608.69,
+   "mean": 44.644,
+   "std": 51.918
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00230": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00318",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00318.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00318.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00318.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00230.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 382.693,
+   "mean": 8.126,
+   "std": 22.246
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00291": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00144",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00144.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00144.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00144.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00291.jpg",
+  "fingerprint": {
+   "min": 3.714,
+   "max": 410.726,
+   "mean": 15.634,
+   "std": 18.431
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00352": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00215",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00215.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00215.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00215.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00352.jpg",
+  "fingerprint": {
+   "min": 4.634,
+   "max": 487.949,
+   "mean": 26.744,
+   "std": 18.631
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00050": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00446",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00446.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00446.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00446.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00050.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.352,
+   "mean": 9.156,
+   "std": 15.879
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00111": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00501",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00501.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00501.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00501.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00111.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 544.871,
+   "mean": 12.1,
+   "std": 24.159
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00172": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00530",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00530.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00530.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00530.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00172.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 450.513,
+   "mean": 9.79,
+   "std": 17.789
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00234": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00607",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00607.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00607.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00607.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00234.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 523.138,
+   "mean": 6.493,
+   "std": 26.202
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00037": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00048",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00048.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00048.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00048.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00037.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 23.488,
+   "mean": 7.61,
+   "std": 10.776
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00098": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00023",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00023.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00023.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00023.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00098.jpg",
+  "fingerprint": {
+   "min": -2.683,
+   "max": 37.916,
+   "mean": 10.595,
+   "std": 4.463
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00046": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00558",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00558.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00558.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00558.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00046.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 601.005,
+   "mean": 15.263,
+   "std": 23.757
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00107": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00058",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00058.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00058.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00058.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00107.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 448.208,
+   "mean": 14.593,
+   "std": 18.424
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00169": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00213",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00213.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00213.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00213.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00169.jpg",
+  "fingerprint": {
+   "min": 7.383,
+   "max": 608.69,
+   "mean": 45.099,
+   "std": 52.261
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00292": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00262",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00262.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00262.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00262.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00292.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 393.137,
+   "mean": 14.63,
+   "std": 18.146
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00353": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00316",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00316.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00316.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00316.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00353.jpg",
+  "fingerprint": {
+   "min": 12.664,
+   "max": 411.631,
+   "mean": 25.025,
+   "std": 18.176
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00051": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00334",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00334.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00334.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00334.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00051.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 186.351,
+   "mean": 8.901,
+   "std": 13.76
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00112": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00552",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00552.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00552.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00552.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00112.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 13.122,
+   "std": 27.035
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00174": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00295",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00295.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00295.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00295.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00174.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 474.2,
+   "mean": 8.939,
+   "std": 17.281
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00235": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00463",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00463.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00463.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00463.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00235.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 530.857,
+   "mean": 6.093,
+   "std": 27.507
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00039": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00017",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00017.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00017.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00017.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00039.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 24.475,
+   "mean": 6.891,
+   "std": 11.017
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00100": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00071",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00071.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00071.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00071.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00100.jpg",
+  "fingerprint": {
+   "min": -1.535,
+   "max": 20.268,
+   "mean": 10.888,
+   "std": 2.109
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00048": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00155",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00155.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00155.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00155.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00048.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 14.833,
+   "std": 31.937
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00109": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00577",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00577.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00577.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00577.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00109.jpg",
+  "fingerprint": {
+   "min": -15.961,
+   "max": 453.356,
+   "mean": 12.554,
+   "std": 12.757
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00171": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00202",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00202.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00202.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00202.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00171.jpg",
+  "fingerprint": {
+   "min": 6.469,
+   "max": 608.69,
+   "mean": 42.063,
+   "std": 52.822
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00232": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00489",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00489.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00489.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00489.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00232.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 373.907,
+   "mean": -3.231,
+   "std": 22.352
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00294": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00283",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00283.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00283.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00283.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00294.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 449.912,
+   "mean": 18.364,
+   "std": 26.847
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00355": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00621",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00621.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00621.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00621.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00355.jpg",
+  "fingerprint": {
+   "min": -9.835,
+   "max": 483.348,
+   "mean": 22.919,
+   "std": 27.573
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00053": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00353",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00353.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00353.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00353.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00053.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 182.264,
+   "mean": 8.598,
+   "std": 10.754
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00114": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00119",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00119.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00119.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00119.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00114.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 571.339,
+   "mean": 12.886,
+   "std": 26.405
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00176": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00536",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00536.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00536.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00536.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00176.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 529.632,
+   "mean": 9.688,
+   "std": 20.526
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00237": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00356",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00356.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00356.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00356.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00237.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 566.525,
+   "mean": 9.64,
+   "std": 36.478
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00041": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00062",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00062.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00062.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00062.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00041.jpg",
+  "fingerprint": {
+   "min": -39.824,
+   "max": 33.1,
+   "mean": 5.828,
+   "std": 10.117
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00102": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00021",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00021.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00021.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00021.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00102.jpg",
+  "fingerprint": {
+   "min": -0.04,
+   "max": 19.605,
+   "mean": 12.294,
+   "std": 1.829
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00049": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00062",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00062.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00062.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00062.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00049.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 593.989,
+   "mean": 11.164,
+   "std": 33.571
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00111": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00482",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00482.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00482.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00482.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00111.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 535.961,
+   "mean": 10.615,
+   "std": 18.027
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00172": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00036",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00036.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00036.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00036.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00172.jpg",
+  "fingerprint": {
+   "min": 9.205,
+   "max": 570.763,
+   "mean": 39.996,
+   "std": 53.335
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00234": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00233",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00233.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00233.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00233.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00234.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 275.639,
+   "mean": -3.123,
+   "std": 21.293
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00295": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00237",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00237.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00237.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00237.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00295.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 447.8,
+   "mean": 14.609,
+   "std": 21.911
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00357": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00573",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00573.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00573.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00573.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00357.jpg",
+  "fingerprint": {
+   "min": -6.258,
+   "max": 495.296,
+   "mean": 20.974,
+   "std": 25.771
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00054": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00517",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00517.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00517.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00517.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00054.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 183.911,
+   "mean": 8.52,
+   "std": 11.004
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00116": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00452",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00452.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00452.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00452.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00116.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 565.425,
+   "mean": 12.328,
+   "std": 25.308
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00177": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00532",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00532.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00532.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00532.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00177.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 599.4,
+   "mean": 11.22,
+   "std": 24.444
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00239": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00304",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00304.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00304.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00304.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00239.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 568.799,
+   "mean": 12.349,
+   "std": 40.706
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00042": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00036",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00036.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00036.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00036.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00042.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 29.863,
+   "mean": 4.894,
+   "std": 10.078
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00104": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00031",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00031.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00031.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00031.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00104.jpg",
+  "fingerprint": {
+   "min": 2.226,
+   "max": 19.438,
+   "mean": 13.349,
+   "std": 1.473
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00051": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00276",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00276.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00276.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00276.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00051.jpg",
+  "fingerprint": {
+   "min": -5.219,
+   "max": 594.421,
+   "mean": 12.691,
+   "std": 31.991
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00113": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00048",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00048.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00048.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00048.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00113.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.843,
+   "std": 24.632
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00174": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00472",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00472.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00472.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00472.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00174.jpg",
+  "fingerprint": {
+   "min": 10.032,
+   "max": 476.78,
+   "mean": 39.923,
+   "std": 42.54
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00236": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00054",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00054.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00054.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00054.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00236.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 334.642,
+   "mean": -2.049,
+   "std": 22.197
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00297": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00317",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00317.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00317.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00317.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00297.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 411.127,
+   "mean": 16.343,
+   "std": 19.161
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00359": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00120",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00120.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00120.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00120.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00359.jpg",
+  "fingerprint": {
+   "min": -6.258,
+   "max": 514.173,
+   "mean": 22.774,
+   "std": 28.591
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00056": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00253",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00253.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00253.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00253.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00056.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 185.064,
+   "mean": 8.182,
+   "std": 12.066
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00118": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00546",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00546.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00546.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00546.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00118.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 515.923,
+   "mean": 9.173,
+   "std": 15.46
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00179": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00261",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00261.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00261.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00261.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00179.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 588.938,
+   "mean": 13.748,
+   "std": 30.048
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00241": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00606",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00606.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00606.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00606.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00241.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 11.92,
+   "std": 40.511
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00044": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00012",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00012.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00012.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00012.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00044.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 34.871,
+   "mean": 4.94,
+   "std": 10.068
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00106": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00005",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00005.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00005.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00005.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00106.jpg",
+  "fingerprint": {
+   "min": 1.098,
+   "max": 21.757,
+   "mean": 12.563,
+   "std": 1.666
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00053": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00399",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00399.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00399.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00399.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00053.jpg",
+  "fingerprint": {
+   "min": -11.332,
+   "max": 608.69,
+   "mean": 13.105,
+   "std": 31.761
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00114": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00059",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00059.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00059.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00059.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00114.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 578.21,
+   "mean": 13.992,
+   "std": 26.141
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00177": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00527",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00527.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00527.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00527.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00177.jpg",
+  "fingerprint": {
+   "min": 5.552,
+   "max": 568.418,
+   "mean": 27.531,
+   "std": 39.745
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00238": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00425",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00425.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00425.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00425.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00238.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 233.921,
+   "mean": -10.409,
+   "std": 18.945
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00300": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00238",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00238.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00238.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00238.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00300.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 345.25,
+   "mean": 12.092,
+   "std": 13.792
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00361": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00310",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00310.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00310.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00310.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00361.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 460.347,
+   "mean": 8.869,
+   "std": 21.024
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00058": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00562",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00562.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00562.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00562.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00058.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 185.278,
+   "mean": 7.959,
+   "std": 12.401
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00120": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00406",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00406.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00406.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00406.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00120.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 416.205,
+   "mean": 7.087,
+   "std": 13.522
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00181": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00220",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00220.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00220.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00220.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00181.jpg",
+  "fingerprint": {
+   "min": -14.349,
+   "max": 608.69,
+   "mean": 14.829,
+   "std": 29.263
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00243": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00243",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00243.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00243.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00243.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00243.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 490.36,
+   "mean": 5.001,
+   "std": 16.635
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00046": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00101",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00101.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00101.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00101.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00046.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 20.848,
+   "mean": 4.666,
+   "std": 12.85
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00107": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00100",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00100.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00100.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00100.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00107.jpg",
+  "fingerprint": {
+   "min": -0.215,
+   "max": 22.83,
+   "mean": 12.398,
+   "std": 1.364
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00055": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00133",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00133.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00133.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00133.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00055.jpg",
+  "fingerprint": {
+   "min": -21.132,
+   "max": 608.69,
+   "mean": 12.657,
+   "std": 31.542
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00116": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00303",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00303.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00303.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00303.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00116.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 592.961,
+   "mean": 15.54,
+   "std": 28.726
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00180": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00475",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00475.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00475.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00475.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00180.jpg",
+  "fingerprint": {
+   "min": 0.856,
+   "max": 608.69,
+   "mean": 24.506,
+   "std": 46.416
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00241": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00148",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00148.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00148.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00148.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00241.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 276.014,
+   "mean": -9.414,
+   "std": 18.682
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00303": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00547",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00547.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00547.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00547.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00303.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 391.825,
+   "mean": 14.178,
+   "std": 18.615
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00364": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00526",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00526.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00526.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00526.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00364.jpg",
+  "fingerprint": {
+   "min": 1.868,
+   "max": 535.889,
+   "mean": 18.884,
+   "std": 25.548
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00061": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00595",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00595.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00595.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00595.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00061.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.67,
+   "std": 13.343
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00122": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00341",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00341.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00341.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00341.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00122.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 461.914,
+   "mean": 6.748,
+   "std": 13.249
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00184": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00415",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00415.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00415.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00415.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00184.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 608.69,
+   "mean": 17.288,
+   "std": 39.339
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00245": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00282",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00282.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00282.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00282.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00245.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 503.42,
+   "mean": 4.388,
+   "std": 17.913
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00048": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00013",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00013.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00013.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00013.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00048.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 21.013,
+   "mean": 6.226,
+   "std": 13.587
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00109": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00015",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00015.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00015.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00015.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00109.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 9.205,
+   "mean": -1.282,
+   "std": 9.508
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00117": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00444",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00444.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00444.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00444.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00117.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 31.77,
+   "std": 45.829
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00189": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00299",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00299.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00299.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00299.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00189.jpg",
+  "fingerprint": {
+   "min": -1.099,
+   "max": 537.35,
+   "mean": 31.457,
+   "std": 47.716
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00249": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00174",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00174.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00174.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00174.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00249.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 300.225,
+   "mean": 3.567,
+   "std": 20.536
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00309": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00204",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00204.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00204.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00204.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00309.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 464.451,
+   "mean": 18.242,
+   "std": 22.414
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00066": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00604",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00604.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00604.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00604.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00066.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 9.37,
+   "std": 15.584
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00127": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00219",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00219.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00219.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00219.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00127.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 473.322,
+   "mean": 8.318,
+   "std": 12.394
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00188": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00078",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00078.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00078.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00078.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00188.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 608.69,
+   "mean": 17.25,
+   "std": 37.828
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00249": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00378",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00378.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00378.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00378.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00249.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 516.211,
+   "mean": 3.322,
+   "std": 18.01
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00051": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00077",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00077.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00077.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00077.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00051.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 19.936,
+   "mean": 6.357,
+   "std": 13.992
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00111": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00065",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00065.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00065.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00065.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00111.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 7.383,
+   "mean": -1.732,
+   "std": 9.432
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00058": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00519",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00519.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00519.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00519.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00058.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 15.051,
+   "std": 31.767
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00120": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00245",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00245.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00245.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00245.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00120.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 31.291,
+   "std": 46.93
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00181": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00193",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00193.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00193.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00193.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00181.jpg",
+  "fingerprint": {
+   "min": 0.856,
+   "max": 608.69,
+   "mean": 23.022,
+   "std": 44.314
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00243": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00312",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00312.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00312.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00312.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00243.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 271.782,
+   "mean": -9.311,
+   "std": 18.889
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00304": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00496",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00496.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00496.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00496.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00304.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 401.189,
+   "mean": 15.616,
+   "std": 20.514
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00002": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00332",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00332.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00332.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00332.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00002.jpg",
+  "fingerprint": {
+   "min": -12.779,
+   "max": 187.424,
+   "mean": 13.173,
+   "std": 18.753
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00063": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00010",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00010.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00010.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00010.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00063.jpg",
+  "fingerprint": {
+   "min": -40.559,
+   "max": 187.424,
+   "mean": 8.31,
+   "std": 13.95
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00125": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00029",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00029.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00029.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00029.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00125.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 465.255,
+   "mean": 6.276,
+   "std": 13.848
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00186": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00117",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00117.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00117.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00117.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00186.jpg",
+  "fingerprint": {
+   "min": -19.397,
+   "max": 608.69,
+   "mean": 15.836,
+   "std": 37.745
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00248": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00046",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00046.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00046.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00046.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00248.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 481.516,
+   "mean": 2.336,
+   "std": 15.029
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00113": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00093",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00093.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00093.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00093.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00113.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 7.383,
+   "mean": -1.365,
+   "std": 9.45
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00060": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00414",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00414.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00414.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00414.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00060.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 608.69,
+   "mean": 12.516,
+   "std": 32.869
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00122": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00314",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00314.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00314.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00314.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00122.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 598.587,
+   "mean": 32.511,
+   "std": 48.512
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00184": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00254",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00254.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00254.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00254.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00184.jpg",
+  "fingerprint": {
+   "min": 2.793,
+   "max": 590.111,
+   "mean": 23.175,
+   "std": 40.86
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00245": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00377",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00377.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00377.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00377.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00245.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 260.436,
+   "mean": -9.306,
+   "std": 18.898
+  }
+ },
+ "Sycan/Sycan 2A/Fire/00307": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00217",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00217.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00217.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00217.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2A_Fire_00307.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 406.954,
+   "mean": 14.354,
+   "std": 17.077
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00004": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00191",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00191.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00191.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00191.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00004.jpg",
+  "fingerprint": {
+   "min": -12.503,
+   "max": 187.424,
+   "mean": 13.577,
+   "std": 19.208
+  }
+ },
+ "Sycan/Sycan 2D/Fire/00250": {
+  "burn_state_on_disk": "Fire",
+  "disk_id": "00025",
+  "rgb_corrected_fov": "Fire/RGB/Corrected FOV/00025.JPG",
+  "thermal_camera_jpg": "Fire/Thermal/Raw JPG/00025.JPG",
+  "thermal_celsius_tiff": "Fire/Thermal/Celsius TIFF/00025.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_Fire_00250.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 499.934,
+   "mean": 3.247,
+   "std": 17.049
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00053": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00067",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00067.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00067.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00067.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00053.jpg",
+  "fingerprint": {
+   "min": -14.994,
+   "max": 22.747,
+   "mean": 12.128,
+   "std": 2.787
+  }
+ },
+ "Sycan/Sycan 2D/No Fire/00115": {
+  "burn_state_on_disk": "No Fire",
+  "disk_id": "00025",
+  "rgb_corrected_fov": "No Fire/RGB/Corrected FOV/00025.JPG",
+  "thermal_camera_jpg": "No Fire/Thermal/Raw JPG/00025.JPG",
+  "thermal_celsius_tiff": "No Fire/Thermal/Celsius TIFF/00025.TIFF",
+  "thermal_rendered_inferno": "data/flame3/rendered/Sycan_Sycan2D_NoFire_00115.jpg",
+  "fingerprint": {
+   "min": -22.789,
+   "max": 9.205,
+   "mean": -1.184,
+   "std": 9.468
+  }
+ }
+}

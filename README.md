@@ -11,7 +11,7 @@ Version 1 specifies five wildfire tasks that score without a human in the loop. 
 | Daily personnel allocation | ICS-209-PLUS (St. Denis et al., 2023), CC BY 4.0 | 300 fire-days | run |
 | Wildfire smoke detection and time to detection | FIgLib, the HPWREN fire ignition image library | 224 frames | run |
 | Fire danger forecasting | Mesogeos Track A (Kondylatos et al., 2023), CC BY 4.0 | 386 cells | run |
-| Temperature-grounded aerial question answering | WildFireVQA over FLAME 3 imagery | 408 items | built, imagery waits on an account |
+| Temperature-grounded aerial question answering | WildFireVQA (Habibpour et al., 2026), apache-2.0, over FLAME 3 imagery | 408 items over 390 frames | run |
 | Fire data tool use | FPA-FOD 6th edition (Short, 2022) | 156 items | run |
 
 Models: `claude-opus-5`, `claude-opus-4.8`, `gemini-3.1-pro`, and `gpt-6-astra` through one gateway; `Qwen3-VL-235B-A22B` and `Llama 4 Maverick` through Amazon Bedrock. Every run uses the same prompts and one output cap of 1,536 tokens. Five models ran at temperature zero; the `gpt-6-astra` endpoint accepts only its default temperature of 1 and takes the cap as `max_completion_tokens`, which counts reasoning tokens (`gw.py`). Its bare allocation repeat is under `repeat/`.
@@ -32,11 +32,12 @@ figures/               the paper's data figures: each make_<name>.py draws one f
                        figstyle.py holds the shared palette and type sizes
 survey/                the two search passes (138 kept works with the 31 re-check records), the scoping summary
                        they re-checked, the 34-source data availability check, and the script behind Appendix A's counts
-build_items_*.py       task builders; fetch_*.py downloads the two sources that allow it
+build_items_*.py       task builders; fetch_*.py downloads the three sources that allow it
+match_flame3.py        maps each aerial item to its FLAME 3 frame by thermal fingerprint and renders the thermal view
 run_*.py               the runners; gw.py is the only place a model is called
 ```
 
-`data/` and the FIgLib frames under `task-figlib/images*` are not in this repository. FIgLib is served as-is with no formal license, so the item manifest carries a `source_url` per frame and `build_items_figlib.py` re-downloads them. `fetch_mesogeos.py` and `fetch_fpafod.py` download their sources; ICS-209-PLUS and WildFireVQA are downloaded by hand from the pages the builders name.
+`data/` and the FIgLib frames under `task-figlib/images*` are not in this repository. FIgLib is served as-is with no formal license, so the item manifest carries a `source_url` per frame and `build_items_figlib.py` re-downloads them. `fetch_mesogeos.py` and `fetch_fpafod.py` download their sources; ICS-209-PLUS and the WildFireVQA question release are downloaded by hand from the pages the builders name. `fetch_flame3.py` downloads the FLAME 3 computer-vision subset (Sycan Marsh) from its Kaggle mirror with the Kaggle API credentials read from the environment or a local `.env` (`KAGGLE_USERNAME`, `KAGGLE_KEY`; the IEEE DataPort original needs an institutional login), and `match_flame3.py` then writes `task-wildfirevqa/image-map.json` and the inferno-rendered thermal images under `data/flame3/rendered/`.
 
 ## Reproducing the paper's numbers
 
@@ -58,6 +59,7 @@ python analysis/calibration_mesogeos.py    # decision consistency, ECE, Brier an
 python analysis/prompt_sensitivity.py      # the two prompt paraphrases against the paper's prompt, paired block bootstrap (six models)
 python analysis/tooluse_paired.py          # tool against bare on the FPA-FOD tool-use task, paired and clustered by question family
 python analysis/retrieval_v2.py            # grounded runs under analogue rule v2 beside bare and rule v1, paired by incident
+python analysis/wildfirevqa_paired.py      # aerial question answering, grounded against bare, paired and clustered by frame, beside the majority and closed-form comparators
 python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
 python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
 python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum

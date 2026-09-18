@@ -3,7 +3,7 @@
 The manifest lists the response files behind the paper: the 36 reported runs (three tasks, six models, bare
 and grounded), the supporting repeat and repair files, the historic archives kept as evidence of earlier
 defects, the files present in the task directories but excluded from the reported set, the trained non-LLM
-baselines, the prompt-sensitivity and retrieval-rule variant runs, and the tool-use runs.  Membership, sections, reasons, and
+baselines, the prompt-sensitivity and retrieval-rule variant runs, the tool-use runs, and the aerial question-answering runs.  Membership, sections, reasons, and
 the skew overrides are read from the existing manifest; row counts, SHA-256 checksums, the distinct
 served_model values, and the modification times are recomputed from the files on disk, so the manifest
 can be regenerated after any file is rewritten.
@@ -34,6 +34,10 @@ VARIANT_SECTIONS = {
     "tooluse": ("Fire data tool-use runs on FPA-FOD (run_tooluse.py), bare and tool arms, 156 items; "
                 "scored by analysis/tooluse_paired.py.",
                 ["task-tooluse/responses-*.jsonl"]),
+    "wildfirevqa": ("Temperature-grounded aerial question answering on WildFireVQA over FLAME 3 imagery "
+                    "(run_wildfirevqa.py), bare and grounded arms, 408 items over 390 frames; "
+                    "scored by analysis/wildfirevqa_paired.py; task-wildfirevqa/image-map.json maps each item to its frame.",
+                    ["task-wildfirevqa/responses-*.jsonl", "task-wildfirevqa/image-map.json"]),
 }
 
 

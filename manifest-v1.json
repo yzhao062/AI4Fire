@@ -1432,5 +1432,177 @@
         }
       }
     ]
+  },
+  "wildfirevqa": {
+    "reason": "Temperature-grounded aerial question answering on WildFireVQA over FLAME 3 imagery (run_wildfirevqa.py), bare and grounded arms, 408 items over 390 frames; scored by analysis/wildfirevqa_paired.py; task-wildfirevqa/image-map.json maps each item to its frame.",
+    "files": [
+      {
+        "path": "task-wildfirevqa/image-map.json",
+        "row_count": null,
+        "sha256": "7dbac767eba5d7a641181302adb069bd00fd61ae2c5c026754598b12aaa123a8",
+        "served_model": [],
+        "written": {
+          "earliest": "2026-09-18T10:13:55",
+          "latest": "2026-09-18T10:13:55",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
+        "row_count": 408,
+        "sha256": "10027930fdfb414b42e2df81bc639b9a1dbc257c2191ae43267f26070189ebff",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:36:53",
+          "latest": "2026-09-18T10:36:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "22ff5c6423f8a3675113ba5d585bf2bd2658acb9f04a35c575c5a17995a90e54",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:40:09",
+          "latest": "2026-09-18T10:40:09",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 408,
+        "sha256": "d1f02fb4a363ac413c809677c31aa264ffc6ca47f25c0ca2144819e5478489bb",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:42:11",
+          "latest": "2026-09-18T10:42:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "91871992aecef7377f3278868b6055f170612c31d37f5dfc47d3dfcdc234e6b9",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:44:29",
+          "latest": "2026-09-18T10:44:29",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-claude-opus-4.8-bare.jsonl",
+        "row_count": 408,
+        "sha256": "0ce1184acf0f4295d46db31bf0abb512d35b70e561eec7b87725cbe9c0c7d223",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:31:58",
+          "latest": "2026-09-18T10:31:58",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-claude-opus-4.8-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "4109dbb51320824847c0365542dd8a01916adbff2161070b9f7a940cfaaa3a8c",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:36:33",
+          "latest": "2026-09-18T10:36:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-claude-opus-5-bare.jsonl",
+        "row_count": 408,
+        "sha256": "e6295643872e14af2388354c8859517159c51a6cda0763149597d17ffad27ca1",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:40:13",
+          "latest": "2026-09-18T10:40:13",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-claude-opus-5-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "4ec8033a82e1e9a690051467e5aa8fb8595b9192dd5e11688c0e63c6600aea1d",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:44:43",
+          "latest": "2026-09-18T10:44:43",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-gemini-3.1-pro-bare.jsonl",
+        "row_count": 408,
+        "sha256": "97f059e211129f7a05d85b8559884ecba32622ccbf45a2df3769ea93005e9e11",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-18T11:07:13",
+          "latest": "2026-09-18T11:07:13",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-gemini-3.1-pro-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "102c3a10f653dabc4639b0b03d2ec38b99c36d4c39039c7cec6d5b5f445c4c6c",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:47:42",
+          "latest": "2026-09-18T10:47:42",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-gpt-6-astra-bare.jsonl",
+        "row_count": 408,
+        "sha256": "5acc1822eb36085eecb32fa5a91fe2294384dd24145896d944c87ac3d1f7ba40",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-18T10:56:03",
+          "latest": "2026-09-18T10:56:03",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-gpt-6-astra-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "3452a8e98b7f8be49ba0deeadf370de899401e42d1e4aaf86e8908f40b9a115b",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-18T11:03:45",
+          "latest": "2026-09-18T11:03:45",
+          "source": "file mtime"
+        }
+      }
+    ]
   }
 }

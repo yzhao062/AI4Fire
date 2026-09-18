@@ -10,3 +10,7 @@ __pycache__/
 *.pyc
 .idea/
 task-tooluse/fake/
+
+# Local credentials (IEEE DataPort login for the FLAME 3 download); never committed
+.env
+task-wildfirevqa/pilot/
