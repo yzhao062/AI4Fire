@@ -2,12 +2,12 @@ family,n,answer_type,best_constant,best_constant_acc,modal_answer,modal_share
 top_state_for_cause,13,categorical,TX,0.308,TX,0.308
 top_cause_state_year,13,categorical,Natural,0.308,Natural,0.308
 peak_year_state,13,integer,2011,0.231,2011,0.231
+human_share_state_year,13,percent,99.14,0.154,67.87,0.077
 largest_fire_size_span,13,acres,7500.0,0.154,201808.2,0.077
-count_season_window,13,integer,433,0.077,433,0.077
 count_county_year,13,integer,24,0.077,24,0.077
 count_cause_state_year,13,integer,69,0.077,69,0.077
 acres_state_year,13,acres,601674.0,0.077,601674.0,0.077
+count_season_window,13,integer,433,0.077,433,0.077
 largest_fire_name,13,string,CARLA LAKE,0.077,CARLA LAKE,0.077
-human_share_state_year,13,percent,67.87,0.077,67.87,0.077
-count_state_year,13,integer,480,0.077,480,0.077
 count_size_class_span,13,integer,80,0.077,80,0.077
+count_state_year,13,integer,480,0.077,480,0.077

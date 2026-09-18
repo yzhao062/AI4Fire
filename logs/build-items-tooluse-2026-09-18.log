@@ -1,0 +1,80 @@
+snapshot: FPA_FOD_20221014.sqlite 1074.9 MB | archive sha256: 479596de101bd52a...
+records loaded: 2303566
+date-encoding disagreements: 38 | (state, year) cells excluded: 11 [('FL', 2003), ('FL', 2004), ('FL', 2005), ('FL', 2006), ('FL', 2007), ('FL', 2008), ('FL', 2009), ('OR', 1993), ('OR', 1994), ('OR', 2009), ('OR', 2010)]
+states with FIPS_NAME coverage >= 0.95: 9 ['HI', 'ME', 'MI', 'NH', 'NJ', 'NY', 'PA', 'TX', 'WV']
+causes: 13 | states: 52
+
+self-check: 156 of 156 stored queries reproduce their stored answer
+
+items: 156 | families: 12
+
+items by tier:
+ tier
+filtered aggregate    78
+multi-step            65
+single lookup         13
+
+items by answer type:
+ answer_type
+acres          26
+categorical    26
+integer        78
+percent        13
+string         13
+
+items by memorization risk:
+ memorization_risk
+high          3
+low          14
+moderate      9
+none        104
+partial      26
+
+fire years covered: 1992 to 2020 | distinct states: 47 | most items on one state: 10
+
+naive baseline, best constant per family (an upper bound on constant guessing):
+                family  n answer_type best_constant  best_constant_acc modal_answer  modal_share
+   top_state_for_cause 13 categorical            TX              0.308           TX        0.308
+  top_cause_state_year 13 categorical       Natural              0.308      Natural        0.308
+       peak_year_state 13     integer          2011              0.231         2011        0.231
+human_share_state_year 13     percent         99.14              0.154        67.87        0.077
+largest_fire_size_span 13       acres        7500.0              0.154     201808.2        0.077
+     count_county_year 13     integer            24              0.077           24        0.077
+count_cause_state_year 13     integer            69              0.077           69        0.077
+      acres_state_year 13       acres      601674.0              0.077     601674.0        0.077
+   count_season_window 13     integer           433              0.077          433        0.077
+     largest_fire_name 13      string    CARLA LAKE              0.077   CARLA LAKE        0.077
+ count_size_class_span 13     integer            80              0.077           80        0.077
+      count_state_year 13     integer           480              0.077          480        0.077
+
+one constant over the whole set: 'Natural' -> 0.026
+best constant chosen per family, averaged over items: 0.141
+FLAG, families a constant already reaches 0.40 or better: none
+
+class balance on the two categorical families:
+  top_cause_state_year   4 distinct answers over 13 items | Natural x4, Arson/incendiarism x4, Debris and open burning x4, Equipment and vehicle use x1
+  top_state_for_cause    7 distinct answers over 13 items | TX x4, CA x3, OR x2, MS x1, WA x1
+
+numeric answer spread, which is why no constant covers a family:
+  acres_state_year         min      7461.4 | median     89062.5 | max      601674.0
+  count_cause_state_year   min        25.0 | median       134.0 | max        1638.0
+  count_county_year        min        21.0 | median        36.0 | max         204.0
+  count_season_window      min        47.0 | median       203.0 | max        2081.0
+  count_size_class_span    min        20.0 | median        51.0 | max         315.0
+  count_state_year         min       135.0 | median      1213.0 | max        3912.0
+  human_share_state_year   min         0.2 | median        87.7 | max          99.2
+  largest_fire_size_span   min      6500.0 | median     11420.0 | max      201808.2
+  peak_year_state          min      1993.0 | median      2006.0 | max        2018.0
+
+which items a model could answer from memory, with no tool:
+  high        3 items | largest_fire_name x2, largest_fire_size_span x1
+  moderate    9 items | largest_fire_size_span x7, largest_fire_name x2
+  partial    26 items | top_cause_state_year x13, top_state_for_cause x13
+  low        14 items | largest_fire_name x9, largest_fire_size_span x5
+  none      104 items | count_state_year x13, count_cause_state_year x13, count_county_year x13, count_season_window x13, acres_state_year x13, count_size_class_span x13, human_share_state_year x13, peak_year_state x13
+  items where recall is a plausible route to the answer: 38 of 156 (24%)
+  items where it is not: 118 (76%)
+  of the 13 largest_fire_name items, 3 have an answer row that belongs to a complex or carries no MTBS_ID, so the database's answer need not be the incident the public record names
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\items.jsonl 333861 bytes
+items.jsonl sha256: e5ac617999b3202c4a3e737938e0c949

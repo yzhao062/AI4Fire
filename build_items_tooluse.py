@@ -515,10 +515,28 @@ def correct(item, pred):
     return norm_str(pred) == norm_str(gold)
 
 
+def _tolerance_edges(item):
+    """The closed interval of numeric predictions the item's tolerance rule accepts, as its two edges."""
+    rule, tol = item["tolerance"]["rule"], item["tolerance"]
+    if rule not in ("relative", "absolute"):
+        return []
+    gold = float(item["answer"])
+    half = max(tol["rel_tol"] * abs(gold), tol["abs_floor"]) if rule == "relative" else tol["abs_tol"]
+    return [gold - half, gold + half]
+
+
 def best_constant(items):
-    """The best single answer repeated over these items, and the share of items it gets right."""
+    """The best single answer repeated over these items, and the share of items it gets right.
+
+    Candidates are the gold answers plus, for tolerance-scored numeric families, every edge of every item's
+    acceptance interval: a point that lies in the most intervals can always be taken at an interval edge, so this
+    search finds a constant that two overlapping tolerances both accept (99.025 for the human-share items 98.95 and
+    99.1), which a search over gold values alone misses (review round 8, 2026-09-18)."""
+    cands = [i["answer"] for i in items]
+    for i in items:
+        cands.extend(_tolerance_edges(i))
     best, score = None, -1.0
-    for cand in [i["answer"] for i in items]:
+    for cand in cands:
         s = sum(1 for i in items if correct(i, cand)) / len(items)
         if s > score:
             best, score = cand, s

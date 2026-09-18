@@ -193,6 +193,18 @@ def validate_sql(sql: str) -> tuple[bool, str]:
     return True, ""
 
 
+
+def _add_usage(total, usage):
+    """Sum a call's usage into the item total. Reasoning tokens are added only when the call reported them, so a
+    row whose calls never carried the field stays without it (the 2026-09-17 tool-arm rows have that shape)."""
+    usage = usage or {}
+    total["prompt_tokens"] += usage.get("prompt_tokens", 0) or 0
+    total["completion_tokens"] += usage.get("completion_tokens", 0) or 0
+    det = usage.get("completion_tokens_details") or {}
+    if "reasoning_tokens" in det:
+        acc = total.setdefault("completion_tokens_details", {"reasoning_tokens": 0})
+        acc["reasoning_tokens"] += det.get("reasoning_tokens") or 0
+
 def query_fpafod(sql: str, db_path: pathlib.Path = DB, timeout_seconds: float = 15.0, return_meta: bool = False):
     """Execute a single SELECT statement on a read-only connection.
 
@@ -532,8 +544,7 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
             err = str(exc)[:300]
             break
 
-        total_usage["prompt_tokens"] += (usage or {}).get("prompt_tokens", 0)
-        total_usage["completion_tokens"] += (usage or {}).get("completion_tokens", 0)
+        _add_usage(total_usage, usage)
 
         tcs = msg.get("tool_calls")
         if not tcs:
@@ -566,8 +577,7 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
             })
             try:
                 final_msg, final_usage, served = gw.call_tools(key, model, msgs, tools=None, max_tokens=MAX_OUT)
-                total_usage["prompt_tokens"] += (final_usage or {}).get("prompt_tokens", 0)
-                total_usage["completion_tokens"] += (final_usage or {}).get("completion_tokens", 0)
+                _add_usage(total_usage, final_usage)
                 raw = final_msg.get("content", "")
             except Exception as exc:
                 err = str(exc)[:300]

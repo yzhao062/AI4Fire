@@ -277,9 +277,15 @@ def gateway_call_tools_responses(key, model, messages, tools=None, max_tokens=51
     if tool_calls:
         msg["tool_calls"] = tool_calls
     u = d.get("usage", {}) or {}
-    usage = {"prompt_tokens": u.get("input_tokens", 0) or 0, "completion_tokens": u.get("output_tokens", 0) or 0,
-             "completion_tokens_details": {"reasoning_tokens": ((u.get("output_tokens_details") or {}).get("reasoning_tokens", 0) or 0)},
-             "prompt_tokens_details": {"cached_tokens": ((u.get("input_tokens_details") or {}).get("cached_tokens", 0) or 0)}}
+    usage = {"prompt_tokens": u.get("input_tokens", 0) or 0, "completion_tokens": u.get("output_tokens", 0) or 0}
+    # A detail the endpoint did not report stays absent, so a stored row can tell "zero" from "not measured"
+    # (the 2026-09-17 tool-arm rows carry no reasoning-token field for that reason; see the paper's D.18).
+    otd = u.get("output_tokens_details") or {}
+    if "reasoning_tokens" in otd:
+        usage["completion_tokens_details"] = {"reasoning_tokens": otd.get("reasoning_tokens") or 0}
+    itd = u.get("input_tokens_details") or {}
+    if "cached_tokens" in itd:
+        usage["prompt_tokens_details"] = {"cached_tokens": itd.get("cached_tokens") or 0}
     return msg, usage, d.get("model", model)
 
 
