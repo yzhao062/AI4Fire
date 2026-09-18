@@ -1,7 +1,9 @@
 """Prompt-sensitivity check on fire danger forecasting (Mesogeos Track A, 386 items).
 
 Two paraphrases of the paper's prompt, p1 and p2 in run_mesogeos.py, carry the same numbers and the same
-answer schema and differ in framing, field order, and layout.  Each was run once, bare, on two models.
+answer schema and differ in framing, field order, and layout.  Each was run once, bare, on the two leading
+proprietary models (2026-09-16), on the two open-weight models through Bedrock (2026-09-17), and on the other two
+proprietary models (2026-09-17 evening), so every model of the paper has all three prompts.
 This script scores every variant file with the runner's own score() and reports, per model, the change
 in AUPRC, fire-class F1, and call rate from the paper's prompt (p0), with a paired block-by-month cluster
 bootstrap interval on the AUPRC and F1 differences, the same clustering unit and seed as
@@ -27,7 +29,9 @@ import cluster_uncertainty as cu  # noqa: E402
 import run_mesogeos as rm  # noqa: E402
 
 TASK = ROOT / "task-mesogeos"
-MODELS = ["claude-opus-5", "gemini-3.1-pro"]
+# response-file stems; the Bedrock stems are the file-safe spellings run_mesogeos.py writes
+MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "gpt-6-astra",
+          "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
 VARIANTS = ["p0", "p1", "p2"]
 
 

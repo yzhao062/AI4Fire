@@ -9,3 +9,4 @@ analysis/.analogue-pool-cache.json
 __pycache__/
 *.pyc
 .idea/
+task-tooluse/fake/

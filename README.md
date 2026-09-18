@@ -12,7 +12,7 @@ Version 1 specifies five wildfire tasks that score without a human in the loop. 
 | Wildfire smoke detection and time to detection | FIgLib, the HPWREN fire ignition image library | 224 frames | run |
 | Fire danger forecasting | Mesogeos Track A (Kondylatos et al., 2023), CC BY 4.0 | 386 cells | run |
 | Temperature-grounded aerial question answering | WildFireVQA over FLAME 3 imagery | 408 items | built, imagery waits on an account |
-| Fire data tool use | FPA-FOD 6th edition (Short, 2022) | 156 items | built, not run |
+| Fire data tool use | FPA-FOD 6th edition (Short, 2022) | 156 items | run |
 
 Models: `claude-opus-5`, `claude-opus-4.8`, `gemini-3.1-pro`, and `gpt-6-astra` through one gateway; `Qwen3-VL-235B-A22B` and `Llama 4 Maverick` through Amazon Bedrock. Every run uses the same prompts and one output cap of 1,536 tokens. Five models ran at temperature zero; the `gpt-6-astra` endpoint accepts only its default temperature of 1 and takes the cap as `max_completion_tokens`, which counts reasoning tokens (`gw.py`). Its bare allocation repeat is under `repeat/`.
 
@@ -48,19 +48,20 @@ python analyze_allocation_all.py           # stable and moving days, false move,
 python copy_agreement.py                   # how often a grounded prediction equals the displayed analogue rule
 python score_mesogeos_all.py               # AUPRC, fire-class F1, call rate, omitted answers, per run
 python month_prior.py                      # the calendar-month prior fit on the training years
-python repeat_stats.py                     # repeat runs against their first runs
+python repeat_stats.py                     # repeat runs against their first runs (incl. the temperature-zero Mesogeos repeats of claude-opus-5 and gemini-3.1-pro)
 python analysis/figlib_paired.py           # smoke detection on the 196 items both conditions answered
 python analysis/cluster_uncertainty.py     # 95 percent cluster bootstrap intervals (20,000 resamples, seed 20260915)
 python analysis/information_only_baselines.py   # persistence, analogue-only, climatology, and last-day rules
 python analysis/answer_failures.py         # rows with no usable answer, by task and run
 python analysis/served_models.py           # table of distinct served_model values, counts, and date ranges
 python analysis/calibration_mesogeos.py    # decision consistency, ECE, Brier and its Murphy terms, reliability tables, per run
-python analysis/prompt_sensitivity.py      # the two prompt paraphrases against the paper's prompt, paired block bootstrap
+python analysis/prompt_sensitivity.py      # the two prompt paraphrases against the paper's prompt, paired block bootstrap (six models)
+python analysis/tooluse_paired.py          # tool against bare on the FPA-FOD tool-use task, paired and clustered by question family
 python analysis/retrieval_v2.py            # grounded runs under analogue rule v2 beside bare and rule v1, paired by incident
 python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
 python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
 python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum
-python figures/make_grounding_effects.py   # grounded minus bare on the three tasks, with the cluster intervals
+python figures/make_grounding_effects.py   # grounded minus bare on the four run tasks, with the cluster intervals
 python figures/make_survey_landscape.py    # the 138 kept works by kind and task category, and models tested
 python figures/make_allocation_analogues.py   # copies of the displayed analogue median; spread of the next-day ratio
 python figures/make_figlib_timeline.py     # smoke detection accuracy by time since the plume, bare and grounded
@@ -76,13 +77,15 @@ The 36 reported response files (three tasks x six models x two conditions) are l
 
 `build_manifest.py` regenerates the manifest from the tree: membership, sections, and reasons come from the existing file; row counts, checksums, served identifiers, and write times are recomputed. Beside the 36 reported files it lists the trained-baseline response files (`baselines` section), the prompt-paraphrase runs (`prompt_variants`), and the rule-v2 grounded runs (`retrieval_v2`). `build_manifest.py --check` exits 1 if any recorded checksum differs from the file on disk.
 
-### Trained baselines, prompt paraphrases, and the second analogue rule
+### Trained baselines, prompt paraphrases, the second analogue rule, and the tool-use task
 
 `baselines/mesogeos_trained.py` fits a histogram gradient-boosted classifier and a logistic regression on the 2006 to 2019 training years, on two feature sets: the 121 numbers the bare prompt prints, at the four significant figures it prints them (last six daily values plus window mean, minimum, and maximum per driver, the static fields, and the month; the script asserts the 386 evaluation rows against the item file) and all 30 daily values per driver at source precision. The learning rate and iteration count are chosen on 2020, and the fits are scored on the 386 items and on the full 2021 to 2022 holdout; `baselines/mesogeos_trained.json` holds every number. `baselines/allocation_trained.py` fits a gradient-boosted regressor of the next-day personnel ratio (and count and ridge variants) on 30,869 fire-days from 1,499 incidents disjoint from the evaluation incidents, reading the 23 report fields of the bare prompt, with hyperparameters chosen by five-fold cross-validation grouped by incident; its analogue ablation draws the six analogues with the runner's own rule and asserts the draw against the saved prompts on all 300 items; `baselines/allocation_trained.json` holds the cross-validation table, the 300-item scores, and the incident-clustered intervals. Both scripts write `responses-baseline-<fit>-bare.jsonl` in the task directory in the runner's row format, so the paper's scorers read them like a model run; `cluster_uncertainty.py` treats a `baseline-` arm as legitimately unpaired.
 
 `run_mesogeos.py --variant p1` and `--variant p2` run two paraphrases of the fire danger prompt that carry the same numbers and the same answer schema (an analyst framing with the drivers named in words, and a question-first table layout). They write `responses-<model>-bare-p1.jsonl` and `-p2.jsonl` and never replace the reported `p0` files; `analysis/prompt_sensitivity.py` scores them against `p0` with a paired block-by-month bootstrap.
 
 `run_allocation.py --rule v2` draws the six analogues under the frozen nearest-neighbour rule of `retrieval-v2/DECISION.md` (family B's `nn_pers_chg`, designed on 599 development items from incidents disjoint from the evaluation set and selected by the rule fixed in `retrieval-v2/BRIEF.md`), with its fourteen standardization constants in `task-allocation/rule-v2-scales.json`. It writes `responses-<model>-grounded-v2.jsonl` and the draws to `task-allocation/rule-v2-draws.jsonl`, and never touches a v1 file; `retrieval-v2/check_v2_transfer.py` confirms that the v1 draws are unchanged and that the runner's v2 draws equal the harness's on all 300 items; `analysis/retrieval_v2.py` scores the v2 runs beside bare and rule v1 with incident-paired intervals, including the two analogue-only rules against persistence and against each other, all joined by item id.
+
+`run_tooluse.py --models <ids> --conditions bare tool` runs the FPA-FOD tool-use task. The bare arm answers from memory; the tool arm exposes one function, `query_fpafod(sql)`, which accepts a single `SELECT` or `WITH` statement, returns at most 50 rows and 4,000 characters, and may be called up to eight times before the harness asks for the answer without the tool (`gw.call_tools` routes the tool loop to Bedrock, to the gateway's chat completions, or, for the OpenAI reasoning models, to the gateway's Responses API, because the Azure endpoint rejects function tools on chat completions unless reasoning is switched off; the raw output items of each response travel back verbatim so the reasoning items stay with their function calls). It writes `task-tooluse/responses-<model>-{bare,tool}.jsonl` and summarizes into `task-tooluse/scores.json`; `--fake` and `--fake noisy` exercise the harness against the reference queries and write under `task-tooluse/fake/`, which is ignored. `analysis/tooluse_paired.py` scores the arms, reports the paired tool-minus-bare accuracy with a 12-cluster family bootstrap, and counts the failure shapes (the unstated `DISCOVERY_DATE` format behind the calendar-window errors, and answers written as code). All six models ran on 2026-09-17: the open-weight pair through Bedrock (0.083 and 0.071 bare, 0.891 and 0.885 with the tool) and the proprietary four through the gateway (`analysis/tooluse_paired.json` holds every number).
 
 `cluster_uncertainty.py` flags a bare-and-grounded pair whose files were written more than 60 minutes apart. The grounded allocation files of the five models that ran before the analogue-date repair were rewritten on 2026-09-16 to replace one repaired item (below; `gpt-6-astra` ran under the final rule), so for allocation pass `--max-skew-min 100000`; the pairing is by item id and was checked.
 

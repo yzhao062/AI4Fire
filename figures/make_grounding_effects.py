@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Generate the grounding contrasts figure (figures/grounding_effects.pdf and .png).
 
-This figure displays the paired grounded-minus-bare contrasts across the three benchmark tasks:
+This figure displays the paired grounded-minus-bare contrasts across the four run benchmark tasks:
   - Panel (a): Smoke detection (FIgLib, 196 paired items per model)
                Recall gain (grounded minus bare) with fire-clustered 95% bootstrap intervals,
                plus false-positive rate (FPR) change shown as a secondary mint marker.
@@ -11,6 +11,9 @@ This figure displays the paired grounded-minus-bare contrasts across the three b
   - Panel (c): Fire danger forecasting (Mesogeos Track A, 386 items)
                AUPRC difference (grounded minus bare) with 1-degree-by-calendar-month clustered
                95% bootstrap intervals.
+  - Panel (d): Fire data tool use (FPA-FOD, 156 items)
+               Accuracy difference (tool minus bare) with family-clustered 95% bootstrap
+               intervals (12 clusters).
 
 Model order (top to bottom):
   1. claude-opus-4.8
@@ -30,6 +33,9 @@ Data sources in the AI4Fire repository:
     supplies allocation rule-v2 contrasts (v2 minus bare) with incident-clustered intervals.
   - analysis/figlib-paired.json:
     supplies per-model paired FIgLib metrics including bare and grounded FPR.
+  - analysis/tooluse_paired.json (written by analysis/tooluse_paired.py):
+    supplies the tool-minus-bare accuracy difference per model with its family-clustered
+    interval (12 clusters, 20,000 resamples).
 
 Styling conventions (CatchBench submission style):
   - Width: 6.5 in, height <= 2.6 in.
@@ -73,6 +79,7 @@ MODELS = [
         "cu_key": "claude-opus-4.8",
         "v2_key": "claude-opus-4.8",
         "fig_key": "claude-opus-4.8",
+        "tool_key": "claude-opus-4.8",
     },
     {
         "id": "claude-opus-5",
@@ -80,6 +87,7 @@ MODELS = [
         "cu_key": "claude-opus-5",
         "v2_key": "claude-opus-5",
         "fig_key": "claude-opus-5",
+        "tool_key": "claude-opus-5",
     },
     {
         "id": "gemini-3.1-pro",
@@ -87,6 +95,7 @@ MODELS = [
         "cu_key": "gemini-3.1-pro",
         "v2_key": "gemini-3.1-pro",
         "fig_key": "gemini-3.1-pro",
+        "tool_key": "gemini-3.1-pro",
     },
     {
         "id": "gpt-6-astra",
@@ -94,6 +103,7 @@ MODELS = [
         "cu_key": "gpt-6-astra",
         "v2_key": "gpt-6-astra",
         "fig_key": "gpt-6-astra",
+        "tool_key": "gpt-6-astra",
     },
     {
         "id": "qwen3-vl",
@@ -101,6 +111,7 @@ MODELS = [
         "cu_key": "bedrock_qwen.qwen3-vl-235b-a22",
         "v2_key": "bedrock_qwen.qwen3-vl-235b-a22b",
         "fig_key": "bedrock_qwen.qwen3-vl-235b-a22b",
+        "tool_key": "Qwen3-VL",
     },
     {
         "id": "llama-4-maverick",
@@ -108,6 +119,7 @@ MODELS = [
         "cu_key": "bedrock_us.meta.llama4-maveric",
         "v2_key": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
         "fig_key": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
+        "tool_key": "Llama 4 Maverick",
     },
 ]
 
@@ -176,11 +188,20 @@ def load_figlib_paired(repo_root: Path) -> dict:
     return fpr
 
 
+def load_tooluse_paired(repo_root: Path) -> dict:
+    path = repo_root / "analysis" / "tooluse_paired.json"
+    if not path.exists():
+        raise SystemExit(f"{path} is missing; run analysis/tooluse_paired.py first")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)["models"]
+
+
 def gather_all_data(repo_root: Path, force_rerun: bool = False):
     cu_text = load_cluster_uncertainty_output(repo_root, force_rerun)
     cu_data = parse_cluster_uncertainty(cu_text)
     v2_data = load_retrieval_v2(repo_root)
     fig_data = load_figlib_paired(repo_root)
+    tool_data = load_tooluse_paired(repo_root)
 
     records = []
     for m in MODELS:
@@ -226,6 +247,13 @@ def gather_all_data(repo_root: Path, force_rerun: bool = False):
         meso_hi = -cu_meso["ci_lo"]
         meso_excl_zero = (meso_lo > 0 and meso_hi > 0) or (meso_lo < 0 and meso_hi < 0)
 
+        # 4. Panel (d) Tool use: accuracy diff (tool minus bare), family-clustered interval
+        tl = tool_data[m["tool_key"]]["tool_minus_bare"]
+        tool_pt = float(tl["d"])
+        tool_lo = float(tl["ci"][0])
+        tool_hi = float(tl["ci"][1])
+        tool_excl_zero = (tool_lo > 0 and tool_hi > 0) or (tool_lo < 0 and tool_hi < 0)
+
         records.append({
             "model": m["label"],
             "figlib_gain": (gain_pt, gain_lo, gain_hi, gain_excl_zero),
@@ -233,6 +261,7 @@ def gather_all_data(repo_root: Path, force_rerun: bool = False):
             "alloc_v1": (v1_pt, v1_lo, v1_hi, v1_excl_zero),
             "alloc_v2": (v2_pt, v2_lo, v2_hi, v2_excl_zero),
             "meso_auprc": (meso_pt, meso_lo, meso_hi, meso_excl_zero),
+            "tool_acc": (tool_pt, tool_lo, tool_hi, tool_excl_zero),
         })
 
     return records
@@ -268,11 +297,19 @@ def print_verification_table(records: list[dict]):
         pt, lo, hi, sig = r["meso_auprc"]
         status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
         print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
+
+    print("\nPanel (d) Fire data tool use (FPA-FOD): accuracy diff, tool minus bare [95% CI], family clusters")
+    print("  Model             Accuracy diff [95% CI]         Status")
+    print("  " + "-" * 105)
+    for r in records:
+        pt, lo, hi, sig = r["tool_acc"]
+        status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
+        print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
     print("=" * 110)
 
 
 def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
-    """Draw the 3-panel CatchBench forest plot at 6.5 x 2.45 in."""
+    """Draw the 4-panel CatchBench forest plot at 6.5 x 2.45 in."""
     plt.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["DejaVu Sans", "Arial", "Helvetica"],
@@ -285,10 +322,10 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
     })
 
     fig, axes = plt.subplots(
-        1, 3,
+        1, 4,
         figsize=(6.5, 2.45),
         sharey=True,
-        gridspec_kw={"wspace": 0.26, "left": 0.18, "right": 0.98, "top": 0.82, "bottom": 0.17}
+        gridspec_kw={"wspace": 0.30, "left": 0.15, "right": 0.99, "top": 0.82, "bottom": 0.17}
     )
 
     n_models = len(records)
@@ -363,9 +400,9 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
     format_ax(
         ax_b,
         x_limits=(-0.05, 0.17),
-        x_ticks=[-0.04, 0.0, 0.08, 0.16],
+        x_ticks=[0.0, 0.08, 0.16],
         x_label="Norm. error diff. (grd. − bare)",
-        title_label="(b) Personnel allocation"
+        title_label="(b) Allocation"
     )
 
     v_offset = 0.14
@@ -414,6 +451,25 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
         col = COLOR_CORAL if sig else COLOR_GRAY
         ax_c.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
         ax_c.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
+
+    # -------------------------------------------------------------
+    # Panel (d): Fire data tool use (FPA-FOD)
+    # -------------------------------------------------------------
+    ax_d = axes[3]
+    format_ax(
+        ax_d,
+        x_limits=(-0.06, 1.08),
+        x_ticks=[0.0, 0.5, 1.0],
+        x_label="Accuracy diff. (tool − bare)",
+        title_label="(d) Tool use"
+    )
+
+    for i, r in enumerate(records):
+        y = y_pos[i]
+        pt, lo, hi, sig = r["tool_acc"]
+        col = COLOR_CORAL if sig else COLOR_GRAY
+        ax_d.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
+        ax_d.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
 
     # Adjust vertical limits
     ax_a.set_ylim(-0.55, n_models - 0.45)

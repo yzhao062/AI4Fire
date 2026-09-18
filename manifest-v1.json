@@ -936,8 +936,8 @@
         "sha256": "81d5bad69575e37c501a9177cae8a0fc64874493b14847d950d917c30bb281d4",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-17T11:17:05",
-          "latest": "2026-09-17T11:17:05",
+          "earliest": "2026-09-17T12:20:15",
+          "latest": "2026-09-17T12:20:15",
           "source": "file mtime"
         }
       },
@@ -947,8 +947,8 @@
         "sha256": "cc0d06ab0391b7d28ae2572d73f96c495f15029cff97ec8edd0470e9a647f07c",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-17T11:17:05",
-          "latest": "2026-09-17T11:17:05",
+          "earliest": "2026-09-17T12:20:15",
+          "latest": "2026-09-17T12:20:15",
           "source": "file mtime"
         }
       },
@@ -958,8 +958,8 @@
         "sha256": "602d0df1c01b519c9783c5a4657a75b7bd878f7269c82f685ada4f9104b2e00d",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-17T11:17:05",
-          "latest": "2026-09-17T11:17:05",
+          "earliest": "2026-09-17T12:20:15",
+          "latest": "2026-09-17T12:20:15",
           "source": "file mtime"
         }
       },
@@ -969,8 +969,8 @@
         "sha256": "16b432ff49a80a5b1f722ac2eb39d0d5e8a9a6dde80283cab96313db3aec5975",
         "served_model": [],
         "written": {
-          "earliest": "2026-09-17T11:17:05",
-          "latest": "2026-09-17T11:17:05",
+          "earliest": "2026-09-17T12:20:15",
+          "latest": "2026-09-17T12:20:15",
           "source": "file mtime"
         }
       },
@@ -982,8 +982,8 @@
           "HistGradientBoostingClassifier"
         ],
         "written": {
-          "earliest": "2026-09-17T11:13:23",
-          "latest": "2026-09-17T11:13:23",
+          "earliest": "2026-09-17T12:22:39",
+          "latest": "2026-09-17T12:22:39",
           "source": "file mtime"
         }
       },
@@ -995,8 +995,8 @@
           "HistGradientBoostingClassifier"
         ],
         "written": {
-          "earliest": "2026-09-17T11:13:41",
-          "latest": "2026-09-17T11:13:41",
+          "earliest": "2026-09-17T12:23:03",
+          "latest": "2026-09-17T12:23:03",
           "source": "file mtime"
         }
       },
@@ -1008,8 +1008,8 @@
           "LogisticRegression"
         ],
         "written": {
-          "earliest": "2026-09-17T11:13:43",
-          "latest": "2026-09-17T11:13:43",
+          "earliest": "2026-09-17T12:23:07",
+          "latest": "2026-09-17T12:23:07",
           "source": "file mtime"
         }
       },
@@ -1021,8 +1021,8 @@
           "LogisticRegression"
         ],
         "written": {
-          "earliest": "2026-09-17T11:13:46",
-          "latest": "2026-09-17T11:13:46",
+          "earliest": "2026-09-17T12:23:14",
+          "latest": "2026-09-17T12:23:14",
           "source": "file mtime"
         }
       }
@@ -1031,6 +1031,84 @@
   "prompt_variants": {
     "reason": "Prompt-sensitivity runs of run_mesogeos.py --variant p1 and p2, bare condition; scored by analysis/prompt_sensitivity.py.",
     "files": [
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "bdbcf7d125913a85571504604d7182151a155255693eacbf6d271294682c7824",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:44:22",
+          "latest": "2026-09-17T16:44:22",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "73761f316b32d37ddbc776547ed1dbdca22e1bb7fbd8a6b17c67e81fba1f6e4d",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:48:34",
+          "latest": "2026-09-17T16:48:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "8a23064286e4748e7d65140c54f5bd46f285d35a0801715a211f005a916f6530",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:52:34",
+          "latest": "2026-09-17T16:52:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "2932b1aa60a36d96e2668dbae19d25acfad2aefde58dfb0b920f09f109ee127a",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:53:40",
+          "latest": "2026-09-17T16:53:40",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-claude-opus-4.8-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "ec3507851c2b914a6ffd9a3b0a24a3ec64d77840550f9afaefbbf5ae548b0d2c",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-17T22:53:53",
+          "latest": "2026-09-17T22:53:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-claude-opus-4.8-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "dd90292652a3446326efea195ec0817d47d1524a2b72e5eefdd2efba980007de",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:04:37",
+          "latest": "2026-09-17T23:04:37",
+          "source": "file mtime"
+        }
+      },
       {
         "path": "task-mesogeos/responses-claude-opus-5-bare-p1.jsonl",
         "row_count": 386,
@@ -1080,6 +1158,32 @@
         "written": {
           "earliest": "2026-09-16T23:08:44",
           "latest": "2026-09-16T23:08:44",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-gpt-6-astra-bare-p1.jsonl",
+        "row_count": 386,
+        "sha256": "0db6345f57bd62dee16a71c8e4e4caab5539a195291aa4d190394d0c0a935d53",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:01:02",
+          "latest": "2026-09-17T23:01:02",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-gpt-6-astra-bare-p2.jsonl",
+        "row_count": 386,
+        "sha256": "bf6c166a97a313436a1e5842c236eaa3fa23ad12f6e04e396af257022602c68b",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:12:20",
+          "latest": "2026-09-17T23:12:20",
           "source": "file mtime"
         }
       }
@@ -1163,6 +1267,167 @@
         "written": {
           "earliest": "2026-09-17T08:29:36",
           "latest": "2026-09-17T08:29:36",
+          "source": "file mtime"
+        }
+      }
+    ]
+  },
+  "tooluse": {
+    "reason": "Fire data tool-use runs on FPA-FOD (run_tooluse.py), bare and tool arms, 156 items; scored by analysis/tooluse_paired.py.",
+    "files": [
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
+        "row_count": 156,
+        "sha256": "3be2698649870dca843ec806eb4a3218456bd99603d0855ad9c12d79038eb129",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:53:48",
+          "latest": "2026-09-17T16:53:48",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-tool.jsonl",
+        "row_count": 156,
+        "sha256": "132235e8b10a41e58b23ba52e80eeb596a95f1b8b8615ff9166e0f78704bf3d2",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:56:31",
+          "latest": "2026-09-17T16:56:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "9c6f35bae8bcd7a5f3014be8440d1ae34aa4a16aa0109787ce33381d2d61a0a6",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:57:25",
+          "latest": "2026-09-17T16:57:25",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "c65022793592d293f14a86d09a3295f86aa522c798969b77319f9af911ef3e33",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-17T16:58:31",
+          "latest": "2026-09-17T16:58:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-4.8-bare.jsonl",
+        "row_count": 156,
+        "sha256": "456611fdf281cae203b735da541408ff90c85588291b30d2a31169f5944cf8e9",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:13:21",
+          "latest": "2026-09-17T23:13:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-4.8-tool.jsonl",
+        "row_count": 156,
+        "sha256": "16c559579d7be0bf159dd1351f27554efad470c27b0ee2d81a92597dff47b339",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:15:52",
+          "latest": "2026-09-17T23:15:52",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-5-bare.jsonl",
+        "row_count": 156,
+        "sha256": "0e90bc446149871fe497af57baedfa9523cc05deedf2470ffc3abd4ace7c2290",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:20:57",
+          "latest": "2026-09-17T23:20:57",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-5-tool.jsonl",
+        "row_count": 156,
+        "sha256": "1c4f1ef087cb1ec485b72f538b4d074d727ff5a2ebfb631a1051e126a861bdff",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:23:39",
+          "latest": "2026-09-17T23:23:39",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gemini-3.1-pro-bare.jsonl",
+        "row_count": 156,
+        "sha256": "399df97c4c7e92b4ea4d27f15474f38b6b57187bc1d38c11ae4ecad22240cbfa",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:30:14",
+          "latest": "2026-09-17T23:30:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gemini-3.1-pro-tool.jsonl",
+        "row_count": 156,
+        "sha256": "bb1380f7ab01ab4099cbc2a13f4bcd6bc071ce97515510c9da923b4d76f575c6",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:35:10",
+          "latest": "2026-09-17T23:35:10",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gpt-6-astra-bare.jsonl",
+        "row_count": 156,
+        "sha256": "d91733e2a16b22efa3d22fe772ef73e5daebe8cb4e6de7303a83489b2980fa44",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:37:07",
+          "latest": "2026-09-17T23:37:07",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gpt-6-astra-tool.jsonl",
+        "row_count": 156,
+        "sha256": "a4001abc4a1999dfb7802c0f677b72a76014a56552f32f32be0e09f705181ad2",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-17T23:44:20",
+          "latest": "2026-09-17T23:44:20",
           "source": "file mtime"
         }
       }

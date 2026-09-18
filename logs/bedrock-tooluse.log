@@ -1,0 +1,202 @@
+
+Running bedrock:qwen.qwen3-vl-235b-a22b on bare condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:qwen.qwen3-vl-235b-a22b/bare",
+  "items": 156,
+  "accuracy": 0.0833,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.0,
+    "multi-step": 0.2,
+    "single lookup": 0.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 0.0,
+    "count_cause_state_year": 0.0,
+    "count_county_year": 0.0,
+    "count_season_window": 0.0,
+    "count_size_class_span": 0.0,
+    "count_state_year": 0.0,
+    "human_share_state_year": 0.0,
+    "largest_fire_name": 0.0,
+    "largest_fire_size_span": 0.0,
+    "peak_year_state": 0.3846,
+    "top_cause_state_year": 0.3846,
+    "top_state_for_cause": 0.2308
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "largest_fire_size_span": 0.154,
+    "count_season_window": 0.077,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "largest_fire_name": 0.077,
+    "human_share_state_year": 0.077,
+    "count_state_year": 0.077,
+    "count_size_class_span": 0.077
+  },
+  "naive_baseline_overall": 0.135,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 22,
+  "mean_tool_calls": 0.0,
+  "max_tool_calls": 0,
+  "tokens_in": 216796,
+  "tokens_out": 38080
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl
+
+Running bedrock:qwen.qwen3-vl-235b-a22b on tool condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:qwen.qwen3-vl-235b-a22b/tool",
+  "items": 156,
+  "accuracy": 0.891,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.8718,
+    "multi-step": 0.8923,
+    "single lookup": 1.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 1.0,
+    "count_cause_state_year": 1.0,
+    "count_county_year": 1.0,
+    "count_season_window": 0.2308,
+    "count_size_class_span": 1.0,
+    "count_state_year": 1.0,
+    "human_share_state_year": 1.0,
+    "largest_fire_name": 1.0,
+    "largest_fire_size_span": 0.4615,
+    "peak_year_state": 1.0,
+    "top_cause_state_year": 1.0,
+    "top_state_for_cause": 1.0
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "largest_fire_size_span": 0.154,
+    "count_season_window": 0.077,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "largest_fire_name": 0.077,
+    "human_share_state_year": 0.077,
+    "count_state_year": 0.077,
+    "count_size_class_span": 0.077
+  },
+  "naive_baseline_overall": 0.135,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 6,
+  "mean_tool_calls": 1.083,
+  "max_tool_calls": 2,
+  "tokens_in": 514116,
+  "tokens_out": 11994
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-tool.jsonl
+
+Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on bare condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/bare",
+  "items": 156,
+  "accuracy": 0.0705,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.0,
+    "multi-step": 0.1692,
+    "single lookup": 0.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 0.0,
+    "count_cause_state_year": 0.0,
+    "count_county_year": 0.0,
+    "count_season_window": 0.0,
+    "count_size_class_span": 0.0,
+    "count_state_year": 0.0,
+    "human_share_state_year": 0.0,
+    "largest_fire_name": 0.0,
+    "largest_fire_size_span": 0.0769,
+    "peak_year_state": 0.2308,
+    "top_cause_state_year": 0.3846,
+    "top_state_for_cause": 0.1538
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "largest_fire_size_span": 0.154,
+    "count_season_window": 0.077,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "largest_fire_name": 0.077,
+    "human_share_state_year": 0.077,
+    "count_state_year": 0.077,
+    "count_size_class_span": 0.077
+  },
+  "naive_baseline_overall": 0.135,
+  "parse_failures": 1,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 0.0,
+  "max_tool_calls": 0,
+  "tokens_in": 204659,
+  "tokens_out": 35385
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl
+
+Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on tool condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/tool",
+  "items": 156,
+  "accuracy": 0.8846,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.8333,
+    "multi-step": 0.9231,
+    "single lookup": 1.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 1.0,
+    "count_cause_state_year": 1.0,
+    "count_county_year": 1.0,
+    "count_season_window": 0.0,
+    "count_size_class_span": 1.0,
+    "count_state_year": 1.0,
+    "human_share_state_year": 0.6154,
+    "largest_fire_name": 1.0,
+    "largest_fire_size_span": 1.0,
+    "peak_year_state": 1.0,
+    "top_cause_state_year": 1.0,
+    "top_state_for_cause": 1.0
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "largest_fire_size_span": 0.154,
+    "count_season_window": 0.077,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "largest_fire_name": 0.077,
+    "human_share_state_year": 0.077,
+    "count_state_year": 0.077,
+    "count_size_class_span": 0.077
+  },
+  "naive_baseline_overall": 0.135,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 1.0,
+  "max_tool_calls": 1,
+  "tokens_in": 483797,
+  "tokens_out": 9129
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool.jsonl
+
+Completed 4 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.

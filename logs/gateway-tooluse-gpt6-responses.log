@@ -1,0 +1,52 @@
+
+Running gpt-6-astra on tool condition (156 items, workers=4, fake=None)...
+{
+  "run": "gpt-6-astra/tool",
+  "items": 156,
+  "accuracy": 0.9936,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.9872,
+    "multi-step": 1.0,
+    "single lookup": 1.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 1.0,
+    "count_cause_state_year": 1.0,
+    "count_county_year": 1.0,
+    "count_season_window": 1.0,
+    "count_size_class_span": 1.0,
+    "count_state_year": 1.0,
+    "human_share_state_year": 1.0,
+    "largest_fire_name": 0.9231,
+    "largest_fire_size_span": 1.0,
+    "peak_year_state": 1.0,
+    "top_cause_state_year": 1.0,
+    "top_state_for_cause": 1.0
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "largest_fire_size_span": 0.154,
+    "count_season_window": 0.077,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "largest_fire_name": 0.077,
+    "human_share_state_year": 0.077,
+    "count_state_year": 0.077,
+    "count_size_class_span": 0.077
+  },
+  "naive_baseline_overall": 0.135,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 1.071,
+  "max_tool_calls": 2,
+  "tokens_in": 465241,
+  "tokens_out": 11171
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-gpt-6-astra-tool.jsonl
+
+Completed 1 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.

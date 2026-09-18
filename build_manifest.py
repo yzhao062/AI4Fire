@@ -3,7 +3,7 @@
 The manifest lists the response files behind the paper: the 36 reported runs (three tasks, six models, bare
 and grounded), the supporting repeat and repair files, the historic archives kept as evidence of earlier
 defects, the files present in the task directories but excluded from the reported set, the trained non-LLM
-baselines, and the prompt-sensitivity and retrieval-rule variant runs.  Membership, sections, reasons, and
+baselines, the prompt-sensitivity and retrieval-rule variant runs, and the tool-use runs.  Membership, sections, reasons, and
 the skew overrides are read from the existing manifest; row counts, SHA-256 checksums, the distinct
 served_model values, and the modification times are recomputed from the files on disk, so the manifest
 can be regenerated after any file is rewritten.
@@ -31,6 +31,9 @@ VARIANT_SECTIONS = {
     "retrieval_v2": ("Grounded allocation runs under the movement-conditioned analogue rule (run_allocation.py --rule v2); "
                      "scored by analysis/retrieval_v2.py.",
                      ["task-allocation/responses-*-grounded-v2.jsonl"]),
+    "tooluse": ("Fire data tool-use runs on FPA-FOD (run_tooluse.py), bare and tool arms, 156 items; "
+                "scored by analysis/tooluse_paired.py.",
+                ["task-tooluse/responses-*.jsonl"]),
 }
 
 
