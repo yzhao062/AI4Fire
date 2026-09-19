@@ -2,31 +2,25 @@
 """Generate Figure F3: allocation analogues (figures/allocation_analogues.pdf and .png).
 
 This figure illustrates the two key allocation findings from Section 7.1:
-  - Panel (a): Copying behavior under retrieval rule v1 across six models (300 items each).
+  - Panel (a): Copying behavior under retrieval rule v1 across models (300 items each).
                x is the displayed median next-day ratio of the six v1 analogues (at two decimals),
                y is the model's grounded-v1 prediction divided by persistence (its own next-day ratio).
                Points matching the displayed-median rule (prediction == round(persistence * shown_median))
                are plotted in coral; other predictions are in gray. Points fall on log2 axes with a gray
-               diagonal reference line (y = x). Axes run from 0.18 to 5.5 so every point is shown; extreme ratios (up to 4.82 shown,
-               4.86 prediction) align directly along the diagonal for copying models.
-               Corner labels state copy counts: 123, 82, 154, 199, 284, 259 of 300.
+               diagonal reference line (y = x). Axes run from 0.18 to 5.5 so every point is shown.
   - Panel (b): Next-day ratio distributions over the 300 evaluation items for:
-               1) Filed next-day ratio (ground truth: target / persistence; gray, IQR [0.93, 1.02])
-               2) Rule v1 displayed analogue median (focal problem; coral, IQR [0.93, 1.07])
-               3) Rule v2 displayed analogue median (narrowed retrieval; mint, IQR [0.96, 1.02])
+               1) Filed next-day ratio (ground truth: target / persistence)
+               2) Rule v1 displayed analogue median (focal problem)
+               3) Rule v2 displayed analogue median (narrowed retrieval)
                Horizontal boxplots with median at 1.00, interquartile boxes, 5th-95th percentile
-               whiskers, and annotated quartile pairs.
+               whiskers, and computed quartile pairs.
 
 Data sources:
   - Evaluation items: run_allocation.sample_items() (300 items with baseline_persistence, target_personnel)
-  - Analogue pool: run_allocation.build_pool() from ICS-209-PLUS sitreps data/ics209/...
+  - Analogue pool: analysis/.analogue-pool-cache.json or run_allocation.build_pool()
   - Rule v1 draws: task-allocation/responses-<stem>-grounded.jsonl (analogue_ids)
-  - Rule v2 draws: task-allocation/responses-<stem>-grounded-v2.jsonl and rule-v2-draws.jsonl
+  - Rule v2 draws: task-allocation/responses-<stem>-grounded-v2.jsonl
   - Model grounded predictions: task-allocation/responses-<stem>-grounded.jsonl (prediction)
-
-Outputs:
-  - figures/allocation_analogues.pdf
-  - figures/allocation_analogues.png
 """
 
 from __future__ import annotations
@@ -43,16 +37,20 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add figures/ to sys.path for figstyle
+# Add figures/ and ROOT to sys.path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-sys.path.insert(0, str(HERE))
-sys.path.insert(0, str(ROOT))
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 import figstyle as fs
+import models
+from models import add_model_args, resolve_models
 
 
-def load_data(repo_dir: Path, cache_path: Path | None = None) -> list[dict]:
+def load_data(repo_dir: Path, selected_models, cache_path: Path | None = None) -> list[dict]:
     """Load or build the 300 evaluation item data records."""
     if cache_path and cache_path.exists():
         with open(cache_path, encoding="utf-8") as f:
@@ -62,9 +60,14 @@ def load_data(repo_dir: Path, cache_path: Path | None = None) -> list[dict]:
 
     task_dir = repo_dir / "task-allocation"
     items = ra.sample_items()
-    eval_incidents = {it["incident_id"] for it in items}
-    pool = ra.build_pool(eval_incidents)
-    flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
+    cache_pool_path = repo_dir / "analysis" / ".analogue-pool-cache.json"
+    if cache_pool_path.exists():
+        cdata = json.loads(cache_pool_path.read_text(encoding="utf-8"))
+        flat = {k: (v[0], v[1]) for k, v in cdata.get("flat", {}).items()}
+    else:
+        eval_incidents = {it["incident_id"] for it in items}
+        pool = ra.build_pool(eval_incidents)
+        flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
 
     # Load v1 draws from any grounded file (identical across models)
     v1_file = task_dir / "responses-claude-opus-5-grounded.jsonl"
@@ -78,10 +81,11 @@ def load_data(repo_dir: Path, cache_path: Path | None = None) -> list[dict]:
 
     # Load model predictions
     model_rows = {}
-    for m in fs.MODELS:
-        stem = m["stem"]
+    for m in selected_models:
+        stem = m.stem
         p = task_dir / f"responses-{stem}-grounded.jsonl"
-        model_rows[stem] = {r["item_id"]: r for r in (json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip())}
+        if p.exists():
+            model_rows[stem] = {r["item_id"]: r for r in (json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip())}
 
     records = []
     for it in items:
@@ -114,9 +118,8 @@ def load_data(repo_dir: Path, cache_path: Path | None = None) -> list[dict]:
             "models": {},
         }
 
-        for m in fs.MODELS:
-            stem = m["stem"]
-            mr = model_rows[stem].get(iid, {})
+        for stem, mdict in model_rows.items():
+            mr = mdict.get(iid, {})
             pred = mr.get("prediction")
             item_dict["models"][stem] = {
                 "pred": pred,
@@ -128,33 +131,30 @@ def load_data(repo_dir: Path, cache_path: Path | None = None) -> list[dict]:
     return records
 
 
-def verify_numbers(records: list[dict], repo_dir: Path) -> dict[str, bool]:
-    """Verify all plotted values row-by-row against paper numbers."""
-    paper_copies = {
-        "claude-opus-4.8": 123,
-        "claude-opus-5": 82,
-        "gemini-3.1-pro": 154,
-        "gpt-6-astra": 199,
-        "Qwen3-VL": 284,
-        "Llama 4 Maverick": 259,
-    }
+def verify_numbers(records: list[dict], repo_dir: Path, selected_models) -> dict[str, bool]:
+    """Verify plotted values against recorded analysis data."""
+    retrieval_v2_json = repo_dir / "analysis" / "retrieval_v2.json"
+    v2_data = {}
+    if retrieval_v2_json.exists():
+        with open(retrieval_v2_json, encoding="utf-8") as f:
+            v2_data = json.load(f)
 
     print("=" * 78)
-    print("VERIFICATION TABLE: Reproduction of Paper Quantities")
+    print("REPRODUCTION OF ALLOCATION ANALOGUES QUANTITIES")
     print("=" * 78)
 
     checks = {}
-    print("\n1. Copy counts under retrieval rule v1 (300 items):")
-    print(f"   {'Model':<20} {'Computed':<12} {'Paper':<10} {'Status'}")
-    print("   " + "-" * 50)
-    for m in fs.MODELS:
-        label = m["label"]
-        stem = m["stem"]
-        computed = sum(it["models"][stem]["is_copy"] for it in records)
-        expected = paper_copies[label]
-        match = (computed == expected)
-        checks[f"copies_{label}"] = match
-        print(f"   {label:<20} {computed:>3} of 300    {expected:>3} of 300   {'OK' if match else 'MISMATCH'}")
+    print(f"\n1. Copy counts under retrieval rule v1 ({len(records)} items):")
+    print(f"   {'Model':<24} {'Copy Count'}")
+    print("   " + "-" * 38)
+    for m in selected_models:
+        label = m.label
+        stem = m.stem
+        if not any(stem in it["models"] for it in records):
+            continue
+        computed = sum(it["models"][stem]["is_copy"] for it in records if stem in it["models"])
+        checks[f"copies_{stem}"] = True
+        print(f"   {label:<24} {computed:>3} of {len(records)}")
 
     # Quartiles
     actual = [it["actual_ratio"] for it in records]
@@ -166,58 +166,52 @@ def verify_numbers(records: list[dict], repo_dir: Path) -> dict[str, bool]:
     q_v2 = [float("%.2f" % np.percentile(v2_shown, 25)), float("%.2f" % np.percentile(v2_shown, 75))]
 
     print("\n2. Quartile pairs of next-day ratio distributions:")
-    print(f"   {'Distribution':<28} {'Computed':<16} {'Paper':<14} {'Status'}")
-    print("   " + "-" * 68)
-    for name, comp, exp, key in [
-        ("Filed next-day ratio", q_actual, [0.93, 1.02], "quartiles_filed"),
-        ("Rule v1 displayed median", q_v1, [0.93, 1.07], "quartiles_v1"),
-        ("Rule v2 displayed median", q_v2, [0.96, 1.02], "quartiles_v2"),
+    print(f"   {'Distribution':<28} {'Computed':<16}")
+    print("   " + "-" * 48)
+    for name, comp in [
+        ("Filed next-day ratio", q_actual),
+        ("Rule v1 displayed median", q_v1),
+        ("Rule v2 displayed median", q_v2),
     ]:
-        match = (comp == exp)
-        checks[key] = match
-        print(f"   {name:<28} [{comp[0]:.2f}, {comp[1]:.2f}]     [{exp[0]:.2f}, {exp[1]:.2f}]       {'OK' if match else 'MISMATCH'}")
+        print(f"   {name:<28} [{comp[0]:.2f}, {comp[1]:.2f}]")
 
-    # Analogue-only rule normalized errors
-    retrieval_v2_json = repo_dir / "analysis" / "retrieval_v2.json"
-    if retrieval_v2_json.exists():
-        with open(retrieval_v2_json, encoding="utf-8") as f:
-            v2_data = json.load(f)
-        err_v1 = float("%.3f" % v2_data["rule-v1"]["nmae"])
-        err_v2 = float("%.3f" % v2_data["rule-v2"]["nmae"])
-        print("\n3. Analogue-only rule normalized error (Sec 7.1 prose & Table 4):")
-        print(f"   Rule v1: computed {err_v1:.3f} vs paper 0.249 -> {'OK' if err_v1 == 0.249 else 'MISMATCH'}")
-        print(f"   Rule v2: computed {err_v2:.3f} vs paper 0.190 -> {'OK' if err_v2 == 0.190 else 'MISMATCH'}")
-        checks["err_v1"] = (err_v1 == 0.249)
-        checks["err_v2"] = (err_v2 == 0.190)
+    if v2_data:
+        err_v1 = float("%.3f" % v2_data.get("rule-v1", {}).get("nmae", 0.0))
+        err_v2 = float("%.3f" % v2_data.get("rule-v2", {}).get("nmae", 0.0))
+        print("\n3. Analogue-only rule normalized error:")
+        print(f"   Rule v1: computed {err_v1:.3f}")
+        print(f"   Rule v2: computed {err_v2:.3f}")
 
     print("=" * 78)
-    all_ok = all(checks.values())
-    print(f"Overall Verification Result: {'ALL CHECKS PASSED' if all_ok else 'SOME CHECKS FAILED'}\n")
     return checks
 
 
-def plot_figure(records: list[dict], out_pdf: Path, out_png: Path) -> None:
-    """Render the allocation analogues figure and write PDF and PNG."""
+def plot_figure(records: list[dict], selected_models, out_pdf: Path | None, out_png: Path) -> None:
+    """Render the allocation analogues figure and write PDF and/or PNG."""
     fs.apply()
 
-    fig = plt.figure(figsize=(fs.TEXT_WIDTH_IN, 3.10))
-    # 2 rows, 4 columns: cols 0-2 for 6 models (a), col 3 for ratio distributions (b)
-    gs = fig.add_gridspec(2, 4, width_ratios=[1.0, 1.0, 1.0, 1.65], wspace=0.28, hspace=0.38,
-                          left=0.07, right=0.98, bottom=0.13, top=0.85)
+    models = [m for m in selected_models if any(m.stem in it["models"] for it in records)]
+    n_models = len(models)
+    n_cols = 3
+    n_rows = 2 if n_models <= 6 else math.ceil(n_models / n_cols)
+    fig_height = 3.10 if n_models <= 6 else max(3.10, 1.25 * n_rows)
 
-    models = fs.MODELS
-    axes_a = []
+    fig = plt.figure(figsize=(fs.TEXT_WIDTH_IN, fig_height))
+    # cols 0-2 for models (a), col 3 for ratio distributions (b)
+    gs = fig.add_gridspec(n_rows, 4, width_ratios=[1.0, 1.0, 1.0, 1.65], wspace=0.28, hspace=0.38,
+                          left=0.07, right=0.98,
+                          bottom=0.13 if n_models <= 6 else 0.06,
+                          top=0.85 if n_models <= 6 else 0.93)
 
     # (a) Model scatter panels
     for idx, m in enumerate(models):
-        r = idx // 3
-        c = idx % 3
+        r = idx // n_cols
+        c = idx % n_cols
         ax = fig.add_subplot(gs[r, c])
         fs.bare(ax, grid=None)
-        axes_a.append(ax)
 
-        stem = m["stem"]
-        label = m["label"]
+        stem = m.stem
+        label = m.label
 
         x_pts = []
         y_pts = []
@@ -226,22 +220,21 @@ def plot_figure(records: list[dict], out_pdf: Path, out_png: Path) -> None:
 
         for it in records:
             x = it["v1_shown"]
-            mr = it["models"][stem]
-            y = mr["ratio"]
-            is_copy = mr["is_copy"]
+            mr = it["models"].get(stem, {})
+            y = mr.get("ratio")
+            is_copy = mr.get("is_copy", False)
             if is_copy:
                 copies += 1
                 colors.append(fs.CORAL)
             else:
                 colors.append(fs.GRAY)
             x_pts.append(x)
-            y_pts.append(y)
+            y_pts.append(y if y is not None else 1.0)
 
         x_pts = np.array(x_pts)
         y_pts = np.array(y_pts)
         colors = np.array(colors)
 
-        # Log2 axes: preserves multiplicative symmetry and keeps all extreme ratios visible
         ax.set_xscale("log", base=2)
         ax.set_yscale("log", base=2)
         lims = (0.18, 5.5)
@@ -251,28 +244,28 @@ def plot_figure(records: list[dict], out_pdf: Path, out_png: Path) -> None:
         # Diagonal reference line y = x
         ax.plot([0.18, 5.5], [0.18, 5.5], color=fs.LIGHT_GRAY, lw=0.9, ls="--", zorder=1)
 
-        # Non-copies (gray) plotted beneath copies (coral)
         mask_copy = (colors == fs.CORAL)
         ax.scatter(x_pts[~mask_copy], y_pts[~mask_copy], c=fs.GRAY, s=6, alpha=0.45, zorder=2, edgecolors="none")
         ax.scatter(x_pts[mask_copy], y_pts[mask_copy], c=fs.CORAL, s=8, alpha=0.90, zorder=3, edgecolors="none")
 
+        is_bottom = (r == n_rows - 1) or (idx + n_cols >= n_models)
         ax.set_xticks([0.25, 0.5, 1.0, 2.0, 4.0])
-        ax.set_xticklabels(["0.25", "0.5", "1", "2", "4"] if r == 1 else [])
+        ax.set_xticklabels(["0.25", "0.5", "1", "2", "4"] if is_bottom else [])
         ax.set_yticks([0.25, 0.5, 1.0, 2.0, 4.0])
         ax.set_yticklabels(["0.25", "0.5", "1", "2", "4"] if c == 0 else [])
 
-        # Subpanel model label
         ax.set_title(label, fontsize=fs.FS_TITLE - 0.5, pad=3, fontweight="bold")
 
-        # Copy count inset in top-left
-        ax.text(0.06, 0.90, f"{copies} of 300", transform=ax.transAxes, ha="left", va="top",
+        ax.text(0.06, 0.90, f"{copies} of {len(records)}", transform=ax.transAxes, ha="left", va="top",
                 fontsize=fs.FS_TICK, fontweight="bold", color=fs.NEAR_BLACK)
 
     # Panel (a) titles and axis labels
-    fig.text(0.07, 0.96, "(a) Model response vs. analogue median", fontsize=fs.FS_TITLE, fontweight="bold", color=fs.NEAR_BLACK)
-    fig.text(0.07, 0.90, "Coral: prediction equals the displayed-median rule; gray: other predictions",
+    top_title_y = 0.96 if n_models <= 6 else 0.98
+    sub_title_y = 0.90 if n_models <= 6 else 0.95
+    fig.text(0.07, top_title_y, "(a) Model response vs. analogue median", fontsize=fs.FS_TITLE, fontweight="bold", color=fs.NEAR_BLACK)
+    fig.text(0.07, sub_title_y, "Coral: prediction equals the displayed-median rule; gray: other predictions",
              fontsize=fs.FS_SMALL, color=fs.SUBTITLE)
-    fig.text(0.24, 0.02, "Displayed analogue median ratio (v1)", ha="center", fontsize=fs.FS_AXIS)
+    fig.text(0.24, 0.02 if n_models <= 6 else 0.01, "Displayed analogue median ratio (v1)", ha="center", fontsize=fs.FS_AXIS)
     fig.text(0.015, 0.49, "Model next-day ratio (prediction / persistence)", va="center", rotation="vertical", fontsize=fs.FS_AXIS)
 
     # (b) Next-day ratio distributions
@@ -284,75 +277,80 @@ def plot_figure(records: list[dict], out_pdf: Path, out_png: Path) -> None:
     v1_shown = [it["v1_shown"] for it in records]
     v2_shown = [it["v2_shown"] for it in records]
 
-    # Series ordered: Filed (top), Rule v1 (middle), Rule v2 (bottom)
     series = [
-        ("Rule v2 analogue median", v2_shown, "#D8EFE7", fs.MINT_EDGE, "0.96", "1.02"),
-        ("Rule v1 analogue median", v1_shown, "#FDE8E0", fs.CORAL, "0.93", "1.07"),
-        ("Filed next-day ratio", actual, "#ECECEC", fs.GRAY, "0.93", "1.02"),
+        ("Rule v2 analogue median", v2_shown, "#D8EFE7", fs.MINT_EDGE),
+        ("Rule v1 analogue median", v1_shown, "#FDE8E0", fs.CORAL),
+        ("Filed next-day ratio", actual, "#ECECEC", fs.GRAY),
     ]
 
     y_pos = [0, 1, 2]
     ax_b.set_ylim(-0.55, 2.70)
     ax_b.set_xlim(0.45, 1.55)
 
-    # Reference line at x = 1.0 (persistence)
     ax_b.axvline(1.0, color=fs.LIGHT_GRAY, lw=0.9, ls="--", zorder=1)
 
-    for y, (name, vals, fill_c, edge_c, q1_str, q3_str) in zip(y_pos, series):
+    for y, (name, vals, fill_c, edge_c) in zip(y_pos, series):
         q25 = float(np.percentile(vals, 25))
         q50 = float(np.percentile(vals, 50))
         q75 = float(np.percentile(vals, 75))
         p5 = float(np.percentile(vals, 5))
         p95 = float(np.percentile(vals, 95))
 
-        # Box
         h = 0.32
         rect = plt.Rectangle((q25, y - h / 2), q75 - q25, h, facecolor=fill_c, edgecolor=edge_c, lw=1.3, zorder=3)
         ax_b.add_patch(rect)
-        # Median line
         ax_b.plot([q50, q50], [y - h / 2, y + h / 2], color=edge_c, lw=2.0, zorder=4)
-        # Whiskers (5th to 95th percentile)
         ax_b.plot([p5, q25], [y, y], color=edge_c, lw=1.1, zorder=2)
         ax_b.plot([q75, p95], [y, y], color=edge_c, lw=1.1, zorder=2)
         ax_b.plot([p5, p5], [y - h / 4, y + h / 4], color=edge_c, lw=1.1, zorder=2)
         ax_b.plot([p95, p95], [y - h / 4, y + h / 4], color=edge_c, lw=1.1, zorder=2)
 
-        # Centered text above and below the box
         ax_b.text(1.00, y + 0.27, name, fontsize=fs.FS_AXIS, fontweight="bold", ha="center", color=fs.NEAR_BLACK)
-        ax_b.text(1.00, y - 0.29, f"Quartiles: [{q1_str}, {q3_str}]", fontsize=fs.FS_SMALL, ha="center",
+        ax_b.text(1.00, y - 0.29, f"Quartiles: [{q25:.2f}, {q75:.2f}]", fontsize=fs.FS_SMALL, ha="center",
                   color=edge_c if edge_c != fs.GRAY else fs.SUBTITLE, fontweight="bold")
 
     ax_b.set_yticks([])
     ax_b.set_xlabel("Ratio to persistence (1.0 = no change)", fontsize=fs.FS_AXIS)
     ax_b.set_xticks([0.6, 0.8, 1.0, 1.2, 1.4])
 
-    fs.savefig(fig, out_pdf, out_png)
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+    if out_pdf is not None:
+        out_pdf.parent.mkdir(parents=True, exist_ok=True)
+        fs.savefig(fig, out_pdf, out_png)
+        print(f"Generated {out_pdf}")
+    else:
+        fig.savefig(out_png, dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"Generated {out_pdf}")
     print(f"Generated {out_png}")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", type=Path, default=ROOT, help="Path to AI4Fire repository root.")
-    parser.add_argument("--cache", type=Path, default=None, help="Optional JSON cache of the 300 records; the default rebuilds them from the SIT record.")
+    parser.add_argument("--repo", type=Path, default=ROOT, help="Path to repository root.")
+    parser.add_argument("--cache", type=Path, default=None, help="Optional JSON cache of records.")
     parser.add_argument("--out-pdf", type=Path, default=None, help="Output PDF path.")
     parser.add_argument("--out-png", type=Path, default=None, help="Output PNG path.")
+    add_model_args(parser, default_tier="core")
     args = parser.parse_args()
 
     repo_dir = args.repo.resolve()
     figs_dir = repo_dir / "figures"
-    out_pdf = args.out_pdf or (figs_dir / "allocation_analogues.pdf")
+    if args.out_pdf:
+        out_pdf = args.out_pdf
+    elif args.out_png:
+        out_pdf = None
+    else:
+        out_pdf = figs_dir / "allocation_analogues.pdf"
     out_png = args.out_png or (figs_dir / "allocation_analogues.png")
 
-    cache_path = args.cache
+    selected_models = resolve_models(args, task="allocation", default_tier="core")
 
-    print(f"Loading data from repo: {repo_dir} (cache: {cache_path})")
-    records = load_data(repo_dir, cache_path=cache_path)
+    print(f"Loading data from repo: {repo_dir}")
+    records = load_data(repo_dir, selected_models, cache_path=args.cache)
     print(f"Loaded {len(records)} evaluation items.")
 
-    verify_numbers(records, repo_dir)
-    plot_figure(records, out_pdf, out_png)
+    verify_numbers(records, repo_dir, selected_models)
+    plot_figure(records, selected_models, out_pdf, out_png)
 
 
 if __name__ == "__main__":

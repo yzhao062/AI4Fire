@@ -1,10 +1,10 @@
 # AI4Fire
 
-Work in progress: two of the five tasks have not run, and the benchmark is still being extended.
+Work in progress: the benchmark is still being extended.
 
 The execution record behind *AI4Fire: Large Language Models and Agents on Fire Tasks*, a survey and benchmark: the version-1 task builders, the item manifests, every stored model response, and the scripts that turn those responses into the numbers the paper reports.
 
-Version 1 specifies five wildfire tasks that score without a human in the loop. Three have run, bare and grounded, on six models; two are built and waiting.
+Version 1 specifies five wildfire tasks that score without a human in the loop. All five have run on the six reported models, bare and grounded (bare and with the tool on the tool-use task). The model sweep of 2026-09-18 adds 29 Bedrock models.
 
 | Task | Source | Items | Status |
 |---|---|---|---|
@@ -14,7 +14,49 @@ Version 1 specifies five wildfire tasks that score without a human in the loop. 
 | Temperature-grounded aerial question answering | WildFireVQA (Habibpour et al., 2026), apache-2.0, over FLAME 3 imagery | 408 items over 390 frames | run |
 | Fire data tool use | FPA-FOD 6th edition (Short, 2022) | 156 items | run |
 
-Models: `claude-opus-5`, `claude-opus-4.8`, `gemini-3.1-pro`, and `gpt-6-astra` through one gateway; `Qwen3-VL-235B-A22B` and `Llama 4 Maverick` through Amazon Bedrock. Every run uses the same prompts and one output cap of 1,536 tokens. Five models ran at temperature zero; the `gpt-6-astra` endpoint accepts only its default temperature of 1 and takes the cap as `max_completion_tokens`, which counts reasoning tokens (`gw.py`). Its bare allocation repeat is under `repeat/`.
+## Models
+
+The six reported models are `claude-opus-5`, `claude-opus-4.8`, `gemini-3.1-pro`, and `gpt-6-astra` through one gateway, and `Qwen3-VL-235B-A22B` and `Llama 4 Maverick` through Amazon Bedrock. The model sweep of 2026-09-18 added 29 Bedrock models in two groups, chosen by a capability probe (`probe_bedrock_caps.py`; results in `probes/bedrock-caps-2026-09-18.json`). Ten models that accept images and tools ran all five tasks. Nineteen text-only models ran the three text tasks; the two whose tool probe failed ran allocation and fire danger only. The paired analyses, the calibration analysis, the sweep tables, and the model figures read the registry `models.py`. Its tiers are `core`, `added`, `all`, `full`, `text`, and `every`: `all` and its alias `full` select the sixteen full-capability models, and `every` selects all 35. The legacy cluster and table scripts keep their own file discovery or manifest rules. `docs/MODEL-SWEEP-2026-09-18.md` records the probe, the groups, the pilots, the launch scripts, and the outcome.
+
+| Model | Identifier (`gw.py`) | Vendor | Weights | Group | Tasks | Cap |
+|---|---|---|---|---|---|---|
+| claude-opus-4.8 | `claude-opus-4.8` | Anthropic | proprietary | reported six | all five | 1,536 |
+| claude-opus-5 | `claude-opus-5` | Anthropic | proprietary | reported six | all five | 1,536 |
+| gemini-3.1-pro | `gemini-3.1-pro` | Google | proprietary | reported six | all five | 1,536 |
+| gpt-6-astra | `gpt-6-astra` | OpenAI | proprietary | reported six | all five | 1,536 |
+| Nova Lite | `bedrock:amazon.nova-lite-v1:0` | Amazon | proprietary | added, full capability | all five | 1,536 |
+| Nova Pro | `bedrock:amazon.nova-pro-v1:0` | Amazon | proprietary | added, full capability | all five | 1,536 |
+| Nova 2 Lite | `bedrock:us.amazon.nova-2-lite-v1:0` | Amazon | proprietary | added, full capability | all five | 1,536 |
+| Qwen3-VL | `bedrock:qwen.qwen3-vl-235b-a22b` | Alibaba | open | reported six | all five | 1,536 |
+| Llama 4 Maverick | `bedrock:us.meta.llama4-maverick-17b-instruct-v1:0` | Meta | open | reported six | all five | 1,536 |
+| Llama 4 Scout | `bedrock:us.meta.llama4-scout-17b-instruct-v1:0` | Meta | open | added, full capability | all five | 1,536 |
+| Mistral Large 3 | `bedrock:mistral.mistral-large-3-675b-instruct` | Mistral | open | added, full capability | all five | 1,536 |
+| Ministral 3 8B | `bedrock:mistral.ministral-3-8b-instruct` | Mistral | open | added, full capability | all five | 1,536 |
+| Kimi K2.5 | `bedrock:moonshotai.kimi-k2.5` | Moonshot | open | added, full capability | all five | 1,536 |
+| Gemma 3 27B | `bedrock:google.gemma-3-27b-it` | Google | open | added, full capability | all five | 1,536 |
+| Gemma 3 12B | `bedrock:google.gemma-3-12b-it` | Google | open | added, full capability | all five | 1,536 |
+| Gemma 3 4B | `bedrock:google.gemma-3-4b-it` | Google | open | added, full capability | all five | 1,536 |
+| Nova Micro | `bedrock:amazon.nova-micro-v1:0` | Amazon | proprietary | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Llama 3.3 70B | `bedrock:us.meta.llama3-3-70b-instruct-v1:0` | Meta | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Llama 3.1 70B | `bedrock:us.meta.llama3-1-70b-instruct-v1:0` | Meta | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Mistral Small 2402 | `bedrock:mistral.mistral-small-2402-v1:0` | Mistral | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Devstral 2 123B | `bedrock:mistral.devstral-2-123b` | Mistral | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Qwen3 32B | `bedrock:qwen.qwen3-32b-v1:0` | Alibaba | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Qwen3 Next 80B | `bedrock:qwen.qwen3-next-80b-a3b` | Alibaba | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Qwen3 Coder 30B | `bedrock:qwen.qwen3-coder-30b-a3b-v1:0` | Alibaba | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| DeepSeek V3.2 | `bedrock:deepseek.v3.2` | DeepSeek | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| GPT-OSS 120B | `bedrock:openai.gpt-oss-120b-1:0` | OpenAI | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| GPT-OSS 20B | `bedrock:openai.gpt-oss-20b-1:0` | OpenAI | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| GLM 5 | `bedrock:zai.glm-5` | Z.AI | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| GLM 4.7 | `bedrock:zai.glm-4.7` | Z.AI | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| GLM 4.7 Flash | `bedrock:zai.glm-4.7-flash` | Z.AI | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| MiniMax M2.5 | `bedrock:minimax.minimax-m2.5` | MiniMax | open | text-only sweep | allocation, fire danger, tool use | 8,192 |
+| Kimi K2 Thinking | `bedrock:moonshot.kimi-k2-thinking` | Moonshot | open | text-only sweep | allocation, fire danger, tool use | 8,192 |
+| Nemotron Super 3 120B | `bedrock:nvidia.nemotron-super-3-120b` | NVIDIA | open | text-only sweep | allocation, fire danger, tool use | 1,536 |
+| Llama 3.1 8B | `bedrock:us.meta.llama3-1-8b-instruct-v1:0` | Meta | open | text-only sweep | allocation, fire danger | 1,536 |
+| DeepSeek R1 | `bedrock:us.deepseek.r1-v1:0` | DeepSeek | open | text-only sweep | allocation, fire danger | 8,192 |
+
+Every run uses the same prompts and the output cap of 1,536 tokens. The three reasoning models marked 8,192 are the exception. MiniMax M2.5 and Kimi K2 Thinking parsed 2 of 10 bare allocation pilot items at the standard cap, and DeepSeek R1 parsed 6. Their runs record the 8,192-token cap in `usage.max_out`, and `models.py` records the configured cap of every model; rows written before that field existed, the core six included, do not carry it. All models ran at temperature zero except `gpt-6-astra`, whose endpoint accepts only its default temperature of 1 and takes the cap as `max_completion_tokens`, which counts reasoning tokens (`gw.py`). Its bare allocation repeat is under `repeat/`. Gemma 3 on Bedrock does not use Converse tool blocks; it calls tools through Python calls in fenced `tool_code` blocks. `gw.py` therefore renders the tool declarations into the system prompt and parses the call blocks from the assistant turns (`parse_tool_code_fences`). The runner sees the same tool interface over a different wire protocol. Such rows carry `tool_protocol: "tool_code"` in the usage dictionary. The full Llama 3.1 8B run supersedes its 10-item allocation probe of 2026-09-16. That probe verified the Bedrock credentials, and its rows remain in the history at commit 6e37924.
 
 ## Layout
 
@@ -35,6 +77,12 @@ survey/                the two search passes (138 kept works with the 31 re-chec
 build_items_*.py       task builders; fetch_*.py downloads the three sources that allow it
 match_flame3.py        maps each aerial item to its FLAME 3 frame by thermal fingerprint and renders the thermal view
 run_*.py               the runners; gw.py is the only place a model is called
+models.py              the model registry: label, identifier, vendor, weights, serving path, tier, cap, tool support
+probe_bedrock_caps.py  the text, image, and tool probe behind the sweep groups; probes/ holds its results
+run_tier1.ps1          one detached five-task chain per added full-capability model (2026-09-18 sweep)
+run_tier2.ps1          the text-only sweep: one detached three-task chain per model, throttled; -Pilot for the ten-item pilots
+docs/                  the sweep record
+tests/                 pytest: the tool-use harness against the reference queries, and the Gemma tool_code adapter
 ```
 
 `data/` and the FIgLib frames under `task-figlib/images*` are not in this repository. FIgLib is served as-is with no formal license, so the item manifest carries a `source_url` per frame and `build_items_figlib.py` re-downloads them. `fetch_mesogeos.py` and `fetch_fpafod.py` download their sources; ICS-209-PLUS and the WildFireVQA question release are downloaded by hand from the pages the builders name. `fetch_flame3.py` downloads the FLAME 3 computer-vision subset (Sycan Marsh) from its Kaggle mirror with the Kaggle API credentials read from the environment or a local `.env` (`KAGGLE_USERNAME`, `KAGGLE_KEY`; the IEEE DataPort original needs an institutional login), and `match_flame3.py` then writes `task-wildfirevqa/image-map.json` and the inferno-rendered thermal images under `data/flame3/rendered/`.
@@ -54,7 +102,8 @@ python analysis/figlib_paired.py           # smoke detection on the 196 items bo
 python analysis/cluster_uncertainty.py     # 95 percent cluster bootstrap intervals (20,000 resamples, seed 20260915)
 python analysis/information_only_baselines.py   # persistence, analogue-only, climatology, and last-day rules
 python analysis/answer_failures.py         # rows with no usable answer, by task and run
-python analysis/served_models.py           # table of distinct served_model values, counts, and date ranges
+python analysis/served_models.py           # served_model values, counts, and date ranges of every response file in the manifest
+python table_rows_new_models.py --tier all  # the rows of the three results tables for the sixteen full-capability models
 python analysis/calibration_mesogeos.py    # decision consistency, ECE, Brier and its Murphy terms, reliability tables, per run
 python analysis/prompt_sensitivity.py      # the two prompt paraphrases against the paper's prompt, paired block bootstrap (six models)
 python analysis/tooluse_paired.py          # tool against bare on the FPA-FOD tool-use task, paired and clustered by question family
@@ -63,6 +112,7 @@ python analysis/wildfirevqa_paired.py      # aerial question answering, grounded
 python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
 python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
 python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum
+python -m pytest tests                     # the tool-use harness and the Gemma tool_code adapter
 python figures/make_grounding_effects.py   # grounded minus bare on the four run tasks, with the cluster intervals
 python figures/make_survey_landscape.py    # the 138 kept works by kind and task category, and models tested
 python figures/make_allocation_analogues.py   # copies of the displayed analogue median; spread of the next-day ratio
@@ -77,7 +127,7 @@ Each figure script reads the same files as the analysis script it follows. Befor
 
 The 36 reported response files (three tasks x six models x two conditions) are listed in `manifest-v1.json` at the repository root with their row counts, SHA-256 checksums, distinct `served_model` values, and serving pathways. The analysis scripts (`analysis/cluster_uncertainty.py`, `analysis/answer_failures.py`, `analysis/figlib_paired.py`, `score_mesogeos_all.py`, `table_rows_allocation.py`, and `copy_agreement.py`) support a `--manifest manifest-v1.json` flag that restricts evaluation strictly to these reported files, filtering out exploratory probes and historic resolution arms. For `cluster_uncertainty.py`, the flag also automatically silences the cross-run skew guard for the five grounded allocation pairs marked with `skew_override: true` from the analogue-date repair.
 
-`build_manifest.py` regenerates the manifest from the tree: membership, sections, and reasons come from the existing file; row counts, checksums, served identifiers, and write times are recomputed. Beside the 36 reported files it lists the trained-baseline response files (`baselines` section), the prompt-paraphrase runs (`prompt_variants`), and the rule-v2 grounded runs (`retrieval_v2`). `build_manifest.py --check` exits 1 if any recorded checksum differs from the file on disk.
+`build_manifest.py` regenerates the manifest from the tree: membership, sections, and reasons come from the existing file; row counts, checksums, served identifiers, and write times are recomputed. Beside the 36 reported files it lists the trained-baseline response files (`baselines`), the prompt-paraphrase runs (`prompt_variants`), the rule-v2 grounded runs (`retrieval_v2`), and the tool-use and aerial runs of every model (`tooluse`, `wildfirevqa`). The `added_models` and `text_models` sections list the 2026-09-18 sweep files on the other tasks, selected through the tiers in `models.py`. `build_manifest.py --check` exits 1 if any recorded checksum differs from the file on disk.
 
 ### Trained baselines, prompt paraphrases, the second analogue rule, and the tool-use task
 
@@ -87,7 +137,7 @@ The 36 reported response files (three tasks x six models x two conditions) are l
 
 `run_allocation.py --rule v2` draws the six analogues under the frozen nearest-neighbour rule of `retrieval-v2/DECISION.md` (family B's `nn_pers_chg`, designed on 599 development items from incidents disjoint from the evaluation set and selected by the rule fixed in `retrieval-v2/BRIEF.md`), with its fourteen standardization constants in `task-allocation/rule-v2-scales.json`. It writes `responses-<model>-grounded-v2.jsonl` and the draws to `task-allocation/rule-v2-draws.jsonl`, and never touches a v1 file; `retrieval-v2/check_v2_transfer.py` confirms that the v1 draws are unchanged and that the runner's v2 draws equal the harness's on all 300 items; `analysis/retrieval_v2.py` scores the v2 runs beside bare and rule v1 with incident-paired intervals, including the two analogue-only rules against persistence and against each other, all joined by item id.
 
-`run_tooluse.py --models <ids> --conditions bare tool` runs the FPA-FOD tool-use task. The bare arm answers from memory; the tool arm exposes one function, `query_fpafod(sql)`, which accepts a single `SELECT` or `WITH` statement, returns at most 50 rows and 4,000 characters, and may be called up to eight times before the harness asks for the answer without the tool (`gw.call_tools` routes the tool loop to Bedrock, to the gateway's chat completions, or, for the OpenAI reasoning models, to the gateway's Responses API, because the Azure endpoint rejects function tools on chat completions unless reasoning is switched off; the raw output items of each response travel back verbatim so the reasoning items stay with their function calls). It writes `task-tooluse/responses-<model>-{bare,tool}.jsonl` and summarizes into `task-tooluse/scores.json`; `--fake` and `--fake noisy` exercise the harness against the reference queries and write under `task-tooluse/fake/`, which is ignored. `analysis/tooluse_paired.py` scores the arms, reports the paired tool-minus-bare accuracy with a 12-cluster family bootstrap, and counts the failure shapes (the unstated `DISCOVERY_DATE` format behind the calendar-window errors, and answers written as code). All six models ran on 2026-09-17: the open-weight pair through Bedrock (0.083 and 0.071 bare, 0.891 and 0.885 with the tool) and the proprietary four through the gateway (`analysis/tooluse_paired.json` holds every number).
+`run_tooluse.py --models <ids> --conditions bare tool` runs the FPA-FOD tool-use task. The bare arm answers from memory; the tool arm exposes one function, `query_fpafod(sql)`, which accepts a single `SELECT` or `WITH` statement, returns at most 50 rows and 4,000 characters, and may be called up to eight times before the harness asks for the answer without the tool (`gw.call_tools` routes the tool loop to Bedrock, to the gateway's chat completions, or, for the OpenAI reasoning models, to the gateway's Responses API, because the Azure endpoint rejects function tools on chat completions unless reasoning is switched off; the raw output items of each response travel back verbatim so the reasoning items stay with their function calls). It writes `task-tooluse/responses-<model>-{bare,tool}.jsonl` and summarizes into `task-tooluse/scores.json`; `--fake` and `--fake noisy` exercise the harness against the reference queries and write under `task-tooluse/fake/`, which is ignored. `analysis/tooluse_paired.py` scores the arms, reports the paired tool-minus-bare accuracy with a 12-cluster family bootstrap, and counts the failure shapes (the unstated `DISCOVERY_DATE` format behind the calendar-window errors, and answers written as code). All six models ran on 2026-09-17: the open-weight pair through Bedrock (0.083 and 0.071 bare, 0.891 and 0.885 with the tool) and the proprietary four through the gateway (`analysis/tooluse_paired.json` holds every number). The sweep models ran on 2026-09-18. The call after the eighth tool call carries no tool declaration, and Bedrock rejects a history that holds tool blocks without one, so `gw.py` renders that history as text for the final call. None of the six reported models ever reached the eighth call. The 19 rows of three added models that had failed there before the fix were re-queried with `run_tooluse.py --retry-errors`.
 
 `cluster_uncertainty.py` flags a bare-and-grounded pair whose files were written more than 60 minutes apart. The grounded allocation files of the five models that ran before the analogue-date repair were rewritten on 2026-09-16 to replace one repaired item (below; `gpt-6-astra` ran under the final rule), so for allocation pass `--max-skew-min 100000`; the pairing is by item id and was checked.
 

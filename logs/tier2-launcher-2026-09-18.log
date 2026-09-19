@@ -1,0 +1,20 @@
+launched bedrock:amazon.nova-micro-v1:0 (tasks=3 cap=) 14:56:06
+launched bedrock:us.meta.llama3-3-70b-instruct-v1:0 (tasks=3 cap=) 14:56:12
+launched bedrock:us.meta.llama3-1-70b-instruct-v1:0 (tasks=3 cap=) 14:56:17
+launched bedrock:mistral.mistral-small-2402-v1:0 (tasks=3 cap=) 14:56:23
+launched bedrock:mistral.devstral-2-123b (tasks=3 cap=) 14:56:29
+launched bedrock:qwen.qwen3-32b-v1:0 (tasks=3 cap=) 14:56:34
+launched bedrock:qwen.qwen3-next-80b-a3b (tasks=3 cap=) 14:56:40
+launched bedrock:qwen.qwen3-coder-30b-a3b-v1:0 (tasks=3 cap=) 15:02:20
+launched bedrock:deepseek.v3.2 (tasks=3 cap=) 15:03:27
+launched bedrock:openai.gpt-oss-120b-1:0 (tasks=3 cap=) 15:03:32
+launched bedrock:openai.gpt-oss-20b-1:0 (tasks=3 cap=) 15:03:38
+launched bedrock:zai.glm-5 (tasks=3 cap=) 15:08:17
+launched bedrock:zai.glm-4.7 (tasks=3 cap=) 15:09:24
+launched bedrock:zai.glm-4.7-flash (tasks=3 cap=) 15:10:00
+launched bedrock:nvidia.nemotron-super-3-120b (tasks=3 cap=) 15:14:39
+launched bedrock:us.meta.llama3-1-8b-instruct-v1:0 (tasks=2 cap=) 15:17:48
+launched bedrock:minimax.minimax-m2.5 (tasks=3 cap=8192) 15:17:53
+launched bedrock:moonshot.kimi-k2-thinking (tasks=3 cap=8192) 15:20:00
+launched bedrock:us.deepseek.r1-v1:0 (tasks=2 cap=8192) 15:21:07
+ALL LAUNCHED 15:21:12

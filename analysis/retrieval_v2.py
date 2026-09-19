@@ -24,10 +24,11 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT))
 import cluster_uncertainty as cu  # noqa: E402
 import run_allocation as ra  # noqa: E402
+import models
+from models import add_model_args, resolve_models
 
 TASK = ROOT / "task-allocation"
-MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "gpt-6-astra",
-          "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
+MODELS = [m.stem for m in models.models(tier="core")]
 HEADER = "%-46s %6s %7s %6s %7s %7s %6s %6s %6s" % ("run", "mae", "nmae", "beatp", "stable", "moving", "false", "missed", "dirok")
 
 
@@ -91,7 +92,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--resamples", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=20260915)
+    ap.add_argument("--out", type=pathlib.Path, default=HERE / "retrieval_v2.json")
+    add_model_args(ap, default_tier="core")
     args = ap.parse_args()
+    selected_models = resolve_models(args, task="allocation", default_tier="core")
     items = ra.sample_items()
     fire_mean = {}
     allrows = [json.loads(l) for l in (TASK / "items.jsonl").read_text(encoding="utf-8").splitlines()]
@@ -99,8 +103,13 @@ def main():
     for r in allrows:
         acc.setdefault(r["incident_id"], []).append(r["target_personnel"])
     fire_mean = {k: float(np.mean(v)) for k, v in acc.items()}
-    pool = ra.build_pool({i["incident_id"] for i in items})
-    flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
+    cache_path = HERE / ".analogue-pool-cache.json"
+    if cache_path.exists():
+        cache_data = json.loads(cache_path.read_text(encoding="utf-8"))
+        flat = {k: (v[0], v[1]) for k, v in cache_data.get("flat", {}).items()}
+    else:
+        pool = ra.build_pool({i["incident_id"] for i in items})
+        flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
     incident = {i["item_id"]: i["incident_id"] for i in items}
     out = {}
 
@@ -140,7 +149,8 @@ def main():
         print("   rule v2 minus rule v1 %+.4f [%+.4f, %+.4f]" % (float(np.mean(err2) - np.mean(err1)), lo, hi))
         out["rule-v2"]["minus_rule_v1"] = [float(np.mean(err2) - np.mean(err1)), lo, hi]
 
-    for model in MODELS:
+    for model_obj in selected_models:
+        model = model_obj.stem
         files = {"bare": TASK / ("responses-%s-bare.jsonl" % model), "v1": TASK / ("responses-%s-grounded.jsonl" % model),
                  "v2": TASK / ("responses-%s-grounded-v2.jsonl" % model)}
         if not files["v2"].exists():
@@ -173,7 +183,7 @@ def main():
         out[model] = {k: {kk: vv for kk, vv in ms[k].items() if kk != "err"} for k in ms}
         out[model].update({"items": len(ids), "d_v2_bare": d_bare, "d_v2_bare_ci": [lo1, hi1], "d_v2_v1": d_v1, "d_v2_v1_ci": [lo2, hi2],
                            "copy_same": same, "copy_n": n})
-    (HERE / "retrieval_v2.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
+    args.out.write_text(json.dumps(out, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+=== chain bedrock:us.meta.llama3-1-8b-instruct-v1:0 start 2026-09-18 15:17:48
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/bare", "items": 300, "parsed": 300, "mae": 16.113333333333333, "mae_norm": 0.17520459270555178, "within_25pct": 0.74, "median_abs_log_ratio": 0.06171664835876041, "mae_norm_on_moving_days": 0.36510033885019877, "beats_persistence_share": 0.016666666666666666, "errors": 0, "tokens_in": 100040, "tokens_out": 19719}
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/grounded", "items": 300, "parsed": 300, "mae": 26.898666666666667, "mae_norm": 0.29954176300761703, "within_25pct": 0.63, "median_abs_log_ratio": 0.16175801882799995, "mae_norm_on_moving_days": 0.4352351964429565, "beats_persistence_share": 0.16, "errors": 0, "tokens_in": 160042, "tokens_out": 35051}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 15:19:54
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.3335640548985484, "f1_fire": 0.0, "f1_no_fire": 0.7956318252730109, "positive_rate_called": 0.0, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 436588}
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.32547042749119603, "f1_fire": 0.0, "f1_no_fire": 0.7956318252730109, "positive_rate_called": 0.0, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 522986}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+=== chain bedrock:us.meta.llama3-1-8b-instruct-v1:0 DONE 2026-09-18 15:21:46

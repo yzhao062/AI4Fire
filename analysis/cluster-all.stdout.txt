@@ -1,0 +1,424 @@
+============================================================================================================================
+CLUSTER-ROBUST UNCERTAINTY FOR THE BARE-AGAINST-GROUNDED CONTRAST   (TMLR round-1 objection A)
+============================================================================================================================
+repo      : C:\Users\yuezh\PycharmProjects\fire-bench
+bootstrap : 20000 replicates per interval, 95% percentile, base seed 20260915
+pairing   : each contrast is scored only on the items BOTH conditions answered, and one
+            resampled index set is scored under both conditions, which keeps it paired
+ratios    : contrast ratio applies to the bare-minus-grounded difference; level ratio applies
+            to each condition's own headline metric.  They differ because pairing already
+            cancels the shared cluster-level difficulty.  Quote the level ratio when
+            defending a per-arm number and the contrast ratio when defending a contrast.
+freshness : an arm whose two condition files were written more than 100000 min apart is flagged
+            CROSS-RUN and excluded from every median, since the rerun replaced one side only
+
+----------------------------------------------------------------------------------------------------------------------------
+FIgLib  |  primary metric: recall on smoke  |  resampling unit: fire, derived from the sequence name
+----------------------------------------------------------------------------------------------------------------------------
+  cluster structure on the largest arm (bedrock_amazon.nova-lite-v1_0): 17 fires over 196 paired items, mean 11.53 and max 42 items per fire, 100% of items share their fire with a neighbour
+  small-cluster note: 17 fires is few enough that a percentile cluster bootstrap undercovers.  Scaling by sqrt(G/(G-1)) and reading the quantile off t with 16 degrees of freedom would widen the cluster interval by 11%.  The width ratios below are close to unaffected; the cluster interval itself is optimistic by about that much, and the paper should say so.
+
+  PAIRED CONTRAST   diff = bare minus grounded in recall on smoke; grounded helps when diff < 0
+  arm                            bare_n  grd_n pair_n n_fire     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0     224    196    196     17   0.4464   0.5268  -0.0804  [-0.1806,-0.0125] [-0.1589, 0.0000]   1.06
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:26, grounded 2026-09-18 14:28 (2 min apart)
+  bedrock_amazon.nova-pro-v1_0      224    196    196     17   0.5893   0.6518  -0.0625  [-0.0938,-0.0238] [-0.1204,-0.0087]   0.63
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:27, grounded 2026-09-18 14:29 (2 min apart)
+  bedrock_google.gemma-3-12b-it     224    196    196     17   0.5893   0.5982  -0.0089  [-0.0481, 0.0312] [-0.0495, 0.0286]   1.02
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 15:06, grounded 2026-09-18 15:07 (1 min apart)
+  bedrock_google.gemma-3-27b-it     224    196    196     17   0.5536   0.6875  -0.1339  [-0.2095,-0.0556] [-0.1983,-0.0738]   1.24
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 15:07, grounded 2026-09-18 15:08 (2 min apart)
+  bedrock_google.gemma-3-4b-it      224    196    196     17   0.5357   0.6071  -0.0714  [-0.1316,-0.0312] [-0.1238,-0.0270]   1.04
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 15:02, grounded 2026-09-18 15:03 (1 min apart)
+  bedrock_mistral.ministral-3-8b    224    196    196     17   0.3839   0.4911  -0.1071  [-0.1711,-0.0595] [-0.1667,-0.0531]   0.98
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:26, grounded 2026-09-18 14:28 (2 min apart)
+  bedrock_mistral.mistral-large-    224    196    194     17   0.4144   0.5766  -0.1622  [-0.2473,-0.0947] [-0.2328,-0.0965]   1.12
+                                   note: smoke frames scored: 111
+                                   note: written bare 2026-09-18 14:27, grounded 2026-09-18 14:29 (3 min apart)
+  bedrock_moonshotai.kimi-k2.5      224    196    196     17   0.4196   0.5446  -0.1250  [-0.1759,-0.0714] [-0.1900,-0.0673]   0.85
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:31, grounded 2026-09-18 14:33 (2 min apart)
+  bedrock_qwen.qwen3-vl-235b-a22    224    196    196     17   0.5446   0.6161  -0.0714  [-0.1210,-0.0288] [-0.1225,-0.0270]   0.97
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:28, grounded 2026-09-16 13:31 (3 min apart)
+  bedrock_us.amazon.nova-2-lite-    224    196    196     17   0.3214   0.2232   0.0982  [ 0.0100, 0.1797] [ 0.0351, 0.1651]   1.30
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:28, grounded 2026-09-18 14:30 (2 min apart)
+  bedrock_us.meta.llama4-maveric    224    196    196     17   0.5089   0.5536  -0.0446  [-0.0857, 0.0000] [-0.0874,-0.0092]   1.10
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:37, grounded 2026-09-16 13:40 (2 min apart)
+  bedrock_us.meta.llama4-scout-1    224    196    196     17   0.3839   0.4821  -0.0982  [-0.1894,-0.0385] [-0.1579,-0.0463]   1.35
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-18 14:26, grounded 2026-09-18 14:28 (2 min apart)
+  claude-opus-4.8                   224    196    196     17   0.5536   0.6161  -0.0625  [-0.1204,-0.0197] [-0.1111,-0.0194]   1.10
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 00:56, grounded 2026-09-16 00:59 (3 min apart)
+  claude-opus-5                     224    196    196     17   0.6071   0.6429  -0.0357  [-0.0687, 0.0000] [-0.0741,-0.0084]   1.05
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 01:03, grounded 2026-09-16 01:08 (4 min apart)
+  claude-opus-5-1024px              224    196    193     17   0.5229   0.5872  -0.0642  [-0.1000,-0.0333] [-0.1134,-0.0202]   0.72
+                                   note: smoke frames scored: 109
+                                   note: written bare 2026-09-15 18:38, grounded 2026-09-15 18:38 (0 min apart)
+  gemini-3.1-pro                    224    196    196     17   0.5446   0.7321  -0.1875  [-0.2386,-0.1364] [-0.2593,-0.1176]   0.72
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 13:00, grounded 2026-09-16 13:07 (6 min apart)
+  gpt-6-astra                       224    196    196     17   0.6429   0.7411  -0.0982  [-0.1630,-0.0515] [-0.1565,-0.0467]   1.02
+                                   note: smoke frames scored: 112
+                                   note: written bare 2026-09-16 18:26, grounded 2026-09-16 18:25 (1 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own recall on smoke, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0           1.79          1.94
+  bedrock_amazon.nova-pro-v1_0            1.69          1.87
+  bedrock_google.gemma-3-12b-it           1.69          1.62
+  bedrock_google.gemma-3-27b-it           1.66          1.78
+  bedrock_google.gemma-3-4b-it            1.55          1.69
+  bedrock_mistral.ministral-3-8b          1.89          1.79
+  bedrock_mistral.mistral-large-          1.85          1.95
+  bedrock_moonshotai.kimi-k2.5            2.13          1.95
+  bedrock_qwen.qwen3-vl-235b-a22          1.76          1.80
+  bedrock_us.amazon.nova-2-lite-          1.79          1.93
+  bedrock_us.meta.llama4-maveric          2.00          1.80
+  bedrock_us.meta.llama4-scout-1          2.03          2.06
+  claude-opus-4.8                         1.97          2.05
+  claude-opus-5                           1.98          1.88
+  claude-opus-5-1024px                    1.95          2.01
+  gemini-3.1-pro                          1.57          1.58
+  gpt-6-astra                             1.80          1.71
+
+  WIDTH RATIO, FIgLib, contrast : median 1.04x over 17 arms (range 0.63x to 1.35x)
+  WIDTH RATIO, FIgLib, levels   : median 1.83x over 34 arm-conditions (range 1.55x to 2.13x)
+
+----------------------------------------------------------------------------------------------------------------------------
+allocation  |  primary metric: normalised MAE  |  resampling unit: incident (incident_id from items.jsonl)
+----------------------------------------------------------------------------------------------------------------------------
+  warning: task-allocation: arm 'baseline-gbdt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-gbdt-analogue' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-analogue-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-gbdt-count' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-count-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-ridge' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-ridge-grounded.jsonl is missing
+  warning: task-allocation: arm 'bedrock_qwen.qwen3-vl-235b-a22b-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'claude-opus-4.8-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-claude-opus-4.8-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'claude-opus-5-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-claude-opus-5-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'gemini-3.1-pro-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-gemini-3.1-pro-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'gpt-6-astra-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-gpt-6-astra-bare-v2.jsonl is missing
+  cluster structure on the largest arm (bedrock_amazon.nova-lite-v1_0): 245 incidents over 300 paired items, mean 1.22 and max 2 items per incident, 37% of items share their incident with a neighbour
+
+  PAIRED CONTRAST   diff = bare minus grounded in normalised MAE; grounded helps when diff > 0
+  arm                            bare_n  grd_n pair_n n_inci     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0     300    300    300    245   0.2716   0.2500   0.0216  [-0.0723, 0.1509] [-0.0726, 0.1539]   0.99
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_amazon.nova-micro-v1_0    300    300    300    245   0.1664   0.2895  -0.1230  [-0.1934,-0.0637] [-0.1939,-0.0635]   0.99
+                                   note: written bare 2026-09-18 14:57, grounded 2026-09-18 14:58 (1 min apart)
+  bedrock_amazon.nova-pro-v1_0      300    300    300    245   0.1714   0.2423  -0.0709  [-0.1190,-0.0302] [-0.1194,-0.0297]   0.99
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_deepseek.v3.2             300    300    300    245   0.1675   0.2548  -0.0873  [-0.1356,-0.0461] [-0.1348,-0.0468]   1.02
+                                   note: written bare 2026-09-18 15:05, grounded 2026-09-18 15:07 (2 min apart)
+  bedrock_google.gemma-3-12b-it     300    300    300    245   0.1770   0.2697  -0.0928  [-0.1452,-0.0466] [-0.1454,-0.0478]   1.01
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 14:59 (2 min apart)
+  bedrock_google.gemma-3-27b-it     300    300    300    245   0.1690   0.2515  -0.0826  [-0.1306,-0.0428] [-0.1303,-0.0429]   1.00
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 15:00 (2 min apart)
+  bedrock_google.gemma-3-4b-it      300    300    300    245   0.1468   0.1749  -0.0281  [-0.0572,-0.0099] [-0.0574,-0.0098]   0.99
+                                   note: written bare 2026-09-18 14:57, grounded 2026-09-18 14:58 (1 min apart)
+  bedrock_minimax.minimax-m2.5      300    300    274    228   0.1559   0.2437  -0.0878  [-0.1382,-0.0458] [-0.1365,-0.0465]   1.03
+                                   note: written bare 2026-09-18 16:24, grounded 2026-09-18 17:02 (37 min apart)
+  bedrock_mistral.devstral-2-123    300    300    300    245   0.1794   0.2373  -0.0578  [-0.1069,-0.0169] [-0.1062,-0.0166]   1.01
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 15:00 (2 min apart)
+  bedrock_mistral.ministral-3-8b    300    300    300    245   0.2075   0.2503  -0.0427  [-0.0996, 0.0106] [-0.1002, 0.0112]   0.99
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_mistral.mistral-large-    300    300    300    245   0.2598   0.2251   0.0346  [-0.0326, 0.1167] [-0.0334, 0.1172]   0.99
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_mistral.mistral-small-    300    300    300    245   0.4909   1.9579  -1.4671  [-4.5474, 0.1459] [-4.4844, 0.1411]   1.01
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 14:59 (2 min apart)
+  bedrock_mistral.mixtral-8x7b-i     10     10      0   no item was answered under both conditions
+  bedrock_moonshot.kimi-k2-think    300    300    300    245   0.1929   0.2526  -0.0596  [-0.1113,-0.0142] [-0.1097,-0.0145]   1.02
+                                   note: written bare 2026-09-18 15:59, grounded 2026-09-18 16:40 (42 min apart)
+  bedrock_moonshotai.kimi-k2.5      300    300    300    245   0.1732   0.2544  -0.0812  [-0.1309,-0.0364] [-0.1321,-0.0378]   1.00
+                                   note: written bare 2026-09-18 14:22, grounded 2026-09-18 14:25 (2 min apart)
+  bedrock_nvidia.nemotron-super-    300    300    300    245   0.1495   0.2431  -0.0936  [-0.1396,-0.0550] [-0.1409,-0.0548]   0.98
+                                   note: written bare 2026-09-18 15:21, grounded 2026-09-18 15:27 (7 min apart)
+  bedrock_openai.gpt-oss-120b-1_    300    300    300    245   0.1661   0.2425  -0.0764  [-0.1225,-0.0382] [-0.1217,-0.0376]   1.00
+                                   note: written bare 2026-09-18 15:06, grounded 2026-09-18 15:08 (2 min apart)
+  bedrock_openai.gpt-oss-20b-1_0    300    300    299    245   0.1664   0.2713  -0.1049  [-0.1594,-0.0587] [-0.1590,-0.0584]   1.00
+                                   note: written bare 2026-09-18 15:07, grounded 2026-09-18 15:16 (8 min apart)
+  bedrock_qwen.qwen3-32b-v1_0       300    300    300    245   0.1472   0.2474  -0.1003  [-0.1514,-0.0585] [-0.1514,-0.0583]   1.00
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 14:59 (1 min apart)
+  bedrock_qwen.qwen3-coder-30b-a    300    300    300    245   0.1506   0.2404  -0.0899  [-0.1365,-0.0513] [-0.1371,-0.0503]   0.98
+                                   note: written bare 2026-09-18 15:05, grounded 2026-09-18 15:07 (3 min apart)
+  bedrock_qwen.qwen3-next-80b-a3    300    300    300    245   0.1529   0.2257  -0.0728  [-0.1211,-0.0348] [-0.1200,-0.0347]   1.01
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 15:00 (2 min apart)
+  bedrock_qwen.qwen3-vl-235b-a22    300    300    300    245   0.1613   0.2484  -0.0871  [-0.1353,-0.0470] [-0.1347,-0.0469]   1.00
+                                   note: written bare 2026-09-16 13:17, grounded 2026-09-16 15:21 (124 min apart)
+  bedrock_us.amazon.nova-2-lite-    300    300    300    245   0.1632   1.6867  -1.5235  [-4.5082,-0.0494] [-4.4313,-0.0521]   1.02
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_us.deepseek.r1-v1_0       300    300    300    245   0.1732   0.2605  -0.0873  [-0.1412,-0.0412] [-0.1401,-0.0415]   1.01
+                                   note: written bare 2026-09-18 15:31, grounded 2026-09-18 15:46 (15 min apart)
+  bedrock_us.meta.llama3-1-70b-i    300    300    300    245   0.2046   0.2571  -0.0525  [-0.1015,-0.0082] [-0.1010,-0.0085]   1.01
+                                   note: written bare 2026-09-18 14:58, grounded 2026-09-18 14:59 (1 min apart)
+  bedrock_us.meta.llama3-1-8b-in    300    300    300    245   0.1752   0.2995  -0.1243  [-0.1761,-0.0784] [-0.1749,-0.0796]   1.02
+                                   note: written bare 2026-09-18 15:18, grounded 2026-09-18 15:19 (1 min apart)
+  bedrock_us.meta.llama3-3-70b-i    300    300    300    245   0.9265   0.2483   0.6783  [-0.0529, 2.1005] [-0.0473, 2.0761]   1.01
+                                   note: written bare 2026-09-18 14:57, grounded 2026-09-18 14:59 (1 min apart)
+  bedrock_us.meta.llama4-maveric    300    300    300    245   0.1926   0.2456  -0.0529  [-0.1009,-0.0115] [-0.1013,-0.0116]   1.00
+                                   note: written bare 2026-09-16 13:42, grounded 2026-09-16 15:21 (99 min apart)
+  bedrock_us.meta.llama4-scout-1    300    300    300    245   0.2297   0.2456  -0.0159  [-0.0658, 0.0281] [-0.0659, 0.0283]   1.00
+                                   note: written bare 2026-09-18 14:21, grounded 2026-09-18 14:22 (1 min apart)
+  bedrock_zai.glm-4.7               300    300    300    245   0.1839   0.2386  -0.0547  [-0.1018,-0.0156] [-0.1010,-0.0153]   1.01
+                                   note: written bare 2026-09-18 15:11, grounded 2026-09-18 15:12 (1 min apart)
+  bedrock_zai.glm-4.7-flash         300    300    300    245   0.1463   0.2701  -0.1238  [-0.1785,-0.0770] [-0.1779,-0.0782]   1.02
+                                   note: written bare 2026-09-18 15:11, grounded 2026-09-18 15:13 (2 min apart)
+  bedrock_zai.glm-5                 300    300    300    245   0.1895   0.2703  -0.0808  [-0.1324,-0.0361] [-0.1325,-0.0372]   1.01
+                                   note: written bare 2026-09-18 15:11, grounded 2026-09-18 15:13 (2 min apart)
+  claude-opus-4.8                   300    300    300    245   0.1568   0.1701  -0.0132  [-0.0283, 0.0028] [-0.0282, 0.0031]   0.99
+                                   note: written bare 2026-09-15 23:18, grounded 2026-09-16 15:21 (963 min apart)
+  claude-opus-5                     300    300    300    245   0.1654   0.1730  -0.0076  [-0.0241, 0.0083] [-0.0235, 0.0077]   1.04
+                                   note: written bare 2026-09-15 23:24, grounded 2026-09-16 15:21 (957 min apart)
+  gemini-3.1-pro                    300    300    300    245   0.1786   0.1772   0.0013  [-0.0146, 0.0174] [-0.0145, 0.0171]   1.01
+                                   note: written bare 2026-09-15 23:54, grounded 2026-09-16 15:21 (928 min apart)
+  gpt-6-astra                       300    300    300    245   0.1614   0.2196  -0.0581  [-0.1026,-0.0234] [-0.1004,-0.0231]   1.03
+                                   note: written bare 2026-09-16 17:51, grounded 2026-09-16 17:57 (6 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own normalised MAE, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0           0.99          1.04
+  bedrock_amazon.nova-micro-v1_0          1.07          1.02
+  bedrock_amazon.nova-pro-v1_0            1.04          1.02
+  bedrock_deepseek.v3.2                   1.06          1.04
+  bedrock_google.gemma-3-12b-it           1.05          1.02
+  bedrock_google.gemma-3-27b-it           1.05          1.02
+  bedrock_google.gemma-3-4b-it            1.09          1.04
+  bedrock_minimax.minimax-m2.5            1.08          1.02
+  bedrock_mistral.devstral-2-123          1.05          1.02
+  bedrock_mistral.ministral-3-8b          1.03          1.01
+  bedrock_mistral.mistral-large-          0.97          1.03
+  bedrock_mistral.mistral-small-          1.05          1.03
+  bedrock_moonshot.kimi-k2-think          1.04          1.01
+  bedrock_moonshotai.kimi-k2.5            1.03          1.00
+  bedrock_nvidia.nemotron-super-          1.08          1.02
+  bedrock_openai.gpt-oss-120b-1_          1.07          1.02
+  bedrock_openai.gpt-oss-20b-1_0          1.05          1.02
+  bedrock_qwen.qwen3-32b-v1_0             1.09          1.02
+  bedrock_qwen.qwen3-coder-30b-a          1.09          1.02
+  bedrock_qwen.qwen3-next-80b-a3          1.09          1.02
+  bedrock_qwen.qwen3-vl-235b-a22          1.04          1.01
+  bedrock_us.amazon.nova-2-lite-          1.06          1.02
+  bedrock_us.deepseek.r1-v1_0             1.02          1.01
+  bedrock_us.meta.llama3-1-70b-i          1.02          1.02
+  bedrock_us.meta.llama3-1-8b-in          1.05          1.03
+  bedrock_us.meta.llama3-3-70b-i          1.02          1.01
+  bedrock_us.meta.llama4-maveric          1.02          1.03
+  bedrock_us.meta.llama4-scout-1          1.03          1.03
+  bedrock_zai.glm-4.7                     1.04          1.01
+  bedrock_zai.glm-4.7-flash               1.09          1.03
+  bedrock_zai.glm-5                       1.02          1.02
+  claude-opus-4.8                         1.05          1.06
+  claude-opus-5                           1.05          1.07
+  gemini-3.1-pro                          1.07          1.07
+  gpt-6-astra                             1.05          1.02
+
+  WIDTH RATIO, allocation, contrast : median 1.01x over 35 arms (range 0.98x to 1.04x)
+  WIDTH RATIO, allocation, levels   : median 1.03x over 70 arm-conditions (range 0.97x to 1.09x)
+
+----------------------------------------------------------------------------------------------------------------------------
+Mesogeos  |  primary metric: average precision  |  resampling unit: spatial-temporal block, 1.00 deg cell x calendar month
+----------------------------------------------------------------------------------------------------------------------------
+  warning: task-mesogeos: arm 'baseline-gbdt-prompt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-gbdt-prompt-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-gbdt-window' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-gbdt-window-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-logit-prompt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-logit-prompt-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-logit-window' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-logit-window-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-4.8-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-4.8-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-4.8-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-4.8-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-5-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-5-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-5-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-5-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'gemini-3.1-pro-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gemini-3.1-pro-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'gemini-3.1-pro-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gemini-3.1-pro-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'gpt-6-astra-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gpt-6-astra-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'gpt-6-astra-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gpt-6-astra-grounded-p2.jsonl is missing
+  cluster structure on the largest arm (bedrock_amazon.nova-lite-v1_0): 352 blocks over 386 paired items, mean 1.10 and max 4 items per block, 16% of items share their block with a neighbour
+  metric check: average precision matches sklearn to 1e-9 on the live data
+
+  PAIRED CONTRAST   diff = bare minus grounded in average precision; grounded helps when diff < 0
+  arm                            bare_n  grd_n pair_n n_bloc     bare grounded     diff  cluster 95% CI        naive item 95% CI      ratio
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0     386    386    386    352   0.4173   0.3773   0.0400  [-0.0061, 0.0914] [-0.0026, 0.0871]   1.09
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:23, grounded 2026-09-18 14:25 (1 min apart)
+  bedrock_amazon.nova-micro-v1_0    386    386    386    352   0.3386   0.3322   0.0064  [-0.0053, 0.0180] [-0.0051, 0.0180]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:59, grounded 2026-09-18 15:00 (1 min apart)
+  bedrock_amazon.nova-pro-v1_0      386    386    386    352   0.4766   0.4794  -0.0028  [-0.0423, 0.0401] [-0.0449, 0.0417]   0.95
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:24, grounded 2026-09-18 14:26 (2 min apart)
+  bedrock_deepseek.v3.2             386    386    386    352   0.4693   0.4392   0.0301  [-0.0122, 0.0687] [-0.0111, 0.0692]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:10, grounded 2026-09-18 15:12 (2 min apart)
+  bedrock_google.gemma-3-12b-it     386    386    386    352   0.4462   0.3887   0.0575  [ 0.0213, 0.0952] [ 0.0222, 0.0939]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:02, grounded 2026-09-18 15:04 (2 min apart)
+  bedrock_google.gemma-3-27b-it     386    386    386    352   0.5323   0.4664   0.0659  [ 0.0241, 0.1050] [ 0.0252, 0.1055]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:03, grounded 2026-09-18 15:05 (2 min apart)
+  bedrock_google.gemma-3-4b-it      386    386    386    352   0.3468   0.3386   0.0082  [-0.0001, 0.0168] [-0.0001, 0.0167]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:59, grounded 2026-09-18 15:01 (1 min apart)
+  bedrock_minimax.minimax-m2.5      386    386    246    229   0.5832   0.4814   0.1018  [ 0.0132, 0.1853] [ 0.0154, 0.1791]   1.05
+                                   note: positive cells scored: 80
+                                   note: written bare 2026-09-18 17:49, grounded 2026-09-18 18:55 (66 min apart)
+  bedrock_mistral.devstral-2-123    386    386    386    352   0.5218   0.5221  -0.0003  [-0.0431, 0.0403] [-0.0419, 0.0389]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:02, grounded 2026-09-18 15:04 (2 min apart)
+  bedrock_mistral.ministral-3-8b    386    386    386    352   0.4673   0.4195   0.0478  [ 0.0156, 0.0781] [ 0.0169, 0.0777]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:23, grounded 2026-09-18 14:25 (2 min apart)
+  bedrock_mistral.mistral-large-    386    386    386    352   0.4727   0.4415   0.0311  [ 0.0105, 0.0496] [ 0.0107, 0.0499]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:24, grounded 2026-09-18 14:25 (1 min apart)
+  bedrock_mistral.mistral-small-    386    386    386    352   0.4012   0.4068  -0.0056  [-0.0253, 0.0138] [-0.0251, 0.0140]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:01, grounded 2026-09-18 15:04 (3 min apart)
+  bedrock_moonshot.kimi-k2-think    386    386    383    349   0.5624   0.5109   0.0516  [-0.0195, 0.1206] [-0.0205, 0.1235]   0.97
+                                   note: positive cells scored: 130
+                                   note: written bare 2026-09-18 17:31, grounded 2026-09-18 18:19 (48 min apart)
+  bedrock_moonshotai.kimi-k2.5      386    386    386    352   0.5182   0.5289  -0.0107  [-0.0637, 0.0413] [-0.0623, 0.0405]   1.02
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:27, grounded 2026-09-18 14:30 (3 min apart)
+  bedrock_nvidia.nemotron-super-    386    386    383    351   0.5294   0.4884   0.0410  [-0.0224, 0.1001] [-0.0232, 0.1006]   0.99
+                                   note: positive cells scored: 130
+                                   note: written bare 2026-09-18 15:29, grounded 2026-09-18 15:33 (3 min apart)
+  bedrock_openai.gpt-oss-120b-1_    386    386    386    352   0.4479   0.4603  -0.0124  [-0.0846, 0.0581] [-0.0828, 0.0586]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:12, grounded 2026-09-18 15:18 (6 min apart)
+  bedrock_openai.gpt-oss-20b-1_0    386    386    381    347   0.4372   0.3916   0.0456  [-0.0171, 0.1076] [-0.0182, 0.1073]   0.99
+                                   note: positive cells scored: 130
+                                   note: written bare 2026-09-18 15:21, grounded 2026-09-18 15:30 (9 min apart)
+  bedrock_qwen.qwen3-32b-v1_0       386    386    386    352   0.4285   0.4584  -0.0299  [-0.0748, 0.0119] [-0.0753, 0.0127]   0.98
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:00, grounded 2026-09-18 15:01 (1 min apart)
+  bedrock_qwen.qwen3-coder-30b-a    386    386    386    352   0.3833   0.4086  -0.0253  [-0.0465,-0.0053] [-0.0459,-0.0052]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:09, grounded 2026-09-18 15:10 (2 min apart)
+  bedrock_qwen.qwen3-next-80b-a3    386    386    386    352   0.4158   0.3905   0.0253  [-0.0069, 0.0605] [-0.0054, 0.0548]   1.12
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:02, grounded 2026-09-18 15:04 (2 min apart)
+  bedrock_qwen.qwen3-vl-235b-a22    386    386    386    352   0.4853   0.5360  -0.0507  [-0.0920,-0.0060] [-0.0916,-0.0060]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 13:23, grounded 2026-09-16 13:26 (3 min apart)
+  bedrock_us.amazon.nova-2-lite-    386    386    386    352   0.4422   0.4776  -0.0354  [-0.0724, 0.0053] [-0.0719, 0.0052]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:24, grounded 2026-09-18 14:26 (2 min apart)
+  bedrock_us.deepseek.r1-v1_0       386    386    386    352   0.4716   0.4627   0.0089  [-0.0381, 0.0568] [-0.0362, 0.0560]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:59, grounded 2026-09-18 16:13 (14 min apart)
+  bedrock_us.meta.llama3-1-70b-i    386    386    386    352   0.4002   0.4265  -0.0263  [-0.0795, 0.0253] [-0.0756, 0.0217]   1.08
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:01, grounded 2026-09-18 15:02 (1 min apart)
+  bedrock_us.meta.llama3-1-8b-in    386    386    386    352   0.3336   0.3255   0.0081  [-0.0153, 0.0288] [-0.0144, 0.0283]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:20, grounded 2026-09-18 15:21 (1 min apart)
+  bedrock_us.meta.llama3-3-70b-i    386    386    386    352   0.4132   0.4582  -0.0450  [-0.0745,-0.0175] [-0.0737,-0.0176]   1.02
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:00, grounded 2026-09-18 15:01 (1 min apart)
+  bedrock_us.meta.llama4-maveric    386    386    386    352   0.5283   0.5146   0.0138  [-0.0368, 0.0632] [-0.0350, 0.0623]   1.03
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 13:35, grounded 2026-09-16 13:36 (1 min apart)
+  bedrock_us.meta.llama4-scout-1    386    386    386    352   0.4728   0.4605   0.0124  [-0.0117, 0.0333] [-0.0116, 0.0338]   0.99
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 14:23, grounded 2026-09-18 14:25 (1 min apart)
+  bedrock_zai.glm-4.7               386    386    386    352   0.4937   0.4963  -0.0026  [-0.0252, 0.0198] [-0.0252, 0.0199]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:13, grounded 2026-09-18 15:15 (2 min apart)
+  bedrock_zai.glm-4.7-flash         386    386    386    352   0.4439   0.4446  -0.0007  [-0.0417, 0.0395] [-0.0420, 0.0421]   0.97
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:15, grounded 2026-09-18 15:17 (2 min apart)
+  bedrock_zai.glm-5                 386    386    386    352   0.5696   0.5656   0.0040  [-0.0499, 0.0588] [-0.0499, 0.0590]   1.00
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-18 15:16, grounded 2026-09-18 15:19 (3 min apart)
+  claude-opus-4.8                   386    386    386    352   0.6130   0.5814   0.0316  [-0.0097, 0.0727] [-0.0091, 0.0721]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:07, grounded 2026-09-16 00:11 (4 min apart)
+  claude-opus-5                     386    386    386    352   0.6876   0.6822   0.0054  [-0.0210, 0.0296] [-0.0211, 0.0313]   0.97
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:19, grounded 2026-09-16 00:26 (7 min apart)
+  gemini-3.1-pro                    386    386    386    352   0.6972   0.6823   0.0149  [-0.0177, 0.0504] [-0.0181, 0.0490]   1.01
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 00:39, grounded 2026-09-16 00:53 (14 min apart)
+  gpt-6-astra                       386    386    386    352   0.6205   0.5898   0.0307  [-0.0258, 0.0857] [-0.0256, 0.0869]   0.99
+                                   note: positive cells scored: 131
+                                   note: written bare 2026-09-16 18:06, grounded 2026-09-16 18:14 (9 min apart)
+
+  PER-ARM LEVELS    width ratio for each condition's own average precision, the quantity the round-1 tables reported
+  arm                                bare level grounded level
+  ------------------------------------------------------------
+  bedrock_amazon.nova-lite-v1_0           1.14          1.10
+  bedrock_amazon.nova-micro-v1_0          1.11          1.14
+  bedrock_amazon.nova-pro-v1_0            1.09          1.11
+  bedrock_deepseek.v3.2                   1.11          1.07
+  bedrock_google.gemma-3-12b-it           1.14          1.11
+  bedrock_google.gemma-3-27b-it           1.05          1.05
+  bedrock_google.gemma-3-4b-it            1.13          1.13
+  bedrock_minimax.minimax-m2.5            1.04          1.05
+  bedrock_mistral.devstral-2-123          1.10          1.09
+  bedrock_mistral.ministral-3-8b          1.12          1.12
+  bedrock_mistral.mistral-large-          1.12          1.10
+  bedrock_mistral.mistral-small-          1.12          1.12
+  bedrock_moonshot.kimi-k2-think          1.06          1.04
+  bedrock_moonshotai.kimi-k2.5            1.10          1.07
+  bedrock_nvidia.nemotron-super-          1.08          1.09
+  bedrock_openai.gpt-oss-120b-1_          1.02          1.07
+  bedrock_openai.gpt-oss-20b-1_0          1.07          1.05
+  bedrock_qwen.qwen3-32b-v1_0             1.07          1.08
+  bedrock_qwen.qwen3-coder-30b-a          1.13          1.11
+  bedrock_qwen.qwen3-next-80b-a3          1.13          1.09
+  bedrock_qwen.qwen3-vl-235b-a22          1.09          1.07
+  bedrock_us.amazon.nova-2-lite-          1.06          1.08
+  bedrock_us.deepseek.r1-v1_0             1.11          1.12
+  bedrock_us.meta.llama3-1-70b-i          1.10          1.14
+  bedrock_us.meta.llama3-1-8b-in          1.13          1.10
+  bedrock_us.meta.llama3-3-70b-i          1.11          1.07
+  bedrock_us.meta.llama4-maveric          1.08          1.06
+  bedrock_us.meta.llama4-scout-1          1.09          1.09
+  bedrock_zai.glm-4.7                     1.10          1.10
+  bedrock_zai.glm-4.7-flash               1.07          1.06
+  bedrock_zai.glm-5                       1.08          1.08
+  claude-opus-4.8                         1.03          1.07
+  claude-opus-5                           1.15          1.14
+  gemini-3.1-pro                          1.10          1.11
+  gpt-6-astra                             1.15          1.11
+
+  WIDTH RATIO, Mesogeos, contrast : median 1.01x over 35 arms (range 0.95x to 1.12x)
+  WIDTH RATIO, Mesogeos, levels   : median 1.10x over 70 arm-conditions (range 1.02x to 1.15x)
+  BLOCKING SENSITIVITY: at a deliberately coarse 2.00 deg x quarter block (250 blocks), contrast 1.02x and levels 1.26x
+
+============================================================================================================================
+SUMMARY, interval-width inflation from resampling the right unit
+============================================================================================================================
+  task         unit        contrast ratio    level ratio  cross-run arms excluded
+  --------------------------------------------------------------------------------
+  FIgLib       fire                 1.04x          1.83x  
+  allocation   incident             1.01x          1.03x  
+  Mesogeos     block                1.01x          1.10x  
+
+  A ratio above 1 means the cluster bootstrap is wider, that is, the frame-level and
+  day-level intervals in the round-1 submission overstated precision by that factor.
+  A contrast ratio at or below 1 is a real result, not a bug: when the two arms disagree
+  on only a few items and those disagreements are spread across clusters, the paired
+  difference carries almost no cluster-level variance for the resampling to recover.
+
+  PROVISIONAL.  Every number above was computed from the responses-*.jsonl files present at
+  run time.  A full model rerun is in progress and will overwrite those files.  Re-execute
+  this script unchanged afterwards; the numbers it prints then supersede these.
+

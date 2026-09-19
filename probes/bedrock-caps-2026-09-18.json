@@ -1,0 +1,1191 @@
+{
+ "date": "2026-09-18",
+ "region": "us-east-1",
+ "results": [
+  {
+   "model": "amazon.nova-micro-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.8,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 7,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": "<thinking> To find the value for the name \"alpha\", I will use the get_number tool. I will call this tool once with the r",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 412,
+    "out": 59
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "amazon.nova-lite-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK.",
+    "tool_use": [],
+    "in": 7,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "Red",
+    "tool_use": [],
+    "in": 541,
+    "out": 2
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": "<thinking>I need to use the get_number tool to look up the value for the name \"alpha\". I will call the tool with the nam",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 412,
+    "out": 56
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "amazon.nova-pro-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "OK.",
+    "tool_use": [],
+    "in": 7,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "Red",
+    "tool_use": [],
+    "in": 541,
+    "out": 2
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.0,
+    "stop": "tool_use",
+    "text": "<thinking> I need to use the get_number tool to look up the value for the name 'alpha'. </thinking>\n",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 412,
+    "out": 43
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "us.amazon.nova-2-lite-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "end_turn",
+    "text": "OK.",
+    "tool_use": [],
+    "in": 53,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "end_turn",
+    "text": "White.",
+    "tool_use": [],
+    "in": 289,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.8,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 927,
+    "out": 24
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "us.meta.llama3-3-70b-instruct-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 42,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 179,
+    "out": 23
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "us.meta.llama4-scout-17b-instruct-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 42,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "Red.",
+    "tool_use": [],
+    "in": 340,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 179,
+    "out": 17
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 42,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "Red.",
+    "tool_use": [],
+    "in": 340,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.2,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     },
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 179,
+    "out": 173
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "us.meta.llama3-1-70b-instruct-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "\n\nOK",
+    "tool_use": [],
+    "in": 22,
+    "out": 3
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 77,
+    "out": 25
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "us.meta.llama3-1-8b-instruct-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "\n\nOK",
+    "tool_use": [],
+    "in": 22,
+    "out": 3
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "end_turn",
+    "text": "\n\n```python\n# Define a dictionary to store numbers for names\nnumbers = {\"alpha\": 1, \"beta\": 2, \"gamma\": 3}\n\n# Use the ge",
+    "tool_use": [],
+    "in": 77,
+    "out": 67
+   },
+   "tool_called": false,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "mistral.mistral-large-3-675b-instruct",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 10,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "White.",
+    "tool_use": [],
+    "in": 26,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 83,
+    "out": 11
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "mistral.mistral-small-2402-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK.",
+    "tool_use": [],
+    "in": 11,
+    "out": 3
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 85,
+    "out": 22
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "mistral.ministral-3-8b-instruct",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 10,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "Red.",
+    "tool_use": [],
+    "in": 26,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 83,
+    "out": 11
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "mistral.mixtral-8x7b-instruct-v0:1",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": " OK.",
+    "tool_use": [],
+    "in": 15,
+    "out": 3
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support tool use."
+   },
+   "tool_called": false,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "mistral.devstral-2-123b",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 10,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 83,
+    "out": 11
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "qwen.qwen3-vl-235b-a22b",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 15,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "Red",
+    "tool_use": [],
+    "in": 85,
+    "out": 2
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.7,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 170,
+    "out": 20
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "qwen.qwen3-32b-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 19,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 175,
+    "out": 20
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "qwen.qwen3-next-80b-a3b",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 15,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 170,
+    "out": 20
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "qwen.qwen3-coder-30b-a3b-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 7.3,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 15,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 304,
+    "out": 21
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "deepseek.v3.2",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 11,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.5,
+    "stop": "tool_use",
+    "text": "I'll use the get_number tool to look up the value for the name \"alpha\".\n\n<\uff5cDSML\uff5cfunction_calls",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 322,
+    "out": 61
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "us.deepseek.r1-v1:0",
+   "text": {
+    "ok": true,
+    "seconds": 1.6,
+    "stop": "end_turn",
+    "text": "\n\nOK",
+    "tool_use": [],
+    "in": 12,
+    "out": 96
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support tool use."
+   },
+   "tool_called": false,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "openai.gpt-oss-120b-1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.8,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 74,
+    "out": 31
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.9,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 140,
+    "out": 39
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "openai.gpt-oss-20b-1:0",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 74,
+    "out": 31
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 140,
+    "out": 42
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "google.gemma-3-27b-it",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK.",
+    "tool_use": [],
+    "in": 16,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 4.2,
+    "stop": "end_turn",
+    "text": "Red.",
+    "tool_use": [],
+    "in": 279,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.1,
+    "stop": "end_turn",
+    "text": "```tool_code\nprint(get_number(name='alpha'))\n```",
+    "tool_use": [],
+    "in": 29,
+    "out": 18
+   },
+   "tool_called": false,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "google.gemma-3-12b-it",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 16,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "Red",
+    "tool_use": [],
+    "in": 279,
+    "out": 2
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "```tool_code\nprint(get_number(name=\"alpha\"))\n```",
+    "tool_use": [],
+    "in": 29,
+    "out": 18
+   },
+   "tool_called": false,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "google.gemma-3-4b-it",
+   "text": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "OK\n",
+    "tool_use": [],
+    "in": 16,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "Red",
+    "tool_use": [],
+    "in": 279,
+    "out": 2
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.6,
+    "stop": "end_turn",
+    "text": "```tool_code\nprint(get_number(name='alpha'))\n```",
+    "tool_use": [],
+    "in": 29,
+    "out": 18
+   },
+   "tool_called": false,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "zai.glm-5",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 12,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.9,
+    "stop": "tool_use",
+    "text": "I'll look up the value for the name \"alpha\" using the get_number tool.",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 181,
+    "out": 29
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "zai.glm-4.7",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 12,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.8,
+    "stop": "tool_use",
+    "text": "I'll look up the value for the name \"alpha\" using the get_number tool.",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 181,
+    "out": 29
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "zai.glm-4.7-flash",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 12,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.1,
+    "stop": "tool_use",
+    "text": "I'll look up the number for the name \"alpha\" using the get_number tool.",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 181,
+    "out": 29
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "minimax.minimax-m2.5",
+   "text": {
+    "ok": true,
+    "seconds": 1.7,
+    "stop": "end_turn",
+    "text": "\n\nOK",
+    "tool_use": [],
+    "in": 45,
+    "out": 44
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 4.9,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 210,
+    "out": 52
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "moonshotai.kimi-k2.5",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": " OK",
+    "tool_use": [],
+    "in": 34,
+    "out": 2
+   },
+   "image": {
+    "ok": true,
+    "seconds": 5.0,
+    "stop": "end_turn",
+    "text": " Red.",
+    "tool_use": [],
+    "in": 52,
+    "out": 3
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.7,
+    "stop": "tool_use",
+    "text": " I'll look up the value for the name \"alpha\" using the get_number tool.",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 87,
+    "out": 34
+   },
+   "tool_called": true,
+   "image_ok": true,
+   "text_ok": true
+  },
+  {
+   "model": "moonshot.kimi-k2-thinking",
+   "text": {
+    "ok": true,
+    "seconds": 0.9,
+    "stop": "end_turn",
+    "text": " OK",
+    "tool_use": [],
+    "in": 14,
+    "out": 36
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 1.0,
+    "stop": "tool_use",
+    "text": "",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 79,
+    "out": 63
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "nvidia.nemotron-super-3-120b",
+   "text": {
+    "ok": true,
+    "seconds": 0.5,
+    "stop": "end_turn",
+    "text": "OK",
+    "tool_use": [],
+    "in": 23,
+    "out": 2
+   },
+   "image": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: This model doesn't support the image content block that you provided. Update the content block and try again."
+   },
+   "tool": {
+    "ok": true,
+    "seconds": 0.8,
+    "stop": "tool_use",
+    "text": "\n",
+    "tool_use": [
+     {
+      "name": "get_number",
+      "input": {
+       "name": "alpha"
+      }
+     }
+    ],
+    "in": 294,
+    "out": 24
+   },
+   "tool_called": true,
+   "image_ok": false,
+   "text_ok": true
+  },
+  {
+   "model": "writer.palmyra-vision-7b",
+   "text": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": " OK.",
+    "tool_use": [],
+    "in": 11,
+    "out": 3
+   },
+   "image": {
+    "ok": true,
+    "seconds": 0.4,
+    "stop": "end_turn",
+    "text": " Red.",
+    "tool_use": [],
+    "in": 332,
+    "out": 3
+   },
+   "tool": {
+    "ok": false,
+    "error": "ValidationException",
+    "message": "An error occurred (ValidationException) when calling the Converse operation: The model returned the following errors: {\"error\":{\"code\":\"validation_error\",\"message\":\"ErrorEvent { error: APIError { type: \\\"BadRequestError\\"
+   },
+   "tool_called": false,
+   "image_ok": true,
+   "text_ok": true
+  }
+ ]
+}

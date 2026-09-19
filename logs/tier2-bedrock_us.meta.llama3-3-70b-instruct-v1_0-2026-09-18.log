@@ -1,0 +1,27 @@
+=== chain bedrock:us.meta.llama3-3-70b-instruct-v1:0 start 2026-09-18 14:56:12
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/bare", "items": 300, "parsed": 300, "mae": 19.626666666666665, "mae_norm": 0.9265451278842405, "within_25pct": 0.6533333333333333, "median_abs_log_ratio": 0.12650435831645693, "mae_norm_on_moving_days": 0.34287475163362763, "beats_persistence_share": 0.19666666666666666, "errors": 0, "tokens_in": 106040, "tokens_out": 16487}
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/grounded", "items": 300, "parsed": 300, "mae": 19.836666666666666, "mae_norm": 0.24825328222674212, "within_25pct": 0.6933333333333334, "median_abs_log_ratio": 0.12066008604162326, "mae_norm_on_moving_days": 0.36490370311421944, "beats_persistence_share": 0.21666666666666667, "errors": 0, "tokens_in": 166042, "tokens_out": 17775}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 14:59:06
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.4131690078968395, "f1_fire": 0.5082508250825083, "f1_no_fire": 0.6823027718550106, "positive_rate_called": 0.44559585492227977, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 444308}
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.458184625351295, "f1_fire": 0.5714285714285714, "f1_no_fire": 0.7261146496815286, "positive_rate_called": 0.44041450777202074, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 530706}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:01:35
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 0.308,
+  "max_tool_calls": 1,
+  "tokens_in": 313847,
+  "tokens_out": 9547
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:us.meta.llama3-3-70b-instruct-v1:0 DONE 2026-09-18 15:03:15

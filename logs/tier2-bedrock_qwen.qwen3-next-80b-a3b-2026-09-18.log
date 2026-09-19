@@ -1,0 +1,27 @@
+=== chain bedrock:qwen.qwen3-next-80b-a3b start 2026-09-18 14:56:40
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/bare", "items": 300, "parsed": 300, "mae": 14.166666666666666, "mae_norm": 0.15292324170353166, "within_25pct": 0.7833333333333333, "median_abs_log_ratio": 0.05568060539161314, "mae_norm_on_moving_days": 0.3387600675903385, "beats_persistence_share": 0.08666666666666667, "errors": 0, "tokens_in": 111572, "tokens_out": 16963}
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/grounded", "items": 300, "parsed": 300, "mae": 17.403333333333332, "mae_norm": 0.22572097902586458, "within_25pct": 0.7066666666666667, "median_abs_log_ratio": 0.09267488829455992, "mae_norm_on_moving_days": 0.361203060775003, "beats_persistence_share": 0.18, "errors": 0, "tokens_in": 184144, "tokens_out": 22714}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 15:00:45
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/bare", "items": 386, "parsed": 386, "auprc": 0.41583400196134424, "f1_fire": 0.527027027027027, "f1_no_fire": 0.3597560975609756, "positive_rate_called": 0.810880829015544, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 530566}
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/grounded", "items": 386, "parsed": 386, "auprc": 0.3905151832417107, "f1_fire": 0.5191873589164786, "f1_no_fire": 0.3525835866261398, "positive_rate_called": 0.8082901554404145, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 638166}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:04:45
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 7,
+  "mean_tool_calls": 1.173,
+  "max_tool_calls": 8,
+  "tokens_in": 549119,
+  "tokens_out": 15510
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-next-80b-a3b-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:qwen.qwen3-next-80b-a3b DONE 2026-09-18 15:09:44

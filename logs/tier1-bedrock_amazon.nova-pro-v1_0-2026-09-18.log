@@ -1,0 +1,25 @@
+=== chain bedrock:amazon.nova-pro-v1:0 start 2026-09-18 14:19:41
+bedrock:amazon.nova-pro-v1:0 allocation rc=0 198s
+bedrock:amazon.nova-pro-v1:0 mesogeos rc=0 203s
+bedrock:amazon.nova-pro-v1:0 figlib rc=0 193s
+ALL DONE
+--- tooluse 14:29:34
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 9,
+  "mean_tool_calls": 1.186,
+  "max_tool_calls": 5,
+  "tokens_in": 684745,
+  "tokens_out": 32244
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_amazon.nova-pro-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+--- wildfirevqa 14:31:54
+items: 408 | images 390 | categories {'Classification': 72, 'Cross-Modal Reasoning': 48, 'Distribution and Segmentation': 96, 'Flight Planning': 48, 'Localization and Direction': 48, 'Presence and Detection': 96}
+{"run": "bedrock:amazon.nova-pro-v1:0/bare", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.553921568627451, "accuracy_parsed_only": 0.553921568627451, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.639, "Cross-Modal Reasoning": 0.5, "Distribution and Segmentation": 0.479, "Flight Planning": 0.583, "Localization and Direction": 0.542, "Presence and Detection": 0.583}, "accuracy_by_question": {"CL1": 0.583, "CL2": 0.917, "CL3": 0.417, "CL4": 0.667, "CL5": 0.667, "CL6": 0.583, "CMR1": 0.667, "CMR2": 0.417, "CMR3": 0.75, "CMR4": 0.167, "DS1": 0.167, "DS2": 0.833, "DS3": 0.083, "DS4": 0.417, "DS5": 0.417, "DS6": 0.333, "DS7": 0.75, "DS8": 0.833, "FP1": 0.833, "FP2": 0.333, "FP3": 0.417, "FP4": 0.75, "LD1": 0.75, "LD2": 0.333, "LD3": 0.167, "LD4": 0.917, "PD1": 0.75, "PD2": 1.0, "PD3": 0.667, "PD4": 0.833, "PD5": 0.083, "PD6": 0.417, "PD7": 0.333, "PD8": 0.583}, "accuracy_closed_form_items": 0.5833333333333334, "accuracy_other_items": 0.55, "applicability_mean": 0.8220588235294118, "accuracy_applicability_ge_0.5": 0.5473145780051151, "accuracy_applicability_lt_0.5": 0.7058823529411765, "items_applicability_lt_0.5": 17, "failures": {}, "tokens_in": 1075476, "tokens_out": 8427}
+{"run": "bedrock:amazon.nova-pro-v1:0/grounded", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.553921568627451, "accuracy_parsed_only": 0.553921568627451, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.611, "Cross-Modal Reasoning": 0.646, "Distribution and Segmentation": 0.458, "Flight Planning": 0.5, "Localization and Direction": 0.562, "Presence and Detection": 0.583}, "accuracy_by_question": {"CL1": 0.583, "CL2": 0.917, "CL3": 0.417, "CL4": 0.583, "CL5": 0.583, "CL6": 0.583, "CMR1": 0.583, "CMR2": 0.417, "CMR3": 0.667, "CMR4": 0.917, "DS1": 0.25, "DS2": 0.5, "DS3": 0.083, "DS4": 0.5, "DS5": 0.5, "DS6": 0.333, "DS7": 1.0, "DS8": 0.5, "FP1": 0.833, "FP2": 0.0, "FP3": 0.417, "FP4": 0.75, "LD1": 0.75, "LD2": 0.333, "LD3": 0.167, "LD4": 1.0, "PD1": 0.75, "PD2": 1.0, "PD3": 0.667, "PD4": 0.833, "PD5": 0.083, "PD6": 0.417, "PD7": 0.333, "PD8": 0.583}, "accuracy_closed_form_items": 0.75, "accuracy_other_items": 0.5277777777777778, "applicability_mean": 0.8031862745098041, "accuracy_applicability_ge_0.5": 0.5478036175710594, "accuracy_applicability_lt_0.5": 0.6666666666666666, "items_applicability_lt_0.5": 21, "failures": {}, "tokens_in": 1145494, "tokens_out": 8454}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\scores.json
+=== chain bedrock:amazon.nova-pro-v1:0 DONE 2026-09-18 14:35:54

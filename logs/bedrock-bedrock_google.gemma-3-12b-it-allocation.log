@@ -1,0 +1,9 @@
+evaluation items: 300 | incidents: 245 | states: 19
+historical analogue bands: 179 | analogue day pairs: 60428
+items with at least three analogues: 1.00
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:google.gemma-3-12b-it/bare", "items": 300, "parsed": 300, "mae": 16.403333333333332, "mae_norm": 0.1769560911329583, "within_25pct": 0.7366666666666667, "median_abs_log_ratio": 0.08025904636102155, "mae_norm_on_moving_days": 0.36612365251491275, "beats_persistence_share": 0.10666666666666667, "errors": 0, "tokens_in": 111449, "tokens_out": 20158}
+{"run": "bedrock:google.gemma-3-12b-it/grounded", "items": 300, "parsed": 300, "mae": 20.843333333333334, "mae_norm": 0.2697305562734734, "within_25pct": 0.6666666666666666, "median_abs_log_ratio": 0.137056671622856, "mae_norm_on_moving_days": 0.37124582335487605, "beats_persistence_share": 0.23666666666666666, "errors": 0, "tokens_in": 185821, "tokens_out": 21355}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json

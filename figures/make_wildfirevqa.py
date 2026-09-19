@@ -15,16 +15,6 @@ Model order (top to bottom):
   4. gpt-6-astra
   5. Qwen3-VL
   6. Llama 4 Maverick
-
-Styling conventions (CatchBench submission style):
-  - Width: 6.5 in, height <= 2.6 in (2.45 in).
-  - Typography: Sans-serif (DejaVu Sans / Arial), TrueType fonts (pdf.fonttype 42), >= 6 pt.
-  - Spines: no top/right spines, gray (#999999) left/bottom spines, no tick marks.
-  - Palette:
-      Coral (#ED8D5A): focal marks (contrasts whose 95% interval excludes zero; lift on closed-form items)
-      Gray (#999999 / #C9C9C9): context (contrasts whose 95% interval includes zero; drop on other items)
-      Mint (#BFDFD2, edge #8FB7A6): comparison layer (bare condition marks)
-      Near-black (#1A1A1A): text
 """
 
 from __future__ import annotations
@@ -40,6 +30,16 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import numpy as np
 
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import models
+from models import add_model_args, resolve_models
+
 # CatchBench Palette
 COLOR_CORAL = "#ED8D5A"
 COLOR_MINT = "#BFDFD2"
@@ -49,22 +49,13 @@ COLOR_LIGHT_GRAY = "#E6E6E6"
 COLOR_TEXT = "#1A1A1A"
 COLOR_SUBTITLE = "#666666"
 
-MODELS = [
-    "claude-opus-4.8",
-    "claude-opus-5",
-    "gemini-3.1-pro",
-    "gpt-6-astra",
-    "Qwen3-VL",
-    "Llama 4 Maverick",
-]
-
 
 def load_data(json_path: Path) -> dict:
     with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
+def plot_wildfirevqa(data: dict, selected_models, out_pdf: Path | None, out_png: Path):
     plt.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["DejaVu Sans", "Arial", "Helvetica"],
@@ -76,17 +67,32 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         "ytick.color": COLOR_TEXT,
     })
 
+    models_dict = data.get("models", {})
+    models_to_plot = []
+    for m in selected_models:
+        if m.label in models_dict:
+            models_to_plot.append(m.label)
+        elif m.stem in models_dict:
+            models_to_plot.append(m.stem)
+
+    if not models_to_plot:
+        models_to_plot = list(models_dict.keys())
+
+    n_models = len(models_to_plot)
+    fig_height = 2.45 if n_models <= 6 else max(2.45, 0.35 * n_models + 0.6)
+    left_margin = 0.18 if n_models <= 6 else 0.22
+
     fig, axes = plt.subplots(
         1, 2,
-        figsize=(6.5, 2.45),
+        figsize=(6.5, fig_height),
         sharey=True,
-        gridspec_kw={"wspace": 0.22, "left": 0.18, "right": 0.98, "top": 0.83, "bottom": 0.17}
+        gridspec_kw={"wspace": 0.22, "left": left_margin, "right": 0.98,
+                     "top": 0.83 if n_models <= 6 else 0.90,
+                     "bottom": 0.17 if n_models <= 6 else 0.10}
     )
 
-    n_models = len(MODELS)
-    # Row 5 is top (claude-opus-4.8), row 0 is bottom (Llama 4 Maverick)
     y_pos = np.arange(n_models - 1, -1, -1)
-    model_names = MODELS
+    model_names = models_to_plot
 
     def format_ax(ax, x_limits, x_ticks, x_label, title_label):
         ax.set_xlim(x_limits)
@@ -102,9 +108,7 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         ax.tick_params(axis="both", length=0, labelsize=6.8)
         ax.set_title(title_label, loc="left", fontsize=8.0, fontweight="bold", pad=8)
 
-    # -------------------------------------------------------------
     # Panel (a): Bare and Grounded Accuracy (Pooled, 408 items)
-    # -------------------------------------------------------------
     ax_a = axes[0]
     format_ax(
         ax_a,
@@ -116,8 +120,7 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
     ax_a.set_yticks(y_pos)
     ax_a.set_yticklabels(model_names, fontsize=7.2)
 
-    # Vertical line at majority baseline 0.627
-    maj_acc = data["majority_baseline"]["accuracy"]  # ~0.627
+    maj_acc = data["majority_baseline"]["accuracy"]
     ax_a.axvline(maj_acc, color=COLOR_GRAY, linestyle="--", linewidth=0.9, zorder=1)
     ax_a.text(
         maj_acc + 0.004, -0.42, f"Majority {maj_acc:.3f}",
@@ -125,14 +128,13 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
     )
 
     v_off_a = 0.12
-    for i, m in enumerate(MODELS):
+    for i, m in enumerate(models_to_plot):
         y = y_pos[i]
-        m_data = data["models"][m]
+        m_data = models_dict[m]
         b = m_data["bare"]
         g = m_data["grounded"]
         diff = m_data["grounded_minus_bare"]
 
-        # Contrast status: coral if interval excludes 0, gray otherwise (all include 0 here)
         ci_lo, ci_hi = diff["ci"]
         sig = (ci_lo > 0 and ci_hi > 0) or (ci_lo < 0 and ci_hi < 0)
         col_g = COLOR_CORAL if sig else COLOR_GRAY
@@ -155,7 +157,6 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         ax_a.plot([b["accuracy"], g["accuracy"]], [y_b, y_g],
                   color="#D0D0D0", linestyle=":", linewidth=0.7, zorder=2)
 
-    # Legend for Panel (a)
     legend_elements_a = [
         Line2D([0], [0], marker="o", markersize=4.0, markerfacecolor=COLOR_MINT,
                markeredgecolor=COLOR_MINT_EDGE, markeredgewidth=0.8, linestyle="-",
@@ -168,9 +169,7 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         handletextpad=0.4, handlelength=1.2, borderaxespad=0.3, labelcolor=COLOR_TEXT
     )
 
-    # -------------------------------------------------------------
-    # Panel (b): Closed-form 48 vs Other 360 (Bare & Grounded)
-    # -------------------------------------------------------------
+    # Panel (b): Closed-form 48 vs Other 360
     ax_b = axes[1]
     format_ax(
         ax_b,
@@ -180,7 +179,6 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         title_label="(b) Closed-form 48 vs. other 360"
     )
 
-    # Closed-form rule vertical dashed line at 1.000
     ax_b.axvline(1.0, color=COLOR_MINT_EDGE, linestyle=":", linewidth=0.9, zorder=1)
     ax_b.text(
         0.995, -0.42, "Rule 1.000",
@@ -188,15 +186,15 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
     )
 
     v_off_b = 0.13
-    for i, m in enumerate(MODELS):
+    for i, m in enumerate(models_to_plot):
         y = y_pos[i]
-        m_data = data["models"][m]
+        m_data = models_dict[m]
         b_cf = m_data["bare"]["closed_form_accuracy"]
         g_cf = m_data["grounded"]["closed_form_accuracy"]
         b_oth = m_data["bare"]["other_accuracy"]
         g_oth = m_data["grounded"]["other_accuracy"]
 
-        # Closed-form 48 (top sub-row, y + v_off_b): coral lift
+        # Closed-form 48 (top sub-row, y + v_off_b)
         y_cf = y + v_off_b
         ax_b.annotate(
             "", xy=(g_cf, y_cf), xytext=(b_cf, y_cf),
@@ -207,7 +205,7 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
                   markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE, markeredgewidth=0.7, zorder=4)
         ax_b.plot(g_cf, y_cf, marker="o", markersize=3.8, color=COLOR_CORAL, zorder=4)
 
-        # Other 360 (bottom sub-row, y - v_off_b): gray drop
+        # Other 360 (bottom sub-row, y - v_off_b)
         y_oth = y - v_off_b
         ax_b.annotate(
             "", xy=(g_oth, y_oth), xytext=(b_oth, y_oth),
@@ -218,7 +216,6 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
                   markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE, markeredgewidth=0.7, zorder=4)
         ax_b.plot(g_oth, y_oth, marker="o", markersize=3.8, color=COLOR_GRAY, zorder=4)
 
-    # Place legend cleanly at lower-left of panel (b) in the empty area x in [0.46, 0.58], y around 1.5-2.2
     legend_elements_b = [
         Line2D([0], [0], marker="o", markersize=3.8, color=COLOR_CORAL, linestyle="-",
                linewidth=1.2, label="Closed-form 48"),
@@ -234,37 +231,48 @@ def plot_wildfirevqa(data: dict, out_pdf: Path, out_png: Path):
         labelcolor=COLOR_TEXT
     )
 
-    # Adjust vertical limits
     ax_a.set_ylim(-0.55, n_models - 0.45)
 
-    out_pdf.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_pdf, format="pdf", bbox_inches="tight")
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+    if out_pdf is not None:
+        out_pdf.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(out_pdf, format="pdf", bbox_inches="tight")
+        print(f"Generated {out_pdf}")
     fig.savefig(out_png, format="png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"Generated {out_pdf} and {out_png}")
+    print(f"Generated {out_png}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Generate WildFireVQA figure.")
-    parser.add_argument("--input", type=str,
-                        default=str(Path(__file__).resolve().parent.parent / "analysis" / "wildfirevqa_paired.json"),
-                        help="Path to wildfirevqa_paired.json (written by analysis/wildfirevqa_paired.py in the AI4Fire repository)")
-    parser.add_argument("--out-pdf", type=str, default=None,
+    parser.add_argument("--input", type=Path,
+                        default=Path(__file__).resolve().parent.parent / "analysis" / "wildfirevqa_paired.json",
+                        help="Path to wildfirevqa_paired.json")
+    parser.add_argument("--out-pdf", type=Path, default=None,
                         help="Path for output PDF file.")
-    parser.add_argument("--out-png", type=str, default=None,
+    parser.add_argument("--out-png", type=Path, default=None,
                         help="Path for output PNG file.")
+    add_model_args(parser, default_tier="core")
     args = parser.parse_args()
 
-    input_path = Path(args.input).resolve()
+    input_path = args.input.resolve()
     if not input_path.exists():
         raise SystemExit(f"Input data not found at {input_path}")
 
     repo_root = Path(__file__).resolve().parent.parent
-    out_pdf = Path(args.out_pdf).resolve() if args.out_pdf else repo_root / "figures" / "wildfirevqa.pdf"
-    out_png = Path(args.out_png).resolve() if args.out_png else repo_root / "figures" / "wildfirevqa.png"
+    figs_dir = repo_root / "figures"
+    if args.out_pdf:
+        out_pdf = args.out_pdf
+    elif args.out_png:
+        out_pdf = None
+    else:
+        out_pdf = figs_dir / "wildfirevqa.pdf"
+    out_png = args.out_png or (figs_dir / "wildfirevqa.png")
+
+    selected_models = resolve_models(args, task="wildfirevqa", default_tier="core")
 
     data = load_data(input_path)
-    plot_wildfirevqa(data, out_pdf, out_png)
+    plot_wildfirevqa(data, selected_models, out_pdf, out_png)
 
 
 if __name__ == "__main__":

@@ -14,38 +14,6 @@ This figure displays the paired grounded-minus-bare contrasts across the four ru
   - Panel (d): Fire data tool use (FPA-FOD, 156 items)
                Accuracy difference (tool minus bare) with family-clustered 95% bootstrap
                intervals (12 clusters).
-
-Model order (top to bottom):
-  1. claude-opus-4.8
-  2. claude-opus-5
-  3. gemini-3.1-pro
-  4. gpt-6-astra
-  5. Qwen3-VL
-  6. Llama 4 Maverick
-
-Data sources in the AI4Fire repository:
-  - analysis/cluster_uncertainty.py (--manifest manifest-v1.json --max-skew-min 100000)
-    or precomputed analysis/cluster-six.stdout.txt:
-    supplies paired contrasts and clustered 95% bootstrap intervals (20,000 resamples,
-    base seed 20260915, clusters by fire for FIgLib, incident for allocation, and
-    1.0 deg x calendar month for Mesogeos).
-  - analysis/retrieval_v2.json:
-    supplies allocation rule-v2 contrasts (v2 minus bare) with incident-clustered intervals.
-  - analysis/figlib-paired.json:
-    supplies per-model paired FIgLib metrics including bare and grounded FPR.
-  - analysis/tooluse_paired.json (written by analysis/tooluse_paired.py):
-    supplies the tool-minus-bare accuracy difference per model with its family-clustered
-    interval (12 clusters, 20,000 resamples).
-
-Styling conventions (CatchBench submission style):
-  - Width: 6.5 in, height <= 2.6 in.
-  - Typography: Sans-serif (DejaVu Sans / Arial), TrueType fonts (pdf.fonttype 42), >= 6 pt.
-  - Spines: no top/right spines, gray (#999999) left/bottom spines, no tick marks.
-  - Palette:
-      Coral (#ED8D5A): focal marks (contrasts whose 95% interval excludes zero)
-      Gray (#999999 / #C9C9C9): context (contrasts whose 95% interval includes zero)
-      Mint (#BFDFD2, edge #8FB7A6): comparison layer (FPR change in panel a)
-      Near-black (#1A1A1A): text
 """
 
 from __future__ import annotations
@@ -63,6 +31,16 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import models
+from models import add_model_args, resolve_models
+
 # CatchBench Palette
 COLOR_CORAL = "#ED8D5A"
 COLOR_MINT = "#BFDFD2"
@@ -72,72 +50,25 @@ COLOR_LIGHT_GRAY = "#E6E6E6"
 COLOR_TEXT = "#1A1A1A"
 COLOR_SUBTITLE = "#666666"
 
-MODELS = [
-    {
-        "id": "claude-opus-4.8",
-        "label": "claude-opus-4.8",
-        "cu_key": "claude-opus-4.8",
-        "v2_key": "claude-opus-4.8",
-        "fig_key": "claude-opus-4.8",
-        "tool_key": "claude-opus-4.8",
-    },
-    {
-        "id": "claude-opus-5",
-        "label": "claude-opus-5",
-        "cu_key": "claude-opus-5",
-        "v2_key": "claude-opus-5",
-        "fig_key": "claude-opus-5",
-        "tool_key": "claude-opus-5",
-    },
-    {
-        "id": "gemini-3.1-pro",
-        "label": "gemini-3.1-pro",
-        "cu_key": "gemini-3.1-pro",
-        "v2_key": "gemini-3.1-pro",
-        "fig_key": "gemini-3.1-pro",
-        "tool_key": "gemini-3.1-pro",
-    },
-    {
-        "id": "gpt-6-astra",
-        "label": "gpt-6-astra",
-        "cu_key": "gpt-6-astra",
-        "v2_key": "gpt-6-astra",
-        "fig_key": "gpt-6-astra",
-        "tool_key": "gpt-6-astra",
-    },
-    {
-        "id": "qwen3-vl",
-        "label": "Qwen3-VL",
-        "cu_key": "bedrock_qwen.qwen3-vl-235b-a22",
-        "v2_key": "bedrock_qwen.qwen3-vl-235b-a22b",
-        "fig_key": "bedrock_qwen.qwen3-vl-235b-a22b",
-        "tool_key": "Qwen3-VL",
-    },
-    {
-        "id": "llama-4-maverick",
-        "label": "Llama 4 Maverick",
-        "cu_key": "bedrock_us.meta.llama4-maveric",
-        "v2_key": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
-        "fig_key": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0",
-        "tool_key": "Llama 4 Maverick",
-    },
-]
 
+def load_cluster_uncertainty_output(repo_root: Path, force_rerun: bool = False, tier: str = "core") -> str:
+    """Read cached cluster uncertainty stdout or run cluster_uncertainty.py.
 
-def load_cluster_uncertainty_output(repo_root: Path, force_rerun: bool = False) -> str:
-    """Read cached cluster uncertainty stdout or run cluster_uncertainty.py."""
-    cached_path = repo_root / "analysis" / "cluster-six.stdout.txt"
+    The core tier runs under the manifest (the 36 reported files) and caches to cluster-six.stdout.txt; any
+    other tier runs over every response file on disk, with unpaired variant arms allowed, and caches to
+    cluster-<tier>.stdout.txt, so the six-model cache is never overwritten by a sweep render.
+    """
+    core = tier == "core"
+    cached_path = repo_root / "analysis" / ("cluster-six.stdout.txt" if core else f"cluster-{tier}.stdout.txt")
     if not force_rerun and cached_path.exists():
         return cached_path.read_text(encoding="utf-8")
 
     script_path = repo_root / "analysis" / "cluster_uncertainty.py"
-    cmd = [
-        sys.executable,
-        str(script_path),
-        "--manifest", "manifest-v1.json",
-        "--max-skew-min", "100000",
-    ]
+    cmd = [sys.executable, str(script_path), "--max-skew-min", "100000"]
+    cmd += ["--manifest", "manifest-v1.json"] if core else ["--allow-unpaired"]
     proc = subprocess.run(cmd, cwd=str(repo_root), capture_output=True, text=True, check=True)
+    if not core:
+        cached_path.write_text(proc.stdout, encoding="utf-8")
     return proc.stdout
 
 
@@ -146,7 +77,7 @@ def parse_cluster_uncertainty(text: str) -> dict[str, dict[str, dict[str, float]
     row_pattern = re.compile(
         r"^\s*(?P<arm>[a-zA-Z0-9_\.\-]+)\s+(?P<bare_n>\d+)\s+(?P<grd_n>\d+)\s+(?P<pair_n>\d+)\s+"
         r"(?P<n_clust>\d+)\s+(?P<bare>[\d\.\-]+)\s+(?P<grounded>[\d\.\-]+)\s+(?P<diff>[\d\.\-]+)\s+"
-        r"\[(?P<ci_lo>[\d\.\-]+)\s*,\s*(?P<ci_hi>[\d\.\-]+)\]",
+        r"\[\s*(?P<ci_lo>[\d\.\-]+)\s*,\s*(?P<ci_hi>[\d\.\-]+)\s*\]",  # a positive bound is padded with a space
         re.M,
     )
     tasks = ["FIgLib", "allocation", "Mesogeos"]
@@ -172,12 +103,16 @@ def parse_cluster_uncertainty(text: str) -> dict[str, dict[str, dict[str, float]
 
 def load_retrieval_v2(repo_root: Path) -> dict:
     path = repo_root / "analysis" / "retrieval_v2.json"
+    if not path.exists():
+        return {}
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def load_figlib_paired(repo_root: Path) -> dict:
     path = repo_root / "analysis" / "figlib-paired.json"
+    if not path.exists():
+        return {}
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
     fpr: dict[str, dict[str, float]] = {}
@@ -191,78 +126,136 @@ def load_figlib_paired(repo_root: Path) -> dict:
 def load_tooluse_paired(repo_root: Path) -> dict:
     path = repo_root / "analysis" / "tooluse_paired.json"
     if not path.exists():
-        raise SystemExit(f"{path} is missing; run analysis/tooluse_paired.py first")
+        return {}
     with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)["models"]
+        return json.load(f).get("models", {})
 
 
-def gather_all_data(repo_root: Path, force_rerun: bool = False):
-    cu_text = load_cluster_uncertainty_output(repo_root, force_rerun)
+def require_coverage(name: str, have, want, command: str) -> None:
+    """Stop when a shared analysis JSON predates the selected tier.
+
+    analysis/figlib-paired.json and analysis/tooluse_paired.json are written by scripts whose own default is the
+    core tier, so rendering the sweep figure after a default analysis run would silently drop the added models'
+    points while still labelling their rows. Name the command that refills the file instead.
+    """
+    missing = [m for m in want if m not in have]
+    if missing:
+        shown = ", ".join(missing[:6]) + (", ..." if len(missing) > 6 else "")
+        raise SystemExit("%s is missing %d of %d selected models (%s).\nRegenerate it first: %s"
+                         % (name, len(missing), len(want), shown, command))
+
+
+def find_cu_entry(task_dict: dict, stem: str):
+    """cluster_uncertainty.py prints arm names cut at 30 characters; take the exact name when it is there,
+    otherwise the truncated name that shares the longest prefix with the stem (so bedrock_zai.glm-4.7 never
+    stands in for bedrock_zai.glm-4.7-flash)."""
+    if stem in task_dict:
+        return task_dict[stem]
+    best, best_len = None, 0
+    for k, v in task_dict.items():
+        if stem.startswith(k) or k.startswith(stem[:28]):
+            n = len(os.path.commonprefix([k, stem]))
+            if n > best_len:
+                best, best_len = v, n
+    return best
+
+
+def gather_all_data(repo_root: Path, selected_models, force_rerun: bool = False, tier: str = "core"):
+    cu_text = load_cluster_uncertainty_output(repo_root, force_rerun, tier)
     cu_data = parse_cluster_uncertainty(cu_text)
     v2_data = load_retrieval_v2(repo_root)
     fig_data = load_figlib_paired(repo_root)
     tool_data = load_tooluse_paired(repo_root)
+    # A model is expected in a shared JSON only when its response files for that task exist; a tier whose models
+    # never ran the task (the text-only sweep has no smoke files) is not a stale cache.
+    def ran(m, task, cond):
+        return (repo_root / f"task-{task}" / f"responses-{m.stem}-{cond}.jsonl").exists()
+
+    require_coverage("analysis/figlib-paired.json", fig_data,
+                     [m.stem for m in selected_models if ran(m, "figlib", "grounded")],
+                     "python analysis/figlib_paired.py --tier %s" % tier)
+    require_coverage("analysis/tooluse_paired.json", tool_data,
+                     [m.label for m in selected_models if ran(m, "tooluse", "tool")],
+                     "python analysis/tooluse_paired.py --tier %s" % tier)
 
     records = []
-    for m in MODELS:
-        # 1. Panel (a) Smoke detection: recall gain (grounded minus bare)
-        # In cu_data: diff = bare - grounded.
-        # Thus recall gain = grounded - bare = -diff.
-        # Clustered CI on gain = [-ci_hi, -ci_lo].
-        cu_fig = cu_data["FIgLib"][m["cu_key"]]
-        gain_pt = cu_fig["grounded"] - cu_fig["bare"]
-        gain_lo = -cu_fig["ci_hi"]
-        gain_hi = -cu_fig["ci_lo"]
-        gain_excl_zero = (gain_lo > 0 and gain_hi > 0) or (gain_lo < 0 and gain_hi < 0)
+    for m in selected_models:
+        stem = m.stem
+        label = m.label
 
-        # FPR change
-        fpr_bare = fig_data[m["fig_key"]]["bare"]
-        fpr_grd = fig_data[m["fig_key"]]["grounded"]
-        fpr_diff = fpr_grd - fpr_bare
+        # 1. Panel (a) Smoke detection: recall gain
+        cu_fig = find_cu_entry(cu_data.get("FIgLib", {}), stem)
+        if cu_fig is not None:
+            gain_pt = cu_fig["grounded"] - cu_fig["bare"]
+            gain_lo = -cu_fig["ci_hi"]
+            gain_hi = -cu_fig["ci_lo"]
+            gain_excl_zero = (gain_lo > 0 and gain_hi > 0) or (gain_lo < 0 and gain_hi < 0)
+            figlib_gain = (gain_pt, gain_lo, gain_hi, gain_excl_zero)
+        else:
+            figlib_gain = None
 
-        # 2. Panel (b) Allocation: normalized error diff (grounded minus bare)
-        # For v1: in cu_data, diff = bare - grounded.
-        # Thus diff (v1 - bare) = grounded - bare = -diff.
-        # Clustered CI = [-ci_hi, -ci_lo].
-        cu_alloc = cu_data["allocation"][m["cu_key"]]
-        v1_pt = cu_alloc["grounded"] - cu_alloc["bare"]
-        v1_lo = -cu_alloc["ci_hi"]
-        v1_hi = -cu_alloc["ci_lo"]
-        v1_excl_zero = (v1_lo > 0 and v1_hi > 0) or (v1_lo < 0 and v1_hi < 0)
+        fig_entry = fig_data.get(stem, {})
+        if "bare" in fig_entry and "grounded" in fig_entry:
+            fpr_diff = fig_entry["grounded"] - fig_entry["bare"]
+        else:
+            fpr_diff = None
 
-        # For v2: from retrieval_v2.json
-        v2_m = v2_data[m["v2_key"]]
-        v2_pt = float(v2_m["d_v2_bare"])
-        v2_lo = float(v2_m["d_v2_bare_ci"][0])
-        v2_hi = float(v2_m["d_v2_bare_ci"][1])
-        v2_excl_zero = (v2_lo > 0 and v2_hi > 0) or (v2_lo < 0 and v2_hi < 0)
+        # 2. Panel (b) Allocation: v1 and v2
+        cu_alloc = find_cu_entry(cu_data.get("allocation", {}), stem)
+        if cu_alloc is not None:
+            v1_pt = cu_alloc["grounded"] - cu_alloc["bare"]
+            v1_lo = -cu_alloc["ci_hi"]
+            v1_hi = -cu_alloc["ci_lo"]
+            v1_excl_zero = (v1_lo > 0 and v1_hi > 0) or (v1_lo < 0 and v1_hi < 0)
+            alloc_v1 = (v1_pt, v1_lo, v1_hi, v1_excl_zero)
+        else:
+            alloc_v1 = None
 
-        # 3. Panel (c) Fire danger: AUPRC diff (grounded minus bare)
-        # In cu_data: diff = bare - grounded.
-        # Thus AUPRC diff = grounded - bare = -diff.
-        # Clustered CI = [-ci_hi, -ci_lo].
-        cu_meso = cu_data["Mesogeos"][m["cu_key"]]
-        meso_pt = cu_meso["grounded"] - cu_meso["bare"]
-        meso_lo = -cu_meso["ci_hi"]
-        meso_hi = -cu_meso["ci_lo"]
-        meso_excl_zero = (meso_lo > 0 and meso_hi > 0) or (meso_lo < 0 and meso_hi < 0)
+        v2_m = v2_data.get(stem)
+        if v2_m and "d_v2_bare" in v2_m:
+            v2_pt = float(v2_m["d_v2_bare"])
+            v2_lo = float(v2_m["d_v2_bare_ci"][0])
+            v2_hi = float(v2_m["d_v2_bare_ci"][1])
+            v2_excl_zero = (v2_lo > 0 and v2_hi > 0) or (v2_lo < 0 and v2_hi < 0)
+            alloc_v2 = (v2_pt, v2_lo, v2_hi, v2_excl_zero)
+        else:
+            alloc_v2 = None
 
-        # 4. Panel (d) Tool use: accuracy diff (tool minus bare), family-clustered interval
-        tl = tool_data[m["tool_key"]]["tool_minus_bare"]
-        tool_pt = float(tl["d"])
-        tool_lo = float(tl["ci"][0])
-        tool_hi = float(tl["ci"][1])
-        tool_excl_zero = (tool_lo > 0 and tool_hi > 0) or (tool_lo < 0 and tool_hi < 0)
+        # 3. Panel (c) Fire danger: AUPRC diff
+        cu_meso = find_cu_entry(cu_data.get("Mesogeos", {}), stem)
+        if cu_meso is not None:
+            meso_pt = cu_meso["grounded"] - cu_meso["bare"]
+            meso_lo = -cu_meso["ci_hi"]
+            meso_hi = -cu_meso["ci_lo"]
+            meso_excl_zero = (meso_lo > 0 and meso_hi > 0) or (meso_lo < 0 and meso_hi < 0)
+            meso_auprc = (meso_pt, meso_lo, meso_hi, meso_excl_zero)
+        else:
+            meso_auprc = None
 
-        records.append({
-            "model": m["label"],
-            "figlib_gain": (gain_pt, gain_lo, gain_hi, gain_excl_zero),
-            "figlib_fpr": fpr_diff,
-            "alloc_v1": (v1_pt, v1_lo, v1_hi, v1_excl_zero),
-            "alloc_v2": (v2_pt, v2_lo, v2_hi, v2_excl_zero),
-            "meso_auprc": (meso_pt, meso_lo, meso_hi, meso_excl_zero),
-            "tool_acc": (tool_pt, tool_lo, tool_hi, tool_excl_zero),
-        })
+        # 4. Panel (d) Tool use: accuracy diff
+        tl_m = tool_data.get(label) or tool_data.get(stem)
+        if tl_m and "tool_minus_bare" in tl_m:
+            tl = tl_m["tool_minus_bare"]
+            tool_pt = float(tl["d"])
+            tool_lo = float(tl["ci"][0])
+            tool_hi = float(tl["ci"][1])
+            tool_excl_zero = (tool_lo > 0 and tool_hi > 0) or (tool_lo < 0 and tool_hi < 0)
+            tool_acc = (tool_pt, tool_lo, tool_hi, tool_excl_zero)
+        else:
+            tool_acc = None
+
+        # Include model if it has data in at least one task
+        if any(x is not None for x in (figlib_gain, alloc_v1, meso_auprc, tool_acc)):
+            records.append({
+                "model": label,
+                "stem": stem,
+                "figlib_gain": figlib_gain,
+                "figlib_fpr": fpr_diff,
+                "alloc_v1": alloc_v1,
+                "alloc_v2": alloc_v2,
+                "meso_auprc": meso_auprc,
+                "tool_acc": tool_acc,
+            })
 
     return records
 
@@ -276,40 +269,64 @@ def print_verification_table(records: list[dict]):
     print("  Model             Recall gain [95% CI]           Paper check              FPR change")
     print("  " + "-" * 105)
     for r in records:
-        pt, lo, hi, sig = r["figlib_gain"]
-        paper_text = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
-        print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {paper_text:<24} {r['figlib_fpr']:+.3f}")
+        if r["figlib_gain"] is not None:
+            pt, lo, hi, sig = r["figlib_gain"]
+            paper_text = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
+            fpr_str = f"{r['figlib_fpr']:+.3f}" if r["figlib_fpr"] is not None else "n/a"
+            print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {paper_text:<24} {fpr_str}")
 
     print("\nPanel (b) Personnel allocation: Normalized error diff [95% CI] (v1 and v2)")
     print("  Model             Rule v1 diff [95% CI]          Rule v2 diff [95% CI]")
     print("  " + "-" * 105)
     for r in records:
-        v1_pt, v1_lo, v1_hi, v1_sig = r["alloc_v1"]
-        v2_pt, v2_lo, v2_hi, v2_sig = r["alloc_v2"]
-        v1_s = f"{v1_pt:+.4f} [{v1_lo:+.4f}, {v1_hi:+.4f}] ({'Coral' if v1_sig else 'Gray'})"
-        v2_s = f"{v2_pt:+.4f} [{v2_lo:+.4f}, {v2_hi:+.4f}] ({'Coral' if v2_sig else 'Gray'})"
+        v1_s = "n/a"
+        if r["alloc_v1"] is not None:
+            v1_pt, v1_lo, v1_hi, v1_sig = r["alloc_v1"]
+            v1_s = f"{v1_pt:+.4f} [{v1_lo:+.4f}, {v1_hi:+.4f}] ({'Coral' if v1_sig else 'Gray'})"
+        v2_s = "n/a"
+        if r["alloc_v2"] is not None:
+            v2_pt, v2_lo, v2_hi, v2_sig = r["alloc_v2"]
+            v2_s = f"{v2_pt:+.4f} [{v2_lo:+.4f}, {v2_hi:+.4f}] ({'Coral' if v2_sig else 'Gray'})"
         print(f"  {r['model']:<17} {v1_s:<32} {v2_s}")
 
     print("\nPanel (c) Fire danger (Mesogeos): AUPRC diff [95% CI]")
     print("  Model             AUPRC diff [95% CI]            Status")
     print("  " + "-" * 105)
     for r in records:
-        pt, lo, hi, sig = r["meso_auprc"]
-        status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
-        print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
+        if r["meso_auprc"] is not None:
+            pt, lo, hi, sig = r["meso_auprc"]
+            status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
+            print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
 
     print("\nPanel (d) Fire data tool use (FPA-FOD): accuracy diff, tool minus bare [95% CI], family clusters")
     print("  Model             Accuracy diff [95% CI]         Status")
     print("  " + "-" * 105)
     for r in records:
-        pt, lo, hi, sig = r["tool_acc"]
-        status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
-        print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
+        if r["tool_acc"] is not None:
+            pt, lo, hi, sig = r["tool_acc"]
+            status = "excl 0 (Coral)" if sig else "incl 0 (Gray)"
+            print(f"  {r['model']:<17} {pt:+.4f} [{lo:+.4f}, {hi:+.4f}]   {status}")
     print("=" * 110)
 
 
-def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
-    """Draw the 4-panel CatchBench forest plot at 6.5 x 2.45 in."""
+def _interval(ax, y, pt, lo, hi, col, xlim, marker="o", ms=4.8, lw=1.4, label_dy=0.34):
+    """One point with its interval. A point beyond the shared axis (Nova 2 Lite in the sweep) is clipped at the
+    edge, marked with a triangle, and labelled with its value, so the row stays readable without rescaling the
+    six-model axis."""
+    x0, x1 = xlim
+    if pt > x1 or pt < x0:
+        edge = x1 if pt > x1 else x0
+        ax.plot([max(lo, x0), min(hi, x1)], [y, y], color=col, linewidth=lw, zorder=3, solid_capstyle="butt")
+        ax.plot(edge, y, marker=">" if pt > x1 else "<", markersize=ms, color=col, zorder=4, clip_on=False)
+        ax.text(edge - 0.02 * (x1 - x0) if pt > x1 else edge + 0.02 * (x1 - x0), y + label_dy, f"{pt:+.2f}",
+                fontsize=5.6, ha="right" if pt > x1 else "left", va="center", color=col)
+    else:
+        ax.plot([lo, hi], [y, y], color=col, linewidth=lw, zorder=3, solid_capstyle="round")
+        ax.plot(pt, y, marker=marker, markersize=ms, color=col, zorder=4)
+
+
+def plot_grounding_effects(records: list[dict], out_pdf: Path | None, out_png: Path):
+    """Draw the 4-panel forest plot."""
     plt.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["DejaVu Sans", "Arial", "Helvetica"],
@@ -321,25 +338,25 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
         "ytick.color": COLOR_TEXT,
     })
 
+    n_models = len(records)
+    fig_height = 2.45 if n_models <= 6 else max(2.45, 0.35 * n_models + 0.6)
+    left_margin = 0.15 if n_models <= 6 else 0.18
+
     fig, axes = plt.subplots(
         1, 4,
-        figsize=(6.5, 2.45),
+        figsize=(6.5, fig_height),
         sharey=True,
-        gridspec_kw={"wspace": 0.30, "left": 0.15, "right": 0.99, "top": 0.82, "bottom": 0.17}
+        gridspec_kw={"wspace": 0.30, "left": left_margin, "right": 0.99, "top": 0.82 if n_models <= 6 else 0.90, "bottom": 0.17 if n_models <= 6 else 0.10}
     )
 
-    n_models = len(records)
-    # y-coordinates: row 5 is top model (claude-opus-4.8), row 0 is bottom (Llama 4 Maverick)
     y_pos = np.arange(n_models - 1, -1, -1)
     model_names = [r["model"] for r in records]
 
-    # Style spines and ticks helper
     def format_ax(ax, x_limits, x_ticks, x_label, title_label):
         ax.set_xlim(x_limits)
         ax.set_xticks(x_ticks)
         ax.set_xlabel(x_label, fontsize=7.2, labelpad=3)
         ax.axvline(0, color=COLOR_GRAY, linestyle="--", linewidth=0.75, zorder=1)
-        # Subtle horizontal guide lines for each row
         for y in y_pos:
             ax.axhline(y, color="#F4F4F4", linestyle="-", linewidth=0.6, zorder=0)
 
@@ -352,9 +369,7 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
         ax.tick_params(axis="both", length=0, labelsize=6.8)
         ax.set_title(title_label, loc="left", fontsize=8.0, fontweight="bold", pad=8)
 
-    # -------------------------------------------------------------
-    # Panel (a): Smoke detection (FIgLib)
-    # -------------------------------------------------------------
+    # Panel (a): Smoke detection
     ax_a = axes[0]
     format_ax(
         ax_a,
@@ -368,23 +383,20 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
 
     for i, r in enumerate(records):
         y = y_pos[i]
-        pt, lo, hi, sig = r["figlib_gain"]
-        col = COLOR_CORAL if sig else COLOR_GRAY
-        # Horizontal CI line
-        ax_a.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
-        # Recall gain point estimate
-        ax_a.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
+        if r["figlib_gain"] is not None:
+            pt, lo, hi, sig = r["figlib_gain"]
+            col = COLOR_CORAL if sig else COLOR_GRAY
+            _interval(ax_a, y, pt, lo, hi, col, (-0.04, 0.27))
 
-        # FPR change: secondary mint marker
-        fpr = r["figlib_fpr"]
-        ax_a.plot(
-            fpr, y,
-            marker="^", markersize=4.0,
-            markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE, markeredgewidth=0.8,
-            zorder=5
-        )
+        if r["figlib_fpr"] is not None:
+            fpr = r["figlib_fpr"]
+            ax_a.plot(
+                fpr, y,
+                marker="^", markersize=4.0,
+                markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE, markeredgewidth=0.8,
+                zorder=5
+            )
 
-    # Clean legend in upper-right open quadrant (x in [0.16, 0.27], y around rows 4-5)
     ax_a.plot([], [], marker="o", markersize=4.5, color=COLOR_CORAL, linestyle="-", linewidth=1.2, label="Recall gain")
     ax_a.plot([], [], marker="^", markersize=4.0, markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE,
                markeredgewidth=0.8, linestyle="None", label="FPR change")
@@ -393,9 +405,7 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
         borderaxespad=0.4, labelcolor=COLOR_TEXT
     )
 
-    # -------------------------------------------------------------
-    # Panel (b): Personnel allocation (ICS-209-PLUS)
-    # -------------------------------------------------------------
+    # Panel (b): Personnel allocation
     ax_b = axes[1]
     format_ax(
         ax_b,
@@ -406,36 +416,34 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
     )
 
     v_offset = 0.14
+    x_max_b = 0.17
     for i, r in enumerate(records):
         y = y_pos[i]
-        # v1 (top)
-        v1_pt, v1_lo, v1_hi, v1_sig = r["alloc_v1"]
-        col_v1 = COLOR_CORAL if v1_sig else COLOR_GRAY
-        y_v1 = y + v_offset
-        ax_b.plot([v1_lo, v1_hi], [y_v1, y_v1], color=col_v1, linewidth=1.3, zorder=3, solid_capstyle="round")
-        ax_b.plot(v1_pt, y_v1, marker="o", markersize=4.3, color=col_v1, zorder=4)
+        if r["alloc_v1"] is not None:
+            v1_pt, v1_lo, v1_hi, v1_sig = r["alloc_v1"]
+            col_v1 = COLOR_CORAL if v1_sig else COLOR_GRAY
+            y_v1 = y + v_offset
+            _interval(ax_b, y_v1, v1_pt, v1_lo, v1_hi, col_v1, (-0.05, x_max_b), ms=4.3, lw=1.3)
 
-        # v2 (bottom)
-        v2_pt, v2_lo, v2_hi, v2_sig = r["alloc_v2"]
-        col_v2 = COLOR_CORAL if v2_sig else COLOR_GRAY
-        y_v2 = y - v_offset
-        ax_b.plot([v2_lo, v2_hi], [y_v2, y_v2], color=col_v2, linewidth=1.3, zorder=3, solid_capstyle="round")
-        ax_b.plot(v2_pt, y_v2, marker="s", markersize=3.9, color=col_v2, zorder=4)
+        if r["alloc_v2"] is not None:
+            v2_pt, v2_lo, v2_hi, v2_sig = r["alloc_v2"]
+            col_v2 = COLOR_CORAL if v2_sig else COLOR_GRAY
+            y_v2 = y - v_offset
+            ax_b.plot([v2_lo, v2_hi], [y_v2, y_v2], color=col_v2, linewidth=1.3, zorder=3, solid_capstyle="round")
+            ax_b.plot(v2_pt, y_v2, marker="s", markersize=3.9, color=col_v2, zorder=4)
 
-    # Direct labels for v1 and v2 beside top model (claude-opus-4.8)
-    top_y = y_pos[0]
-    ax_b.text(
-        0.046, top_y + v_offset, "v1",
-        fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
-    )
-    ax_b.text(
-        0.046, top_y - v_offset, "v2",
-        fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
-    )
+    if n_models > 0 and records[0]["alloc_v1"] is not None:
+        top_y = y_pos[0]
+        ax_b.text(
+            0.046, top_y + v_offset, "v1",
+            fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
+        )
+        ax_b.text(
+            0.046, top_y - v_offset, "v2",
+            fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
+        )
 
-    # -------------------------------------------------------------
-    # Panel (c): Fire danger (Mesogeos)
-    # -------------------------------------------------------------
+    # Panel (c): Fire danger
     ax_c = axes[2]
     format_ax(
         ax_c,
@@ -447,14 +455,13 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
 
     for i, r in enumerate(records):
         y = y_pos[i]
-        pt, lo, hi, sig = r["meso_auprc"]
-        col = COLOR_CORAL if sig else COLOR_GRAY
-        ax_c.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
-        ax_c.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
+        if r["meso_auprc"] is not None:
+            pt, lo, hi, sig = r["meso_auprc"]
+            col = COLOR_CORAL if sig else COLOR_GRAY
+            ax_c.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
+            ax_c.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
 
-    # -------------------------------------------------------------
-    # Panel (d): Fire data tool use (FPA-FOD)
-    # -------------------------------------------------------------
+    # Panel (d): Tool use
     ax_d = axes[3]
     format_ax(
         ax_d,
@@ -466,38 +473,53 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path, out_png: Path):
 
     for i, r in enumerate(records):
         y = y_pos[i]
-        pt, lo, hi, sig = r["tool_acc"]
-        col = COLOR_CORAL if sig else COLOR_GRAY
-        ax_d.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
-        ax_d.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
+        if r["tool_acc"] is not None:
+            pt, lo, hi, sig = r["tool_acc"]
+            col = COLOR_CORAL if sig else COLOR_GRAY
+            ax_d.plot([lo, hi], [y, y], color=col, linewidth=1.4, zorder=3, solid_capstyle="round")
+            ax_d.plot(pt, y, marker="o", markersize=4.8, color=col, zorder=4)
 
-    # Adjust vertical limits
     ax_a.set_ylim(-0.55, n_models - 0.45)
 
-    out_pdf.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_pdf, format="pdf", bbox_inches="tight")
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+    if out_pdf is not None:
+        out_pdf.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(out_pdf, format="pdf", bbox_inches="tight")
+        print(f"Generated {out_pdf}")
     fig.savefig(out_png, format="png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"Generated {out_pdf} and {out_png}")
+    print(f"Generated {out_png}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Generate grounding effects figure.")
-    parser.add_argument("--repo", type=str, default=str(Path(__file__).resolve().parent.parent),
-                        help="Path to AI4Fire repository root.")
-    parser.add_argument("--out-pdf", type=str, default=None,
+    parser.add_argument("--repo", type=str, default=str(ROOT),
+                        help="Path to repository root.")
+    parser.add_argument("--out-pdf", type=Path, default=None,
                         help="Path for output PDF file.")
-    parser.add_argument("--out-png", type=str, default=None,
+    parser.add_argument("--out-png", type=Path, default=None,
                         help="Path for output PNG file.")
     parser.add_argument("--rerun-cluster", action="store_true",
                         help="Force re-running cluster_uncertainty.py instead of using cached output.")
+    add_model_args(parser, default_tier="core")
     args = parser.parse_args()
 
     repo_root = Path(args.repo).resolve()
-    out_pdf = Path(args.out_pdf).resolve() if args.out_pdf else repo_root / "figures" / "grounding_effects.pdf"
-    out_png = Path(args.out_png).resolve() if args.out_png else repo_root / "figures" / "grounding_effects.png"
+    figs_dir = repo_root / "figures"
+    # The default filename follows the tier, so a sweep render cannot overwrite the six-model figure the paper's
+    # Figure 3 uses. --out-pdf and --out-png still override it.
+    stem = {"core": "grounding_effects", "all": "grounding_effects_sweep"}.get(args.tier, f"grounding_effects_{args.tier}")
+    if args.out_pdf:
+        out_pdf = args.out_pdf
+    elif args.out_png:
+        out_pdf = None
+    else:
+        out_pdf = figs_dir / f"{stem}.pdf"
+    out_png = args.out_png or (figs_dir / f"{stem}.png")
 
-    records = gather_all_data(repo_root, force_rerun=args.rerun_cluster)
+    selected_models = resolve_models(args, default_tier="core")
+
+    records = gather_all_data(repo_root, selected_models, force_rerun=args.rerun_cluster, tier=args.tier)
     print_verification_table(records)
     plot_grounding_effects(records, out_pdf, out_png)
 

@@ -32,7 +32,7 @@ import pandas as pd
 import gw
 
 S = pathlib.Path(__file__).parent
-MAX_OUT = 1536  # see the note in the module docstring on why this is not a few hundred
+MAX_OUT = int(__import__("os").environ.get("AI4FIRE_MAX_OUT", 1536))  # the benchmark cap; AI4FIRE_MAX_OUT raises it for a documented variant run
 TASK = S / "task-allocation"
 SIT = S / "data" / "ics209" / "ics209plus-wildfire" / "ics209-plus-wf_sitreps_1999to2020.csv"
 PER_YEAR = 50
@@ -349,6 +349,7 @@ def main():
                 msgs = render(it, grounded_block(ana[it["item_id"]], args.rule) if cond == "grounded" else None)
                 try:
                     text, usage, served = gw.call(key, model, msgs, max_tokens=MAX_OUT)
+                    usage["max_out"] = MAX_OUT
                 except Exception as exc:  # a failed call is recorded, never silently dropped
                     return {"item_id": it["item_id"], "error": str(exc)[:200], "prediction": None,
                             "target": it["target_personnel"], "persistence": it["baseline_persistence"],

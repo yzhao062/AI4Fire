@@ -1,7 +1,8 @@
 """Gateway helpers: read the key from the environment, as the gateway README documents, and call the chat endpoint."""
-import os
-
+import ast
 import json
+import os
+import re
 import httpx
 
 BASE = "http://35.226.229.248:4000/v1"
@@ -96,31 +97,206 @@ def chat(key, model, messages, temperature=0, max_tokens=512, timeout=180):
     return d["choices"][0]["message"]["content"], d.get("usage", {}), d.get("model", model)
 
 
-def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=512):
-    """Call a model on Bedrock with tools using the Converse API.
+GEMMA_TOOL_PREFIXES = ("google.gemma-",)
 
-    Handles toolConfig with toolSpec, stopReason == 'tool_use', and toolUse blocks answered with toolResult blocks.
+
+def is_gemma_model(model: str) -> bool:
+    """Return True if model uses Gemma's tool_code convention."""
+    return model.startswith(GEMMA_TOOL_PREFIXES)
+
+
+def render_gemma_tool_specs(tools) -> str:
+    """Render tool specifications and the tool_code / tool_output protocol into system text."""
+    specs = []
+    for t in tools:
+        if "toolSpec" in t:
+            ts = t["toolSpec"]
+            name = ts.get("name", "")
+            desc = ts.get("description", "")
+            schema = ts.get("inputSchema", {}).get("json", ts.get("inputSchema", {}))
+            props = schema.get("properties", {})
+        elif "function" in t:
+            fn = t["function"]
+            name = fn.get("name", "")
+            desc = fn.get("description", "")
+            schema = fn.get("parameters", {})
+            props = schema.get("properties", {})
+        else:
+            name = t.get("name", "")
+            desc = t.get("description", "")
+            props = t.get("parameters", {}).get("properties", {})
+        spec = f"- Tool: {name}\n  Description: {desc}\n  Parameters: {json.dumps(props)}"
+        specs.append(spec)
+
+    tools_text = "\n".join(specs)
+    return (
+        f"Available tools:\n{tools_text}\n\n"
+        "To call a tool, output a Python call in a ```tool_code``` block. "
+        "The response will appear in a ```tool_output``` block."
+    )
+
+
+def render_gemma_tool_result(content: str) -> str:
+    """Format tool result string into a tool_output fence."""
+    return f"```tool_output\n{content}\n```"
+
+
+def parse_tool_code_fences(text: str, tools=None):
+    """Parse tool_code fenced blocks into OpenAI-style tool_calls."""
+    known_tools = {}
+    if tools:
+        for t in tools:
+            if "toolSpec" in t:
+                ts = t["toolSpec"]
+                name = ts.get("name")
+                schema = ts.get("inputSchema", {}).get("json", ts.get("inputSchema", {}))
+                props = list(schema.get("properties", {}).keys())
+                known_tools[name] = props
+            elif "function" in t:
+                fn = t["function"]
+                name = fn.get("name")
+                schema = fn.get("parameters", {})
+                props = list(schema.get("properties", {}).keys())
+                known_tools[name] = props
+
+    pattern = re.compile(r"```tool_code\s*([\s\S]*?)```")
+    matches = pattern.findall(text)
+    tool_calls = []
+
+    for idx, raw_code in enumerate(matches):
+        code = raw_code.strip()
+        try:
+            tree = ast.parse(code)
+        except Exception:
+            continue
+
+        for stmt in tree.body:
+            if not isinstance(stmt, ast.Expr) or not isinstance(stmt.value, ast.Call):
+                continue
+            call = stmt.value
+            if isinstance(call.func, ast.Name) and call.func.id == "print" and call.args:
+                if isinstance(call.args[0], ast.Call):
+                    call = call.args[0]
+
+            if not isinstance(call.func, ast.Name):
+                continue
+            func_name = call.func.id
+
+            if tools is not None and func_name not in known_tools:
+                continue
+
+            param_names = known_tools.get(func_name, [])
+            args_dict = {}
+
+            failed = False
+            for p_idx, arg_node in enumerate(call.args):
+                try:
+                    val = ast.literal_eval(arg_node)
+                except Exception:
+                    try:
+                        val = ast.unparse(arg_node)
+                    except Exception:
+                        failed = True
+                        break
+                if p_idx < len(param_names):
+                    args_dict[param_names[p_idx]] = val
+                elif len(call.args) == 1 and param_names:
+                    args_dict[param_names[0]] = val
+                else:
+                    args_dict[f"arg_{p_idx}"] = val
+
+            if failed:
+                continue
+
+            for kw in call.keywords:
+                if not kw.arg:
+                    continue
+                try:
+                    val = ast.literal_eval(kw.value)
+                except Exception:
+                    try:
+                        val = ast.unparse(kw.value)
+                    except Exception:
+                        failed = True
+                        break
+                args_dict[kw.arg] = val
+
+            if failed:
+                continue
+
+            call_id = f"call_{func_name}_{idx}"
+            tool_calls.append({
+                "id": call_id,
+                "type": "function",
+                "function": {
+                    "name": func_name,
+                    "arguments": json.dumps(args_dict)
+                }
+            })
+
+    return tool_calls
+
+
+def _tool_blocks_as_text(turns):
+    """Rewrite toolUse and toolResult blocks into text blocks, merging consecutive same-role turns.
+
+    Used only for a toolless final call after a tool exchange; a run that never exhausts its tool budget
+    never reaches it.
     """
+    import json
+
+    out = []
+    for turn in turns:
+        blocks = []
+        for b in turn["content"]:
+            if "toolUse" in b:
+                tu = b["toolUse"]
+                blocks.append({"text": "[Tool call %s(%s)]" % (tu.get("name", ""), json.dumps(tu.get("input", {})))})
+            elif "toolResult" in b:
+                texts = [c.get("text", "") for c in b["toolResult"].get("content", []) if "text" in c]
+                blocks.append({"text": "[Tool result]\n" + "\n".join(texts)})
+            else:
+                blocks.append(b)
+        if out and out[-1]["role"] == turn["role"]:
+            out[-1]["content"].extend(blocks)
+        else:
+            out.append({"role": turn["role"], "content": blocks})
+    return out
+
+
+def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=512):
+    """Call a model on Bedrock with tools using the Converse API or Gemma tool_code convention."""
     import json
     import boto3
     from botocore.config import Config
 
     client = boto3.client("bedrock-runtime", region_name="us-east-1",
                           config=Config(retries={"max_attempts": 10, "mode": "adaptive"}, read_timeout=600))
+    is_gemma = is_gemma_model(model)
     system = [{"text": m["content"]} for m in messages if m["role"] == "system"]
+
+    if is_gemma and tools:
+        tool_spec_text = render_gemma_tool_specs(tools)
+        if system:
+            system = [{"text": system[0]["text"] + "\n\n" + tool_spec_text}]
+        else:
+            system = [{"text": tool_spec_text}]
 
     turns = []
     for m in messages:
         if m["role"] == "system":
             continue
         if m["role"] == "tool":
-            tool_res_block = {
-                "toolResult": {
-                    "toolUseId": m.get("tool_call_id", ""),
-                    "content": [{"text": str(m.get("content", ""))}],
-                    "status": "success" if not m.get("is_error") else "error"
+            if is_gemma:
+                tool_res_block = {"text": render_gemma_tool_result(str(m.get("content", "")))}
+            else:
+                tool_res_block = {
+                    "toolResult": {
+                        "toolUseId": m.get("tool_call_id", ""),
+                        "content": [{"text": str(m.get("content", ""))}],
+                        "status": "success" if not m.get("is_error") else "error"
+                    }
                 }
-            }
             if turns and turns[-1]["role"] == "user":
                 turns[-1]["content"].append(tool_res_block)
             else:
@@ -132,7 +308,7 @@ def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=51
                     blocks.append({"text": m["content"]})
                 elif isinstance(m["content"], list):
                     blocks.extend(m["content"])
-            if m.get("tool_calls"):
+            if not is_gemma and m.get("tool_calls"):
                 for tc in m["tool_calls"]:
                     fn = tc.get("function", {})
                     args = fn.get("arguments", {})
@@ -155,6 +331,12 @@ def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=51
             else:
                 turns.append({"role": m["role"], "content": _bedrock_blocks(m["content"])})
 
+    if not tools and not is_gemma:
+        # A final call without tools (the runner's eight-call cap) cannot carry toolUse or toolResult blocks:
+        # Bedrock rejects them without a toolConfig ("The toolConfig field must be defined when using toolUse
+        # and toolResult content blocks"). Render the tool exchange as text so the model still sees it.
+        turns = _tool_blocks_as_text(turns)
+
     kwargs = {
         "modelId": model,
         "messages": turns,
@@ -163,7 +345,7 @@ def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=51
     if system:
         kwargs["system"] = system
 
-    if tools:
+    if tools and not is_gemma:
         specs = []
         for t in tools:
             if "toolSpec" in t:
@@ -187,21 +369,26 @@ def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=51
     text = "\n".join(p["text"] for p in parts if "text" in p)
 
     tool_calls = []
-    for p in parts:
-        if "toolUse" in p:
-            tu = p["toolUse"]
-            tool_calls.append({
-                "id": tu["toolUseId"],
-                "type": "function",
-                "function": {
-                    "name": tu["name"],
-                    "arguments": json.dumps(tu.get("input", {}))
-                }
-            })
+    if is_gemma:
+        tool_calls = parse_tool_code_fences(text, tools=tools)
+    else:
+        for p in parts:
+            if "toolUse" in p:
+                tu = p["toolUse"]
+                tool_calls.append({
+                    "id": tu["toolUseId"],
+                    "type": "function",
+                    "function": {
+                        "name": tu["name"],
+                        "arguments": json.dumps(tu.get("input", {}))
+                    }
+                })
 
     msg = {"role": "assistant", "content": text}
     if tool_calls:
         msg["tool_calls"] = tool_calls
+    if is_gemma:
+        msg["tool_protocol"] = "tool_code"
     msg["bedrock_content"] = parts
 
     usage = {
@@ -209,6 +396,8 @@ def bedrock_call_tools(model, messages, tools=None, temperature=0, max_tokens=51
         "completion_tokens": resp.get("usage", {}).get("outputTokens", 0),
         "stop_reason": resp.get("stopReason")
     }
+    if is_gemma:
+        usage["tool_protocol"] = "tool_code"
     return msg, usage, model
 
 

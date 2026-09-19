@@ -12,6 +12,7 @@ Computes:
 Outputs formatted tables to stdout and saves structured results to analysis/calibration_mesogeos.json.
 """
 
+import argparse
 import collections
 import json
 import math
@@ -24,21 +25,33 @@ from sklearn.metrics import average_precision_score, brier_score_loss, f1_score
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TASK = ROOT / "task-mesogeos"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+import models
+from models import add_model_args, resolve_models
 
-MODEL_ORDER = [
-    ("claude-opus-4.8", "bare", "Claude Opus 4.8 (bare)"),
-    ("claude-opus-4.8", "grounded", "Claude Opus 4.8 (grounded)"),
-    ("claude-opus-5", "bare", "Claude Opus 5 (bare)"),
-    ("claude-opus-5", "grounded", "Claude Opus 5 (grounded)"),
-    ("gemini-3.1-pro", "bare", "Gemini 3.1 Pro (bare)"),
-    ("gemini-3.1-pro", "grounded", "Gemini 3.1 Pro (grounded)"),
-    ("gpt-6-astra", "bare", "GPT-6-Astra (bare)"),
-    ("gpt-6-astra", "grounded", "GPT-6-Astra (grounded)"),
-    ("bedrock_qwen.qwen3-vl-235b-a22b", "bare", "Qwen3-VL 235B (bare)"),
-    ("bedrock_qwen.qwen3-vl-235b-a22b", "grounded", "Qwen3-VL 235B (grounded)"),
-    ("bedrock_us.meta.llama4-maverick-17b-instruct-v1_0", "bare", "Llama 4 Maverick 17B (bare)"),
-    ("bedrock_us.meta.llama4-maverick-17b-instruct-v1_0", "grounded", "Llama 4 Maverick 17B (grounded)"),
-]
+DISPLAY_NAMES = {
+    "claude-opus-4.8": "Claude Opus 4.8",
+    "claude-opus-5": "Claude Opus 5",
+    "gemini-3.1-pro": "Gemini 3.1 Pro",
+    "gpt-6-astra": "GPT-6-Astra",
+    "bedrock_qwen.qwen3-vl-235b-a22b": "Qwen3-VL 235B",
+    "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0": "Llama 4 Maverick 17B",
+}
+
+
+def get_model_order(selected_models=None):
+    if selected_models is None:
+        selected_models = models.models(tier="core", task="mesogeos")
+    order = []
+    for m in selected_models:
+        name = DISPLAY_NAMES.get(m.stem, m.label)
+        for cond in ("bare", "grounded"):
+            order.append((m.stem, cond, f"{name} ({cond})"))
+    return order
+
+
+MODEL_ORDER = get_model_order()
 
 TRAIN_PRIOR_BY_MONTH = {
     1: 0.06451612903225806,
@@ -229,7 +242,7 @@ def compute_granularity(y_prob: np.ndarray) -> Dict[str, Any]:
     }
 
 
-def analyze_all() -> Dict[str, Any]:
+def analyze_all(selected_models=None) -> Dict[str, Any]:
     items = load_items()
     y_test = np.array([it["label"] for it in items])
     assert len(items) == 386, f"Expected 386 test items, found {len(items)}"
@@ -243,8 +256,8 @@ def analyze_all() -> Dict[str, Any]:
         "references": {},
     }
 
-    # 12 LLM runs
-    for model_id, cond, display_name in MODEL_ORDER:
+    model_order = get_model_order(selected_models)
+    for model_id, cond, display_name in model_order:
         file_path = TASK / f"responses-{model_id}-{cond}.jsonl"
         if not file_path.exists():
             print(f"Warning: {file_path} not found", file=sys.stderr)
@@ -436,10 +449,15 @@ def print_tables(results: Dict[str, Any]):
 
 
 def main():
-    results = analyze_all()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", type=pathlib.Path, default=ROOT / "analysis" / "calibration_mesogeos.json")
+    add_model_args(ap, default_tier="core")
+    args = ap.parse_args()
+    selected_models = resolve_models(args, task="mesogeos", default_tier="core")
+    results = analyze_all(selected_models)
     print_tables(results)
 
-    out_path = ROOT / "analysis" / "calibration_mesogeos.json"
+    out_path = args.out
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote full structured calibration data to {out_path}")

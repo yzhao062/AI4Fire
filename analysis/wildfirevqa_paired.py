@@ -21,17 +21,12 @@ import numpy as np
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(ROOT))
 import cluster_uncertainty as cu  # noqa: E402
+import models
+from models import add_model_args, resolve_models
 
 TASK = ROOT / "task-wildfirevqa"
-MODELS = {
-    "bedrock_qwen.qwen3-vl-235b-a22b": "Qwen3-VL",
-    "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0": "Llama 4 Maverick",
-    "claude-opus-4.8": "claude-opus-4.8",
-    "claude-opus-5": "claude-opus-5",
-    "gemini-3.1-pro": "gemini-3.1-pro",
-    "gpt-6-astra": "gpt-6-astra",
-}
 CONDITIONS = ["bare", "grounded"]
 
 
@@ -70,7 +65,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--resamples", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=20260915)
+    ap.add_argument("--out", type=pathlib.Path, default=HERE / "wildfirevqa_paired.json")
+    add_model_args(ap, default_tier="core")
     args = ap.parse_args()
+    selected_models = resolve_models(args, task="wildfirevqa", default_tier="core")
     items = [json.loads(l) for l in (TASK / "items.jsonl").read_text(encoding="utf-8").splitlines()]
     by_id = {i["item_id"]: i for i in items}
     ids_all = [i["item_id"] for i in items]
@@ -86,7 +84,8 @@ def main():
            "models": {}}
     print("items %d | frames %d | majority baseline %.3f | closed-form items %d, rule accuracy %.3f"
           % (len(items), out["frames"], majority.mean(), len(closed), rule.mean() if len(rule) else float("nan")))
-    for stem, name in MODELS.items():
+    for m in selected_models:
+        stem, name = m.stem, m.label
         files = {c: TASK / ("responses-%s-%s.jsonl" % (stem, c)) for c in CONDITIONS}
         if not all(p.exists() for p in files.values()):
             print("%s: arm files missing, skipped" % name)
@@ -131,8 +130,8 @@ def main():
         print("  grounded - bare: %+.3f [%+.3f, %+.3f] over %d frame clusters | gained %d, lost %d | by category %s"
               % (d, lo, hi, k, rec["flips"]["bare_wrong_grounded_right"], rec["flips"]["bare_right_grounded_wrong"], {c[:14]: round(v, 3) for c, v in by_cat_d.items()}))
         out["models"][name] = rec
-    (HERE / "wildfirevqa_paired.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
-    print("\nwrote", HERE / "wildfirevqa_paired.json")
+    args.out.write_text(json.dumps(out, indent=1), encoding="utf-8")
+    print("\nwrote", args.out)
 
 
 if __name__ == "__main__":

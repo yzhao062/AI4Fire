@@ -25,7 +25,8 @@ TASK = S / "task-tooluse"
 DB = S / "data" / "tooluse" / "FPA_FOD_20221014.sqlite"
 VAR_DESC = S / "data" / "tooluse" / "_variable_descriptions.csv"
 NAIVE_CSV = TASK / "naive-baseline.csv"
-MAX_OUT = 1536
+MAX_TOOL_CALLS = 8  # the budget is eight executed queries, whether the model spreads them over eight turns or issues several in one
+MAX_OUT = int(__import__("os").environ.get("AI4FIRE_MAX_OUT", 1536))  # the benchmark cap; AI4FIRE_MAX_OUT raises it for a documented variant run
 
 # -------------------------------------------------------------------------------------------------
 # Prompts and Schema
@@ -204,6 +205,8 @@ def _add_usage(total, usage):
     if "reasoning_tokens" in det:
         acc = total.setdefault("completion_tokens_details", {"reasoning_tokens": 0})
         acc["reasoning_tokens"] += det.get("reasoning_tokens") or 0
+    if usage.get("tool_protocol"):  # Gemma 3's tool_code wire protocol, flagged by gw.py on every call
+        total["tool_protocol"] = usage["tool_protocol"]
 
 def query_fpafod(sql: str, db_path: pathlib.Path = DB, timeout_seconds: float = 15.0, return_meta: bool = False):
     """Execute a single SELECT statement on a read-only connection.
@@ -500,6 +503,7 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
     if condition == "bare":
         try:
             raw, usage, served = gw.call(key, model, msgs, max_tokens=MAX_OUT)
+            usage["max_out"] = MAX_OUT  # the cap this run used, as the tool arm and the other runners record it
             pred, abstained, fail = parse_answer(raw, item)
             corr = score_item(item, pred) if pred is not None and not abstained else False
             return dict(
@@ -532,12 +536,12 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
 
     # Real tool condition
     tool_calls = []
-    total_usage = {"prompt_tokens": 0, "completion_tokens": 0}
+    total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "max_out": MAX_OUT}
     served = model
     raw = ""
     err = None
 
-    for step in range(8):
+    for step in range(MAX_TOOL_CALLS):
         try:
             msg, usage, served = gw.call_tools(key, model, msgs, tools=TOOLS, max_tokens=MAX_OUT)
         except Exception as exc:
@@ -552,7 +556,18 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
             break
 
         msgs.append(msg)
+        budget_spent = False
         for tc in tcs:
+            if len(tool_calls) >= MAX_TOOL_CALLS:
+                # a turn carrying several calls can reach the budget mid-turn; the rest of that turn is
+                # refused rather than executed, so no run exceeds MAX_TOOL_CALLS queries
+                budget_spent = True
+                msgs.append({
+                    "role": "tool",
+                    "tool_call_id": tc.get("id", ""),
+                    "content": "Tool call budget exhausted; answer from the results you already have."
+                })
+                continue
             fn = tc.get("function", {})
             args = fn.get("arguments", {})
             if isinstance(args, str):
@@ -561,6 +576,10 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
                 except Exception:
                     args = {"sql": args}
             sql_arg = args.get("sql", "") if isinstance(args, dict) else str(args)
+            if not isinstance(sql_arg, str):
+                # a call whose sql argument is not a string (Gemma 3 12B passed a dict through the tool_code
+                # protocol) is a malformed query: the guard rejects its serialized form and the model reads why
+                sql_arg = json.dumps(sql_arg)
             res_text, meta = query_fpafod(sql_arg, return_meta=True)
             tool_calls.append(meta)
             msgs.append({
@@ -569,8 +588,8 @@ def run_item(item: dict, condition: str, model: str, key: str = None, fake: str 
                 "content": res_text
             })
 
-        if step == 7:
-            # Reached eighth tool call; final call carries no tools
+        if step == MAX_TOOL_CALLS - 1 or budget_spent or len(tool_calls) >= MAX_TOOL_CALLS:
+            # Budget spent; the final call carries no tools
             msgs.append({
                 "role": "user",
                 "content": "You have reached the maximum number of tool calls. Based on your findings, provide your final answer now. End with ANSWER: <value>."
@@ -687,6 +706,8 @@ def main():
                     help="print the system and user prompt of one item per arm and exit")
     ap.add_argument("--limit", type=int, default=None,
                     help="run first N items only")
+    ap.add_argument("--retry-errors", action="store_true",
+                    help="re-run only the rows whose error field is set in the existing response file; keep the rest")
     ap.add_argument("--fake", nargs="?", const="clean", default=None, choices=["clean", "noisy"],
                     help="run against fake backend (clean or noisy)")
     args = ap.parse_args()
@@ -723,15 +744,26 @@ def main():
             def process_one(it):
                 return run_item(it, cond, model, key=key, fake=args.fake)
 
-            with ThreadPoolExecutor(max_workers=args.workers) as ex:
-                rows = list(ex.map(process_one, items))
-
             safe = re.sub(r"[^A-Za-z0-9._-]", "_", model)
             # A fake run is a harness test: it writes under task-tooluse/fake/ and never touches scores.json,
             # so the reported files and the score record hold model runs only.
             out_dir = TASK / "fake" if args.fake else TASK
             out_dir.mkdir(exist_ok=True)
             out_file = out_dir / f"responses-{safe}-{cond}.jsonl"
+
+            if args.retry_errors:
+                # Keep every row that returned an answer; re-run only the calls that raised.
+                kept = {r["item_id"]: r for r in (json.loads(l) for l in out_file.read_text(encoding="utf-8").splitlines() if l.strip())}
+                todo = [it for it in items if kept.get(it["item_id"], {}).get("error")]
+                print(f"{model}/{cond}: retrying {len(todo)} errored rows of {len(kept)}")
+                with ThreadPoolExecutor(max_workers=args.workers) as ex:
+                    for r in ex.map(process_one, todo):
+                        kept[r["item_id"]] = r
+                # keep every recorded row, not only the (possibly --limit) retry slice, in item order
+                rows = [kept[it["item_id"]] for it in allitems if it["item_id"] in kept]
+            else:
+                with ThreadPoolExecutor(max_workers=args.workers) as ex:
+                    rows = list(ex.map(process_one, items))
             out_file.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
 
             run_key = f"{model}/{cond}"

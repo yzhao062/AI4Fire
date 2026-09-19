@@ -1,0 +1,27 @@
+=== chain bedrock:amazon.nova-micro-v1:0 start 2026-09-18 14:56:07
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:amazon.nova-micro-v1:0/bare", "items": 300, "parsed": 300, "mae": 15.13, "mae_norm": 0.1664492490689626, "within_25pct": 0.7433333333333333, "median_abs_log_ratio": 0.05000485031189026, "mae_norm_on_moving_days": 0.33807740256312385, "beats_persistence_share": 0.02, "errors": 0, "tokens_in": 107844, "tokens_out": 10461}
+{"run": "bedrock:amazon.nova-micro-v1:0/grounded", "items": 300, "parsed": 300, "mae": 23.343333333333334, "mae_norm": 0.2894874977743162, "within_25pct": 0.66, "median_abs_log_ratio": 0.12567887275733716, "mae_norm_on_moving_days": 0.3907679134804235, "beats_persistence_share": 0.17333333333333334, "errors": 0, "tokens_in": 180116, "tokens_out": 13934}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 14:58:21
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:amazon.nova-micro-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.33859482313751643, "f1_fire": 0.0, "f1_no_fire": 0.7956318252730109, "positive_rate_called": 0.0, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 543690}
+{"run": "bedrock:amazon.nova-micro-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.3321539400505613, "f1_fire": 0.0, "f1_no_fire": 0.7956318252730109, "positive_rate_called": 0.0, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 664414}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:00:23
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 13,
+  "mean_tool_calls": 1.096,
+  "max_tool_calls": 3,
+  "tokens_in": 645304,
+  "tokens_out": 40831
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_amazon.nova-micro-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:amazon.nova-micro-v1:0 DONE 2026-09-18 15:01:56

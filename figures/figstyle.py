@@ -39,16 +39,52 @@ FS_AXIS = 7.2
 FS_TICK = 6.8
 FS_SMALL = 6.2
 
-# The six models, in the order every figure and table uses, with the stem each task's response
-# files carry: task-<task>/responses-<stem>-<condition>.jsonl.
-MODELS = [
-    {"label": "claude-opus-4.8", "stem": "claude-opus-4.8", "family": "proprietary"},
-    {"label": "claude-opus-5", "stem": "claude-opus-5", "family": "proprietary"},
-    {"label": "gemini-3.1-pro", "stem": "gemini-3.1-pro", "family": "proprietary"},
-    {"label": "gpt-6-astra", "stem": "gpt-6-astra", "family": "proprietary"},
-    {"label": "Qwen3-VL", "stem": "bedrock_qwen.qwen3-vl-235b-a22b", "family": "open-weight"},
-    {"label": "Llama 4 Maverick", "stem": "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0", "family": "open-weight"},
+import sys
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+import models
+
+# The core models by default, in display order, reading from the registry
+MODELS = models.models(tier="core")
+
+# Extended palette for models: warm tones anchored by CORAL for proprietary, cool tones for open weight
+PALETTE_PROPRIETARY = [
+    "#ED8D5A",  # CORAL
+    "#D96B35",
+    "#C4511C",
+    "#E57B43",
+    "#F09867",
+    "#B04210",
+    "#F5B38B",
+    "#99380A",
+    "#F9CEB4",
 ]
+
+PALETTE_OPEN = [
+    "#3D735E",  # dark mint / teal
+    "#5A9E87",
+    "#8FB7A6",  # MINT_EDGE
+    "#2F5948",
+    "#4B7A6A",
+    "#6FA894",
+    "#234737",
+    "#7DBAA5",
+]
+
+
+def model_color(m: Any, index: int = 0) -> str:
+    """Return a color for a model based on its weights group and index."""
+    weights = getattr(m, "weights", None)
+    if weights is None and isinstance(m, dict):
+        weights = m.get("weights")
+        if weights is None and m.get("family") == "open-weight":
+            weights = "open"
+    if weights == "open":
+        return PALETTE_OPEN[index % len(PALETTE_OPEN)]
+    return PALETTE_PROPRIETARY[index % len(PALETTE_PROPRIETARY)]
 
 
 def apply() -> None:

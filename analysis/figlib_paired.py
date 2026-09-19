@@ -13,11 +13,18 @@ import json
 import math
 import os
 import sys
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+import models
+from models import add_model_args, resolve_models
 
 TASK_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "task-figlib")
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "figlib-paired.json")
 
-MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "gpt-6-astra", "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
+MODELS = [m.stem for m in models.models(tier="core", task="figlib")]
 CONDITIONS = ["bare", "grounded"]
 PAIR_WINDOW_MIN = 60.0
 TOKEN_CAP = 1536
@@ -111,9 +118,16 @@ def score(rows_by_id, ids):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=str, default=None, help="Path to manifest JSON restricting response files.")
+    parser.add_argument("--out", type=str, default=OUT_PATH, help="Path for output JSON file.")
+    add_model_args(parser)
     args = parser.parse_args()
 
-    models = MODELS
+    m_list = resolve_models(args, task="figlib")
+    # No silent fallback to another tier: a tier with no smoke files (the text-only sweep) must say so rather
+    # than score the core six under that label and overwrite the cache with it.
+    if not m_list:
+        raise SystemExit("no model with smoke-detection files in this selection; nothing to score")
+    selected_models = [m.stem for m in m_list]
     if args.manifest:
         with open(args.manifest, encoding="utf-8") as fh:
             manifest = json.load(fh)
@@ -123,7 +137,8 @@ def main():
             if r.get("task") in ("figlib", "task-figlib") and r.get("condition") == "bare":
                 manifest_models.append(r["model_token"])
         if manifest_models:
-            models = manifest_models
+            selected_models = manifest_models
+    models = selected_models
 
     items = read_jsonl(os.path.join(TASK_DIR, "items.jsonl"))
     items_by_id = {r["item_id"]: r for r in items}
@@ -328,11 +343,11 @@ def main():
             prov["repo_figlib_paired_json"] = json.load(fh)
     out["provenance"] = prov
 
-    with open(OUT_PATH, "w", encoding="utf-8") as fh:
+    with open(args.out, "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=2)
     json.dump(out, sys.stdout, indent=2)
     print()
-    print("wrote", OUT_PATH)
+    print("wrote", args.out)
 
 
 if __name__ == "__main__":

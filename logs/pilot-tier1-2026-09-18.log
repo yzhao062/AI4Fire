@@ -1,0 +1,169 @@
+=== bedrock:amazon.nova-lite-v1:0 14:07:11
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:amazon.nova-lite-v1:0/bare", "items": 10, "parsed": 10, "accuracy": 0.6, "recall_on_smoke": 0.25, "false_positive_rate": 0.16666666666666666, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 0.0, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 0.75}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 18900, "tokens_out": 212}
+{"run": "bedrock:amazon.nova-lite-v1:0/grounded", "items": 8, "parsed": 8, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 29880, "tokens_out": 169}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:amazon.nova-lite-v1:0/bare", "items": 10, "parsed": 10, "mae": 16.6, "mae_norm": 0.14274437180938687, "within_25pct": 0.9, "median_abs_log_ratio": 0.03568549694595943, "mae_norm_on_moving_days": 0.5363369371684502, "beats_persistence_share": 0.0, "errors": 0, "tokens_in": 3511, "tokens_out": 463}
+{"run": "bedrock:amazon.nova-lite-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.2, "mae_norm": 0.10511550830628216, "within_25pct": 0.9, "median_abs_log_ratio": 0.04759374397238787, "mae_norm_on_moving_days": 0.06264982837423594, "beats_persistence_share": 0.4, "errors": 0, "tokens_in": 6012, "tokens_out": 626}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 38949,
+  "tokens_out": 1371
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_amazon.nova-lite-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:amazon.nova-pro-v1:0 14:07:54
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:amazon.nova-pro-v1:0/bare", "items": 10, "parsed": 10, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 18900, "tokens_out": 266}
+{"run": "bedrock:amazon.nova-pro-v1:0/grounded", "items": 8, "parsed": 8, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 29880, "tokens_out": 221}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:amazon.nova-pro-v1:0/bare", "items": 10, "parsed": 10, "mae": 17.8, "mae_norm": 0.15937838269103455, "within_25pct": 0.8, "median_abs_log_ratio": 0.05912683685422482, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.2, "errors": 0, "tokens_in": 3511, "tokens_out": 441}
+{"run": "bedrock:amazon.nova-pro-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 6012, "tokens_out": 580}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 39087,
+  "tokens_out": 1173
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_amazon.nova-pro-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:us.amazon.nova-2-lite-v1:0 14:08:39
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:us.amazon.nova-2-lite-v1:0/bare", "items": 10, "parsed": 10, "accuracy": 0.6, "recall_on_smoke": 0.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.0, "after 10 to 25 min": 0.0, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "0 of 1", "median_detection_offset_seconds": null, "errors": 0, "tokens_in": 3420, "tokens_out": 495}
+{"run": "bedrock:us.amazon.nova-2-lite-v1:0/grounded", "items": 8, "parsed": 8, "accuracy": 0.5, "recall_on_smoke": 0.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.0, "after 10 to 25 min": 0.0, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "0 of 1", "median_detection_offset_seconds": null, "errors": 0, "tokens_in": 4744, "tokens_out": 418}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:us.amazon.nova-2-lite-v1:0/bare", "items": 10, "parsed": 10, "mae": 14.0, "mae_norm": 0.08201620745484436, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.1, "errors": 0, "tokens_in": 3497, "tokens_out": 507}
+{"run": "bedrock:us.amazon.nova-2-lite-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.2, "mae_norm": 0.1274056195796453, "within_25pct": 0.8, "median_abs_log_ratio": 0.045950143911580234, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 5496, "tokens_out": 538}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 45147,
+  "tokens_out": 526
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.amazon.nova-2-lite-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:us.meta.llama4-scout-17b-instruct-v1:0 14:09:29
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/bare", "items": 10, "parsed": 10, "accuracy": 0.7, "recall_on_smoke": 0.25, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.0, "after 10 to 25 min": 0.5, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 898.0, "errors": 0, "tokens_in": 47440, "tokens_out": 315}
+{"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/grounded", "items": 8, "parsed": 8, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 75240, "tokens_out": 252}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/bare", "items": 10, "parsed": 10, "mae": 25.2, "mae_norm": 0.17381620741692927, "within_25pct": 0.7, "median_abs_log_ratio": 0.10269471053660814, "mae_norm_on_moving_days": 0.2640026432203234, "beats_persistence_share": 0.0, "errors": 0, "tokens_in": 3415, "tokens_out": 499}
+{"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.5, "mae_norm": 0.12969518671095148, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 5414, "tokens_out": 573}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 30085,
+  "tokens_out": 425
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:mistral.mistral-large-3-675b-instruct 14:10:11
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:mistral.mistral-large-3-675b-instruct/bare", "items": 10, "parsed": 10, "accuracy": 0.7, "recall_on_smoke": 0.25, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.0, "after 10 to 25 min": 0.5, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 898.0, "errors": 0, "tokens_in": 21420, "tokens_out": 363}
+{"run": "bedrock:mistral.mistral-large-3-675b-instruct/grounded", "items": 8, "parsed": 8, "accuracy": 0.625, "recall_on_smoke": 1.0, "false_positive_rate": 0.75, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 0.0, "before 25 min or more": 0.5}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 33864, "tokens_out": 316}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:mistral.mistral-large-3-675b-instruct/bare", "items": 10, "parsed": 10, "mae": 17.5, "mae_norm": 0.12675323721176893, "within_25pct": 0.9, "median_abs_log_ratio": 0.10031375365648629, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.2, "errors": 0, "tokens_in": 3585, "tokens_out": 526}
+{"run": "bedrock:mistral.mistral-large-3-675b-instruct/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 6096, "tokens_out": 563}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 32318,
+  "tokens_out": 497
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_mistral.mistral-large-3-675b-instruct-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:mistral.ministral-3-8b-instruct 14:10:51
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/bare", "items": 10, "parsed": 10, "accuracy": 0.9, "recall_on_smoke": 0.75, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 0.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 21420, "tokens_out": 345}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/grounded", "items": 8, "parsed": 8, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 33864, "tokens_out": 283}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/bare", "items": 10, "parsed": 10, "mae": 18.2, "mae_norm": 0.1651757522123825, "within_25pct": 0.8, "median_abs_log_ratio": 0.04455492601706877, "mae_norm_on_moving_days": 0.5104003377448191, "beats_persistence_share": 0.1, "errors": 0, "tokens_in": 3585, "tokens_out": 589}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/grounded", "items": 10, "parsed": 10, "mae": 14.5, "mae_norm": 0.12815453708211869, "within_25pct": 0.8, "median_abs_log_ratio": 0.04277553007225089, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 6096, "tokens_out": 619}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 32314,
+  "tokens_out": 496
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_mistral.ministral-3-8b-instruct-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+=== bedrock:moonshotai.kimi-k2.5 14:11:29
+items: 10 | smoke 4 | sequences 2 | reference frames 28
+buckets: {"before 25 min or more": 4, "before 10 to 25 min": 2, "after 0 to 10 min": 1, "after 10 to 25 min": 2, "after 25 min or more": 1}
+{"run": "bedrock:moonshotai.kimi-k2.5/bare", "items": 10, "parsed": 10, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 22110, "tokens_out": 393}
+{"run": "bedrock:moonshotai.kimi-k2.5/grounded", "items": 8, "parsed": 8, "accuracy": 1.0, "recall_on_smoke": 1.0, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 1.0, "after 10 to 25 min": 1.0, "after 25 min or more": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "1 of 1", "median_detection_offset_seconds": 298.0, "errors": 0, "tokens_in": 34912, "tokens_out": 343}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0}
+{"run": "bedrock:moonshotai.kimi-k2.5/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.2380660437966923, "beats_persistence_share": 0.0, "errors": 0, "tokens_in": 3196, "tokens_out": 721}
+{"run": "bedrock:moonshotai.kimi-k2.5/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_moving_days": 0.2571743240514694, "beats_persistence_share": 0.3, "errors": 0, "tokens_in": 5205, "tokens_out": 899}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+  "tokens_in": 28075,
+  "tokens_out": 435
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshotai.kimi-k2.5-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+usage: run_wildfirevqa.py [-h] [--models [MODELS ...]]
+                          [--conditions [CONDITIONS ...]] [--limit LIMIT]
+                          [--workers WORKERS] [--dry-run] [--suffix SUFFIX]
+                          [--retry-errors]
+run_wildfirevqa.py: error: argument --suffix: expected one argument
+PILOT DONE 14:12:28

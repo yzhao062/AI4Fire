@@ -1,0 +1,85 @@
+==============================================================================================================
+VERIFICATION OF DATA POINTS AND INTERVALS AGAINST PAPER TABLES & TEXT
+==============================================================================================================
+Panel (a) Smoke detection (FIgLib): Recall gain [95% CI], FPR change
+  Model             Recall gain [95% CI]           Paper check              FPR change
+  ---------------------------------------------------------------------------------------------------------
+  claude-opus-4.8   +0.0625 [+0.0197, +0.1204]   excl 0 (Coral)           +0.000
+  claude-opus-5     +0.0358 [-0.0000, +0.0687]   incl 0 (Gray)            +0.024
+  gemini-3.1-pro    +0.1875 [+0.1364, +0.2386]   excl 0 (Coral)           +0.024
+  gpt-6-astra       +0.0982 [+0.0515, +0.1630]   excl 0 (Coral)           +0.024
+  Nova Lite         +0.0804 [+0.0125, +0.1806]   excl 0 (Coral)           -0.083
+  Nova Pro          +0.0625 [+0.0238, +0.0938]   excl 0 (Coral)           +0.023
+  Nova 2 Lite       -0.0982 [-0.1797, -0.0100]   excl 0 (Coral)           +0.000
+  Qwen3-VL          +0.0715 [+0.0288, +0.1210]   excl 0 (Coral)           +0.000
+  Llama 4 Maverick  +0.0447 [-0.0000, +0.0857]   incl 0 (Gray)            +0.036
+  Llama 4 Scout     +0.0982 [+0.0385, +0.1894]   excl 0 (Coral)           +0.012
+  Mistral Large 3   +0.1622 [+0.0947, +0.2473]   excl 0 (Coral)           +0.121
+  Ministral 3 8B    +0.1072 [+0.0595, +0.1711]   excl 0 (Coral)           +0.000
+  Kimi K2.5         +0.1250 [+0.0714, +0.1759]   excl 0 (Coral)           +0.000
+  Gemma 3 27B       +0.1339 [+0.0556, +0.2095]   excl 0 (Coral)           +0.131
+  Gemma 3 12B       +0.0089 [-0.0312, +0.0481]   incl 0 (Gray)            +0.119
+  Gemma 3 4B        +0.0714 [+0.0312, +0.1316]   excl 0 (Coral)           +0.131
+
+Panel (b) Personnel allocation: Normalized error diff [95% CI] (v1 and v2)
+  Model             Rule v1 diff [95% CI]          Rule v2 diff [95% CI]
+  ---------------------------------------------------------------------------------------------------------
+  claude-opus-4.8   +0.0133 [-0.0028, +0.0283] (Gray) +0.0096 [-0.0019, +0.0228] (Gray)
+  claude-opus-5     +0.0076 [-0.0083, +0.0241] (Gray) +0.0002 [-0.0108, +0.0111] (Gray)
+  gemini-3.1-pro    -0.0014 [-0.0174, +0.0146] (Gray) -0.0121 [-0.0258, +0.0011] (Gray)
+  gpt-6-astra       +0.0582 [+0.0234, +0.1026] (Coral) +0.0144 [-0.0004, +0.0323] (Gray)
+  Nova Lite         -0.0216 [-0.1509, +0.0723] (Gray) n/a
+  Nova Pro          +0.0709 [+0.0302, +0.1190] (Coral) n/a
+  Nova 2 Lite       +1.5235 [+0.0494, +4.5082] (Coral) n/a
+  Qwen3-VL          +0.0871 [+0.0470, +0.1353] (Coral) +0.0256 [+0.0027, +0.0518] (Coral)
+  Llama 4 Maverick  +0.0530 [+0.0115, +0.1009] (Coral) +0.0447 [-0.0214, +0.1500] (Gray)
+  Llama 4 Scout     +0.0159 [-0.0281, +0.0658] (Gray) n/a
+  Mistral Large 3   -0.0347 [-0.1167, +0.0326] (Gray) n/a
+  Ministral 3 8B    +0.0428 [-0.0106, +0.0996] (Gray) n/a
+  Kimi K2.5         +0.0812 [+0.0364, +0.1309] (Coral) n/a
+  Gemma 3 27B       +0.0825 [+0.0428, +0.1306] (Coral) n/a
+  Gemma 3 12B       +0.0927 [+0.0466, +0.1452] (Coral) n/a
+  Gemma 3 4B        +0.0281 [+0.0099, +0.0572] (Coral) n/a
+
+Panel (c) Fire danger (Mesogeos): AUPRC diff [95% CI]
+  Model             AUPRC diff [95% CI]            Status
+  ---------------------------------------------------------------------------------------------------------
+  claude-opus-4.8   -0.0316 [-0.0727, +0.0097]   incl 0 (Gray)
+  claude-opus-5     -0.0054 [-0.0296, +0.0210]   incl 0 (Gray)
+  gemini-3.1-pro    -0.0149 [-0.0504, +0.0177]   incl 0 (Gray)
+  gpt-6-astra       -0.0307 [-0.0857, +0.0258]   incl 0 (Gray)
+  Nova Lite         -0.0400 [-0.0914, +0.0061]   incl 0 (Gray)
+  Nova Pro          +0.0028 [-0.0401, +0.0423]   incl 0 (Gray)
+  Nova 2 Lite       +0.0354 [-0.0053, +0.0724]   incl 0 (Gray)
+  Qwen3-VL          +0.0507 [+0.0060, +0.0920]   excl 0 (Coral)
+  Llama 4 Maverick  -0.0137 [-0.0632, +0.0368]   incl 0 (Gray)
+  Llama 4 Scout     -0.0123 [-0.0333, +0.0117]   incl 0 (Gray)
+  Mistral Large 3   -0.0312 [-0.0496, -0.0105]   excl 0 (Coral)
+  Ministral 3 8B    -0.0478 [-0.0781, -0.0156]   excl 0 (Coral)
+  Kimi K2.5         +0.0107 [-0.0413, +0.0637]   incl 0 (Gray)
+  Gemma 3 27B       -0.0659 [-0.1050, -0.0241]   excl 0 (Coral)
+  Gemma 3 12B       -0.0575 [-0.0952, -0.0213]   excl 0 (Coral)
+  Gemma 3 4B        -0.0082 [-0.0168, +0.0001]   incl 0 (Gray)
+
+Panel (d) Fire data tool use (FPA-FOD): accuracy diff, tool minus bare [95% CI], family clusters
+  Model             Accuracy diff [95% CI]         Status
+  ---------------------------------------------------------------------------------------------------------
+  claude-opus-4.8   +0.8974 [+0.7564, +1.0000]   excl 0 (Coral)
+  claude-opus-5     +0.8397 [+0.6603, +0.9744]   excl 0 (Coral)
+  gemini-3.1-pro    +0.8397 [+0.6923, +0.9744]   excl 0 (Coral)
+  gpt-6-astra       +0.9936 [+0.9808, +1.0000]   excl 0 (Coral)
+  Nova Lite         +0.8654 [+0.6859, +0.9872]   excl 0 (Coral)
+  Nova Pro          +0.7372 [+0.5256, +0.9167]   excl 0 (Coral)
+  Nova 2 Lite       +0.8077 [+0.6218, +0.9487]   excl 0 (Coral)
+  Qwen3-VL          +0.8077 [+0.6538, +0.9359]   excl 0 (Coral)
+  Llama 4 Maverick  +0.8141 [+0.6346, +0.9487]   excl 0 (Coral)
+  Llama 4 Scout     +0.8782 [+0.7051, +0.9872]   excl 0 (Coral)
+  Mistral Large 3   +0.8397 [+0.7308, +0.9359]   excl 0 (Coral)
+  Ministral 3 8B    +0.7628 [+0.5449, +0.9359]   excl 0 (Coral)
+  Kimi K2.5         +0.8269 [+0.6795, +0.9551]   excl 0 (Coral)
+  Gemma 3 27B       +0.7692 [+0.5449, +0.9487]   excl 0 (Coral)
+  Gemma 3 12B       -0.0577 [-0.1218, +0.0000]   incl 0 (Gray)
+  Gemma 3 4B        -0.0577 [-0.1218, +0.0000]   incl 0 (Gray)
+==============================================================================================================
+Generated figures\grounding_effects_sweep.pdf
+Generated figures\grounding_effects_sweep.png

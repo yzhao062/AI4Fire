@@ -1,0 +1,27 @@
+=== chain bedrock:qwen.qwen3-coder-30b-a3b-v1:0 start 2026-09-18 15:02:21
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/bare", "items": 300, "parsed": 300, "mae": 13.956666666666667, "mae_norm": 0.15057635469596647, "within_25pct": 0.7766666666666666, "median_abs_log_ratio": 0.04616477583309351, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0, "errors": 0, "tokens_in": 111572, "tokens_out": 15577}
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/grounded", "items": 300, "parsed": 300, "mae": 19.35, "mae_norm": 0.24043892806152253, "within_25pct": 0.7, "median_abs_log_ratio": 0.119959315078979, "mae_norm_on_moving_days": 0.3598542614043349, "beats_persistence_share": 0.22, "errors": 0, "tokens_in": 184144, "tokens_out": 18244}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 15:07:53
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.3833056904453966, "f1_fire": 0.4970414201183432, "f1_no_fire": 0.03773584905660377, "positive_rate_called": 0.9740932642487047, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 530566}
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.4085868984427886, "f1_fire": 0.49696969696969695, "f1_no_fire": 0.10108303249097472, "positive_rate_called": 0.9430051813471503, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 638166}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:10:48
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 2,
+  "mean_tool_calls": 1.622,
+  "max_tool_calls": 8,
+  "tokens_in": 813419,
+  "tokens_out": 44619
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:qwen.qwen3-coder-30b-a3b-v1:0 DONE 2026-09-18 15:14:29

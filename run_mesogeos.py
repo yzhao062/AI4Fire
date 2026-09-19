@@ -20,7 +20,7 @@ from sklearn.metrics import average_precision_score, f1_score
 import gw
 
 S = pathlib.Path(__file__).parent
-MAX_OUT = 1536  # see the note in the module docstring on why this is not a few hundred
+MAX_OUT = int(__import__("os").environ.get("AI4FIRE_MAX_OUT", 1536))  # the benchmark cap; AI4FIRE_MAX_OUT raises it for a documented variant run
 TASK = S / "task-mesogeos"
 PUBLISHED = {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}
 SHOW = ["t2m", "d2m", "tp", "sp", "wind_speed", "rh", "lai", "ndvi", "smi", "lst_day", "lst_night", "ssrd"]
@@ -199,6 +199,7 @@ def main():
                 base = {"item_id": it["item_id"], "label": it["label"], "target_date": it["target_date"], "variant": args.variant}
                 try:
                     text, usage, served = gw.call(key, model, msgs, max_tokens=MAX_OUT)
+                    usage["max_out"] = MAX_OUT
                 except Exception as exc:
                     return dict(base, error=str(exc)[:200], probability=None, call=None)
                 p, f = parse(text)

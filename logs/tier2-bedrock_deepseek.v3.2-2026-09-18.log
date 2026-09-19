@@ -1,0 +1,27 @@
+=== chain bedrock:deepseek.v3.2 start 2026-09-18 15:03:27
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:deepseek.v3.2/bare", "items": 300, "parsed": 300, "mae": 15.776666666666667, "mae_norm": 0.16745999519767515, "within_25pct": 0.7533333333333333, "median_abs_log_ratio": 0.07356655358430583, "mae_norm_on_moving_days": 0.33869834724148534, "beats_persistence_share": 0.12333333333333334, "errors": 0, "tokens_in": 96384, "tokens_out": 15070}
+{"run": "bedrock:deepseek.v3.2/grounded", "items": 300, "parsed": 300, "mae": 20.31, "mae_norm": 0.25478108214255685, "within_25pct": 0.6833333333333333, "median_abs_log_ratio": 0.12605493390158004, "mae_norm_on_moving_days": 0.3699370906190864, "beats_persistence_share": 0.21333333333333335, "errors": 0, "tokens_in": 155786, "tokens_out": 16070}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 15:07:55
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:deepseek.v3.2/bare", "items": 386, "parsed": 386, "auprc": 0.4693375117467366, "f1_fire": 0.5809768637532133, "f1_no_fire": 0.5744125326370757, "positive_rate_called": 0.6683937823834197, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 438132}
+{"run": "bedrock:deepseek.v3.2/grounded", "items": 386, "parsed": 386, "auprc": 0.4392177366747177, "f1_fire": 0.5691906005221932, "f1_no_fire": 0.5758354755784062, "positive_rate_called": 0.6528497409326425, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 525302}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:12:09
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 1.083,
+  "max_tool_calls": 7,
+  "tokens_in": 610234,
+  "tokens_out": 28949
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_deepseek.v3.2-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:deepseek.v3.2 DONE 2026-09-18 15:17:23

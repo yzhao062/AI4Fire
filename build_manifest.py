@@ -3,10 +3,13 @@
 The manifest lists the response files behind the paper: the 36 reported runs (three tasks, six models, bare
 and grounded), the supporting repeat and repair files, the historic archives kept as evidence of earlier
 defects, the files present in the task directories but excluded from the reported set, the trained non-LLM
-baselines, the prompt-sensitivity and retrieval-rule variant runs, the tool-use runs, and the aerial question-answering runs.  Membership, sections, reasons, and
-the skew overrides are read from the existing manifest; row counts, SHA-256 checksums, the distinct
-served_model values, and the modification times are recomputed from the files on disk, so the manifest
-can be regenerated after any file is rewritten.
+baselines, the prompt-sensitivity and retrieval-rule variant runs, the tool-use runs, the aerial
+question-answering runs, and the two model-sweep sections of 2026-09-18 (the added full-capability models on
+allocation, fire danger, and smoke detection; the text-only models on allocation and fire danger), whose
+membership comes from the tiers in models.py.  Membership of the other sections, reasons, and the skew
+overrides are read from the existing manifest; row counts, SHA-256 checksums, the distinct served_model
+values, and the modification times are recomputed from the files on disk, so the manifest can be
+regenerated after any file is rewritten.
 
     python build_manifest.py            # rewrite manifest-v1.json in place
     python build_manifest.py --check    # exit 1 if any recorded checksum differs from the file on disk
@@ -17,9 +20,15 @@ import hashlib
 import json
 import os
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 MANIFEST = ROOT / "manifest-v1.json"
+sys.path.insert(0, str(ROOT))
+from models import models as registry_models  # noqa: E402
+
+ADDED_STEMS = [m.stem for m in registry_models(tier="added")]
+TEXT_STEMS = [m.stem for m in registry_models(tier="text")]
 
 VARIANT_SECTIONS = {
     "baselines": ("Trained non-LLM baselines on the same items and the same displayed information; "
@@ -38,6 +47,16 @@ VARIANT_SECTIONS = {
                     "(run_wildfirevqa.py), bare and grounded arms, 408 items over 390 frames; "
                     "scored by analysis/wildfirevqa_paired.py; task-wildfirevqa/image-map.json maps each item to its frame.",
                     ["task-wildfirevqa/responses-*.jsonl", "task-wildfirevqa/image-map.json"]),
+    "added_models": ("Model sweep of 2026-09-18: the added full-capability Bedrock models (tier 'added' in models.py) on "
+                     "personnel allocation, fire danger, and smoke detection, bare and grounded, same prompts and "
+                     "cap as the reported runs; their tool-use and aerial files sit in the tooluse and wildfirevqa sections.",
+                     ["task-%s/responses-%s-*.jsonl" % (task, stem)
+                      for task in ("allocation", "mesogeos", "figlib") for stem in ADDED_STEMS]),
+    "text_models": ("Model sweep of 2026-09-18: the text-only Bedrock models (tier 'text' in models.py) on personnel "
+                    "allocation and fire danger, bare and grounded; the three reasoning models ran at an 8,192-token "
+                    "cap recorded in usage.max_out; tool-use files of the tool-capable ones sit in the tooluse section.",
+                    ["task-%s/responses-%s-*.jsonl" % (task, stem)
+                     for task in ("allocation", "mesogeos") for stem in TEXT_STEMS]),
 }
 
 

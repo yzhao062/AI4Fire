@@ -903,18 +903,6 @@
   ],
   "excluded_from_reported": [
     {
-      "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-bare.jsonl",
-      "sha256": "302fa45b59e50df0508284c0463604c1b96fc73985cc624c0b99991ae73570ec",
-      "row_count": 10,
-      "reason": "10-item Llama 3 probe run to verify Bedrock credentials before the main benchmark."
-    },
-    {
-      "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-grounded.jsonl",
-      "sha256": "3fffc8ff92c847d79c8c72957c15a4aaba95306f9f715ebe4ff9d171da271f67",
-      "row_count": 10,
-      "reason": "10-item Llama 3 probe run to verify Bedrock credentials before the main benchmark."
-    },
-    {
       "path": "task-figlib/responses-claude-opus-5-bare-1024px.jsonl",
       "sha256": "86a2ab40b6f201742e5668b0ced9ee6c67ba095d14973a663cecf3a52792469e",
       "row_count": 224,
@@ -1276,6 +1264,526 @@
     "reason": "Fire data tool-use runs on FPA-FOD (run_tooluse.py), bare and tool arms, 156 items; scored by analysis/tooluse_paired.py.",
     "files": [
       {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-lite-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "5ba07ece23e02d919959c8b34cd77e158c034148f91118b61695779b92a56ed7",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:28:50",
+          "latest": "2026-09-18T14:28:50",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-lite-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "a71ac234f2af07fcb748282bb8f3b284b57d7fc2f7d6e6a8982ea6e02ee5a2a7",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:11",
+          "latest": "2026-09-18T14:30:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-micro-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "824f19c9c9c69012f8d76e6c47650dc7a3dd2a1ac763acba84b078f5e5aaade9",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:47",
+          "latest": "2026-09-18T15:00:47",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-micro-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "646922e09a52c943f3196cc9b8451056aadb7b85b5019c7bdf643a6248402da2",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:56",
+          "latest": "2026-09-18T15:01:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-pro-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "6a014cd6291dbf97044a865dfc33e2e51fc3754b7251be42d1ac3b3472b2e573",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:11",
+          "latest": "2026-09-18T14:30:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_amazon.nova-pro-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "d50bd3066585c20bb65dc9f709462aabbb1e3c2b5ba30fe07b6f31837230466e",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:31:54",
+          "latest": "2026-09-18T14:31:54",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_deepseek.v3.2-bare.jsonl",
+        "row_count": 156,
+        "sha256": "f9d43768841f6fd2a8d1f1362a8eeeef86c7610f41c0744ec4d0ea9e9b247e89",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:14:12",
+          "latest": "2026-09-18T15:14:12",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_deepseek.v3.2-tool.jsonl",
+        "row_count": 156,
+        "sha256": "bc8d14d79930410f4371b82ff004b299065f6c2fdff180e2abc3899a9bd44d3c",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:17:23",
+          "latest": "2026-09-18T15:17:23",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-12b-it-bare.jsonl",
+        "row_count": 156,
+        "sha256": "3d96686d42036aadcdb064012646cb9b801a1e387bba359e7b2a5842aaf8ea5c",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:12",
+          "latest": "2026-09-18T15:08:12",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-12b-it-tool.jsonl",
+        "row_count": 156,
+        "sha256": "6558c5fb1bfdc1c81dd889be984d2c11431717176e84b78aa40e31a6bb3e9b69",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:17:10",
+          "latest": "2026-09-18T15:17:10",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-27b-it-bare.jsonl",
+        "row_count": 156,
+        "sha256": "e16ee80e22f4e86dd5296fb69338f7250fe75c751bb11677ddeb9609587d1a49",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:09:52",
+          "latest": "2026-09-18T15:09:52",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-27b-it-tool.jsonl",
+        "row_count": 156,
+        "sha256": "bda3d6c4144ccf6ae4c644cadec338595b95a6b01f4b4157486423774322ac61",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:17:36",
+          "latest": "2026-09-18T15:17:36",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-4b-it-bare.jsonl",
+        "row_count": 156,
+        "sha256": "e4ccb1aaf5bfea8180d6d9b328f83309d9bae0585370b1f71a2fb5873481bda9",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:57",
+          "latest": "2026-09-18T15:03:57",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_google.gemma-3-4b-it-tool.jsonl",
+        "row_count": 156,
+        "sha256": "684c45a1e91e5d6090a2c9bb080ce9857990d81d3181878d41d0b81221d20305",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:16:42",
+          "latest": "2026-09-18T15:16:42",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_minimax.minimax-m2.5-bare.jsonl",
+        "row_count": 156,
+        "sha256": "67f8f4d5250b6b683fd9d2daba18df5a3e6ecc2385aa775c1a63ed4346baff9e",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T18:11:53",
+          "latest": "2026-09-18T18:11:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_minimax.minimax-m2.5-tool.jsonl",
+        "row_count": 156,
+        "sha256": "b5cc6e4b391f123a67a71964648a3793c760c08207f18ff2324a27b1208d16ab",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:31:45",
+          "latest": "2026-09-18T17:31:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.devstral-2-123b-bare.jsonl",
+        "row_count": 156,
+        "sha256": "b81220c10958b8e2ac061fe534289e4cccb05ae559dc3cc67f77075d48d1d686",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:03",
+          "latest": "2026-09-18T15:07:03",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.devstral-2-123b-tool.jsonl",
+        "row_count": 156,
+        "sha256": "febb11949f28ac86385e2fc0278ca5bbc599f3361f3b8e0e47b67c867eaa3d20",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:09:17",
+          "latest": "2026-09-18T15:09:17",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.ministral-3-8b-instruct-bare.jsonl",
+        "row_count": 156,
+        "sha256": "16e81e15e6581bda59a951921df0c67d8bc6a76ec2b53f9a00226240ce9deb9f",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:29:06",
+          "latest": "2026-09-18T14:29:06",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.ministral-3-8b-instruct-tool.jsonl",
+        "row_count": 156,
+        "sha256": "6630936500232ab76ff3fb9d4f8cea0e9ce7ada0955aa6af868b42b4cca4b5c8",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:37:19",
+          "latest": "2026-09-18T14:37:19",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.mistral-large-3-675b-instruct-bare.jsonl",
+        "row_count": 156,
+        "sha256": "fb5c3b0494073cf4602ac80bd0221d20f54ed96128ab62abd5ddffc051c5e225",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:31",
+          "latest": "2026-09-18T14:30:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.mistral-large-3-675b-instruct-tool.jsonl",
+        "row_count": 156,
+        "sha256": "492a6444121411f1991f3bad7537998f75a5e55c4ce67c1faf17fa9bc2c2b107",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:31:42",
+          "latest": "2026-09-18T14:31:42",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.mistral-small-2402-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "0f50f568e2dc232373cbd619a748cb95a5b35365a6e124f18a389a8921b687ff",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:06:09",
+          "latest": "2026-09-18T15:06:09",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_mistral.mistral-small-2402-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "93e6e3cf21fe20fd1659579221d9797157e9d2b07c4d5f0db26e62cbc06a504f",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:15",
+          "latest": "2026-09-18T15:08:15",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl",
+        "row_count": 156,
+        "sha256": "3d464e4c61f064d80f4f0abbf9e11ae97e76996bc624801c532fee0470275ee7",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:25:30",
+          "latest": "2026-09-18T17:25:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_moonshot.kimi-k2-thinking-tool.jsonl",
+        "row_count": 156,
+        "sha256": "d551249f6b60ed2ffe46b327295639b4fd763e0c1571228a9295c6b2b19eba50",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:09:45",
+          "latest": "2026-09-18T17:09:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_moonshotai.kimi-k2.5-bare.jsonl",
+        "row_count": 156,
+        "sha256": "2704e050c8e5e4aa6391ccdef5831df905be99909cf11d46ac68bad441d8595c",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:36:11",
+          "latest": "2026-09-18T14:36:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_moonshotai.kimi-k2.5-tool.jsonl",
+        "row_count": 156,
+        "sha256": "b868f1e24c1c961a1786f6aba343e58a76121c8ec695e6f81b3574793b485d9c",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:49:32",
+          "latest": "2026-09-18T14:49:32",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_nvidia.nemotron-super-3-120b-bare.jsonl",
+        "row_count": 156,
+        "sha256": "3aa1947354481e8c0dc87562e256f82c4ef06727bcda18621bcdb3b6e9219624",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:33:35",
+          "latest": "2026-09-18T15:33:35",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_nvidia.nemotron-super-3-120b-tool.jsonl",
+        "row_count": 156,
+        "sha256": "f2f12b91d37cd80f4b7ba027ac17d50595ead66c3df87236026998aa92ecbf1e",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:40:53",
+          "latest": "2026-09-18T15:40:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_openai.gpt-oss-120b-1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "7e4151892cf3456c9d90399f14a5f490782c3d8ab9c88207aa0f5115ff8ab8b6",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:19:25",
+          "latest": "2026-09-18T15:19:25",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_openai.gpt-oss-120b-1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "bf590a428cfdf6b3390afd98fad6750210b9f27486e8dc08efa6da430be74f21",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:21:01",
+          "latest": "2026-09-18T15:21:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_openai.gpt-oss-20b-1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "efd217b13e27549d8c3e5e93220464d8500819d3b944656219440a988f7bf924",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:31:58",
+          "latest": "2026-09-18T15:31:58",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_openai.gpt-oss-20b-1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "2b8966d648fa04ca7a83a99fe3c1bce90f8c52c4ee4ae936f11c193e6b76cf52",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:34:25",
+          "latest": "2026-09-18T15:34:25",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-32b-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "1392ea13a3f18019d7c8951fcde5406fa2c1989a79f4dbb572a43ca2f4df256e",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:21",
+          "latest": "2026-09-18T15:02:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-32b-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "ce4f69c488b75590f9ede835fe6d59eb4ae0c1cc08fbe6776f923b476976b476",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:14",
+          "latest": "2026-09-18T15:03:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "084f4097d8b7649af1586a67b42dc0a7444c7ad35a8b6c962b5fd1a22f5b803e",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:12:29",
+          "latest": "2026-09-18T15:12:29",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "7c038970885ad5c840f909a85c4cf1c556449a979d37b75001f1490267054a24",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:14:29",
+          "latest": "2026-09-18T15:14:29",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-next-80b-a3b-bare.jsonl",
+        "row_count": 156,
+        "sha256": "8c6bae509340d2b4b6739ec1b11617700d052f39a0cb67c0a549cf24a94cf02d",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:04",
+          "latest": "2026-09-18T15:08:04",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-next-80b-a3b-tool.jsonl",
+        "row_count": 156,
+        "sha256": "15128f935aa326791294e2bde65ae00e4ad8ff6c84d66405ef0ed440c3c988ac",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:09:44",
+          "latest": "2026-09-18T15:09:44",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
         "row_count": 156,
         "sha256": "3be2698649870dca843ec806eb4a3218456bd99603d0855ad9c12d79038eb129",
@@ -1302,6 +1810,84 @@
         }
       },
       {
+        "path": "task-tooluse/responses-bedrock_us.amazon.nova-2-lite-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "d319db9b7b077100a9be1bb556d1f70df4b5fd94c0c649c9605f994e77107124",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:31:30",
+          "latest": "2026-09-18T14:31:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.amazon.nova-2-lite-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "613ba2eb6eb12126548b8651e5733a7c4f9a5c0296917d5eb3d9791dad82a957",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:37:48",
+          "latest": "2026-09-18T14:37:48",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "32d97b5c24d787206f0ab5fdd8689afff50d9066a59c84484d729cf04801ef30",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:59",
+          "latest": "2026-09-18T15:02:59",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "fde4e0b920b45c0efbe44ed1bd93696c8760052a23fe27570810c2485c2f5b38",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:27",
+          "latest": "2026-09-18T15:03:27",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "7f757d12f8ec57b5cd45d5f57c95ddb2afcd236abbf5e420ba0490623fd9b61b",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:33",
+          "latest": "2026-09-18T15:02:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "f539ac889ba9c1cc9b9d066e5bd582f86a1d3420f24ca17c0ad510e715b7702a",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:15",
+          "latest": "2026-09-18T15:03:15",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-tooluse/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
         "row_count": 156,
         "sha256": "9c6f35bae8bcd7a5f3014be8440d1ae34aa4a16aa0109787ce33381d2d61a0a6",
@@ -1324,6 +1910,110 @@
         "written": {
           "earliest": "2026-09-17T16:58:31",
           "latest": "2026-09-17T16:58:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 156,
+        "sha256": "fff646e8b6a1b03dc31535f2e93b0727fe2bdda0f60ee40aaebf83c007a9315a",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:29:51",
+          "latest": "2026-09-18T14:29:51",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-tool.jsonl",
+        "row_count": 156,
+        "sha256": "61e0bada04284f312705831f5bec3e03b0fdc367d075259c9a77e8a3f4b28d2c",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:34",
+          "latest": "2026-09-18T14:30:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-4.7-bare.jsonl",
+        "row_count": 156,
+        "sha256": "85b079523a26ee0d6eb60e4d59fbd845c5b86103120c58f6fbfa7fd0e070956f",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:16:26",
+          "latest": "2026-09-18T15:16:26",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-4.7-flash-bare.jsonl",
+        "row_count": 156,
+        "sha256": "68930f8298b156fa9c1ce95d16a69a5fb64afd1357ac1c7ecbccdb7d4e122c46",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:18:28",
+          "latest": "2026-09-18T15:18:28",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-4.7-flash-tool.jsonl",
+        "row_count": 156,
+        "sha256": "f6398ee2575b9dc7de6843174f1eec29d18cf56f6bce40e0b0d62f9c9652e8de",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:20:00",
+          "latest": "2026-09-18T15:20:00",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-4.7-tool.jsonl",
+        "row_count": 156,
+        "sha256": "6cdc47fa2a546f9a082a0b4a7c0bde815d7b44fec7d3dac9a55ba0e01dcd8817",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:17:35",
+          "latest": "2026-09-18T15:17:35",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-5-bare.jsonl",
+        "row_count": 156,
+        "sha256": "5e0451500b97d5d9ff4402f8c87f2268fd891f1929cc3977a37e49784a5f2f14",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:21:41",
+          "latest": "2026-09-18T15:21:41",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_zai.glm-5-tool.jsonl",
+        "row_count": 156,
+        "sha256": "d8a67ac6356f933772e144d9506a26abda84098ccdd3b78f325b9e3e6d8e0802",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:23:59",
+          "latest": "2026-09-18T15:23:59",
           "source": "file mtime"
         }
       },
@@ -1448,6 +2138,214 @@
         }
       },
       {
+        "path": "task-wildfirevqa/responses-bedrock_amazon.nova-lite-v1_0-bare.jsonl",
+        "row_count": 408,
+        "sha256": "f348fe16532427abfc76d659fa419e0b6cfd642889b52e593fa44f8162825f9e",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:32:02",
+          "latest": "2026-09-18T14:32:02",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_amazon.nova-lite-v1_0-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "b437e35f29bac50da4efc5d8ef7d598ebd16756ede9de90ba295155fbe5b3b3a",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:33:55",
+          "latest": "2026-09-18T14:33:55",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_amazon.nova-pro-v1_0-bare.jsonl",
+        "row_count": 408,
+        "sha256": "26742429fd1d3fe11adc2ccd8c4b7b12ad75a6ae730b1f904f4d1428d01bffb0",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:33:54",
+          "latest": "2026-09-18T14:33:54",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_amazon.nova-pro-v1_0-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "69d96af5eb143dcae9e357482861cd4c74b3ef71763131a23293c4171936c6b6",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:35:53",
+          "latest": "2026-09-18T14:35:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-12b-it-bare.jsonl",
+        "row_count": 408,
+        "sha256": "6b9e12b75f2e012fe9aeafd8d753b34ac5056a7a5e8dc679ce8443345624e3c5",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:10:44",
+          "latest": "2026-09-18T15:10:44",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-12b-it-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "91fd9db10557e1a15e09721d71a893a35898122c71aa319778f75bd1351bd419",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:13:08",
+          "latest": "2026-09-18T15:13:08",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-27b-it-bare.jsonl",
+        "row_count": 408,
+        "sha256": "2793e11834594ee8edd9bd7165cdd7e56d1b1610920785469c22e0a9bfbabcbe",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:14:02",
+          "latest": "2026-09-18T15:14:02",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-27b-it-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "8a00052f8a36c5abd0a68dbcf8629b2eb128bfdf3a8b5adae907f9e88aefd598",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:16:50",
+          "latest": "2026-09-18T15:16:50",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-4b-it-bare.jsonl",
+        "row_count": 408,
+        "sha256": "322a86d7b617740ff70e37901782450653cbb53e8aea5a5580fd3ec35755c959",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:06:18",
+          "latest": "2026-09-18T15:06:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_google.gemma-3-4b-it-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "a8bb4c4411ec55dc2c0d6d1380cc54e0de19904a4b990433dafba3ecba9035a0",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:13",
+          "latest": "2026-09-18T15:08:13",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_mistral.ministral-3-8b-instruct-bare.jsonl",
+        "row_count": 408,
+        "sha256": "f7a5b2dca879c3255c0a507deb3d8b3d647634b690759f5e462caaee3e05b611",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:32:08",
+          "latest": "2026-09-18T14:32:08",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_mistral.ministral-3-8b-instruct-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "056e2f9a6b1d70c5e20dc4763f88f4c16d3de3250170d2268148fbeaf650e26a",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:34:01",
+          "latest": "2026-09-18T14:34:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_mistral.mistral-large-3-675b-instruct-bare.jsonl",
+        "row_count": 408,
+        "sha256": "10f52e1db74ac461a9b004cf14aaf3f477b800d048259ecc9f424b88604f1130",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:33:51",
+          "latest": "2026-09-18T14:33:51",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_mistral.mistral-large-3-675b-instruct-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "3b13d4f553a96de4dcf63dce37a80260e9a15acf1bee3a04eff77abe238ca094",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:36:02",
+          "latest": "2026-09-18T14:36:02",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_moonshotai.kimi-k2.5-bare.jsonl",
+        "row_count": 408,
+        "sha256": "b72a321f542b503104f0743b96d1638b22ed9407b06952001f67b3644b618f80",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:41:13",
+          "latest": "2026-09-18T14:41:13",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_moonshotai.kimi-k2.5-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "0eafb2be429a5ca07d38bed8122cc40775a00865d679667148c30af79a4e26c0",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:44:10",
+          "latest": "2026-09-18T14:44:10",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-wildfirevqa/responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl",
         "row_count": 408,
         "sha256": "10027930fdfb414b42e2df81bc639b9a1dbc257c2191ae43267f26070189ebff",
@@ -1474,6 +2372,32 @@
         }
       },
       {
+        "path": "task-wildfirevqa/responses-bedrock_us.amazon.nova-2-lite-v1_0-bare.jsonl",
+        "row_count": 408,
+        "sha256": "f1a6365fab22cb6ce32ab260ed0b2455376bf599eb7b083404c6fd74f8671bf3",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:35:05",
+          "latest": "2026-09-18T14:35:05",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_us.amazon.nova-2-lite-v1_0-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "9287b6935389f229cf13134e54c700ae5c15b248245183ead975551e4a55f4e0",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:37:11",
+          "latest": "2026-09-18T14:37:11",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-wildfirevqa/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl",
         "row_count": 408,
         "sha256": "d1f02fb4a363ac413c809677c31aa264ffc6ca47f25c0ca2144819e5478489bb",
@@ -1496,6 +2420,32 @@
         "written": {
           "earliest": "2026-09-18T10:44:29",
           "latest": "2026-09-18T10:44:29",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 408,
+        "sha256": "f08f493c41a66b8758ab5ff28c4ab0ea2f081a9c0e914bdaf13790aac69efdeb",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:34:37",
+          "latest": "2026-09-18T14:34:37",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-wildfirevqa/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-grounded.jsonl",
+        "row_count": 408,
+        "sha256": "4e890db1b6a64f80241fc586c0c80c1e2d5aafaa71c9b296a5e334e2b458eeaf",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:37:57",
+          "latest": "2026-09-18T14:37:57",
           "source": "file mtime"
         }
       },
@@ -1600,6 +2550,1784 @@
         "written": {
           "earliest": "2026-09-18T11:03:45",
           "latest": "2026-09-18T11:03:45",
+          "source": "file mtime"
+        }
+      }
+    ]
+  },
+  "added_models": {
+    "reason": "Model sweep of 2026-09-18: the added full-capability Bedrock models (tier 'added' in models.py) on personnel allocation, fire danger, and smoke detection, bare and grounded, same prompts and cap as the reported runs; their tool-use and aerial files sit in the tooluse and wildfirevqa sections.",
+    "files": [
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-lite-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "ce35dadc4f7fb991e81106cf0049215109f5dc9d3b8305ff999e7797109342e6",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:30",
+          "latest": "2026-09-18T14:21:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-lite-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "e07238d08c568ddddcc33ad06345215b0c7fa35e1bc26b7216810d0afd243965",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:33",
+          "latest": "2026-09-18T14:22:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-pro-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "fdfc09e9af5173dc5c55f6aff147e8cb584f89af65913c7aabae430a3393a2ed",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:45",
+          "latest": "2026-09-18T14:21:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-pro-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "9103f47532346190f6cc49b14d4c1b3297a2adc3a866c83fd8c67c316fcc5e27",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:58",
+          "latest": "2026-09-18T14:22:58",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-12b-it-bare.jsonl",
+        "row_count": 300,
+        "sha256": "228362d098e47646438c67015b398e072c12a5f93292c63f578a86c7bb365dff",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:14",
+          "latest": "2026-09-18T14:58:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-12b-it-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "6fc96fdf9f2ac63917f8568668594d958d7ec099591296365524480e249c57b8",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:45",
+          "latest": "2026-09-18T14:59:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-27b-it-bare.jsonl",
+        "row_count": 300,
+        "sha256": "8a26a6bbb61f505cf452687eef366f1d1945b5da603c785544cfefdb766e52e5",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:33",
+          "latest": "2026-09-18T14:58:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-27b-it-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "c512a3fa6f4cda0ff2a6945ea3fb1a1138c4e337b93f8286b17938fa61d8a750",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:19",
+          "latest": "2026-09-18T15:00:19",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-4b-it-bare.jsonl",
+        "row_count": 300,
+        "sha256": "a0a380d1320feed42c899b61f3eaafe4283b794344bddcc0e16f796e05c2b971",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:57:41",
+          "latest": "2026-09-18T14:57:41",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_google.gemma-3-4b-it-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "2ac02ecb4098f56fc20c404fc4e65910245c52cc1225238b869f4c8e31df510e",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:27",
+          "latest": "2026-09-18T14:58:27",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.ministral-3-8b-instruct-bare.jsonl",
+        "row_count": 300,
+        "sha256": "9ab012739d9d3777b0cb0ad8cc3cff9d08003e2f571f5e8aaf9cb3f7481e7d5e",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:26",
+          "latest": "2026-09-18T14:21:26",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.ministral-3-8b-instruct-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "e054562173213527c17b30d176277b27a07880efa50e4f0914addb3596af1c03",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:14",
+          "latest": "2026-09-18T14:22:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.mistral-large-3-675b-instruct-bare.jsonl",
+        "row_count": 300,
+        "sha256": "9e5e1126a741d14588eaadcb680b1df1036eb2112f791df4a0787f570e364e06",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:47",
+          "latest": "2026-09-18T14:21:47",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.mistral-large-3-675b-instruct-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "0ec226c47d26fd77a87cb018e7bc5132c4ea5b4bf799441263a0818c29d2b250",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:53",
+          "latest": "2026-09-18T14:22:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_moonshotai.kimi-k2.5-bare.jsonl",
+        "row_count": 300,
+        "sha256": "aa951d364008d72370d6383250d4b1410ca94e451c5f2062ddf436646ce4c2d0",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:53",
+          "latest": "2026-09-18T14:22:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_moonshotai.kimi-k2.5-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "e86a923bb6407096a3676f25bcdb88b6e653b34eacc302a604ffe161cb3b48ec",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:25:00",
+          "latest": "2026-09-18T14:25:00",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.amazon.nova-2-lite-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "3d03f523780f73cf9a718f29f6a2fee1ab1be34e6237563feecd3562b9274e2a",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:42",
+          "latest": "2026-09-18T14:21:42",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.amazon.nova-2-lite-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "0c1f1887bb8f53868089ea730ec4f8af6cd7fd70bd2b878382c5125cdedbac08",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:52",
+          "latest": "2026-09-18T14:22:52",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "0404bc0b0fea417db615c45f83469ed6b37b75e3a2954a93ceac3786e976be97",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:21:37",
+          "latest": "2026-09-18T14:21:37",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "d2bce8ec56acb6588604f0113c567b90b4a6811b1b98fd832729439d411696a9",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:22:37",
+          "latest": "2026-09-18T14:22:37",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_amazon.nova-lite-v1_0-bare.jsonl",
+        "row_count": 224,
+        "sha256": "07b53625978222b8c0c32719480a9e7c02ebe781871006999aa16c21e5b63547",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:26:30",
+          "latest": "2026-09-18T14:26:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_amazon.nova-lite-v1_0-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "3668b9d23dc6cb1f760934ce2a2a84531634fff8b8f89bb57cb3d832ed6b8a6d",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:28:25",
+          "latest": "2026-09-18T14:28:25",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_amazon.nova-pro-v1_0-bare.jsonl",
+        "row_count": 224,
+        "sha256": "91b480e9a2406b51c62b6a9a68c0e92188b6715ae7b7298e2a72a593a97afd68",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:27:54",
+          "latest": "2026-09-18T14:27:54",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_amazon.nova-pro-v1_0-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "1cc96d6a689f1657da17836f6a93aa4e6624075bd2ad225c02dfa890f0148418",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:29:34",
+          "latest": "2026-09-18T14:29:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-12b-it-bare.jsonl",
+        "row_count": 224,
+        "sha256": "b918862ab3873ca4cab9fb2fecc705c67515161ace6dea9790798f86b926d83a",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:06:01",
+          "latest": "2026-09-18T15:06:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-12b-it-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "92085d47d393105b8780815abb97e4bd9fa8bc06fd30ea57f23f748015609e96",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:27",
+          "latest": "2026-09-18T15:07:27",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-27b-it-bare.jsonl",
+        "row_count": 224,
+        "sha256": "aebde5733b0d4e1e68abc0e7072eb2568bc7632855426034348aab4403c1a7ae",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:10",
+          "latest": "2026-09-18T15:07:10",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-27b-it-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "4907cff9bc81b6d3e7a0365312af8e202e7b5c36b35e3b7d36da7772cfcde5e9",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:55",
+          "latest": "2026-09-18T15:08:55",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-4b-it-bare.jsonl",
+        "row_count": 224,
+        "sha256": "bf525f48d1f869c55e55f50764f5aa2a4c49afb0d20429b87ff00de843f6b510",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:14",
+          "latest": "2026-09-18T15:02:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_google.gemma-3-4b-it-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "5684f84d7ba582bd25d621f2fe10ecdef3f7756cb2e00ceb1cf62a4f6e08bf70",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:31",
+          "latest": "2026-09-18T15:03:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_mistral.ministral-3-8b-instruct-bare.jsonl",
+        "row_count": 224,
+        "sha256": "fab7a15d578c36e582dfd259bad40184f4308d5cf5965f8bf01e9e05aa8973df",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:26:37",
+          "latest": "2026-09-18T14:26:37",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_mistral.ministral-3-8b-instruct-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "a4cdd1e876a08d158161f79531bf38843768223dfd52fa3ba5d6d30b4e024467",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:28:45",
+          "latest": "2026-09-18T14:28:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_mistral.mistral-large-3-675b-instruct-bare.jsonl",
+        "row_count": 224,
+        "sha256": "8c7a453984bfadb3155469ad7d77a3d5576caa0011e0a9c0d24681cd2dbdb26b",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:27:17",
+          "latest": "2026-09-18T14:27:17",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_mistral.mistral-large-3-675b-instruct-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "b4e78100756bb46c2778e798e8f7e950199191790708ab86b47487122efc0915",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:29:52",
+          "latest": "2026-09-18T14:29:52",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_moonshotai.kimi-k2.5-bare.jsonl",
+        "row_count": 224,
+        "sha256": "5c4a26d00a01d1dca72130bf9361d340b7145a91d7cd9cef408eccfdebd0ea69",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:31:50",
+          "latest": "2026-09-18T14:31:50",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_moonshotai.kimi-k2.5-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "f4b0be0e76bd01a9304e0f189bc14f44c59e79461882c7b8db6c4d3bfa981ab3",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:33:34",
+          "latest": "2026-09-18T14:33:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_us.amazon.nova-2-lite-v1_0-bare.jsonl",
+        "row_count": 224,
+        "sha256": "7e131748e05a8e32ba8b237113f5bd3642e459bb442e45a4d7893d11ce3c73ee",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:28:22",
+          "latest": "2026-09-18T14:28:22",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_us.amazon.nova-2-lite-v1_0-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "dd78e488e36a97ab5e6eda360972451e7581659d20d5b6ed7376074f6cef927a",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:19",
+          "latest": "2026-09-18T14:30:19",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 224,
+        "sha256": "1587023895ed3069f71a687179487c4b9a05af66c3ffcbeaeb84fbaa6789ac22",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:26:33",
+          "latest": "2026-09-18T14:26:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-figlib/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-grounded.jsonl",
+        "row_count": 196,
+        "sha256": "ef6d4b0d88b4502aa872dd106bdb3b32f2fe56f5433f354e63f3cfe249c80dc4",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:28:59",
+          "latest": "2026-09-18T14:28:59",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-lite-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "ca8275e7c108f282c10e15bace1c7dc4b4d330be9c2a058b95b1cbab085de554",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:23:43",
+          "latest": "2026-09-18T14:23:43",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-lite-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "36cdf3478255084d5d07668aa0d0c902a4abfd5bbd49a71751d44fbf2c93ae6e",
+        "served_model": [
+          "amazon.nova-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:25:10",
+          "latest": "2026-09-18T14:25:10",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-pro-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "dedc3867cc329b798d4469988b457a454ba5393e3ebc29b536815d5200493282",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:24:50",
+          "latest": "2026-09-18T14:24:50",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-pro-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "3fb34447f71baf45fabb988908be15059ff5b7e47deb930e1300d620ef420221",
+        "served_model": [
+          "amazon.nova-pro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:26:21",
+          "latest": "2026-09-18T14:26:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-12b-it-bare.jsonl",
+        "row_count": 386,
+        "sha256": "dd191b0c8fba706fd3dba0202afd666f390975df6b9ce6b83391cbb74573f823",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:21",
+          "latest": "2026-09-18T15:02:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-12b-it-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "b3aa4f33832f20646634397257704dc292e08576bde8676f6f5b927584941272",
+        "served_model": [
+          "google.gemma-3-12b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:04:42",
+          "latest": "2026-09-18T15:04:42",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-27b-it-bare.jsonl",
+        "row_count": 386,
+        "sha256": "52aa20455f5ca757bd4f851d30da3818723ab8aab2316098482cd6f0d40ab2bc",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:03:11",
+          "latest": "2026-09-18T15:03:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-27b-it-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "03ac8e33a9a7dde33884eee0cff8a902a6f1e7d62aeef28ff4dac51500a1fed4",
+        "served_model": [
+          "google.gemma-3-27b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:05:33",
+          "latest": "2026-09-18T15:05:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-4b-it-bare.jsonl",
+        "row_count": 386,
+        "sha256": "37eef9155e60ea82c50ef2ad6a618beca1421b63d6027963e9abce2391bde149",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:49",
+          "latest": "2026-09-18T14:59:49",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_google.gemma-3-4b-it-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "cad533c23f8b085d308dde311abaf9d6885ffa61d37972657a84533454463125",
+        "served_model": [
+          "google.gemma-3-4b-it"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:08",
+          "latest": "2026-09-18T15:01:08",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.ministral-3-8b-instruct-bare.jsonl",
+        "row_count": 386,
+        "sha256": "399b94d57ed2ec08d7930516bfe5f62bd815f4e690e7b7dc824f73e0b84d65bc",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:23:31",
+          "latest": "2026-09-18T14:23:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.ministral-3-8b-instruct-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "faaa8165be2e3d529a789e47943a094f14972e80ea88b95422e2412b7928bde9",
+        "served_model": [
+          "mistral.ministral-3-8b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:25:05",
+          "latest": "2026-09-18T14:25:05",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.mistral-large-3-675b-instruct-bare.jsonl",
+        "row_count": 386,
+        "sha256": "6abbff935d7af31a0beb10ebf92986b669f3681c8d88686e7054fd819d1e728e",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:24:17",
+          "latest": "2026-09-18T14:24:17",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.mistral-large-3-675b-instruct-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "7a3234f181d43b25a0944c9d0881d999d5de9bd69912ba6f57be7417f33bd188",
+        "served_model": [
+          "mistral.mistral-large-3-675b-instruct"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:25:23",
+          "latest": "2026-09-18T14:25:23",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_moonshotai.kimi-k2.5-bare.jsonl",
+        "row_count": 386,
+        "sha256": "e3568a9632a32efbfe00c267e0ac518627400d0582c95b7a903c9fa1e798d835",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:27:40",
+          "latest": "2026-09-18T14:27:40",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_moonshotai.kimi-k2.5-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "2b2dfffb162301ca47828c5781fc61e5e43e24ca50062619b8ca016ce6030e7a",
+        "served_model": [
+          "moonshotai.kimi-k2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:30:18",
+          "latest": "2026-09-18T14:30:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.amazon.nova-2-lite-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "db39e506846b53d01fce7b208ad131fe6a091e577cb5e13de0d8a8b5c707b7b1",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:24:34",
+          "latest": "2026-09-18T14:24:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.amazon.nova-2-lite-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "50ec27cc0ce4f98269c8d476b1c718a623015022bf30b332c366889eed446bb8",
+        "served_model": [
+          "us.amazon.nova-2-lite-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:26:07",
+          "latest": "2026-09-18T14:26:07",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "8d1973ebcc90cbaec1147d24ca8ebbac1c9346adc90bfc66a5d97389334a1324",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:23:43",
+          "latest": "2026-09-18T14:23:43",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama4-scout-17b-instruct-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "640a14aab3f2915ea986f4d3be0ae5fccd54f495b3735830d3b868d8d0dacfd0",
+        "served_model": [
+          "us.meta.llama4-scout-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:25:06",
+          "latest": "2026-09-18T14:25:06",
+          "source": "file mtime"
+        }
+      }
+    ]
+  },
+  "text_models": {
+    "reason": "Model sweep of 2026-09-18: the text-only Bedrock models (tier 'text' in models.py) on personnel allocation and fire danger, bare and grounded; the three reasoning models ran at an 8,192-token cap recorded in usage.max_out; tool-use files of the tool-capable ones sit in the tooluse section.",
+    "files": [
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-micro-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "85de9948c9e192ab891ffa9d8ddfe23154e36fba20cd626deda73a825f69331e",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:57:30",
+          "latest": "2026-09-18T14:57:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_amazon.nova-micro-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "76487547b4ccc5412f5371300e8e71ac30a5d35e33f783f8aa0a3729cf4a9d8a",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:21",
+          "latest": "2026-09-18T14:58:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_deepseek.v3.2-bare.jsonl",
+        "row_count": 300,
+        "sha256": "7b0c2ebf7f28173e07acc4159f3395a45aa44db6b8d2bf15c64a995c0a259f14",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:05:47",
+          "latest": "2026-09-18T15:05:47",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_deepseek.v3.2-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "4208b7b91ce7ea2b2a4c5e276063c3e422a69558e020cc4cd1b24001e0c31d0f",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:55",
+          "latest": "2026-09-18T15:07:55",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_minimax.minimax-m2.5-bare.jsonl",
+        "row_count": 300,
+        "sha256": "bd387e82610f2cf0cc88d5c1da4e31b435f022b6007ca14b8b3dd15d9150c58f",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T16:24:43",
+          "latest": "2026-09-18T16:24:43",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_minimax.minimax-m2.5-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "abc374be318223ea0fa701bb6b35e3cbd56077fb0d04f54f91efe9249481db78",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:02:01",
+          "latest": "2026-09-18T17:02:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.devstral-2-123b-bare.jsonl",
+        "row_count": 300,
+        "sha256": "9a57f2b67267e1d06ba9e24302407e981f8c7fff4c01def408b0c2eda9fad23f",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:31",
+          "latest": "2026-09-18T14:58:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.devstral-2-123b-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "a039514837929b1e523903e33a625136df93e89729113af00a02ff8278bf3cd6",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:18",
+          "latest": "2026-09-18T15:00:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.mistral-small-2402-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "73002ae9ba503c160105efd5d6d36e72c3b67d6f811806c2b17bf49d307ed2c4",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:16",
+          "latest": "2026-09-18T14:58:16",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_mistral.mistral-small-2402-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "66b14bda676efceea0362d616a96a8b097ab79949a31fb6ac6e26e04ae23af8d",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:58",
+          "latest": "2026-09-18T14:59:58",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl",
+        "row_count": 300,
+        "sha256": "b01ea45673bbc768bf665c4c6cef336955110ac871d2d7fd47784bbe801ebded",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:59:11",
+          "latest": "2026-09-18T15:59:11",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_moonshot.kimi-k2-thinking-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "bedd5b50260c13b5ed4cd475e6d3bb509f1979c373b46ac733819ab7d8bcbd7b",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T16:40:44",
+          "latest": "2026-09-18T16:40:44",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_nvidia.nemotron-super-3-120b-bare.jsonl",
+        "row_count": 300,
+        "sha256": "4bb39571eae32d5f99bea68dd669a7db98588fe6bbe311642f61344c6f339df1",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:21:19",
+          "latest": "2026-09-18T15:21:19",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_nvidia.nemotron-super-3-120b-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "c49238472120e2fd2b8566ebbaa1cc5a1d2cea7f6d10881831d7e1f56ed78ae2",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:27:56",
+          "latest": "2026-09-18T15:27:56",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_openai.gpt-oss-120b-1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "cdbf857447710e52b9cc144f66d23adcba83e3b91fdabe4e2c17b4c1cc127223",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:06:35",
+          "latest": "2026-09-18T15:06:35",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_openai.gpt-oss-120b-1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "2dec828d34ff9960cc94066aa5a13d130e7a9beaeaabf07acbf141ebb3875487",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:08:23",
+          "latest": "2026-09-18T15:08:23",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_openai.gpt-oss-20b-1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "743f917b746c5a7cd804027c312cf1909318b2ca86d7f73248974dd4df5504fe",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:48",
+          "latest": "2026-09-18T15:07:48",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_openai.gpt-oss-20b-1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "f2bd8f8c5d7c8b484d2fad55595312980b3e50900026d7347c934de938cc5be3",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:16:14",
+          "latest": "2026-09-18T15:16:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-32b-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "30d1eacb42efbd476212096fa948a963ab1d22a5414ded8fc5949633a0e41038",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:06",
+          "latest": "2026-09-18T14:58:06",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-32b-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "ac3a0faf2ceccc246537c42011c3f10947598d768680a96ab3922877c12056a3",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:09",
+          "latest": "2026-09-18T14:59:09",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "3e802c0e526b98f1bc70e0134888952fa6b9b28d3b9264f3c5c393b27a5177fd",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:05:16",
+          "latest": "2026-09-18T15:05:16",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "0580487adb21f5e7d41eb4062b5cd9804add3e43fc22227f100b8117f7ea4640",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:07:53",
+          "latest": "2026-09-18T15:07:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-next-80b-a3b-bare.jsonl",
+        "row_count": 300,
+        "sha256": "a6f92f193cfe97c8bf07d6831d7fb2513e8b76bed46501d52304663436e8abed",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:45",
+          "latest": "2026-09-18T14:58:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_qwen.qwen3-next-80b-a3b-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "4eb4bf0256837585f46515feaea2b47f429415adbe562bc46b87fd62e35851f3",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:45",
+          "latest": "2026-09-18T15:00:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.deepseek.r1-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "cf281a2c8c4d2b86443c7503a6152b0b6be6d613a972279daa98347ee50e4a1d",
+        "served_model": [
+          "us.deepseek.r1-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:31:36",
+          "latest": "2026-09-18T15:31:36",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.deepseek.r1-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "ed6cad924c88b7bfac450f9ee1ea71887414e87ed953e09924c763a8df181fe7",
+        "served_model": [
+          "us.deepseek.r1-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:46:32",
+          "latest": "2026-09-18T15:46:32",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "c5e942415d1baf2e53ea683a3bd20a235ce312bdf65e4c526c97fa4a664129ab",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:58:14",
+          "latest": "2026-09-18T14:58:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "10af7bccbb8a157757d75abe29bcc98a3e2139caac1258eee82a37c1666676a9",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:38",
+          "latest": "2026-09-18T14:59:38",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "01c4ccc9a909825e428628e79dae46f85ea956b100d6ef4c9bb9d1b19aae2d0c",
+        "served_model": [
+          "us.meta.llama3-1-8b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:18:59",
+          "latest": "2026-09-18T15:18:59",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "18db9829a444ea009f3e157ee04fcd0cc0566f0d74e75a5af7afec70498e453a",
+        "served_model": [
+          "us.meta.llama3-1-8b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:19:54",
+          "latest": "2026-09-18T15:19:54",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 300,
+        "sha256": "3d3cc41cdb9004f76f549edd86bac8a13297bf96ef3417da749303774094ce3d",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:57:57",
+          "latest": "2026-09-18T14:57:57",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "f5e9212ac68db671731ddea94bfa9a30fdcf413282789fe1f84e37151f402162",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:06",
+          "latest": "2026-09-18T14:59:06",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-4.7-bare.jsonl",
+        "row_count": 300,
+        "sha256": "dec3112bca38af01f84ff8530a90518ea299d358ec2c7c073f0198b8b00ef6ae",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:11:04",
+          "latest": "2026-09-18T15:11:04",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-4.7-flash-bare.jsonl",
+        "row_count": 300,
+        "sha256": "44fa682a9bd1684cb856ba34b6ecec177fe4b202bbc7e995378a20f6d9366a4a",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:11:48",
+          "latest": "2026-09-18T15:11:48",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-4.7-flash-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "1b033dda27302b7877018d120428e85c2e6e4a2ac9835bdc2b4fcf6d07fdd272",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:13:28",
+          "latest": "2026-09-18T15:13:28",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-4.7-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "4cbe268eabd519a5f8eb6e61a4637eacd648aefc33074608f66e0d54def99310",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:12:17",
+          "latest": "2026-09-18T15:12:17",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-5-bare.jsonl",
+        "row_count": 300,
+        "sha256": "640ff447f6a127e16c89e76a62ac9708a483e768f3d64d63d65879ecd8421f64",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:11:21",
+          "latest": "2026-09-18T15:11:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-allocation/responses-bedrock_zai.glm-5-grounded.jsonl",
+        "row_count": 300,
+        "sha256": "064c4b652f4aa8ae4724c401b772260cb56bb0e5f442131abcca0b5c1d7091ae",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:13:43",
+          "latest": "2026-09-18T15:13:43",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-micro-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "6587a28b9fb0a24d0de861c9c33a888eb3fb69ad36710bc98b12a5aefafe4901",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T14:59:23",
+          "latest": "2026-09-18T14:59:23",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_amazon.nova-micro-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "6f603872c375eaa869b85bae93742e586b0fc8880e5d0e45e9d986c27b686185",
+        "served_model": [
+          "amazon.nova-micro-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:23",
+          "latest": "2026-09-18T15:00:23",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_deepseek.v3.2-bare.jsonl",
+        "row_count": 386,
+        "sha256": "13e560bd74b42dae24aa1fc279068127c2d58aacb8e31d22712e91bfe45f6340",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:10:05",
+          "latest": "2026-09-18T15:10:05",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_deepseek.v3.2-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "c19d268ad24c667300cefff0ff9676e1db13c9dbce1d81dde4db127ad2601161",
+        "served_model": [
+          "deepseek.v3.2"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:12:09",
+          "latest": "2026-09-18T15:12:09",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_minimax.minimax-m2.5-bare.jsonl",
+        "row_count": 386,
+        "sha256": "542285b2bacfcd13446889f9083ebea296387e0c7620d1203db741916dc93e94",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:49:18",
+          "latest": "2026-09-18T17:49:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_minimax.minimax-m2.5-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "e2b9401e0d637daa802eee15160ef9f9cc0f017156e692b1ddc7fd60536207cf",
+        "served_model": [
+          "minimax.minimax-m2.5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T18:55:18",
+          "latest": "2026-09-18T18:55:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.devstral-2-123b-bare.jsonl",
+        "row_count": 386,
+        "sha256": "48f4bc02c468bdf57682df3b0e32c6128ed2daa8344a21f8e3b6e39d0ef46e2d",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:33",
+          "latest": "2026-09-18T15:02:33",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.devstral-2-123b-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "c75289212b22095d29ac45fd373729e1e1466e12c36f4435e9654143a586863a",
+        "served_model": [
+          "mistral.devstral-2-123b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:04:41",
+          "latest": "2026-09-18T15:04:41",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.mistral-small-2402-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "48b009808a4bf8937e2345f006f89835d8b41b8effc4e52f3dc10775046bc67d",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:47",
+          "latest": "2026-09-18T15:01:47",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_mistral.mistral-small-2402-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "21ece9b3fdbd7a0506f316b74d7f48f9ea4ae3dba82d94f058240dda266ad916",
+        "served_model": [
+          "mistral.mistral-small-2402-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:04:21",
+          "latest": "2026-09-18T15:04:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl",
+        "row_count": 386,
+        "sha256": "7ab8402c1d49aada2030347a1f82adf0bb9dba11685d8ea33c5fb49d6cc5e17f",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T17:31:16",
+          "latest": "2026-09-18T17:31:16",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_moonshot.kimi-k2-thinking-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "676ed93945ed5d4b14fd4a52daff10447b943bdfbea5b62c207bee5c9de21e82",
+        "served_model": [
+          "moonshot.kimi-k2-thinking"
+        ],
+        "written": {
+          "earliest": "2026-09-18T18:19:22",
+          "latest": "2026-09-18T18:19:22",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_nvidia.nemotron-super-3-120b-bare.jsonl",
+        "row_count": 386,
+        "sha256": "5d7ce04e28279df8685520ea3e7610a09d80586e6dadc49116b2a24707825184",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:29:57",
+          "latest": "2026-09-18T15:29:57",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_nvidia.nemotron-super-3-120b-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "a4f8681c9e6eddb7d078b65108df2dabb89a725456c2e77a1274589e6064f00d",
+        "served_model": [
+          "nvidia.nemotron-super-3-120b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:33:08",
+          "latest": "2026-09-18T15:33:08",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_openai.gpt-oss-120b-1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "a57a121ec34c9f6cfd510fae8ea03204362fbdfab2dd20b70bd6c14ba331837d",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:12:21",
+          "latest": "2026-09-18T15:12:21",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_openai.gpt-oss-120b-1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "53f2034b5317115b2b08230f2086ba7bcc3cb0fb0b4ffdfbe238ef64cbb150d4",
+        "served_model": [
+          "openai.gpt-oss-120b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:18:07",
+          "latest": "2026-09-18T15:18:07",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_openai.gpt-oss-20b-1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "0540249ad2c96e4aba8714593f15e2859fc94fe63e1f42cfd4aca35d0e5fb519",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:21:39",
+          "latest": "2026-09-18T15:21:39",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_openai.gpt-oss-20b-1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "8bdb09b5bd83de90e8ac9801fe0b7bc109a37d618fa4eca9517bf1f23af565f4",
+        "served_model": [
+          "openai.gpt-oss-20b-1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:30:14",
+          "latest": "2026-09-18T15:30:14",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-32b-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "3edb0f4e3664232fcae5fe0abfb6f50b977be71dede95f85d5e9c4cb8f0948d8",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:28",
+          "latest": "2026-09-18T15:00:28",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-32b-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "50586820f705c34a41065a4f373f8623089151e0b0f3bf6c7cced97bb5e4c610",
+        "served_model": [
+          "qwen.qwen3-32b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:45",
+          "latest": "2026-09-18T15:01:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "a79c03f59e8a318de7a89a51e0a76a52b2bb47c610ca278ea2ea594a6ead6ac5",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:09:08",
+          "latest": "2026-09-18T15:09:08",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-coder-30b-a3b-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "3c2e4cd831e11fa4b2d3ddcbf42016fd02e9209c492a9324b989ce66f6fa850f",
+        "served_model": [
+          "qwen.qwen3-coder-30b-a3b-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:10:47",
+          "latest": "2026-09-18T15:10:47",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-next-80b-a3b-bare.jsonl",
+        "row_count": 386,
+        "sha256": "f10dbac845b913811885de9aed217ba92d8bdca24e2a721f9f1238fdbff2729e",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:41",
+          "latest": "2026-09-18T15:02:41",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_qwen.qwen3-next-80b-a3b-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "68ad487a711d0a893db60c48b0bdb7c6a2316549c3fef4a37b8e7b1ae3ab65d0",
+        "served_model": [
+          "qwen.qwen3-next-80b-a3b"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:04:45",
+          "latest": "2026-09-18T15:04:45",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.deepseek.r1-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "d9ac4b2eae1458c49a6e70f2f7ec0155e80e68da29203536a648261dbd4d11d9",
+        "served_model": [
+          "us.deepseek.r1-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:59:01",
+          "latest": "2026-09-18T15:59:01",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.deepseek.r1-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "08ed5aea6cde70cd67e0824cf98000364f2672039fa9e84f0a0e519884b62884",
+        "served_model": [
+          "us.deepseek.r1-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T16:13:31",
+          "latest": "2026-09-18T16:13:31",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "b28da09af77839515329e5ca57f7d90d334b5bc463165b98ec69eaa3898ff016",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:03",
+          "latest": "2026-09-18T15:01:03",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "aa3721cd6da4ada6ab1b48ef9ab99253054e5147b939b0e28c78bef8f786dcb0",
+        "served_model": [
+          "us.meta.llama3-1-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:02:30",
+          "latest": "2026-09-18T15:02:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "6bd7ff47bbf6d26608a73d09db97dada604201e3c1ddca0840932154922829c4",
+        "served_model": [
+          "us.meta.llama3-1-8b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:20:53",
+          "latest": "2026-09-18T15:20:53",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-1-8b-instruct-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "1c483092272bf346ad732ce19eefdbc60a0a9bc3f0c40dafc499ca219235b510",
+        "served_model": [
+          "us.meta.llama3-1-8b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:21:46",
+          "latest": "2026-09-18T15:21:46",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-bare.jsonl",
+        "row_count": 386,
+        "sha256": "b28cc48406fe363cc6817180c4b9d00edd2a546a992235456089b8e45f1b19e9",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:00:17",
+          "latest": "2026-09-18T15:00:17",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_us.meta.llama3-3-70b-instruct-v1_0-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "dca40d765b8638bdc90056445cfd572c13d967a358426b515c119bad64647880",
+        "served_model": [
+          "us.meta.llama3-3-70b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:01:35",
+          "latest": "2026-09-18T15:01:35",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-4.7-bare.jsonl",
+        "row_count": 386,
+        "sha256": "6547686c5644e9c3384b22ad51e8c9c3e85d2904c22c86e88e89f9b6f7c6d84c",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:13:48",
+          "latest": "2026-09-18T15:13:48",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-4.7-flash-bare.jsonl",
+        "row_count": 386,
+        "sha256": "7a21f8251a80c1ea40ea56ef825aa8c2552e94f16b795fca88a7aed21126b585",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:15:38",
+          "latest": "2026-09-18T15:15:38",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-4.7-flash-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "e76127715a2d173fe7e0259cb867778db42df6e63d05933a969676cbc4d55b3e",
+        "served_model": [
+          "zai.glm-4.7-flash"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:17:30",
+          "latest": "2026-09-18T15:17:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-4.7-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "5f8802ad0d1b26f10749424f552a8827e5712e208e58f21abbe34100cc3733ed",
+        "served_model": [
+          "zai.glm-4.7"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:15:44",
+          "latest": "2026-09-18T15:15:44",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-5-bare.jsonl",
+        "row_count": 386,
+        "sha256": "20f7623bf6d7ceb7858ba5a5879674ade2dbe02a64f88322858bbe5bcb6f3810",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:16:29",
+          "latest": "2026-09-18T15:16:29",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-mesogeos/responses-bedrock_zai.glm-5-grounded.jsonl",
+        "row_count": 386,
+        "sha256": "fc8a06ea7849faf18f66a4c374b3baecc5a9adc63cde0fb0ef7d67a354c1f2ac",
+        "served_model": [
+          "zai.glm-5"
+        ],
+        "written": {
+          "earliest": "2026-09-18T15:19:25",
+          "latest": "2026-09-18T15:19:25",
           "source": "file mtime"
         }
       }

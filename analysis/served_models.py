@@ -2,7 +2,10 @@
 
 Reads manifest-v1.json and inspects the 36 reported response files. Prints a Markdown table,
 one row per (task, model), showing the distinct served_model values and their counts,
-serving path, and date range. Saves the table as analysis/served_models.md for paper appendix.
+serving path, and date range. A second part audits every other manifest section that holds
+response files (tool use, aerial question answering, and the two model-sweep sections of 2026-09-18)
+and prints one row per sweep model with its served identifier and call count. Saves everything as
+analysis/served_models.md for the paper appendix.
 """
 import argparse
 import collections
@@ -12,11 +15,83 @@ import os
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+from models import by_stem  # noqa: E402
+
 TASK_DISPLAY = {
     "allocation": "Personnel allocation (ICS-209-PLUS)",
     "figlib": "Smoke detection (FIgLib)",
     "mesogeos": "Fire danger forecasting (Mesogeos)",
+    "tooluse": "Fire data tool use (FPA-FOD)",
+    "wildfirevqa": "Aerial question answering (WildFireVQA)",
 }
+TASK_SHORT = {"allocation": "allocation", "mesogeos": "fire danger", "figlib": "smoke",
+              "tooluse": "tool use", "wildfirevqa": "aerial"}
+AUDIT_SECTIONS = ("reported", "tooluse", "wildfirevqa", "added_models", "text_models")
+
+
+def served_counts_of(path):
+    """Counter of served_model over the rows of a response file."""
+    counts = collections.Counter()
+    with open(fix_path(path), encoding="utf-8") as fh:
+        for line in fh:
+            if line.strip():
+                counts[json.loads(line).get("served_model")] += 1
+    return counts
+
+
+def audit_sections(manifest, repo_root):
+    """Markdown lines: per-section file and row totals with any file that mixes served identifiers, then one
+    row per model of every section beyond the six-model reported set."""
+    lines = ["## All Response Files in the Manifest", "",
+             "| Section | Files | Responses | Files with one served identifier |", "|---|:---:|:---:|:---:|"]
+    mixed = []
+    per_model = collections.defaultdict(lambda: {"served": collections.Counter(), "tasks": set(), "paths": set()})
+    stems = sorted(by_stem(), key=len, reverse=True)
+    for section in AUDIT_SECTIONS:
+        block = manifest.get(section)
+        entries = block if isinstance(block, list) else (block or {}).get("files", [])
+        entries = [e for e in entries if e["path"].endswith(".jsonl")]
+        if not entries:
+            continue
+        n_rows, n_uniform = 0, 0
+        for e in entries:
+            counts = served_counts_of(repo_root / e["path"])
+            n_rows += sum(counts.values())
+            n_uniform += len(counts) == 1
+            if len(counts) != 1:
+                mixed.append((section, e["path"], dict(counts)))
+            if section != "reported":
+                name = pathlib.Path(e["path"]).name[len("responses-"):-len(".jsonl")]
+                stem = next((s for s in stems if name.startswith(s + "-")), None)
+                if stem is None:
+                    continue
+                rec = per_model[stem]
+                rec["served"].update(counts)
+                rec["tasks"].add(e["path"].split("/")[0][len("task-"):])
+                rec["paths"].add(e["path"])
+        lines.append("| %s | %d | %s | %d of %d |" % (section, len(entries), format(n_rows, ","), n_uniform, len(entries)))
+    lines.append("")
+    if mixed:
+        lines.append("> [!WARNING]")
+        lines.append("> Files whose rows carry more than one served identifier:")
+        for section, path, counts in mixed:
+            lines.append("> - `%s` in `%s`: %s" % (path, section, counts))
+    else:
+        lines.append("> [!NOTE]")
+        lines.append("> Every file above carries exactly one served identifier across all of its rows.")
+    lines += ["", "## Models Beyond the Six-Model Reported Set", "",
+              "One row per model over the tool-use, aerial, and 2026-09-18 sweep sections; the six reported models "
+              "appear here with their tool-use and aerial files only.", "",
+              "| Model | Tier | Path | Served identifier (calls) | Tasks in these sections |", "|---|:---:|:---:|---|---|"]
+    reg = by_stem()
+    for stem, rec in sorted(per_model.items(), key=lambda kv: reg[kv[0]].order):
+        m = reg[stem]
+        served = "<br>".join("`%s` (%s)" % (k, format(v, ",")) for k, v in sorted(rec["served"].items(), key=lambda kv: str(kv[0])))
+        tasks = ", ".join(TASK_SHORT[t] for t in ("allocation", "mesogeos", "figlib", "tooluse", "wildfirevqa") if t in rec["tasks"])
+        lines.append("| %s | %s | %s | %s | %s |" % (m.label, m.tier, m.path.capitalize(), served, tasks))
+    lines.append("")
+    return lines
 
 def fix_path(p):
     abs_p = os.path.abspath(str(p))
@@ -150,6 +225,8 @@ def main():
     lines.append("  - Qwen3-VL-235B-A22B: Served under AWS Bedrock identifier `qwen.qwen3-vl-235b-a22b` (1,792 total calls).")
     lines.append("  - Llama 4 Maverick: Served under AWS Bedrock identifier `us.meta.llama4-maverick-17b-instruct-v1:0` (1,792 total calls).")
     lines.append("")
+
+    lines.extend(audit_sections(manifest, repo_root))
 
     content = "\n".join(lines) + "\n"
 

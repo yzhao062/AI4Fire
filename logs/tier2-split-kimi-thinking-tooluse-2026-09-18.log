@@ -1,0 +1,102 @@
+
+Running bedrock:moonshot.kimi-k2-thinking on bare condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:moonshot.kimi-k2-thinking/bare",
+  "items": 156,
+  "accuracy": 0.0705,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.0256,
+    "multi-step": 0.1385,
+    "single lookup": 0.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 0.0,
+    "count_cause_state_year": 0.0,
+    "count_county_year": 0.0,
+    "count_season_window": 0.0,
+    "count_size_class_span": 0.0,
+    "count_state_year": 0.0,
+    "human_share_state_year": 0.0,
+    "largest_fire_name": 0.1538,
+    "largest_fire_size_span": 0.0,
+    "peak_year_state": 0.0769,
+    "top_cause_state_year": 0.3846,
+    "top_state_for_cause": 0.2308
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "human_share_state_year": 0.154,
+    "largest_fire_size_span": 0.154,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "count_season_window": 0.077,
+    "largest_fire_name": 0.077,
+    "count_size_class_span": 0.077,
+    "count_state_year": 0.077
+  },
+  "naive_baseline_overall": 0.141,
+  "parse_failures": 4,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 91,
+  "mean_tool_calls": 0.0,
+  "max_tool_calls": 0,
+  "tokens_in": 201577,
+  "tokens_out": 251786
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl
+
+Running bedrock:moonshot.kimi-k2-thinking on tool condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:moonshot.kimi-k2-thinking/tool",
+  "items": 156,
+  "accuracy": 0.891,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.8077,
+    "multi-step": 0.9692,
+    "single lookup": 1.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 1.0,
+    "count_cause_state_year": 1.0,
+    "count_county_year": 1.0,
+    "count_season_window": 0.3846,
+    "count_size_class_span": 1.0,
+    "count_state_year": 1.0,
+    "human_share_state_year": 1.0,
+    "largest_fire_name": 0.4615,
+    "largest_fire_size_span": 0.8462,
+    "peak_year_state": 1.0,
+    "top_cause_state_year": 1.0,
+    "top_state_for_cause": 1.0
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "human_share_state_year": 0.154,
+    "largest_fire_size_span": 0.154,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "count_season_window": 0.077,
+    "largest_fire_name": 0.077,
+    "count_size_class_span": 0.077,
+    "count_state_year": 0.077
+  },
+  "naive_baseline_overall": 0.141,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 2.071,
+  "max_tool_calls": 8,
+  "tokens_in": 803333,
+  "tokens_out": 100154
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.

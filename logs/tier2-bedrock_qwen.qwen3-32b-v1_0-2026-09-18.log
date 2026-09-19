@@ -1,0 +1,27 @@
+=== chain bedrock:qwen.qwen3-32b-v1:0 start 2026-09-18 14:56:34
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:qwen.qwen3-32b-v1:0/bare", "items": 300, "parsed": 300, "mae": 13.793333333333333, "mae_norm": 0.14715807822837368, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.006666666666666667, "errors": 0, "tokens_in": 112772, "tokens_out": 14184}
+{"run": "bedrock:qwen.qwen3-32b-v1:0/grounded", "items": 300, "parsed": 300, "mae": 20.046666666666667, "mae_norm": 0.2474204430177926, "within_25pct": 0.7, "median_abs_log_ratio": 0.11585117677401821, "mae_norm_on_moving_days": 0.36590470513033574, "beats_persistence_share": 0.20333333333333334, "errors": 0, "tokens_in": 185344, "tokens_out": 16831}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 14:59:10
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:qwen.qwen3-32b-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.42852663887206616, "f1_fire": 0.5219399538106235, "f1_no_fire": 0.3893805309734513, "positive_rate_called": 0.7823834196891192, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 532110}
+{"run": "bedrock:qwen.qwen3-32b-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.4583916836822007, "f1_fire": 0.5133928571428571, "f1_no_fire": 0.3271604938271605, "positive_rate_called": 0.8212435233160622, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 639710}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:01:45
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 7,
+  "mean_tool_calls": 1.032,
+  "max_tool_calls": 3,
+  "tokens_in": 524434,
+  "tokens_out": 12483
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-32b-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:qwen.qwen3-32b-v1:0 DONE 2026-09-18 15:03:14

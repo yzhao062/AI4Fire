@@ -1,0 +1,102 @@
+
+Running bedrock:minimax.minimax-m2.5 on bare condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:minimax.minimax-m2.5/bare",
+  "items": 156,
+  "accuracy": 0.0385,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.0,
+    "multi-step": 0.0923,
+    "single lookup": 0.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 0.0,
+    "count_cause_state_year": 0.0,
+    "count_county_year": 0.0,
+    "count_season_window": 0.0,
+    "count_size_class_span": 0.0,
+    "count_state_year": 0.0,
+    "human_share_state_year": 0.0769,
+    "largest_fire_name": 0.0,
+    "largest_fire_size_span": 0.0,
+    "peak_year_state": 0.0,
+    "top_cause_state_year": 0.2308,
+    "top_state_for_cause": 0.1538
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "human_share_state_year": 0.154,
+    "largest_fire_size_span": 0.154,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "count_season_window": 0.077,
+    "largest_fire_name": 0.077,
+    "count_size_class_span": 0.077,
+    "count_state_year": 0.077
+  },
+  "naive_baseline_overall": 0.141,
+  "parse_failures": 64,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 10,
+  "mean_tool_calls": 0.0,
+  "max_tool_calls": 0,
+  "tokens_in": 204996,
+  "tokens_out": 606236
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_minimax.minimax-m2.5-bare.jsonl
+
+Running bedrock:minimax.minimax-m2.5 on tool condition (156 items, workers=4, fake=None)...
+{
+  "run": "bedrock:minimax.minimax-m2.5/tool",
+  "items": 156,
+  "accuracy": 0.8846,
+  "accuracy_by_tier": {
+    "filtered aggregate": 0.8718,
+    "multi-step": 0.8769,
+    "single lookup": 1.0
+  },
+  "accuracy_by_family": {
+    "acres_state_year": 1.0,
+    "count_cause_state_year": 0.9231,
+    "count_county_year": 1.0,
+    "count_season_window": 0.3077,
+    "count_size_class_span": 1.0,
+    "count_state_year": 1.0,
+    "human_share_state_year": 1.0,
+    "largest_fire_name": 1.0,
+    "largest_fire_size_span": 0.8462,
+    "peak_year_state": 1.0,
+    "top_cause_state_year": 0.6923,
+    "top_state_for_cause": 0.8462
+  },
+  "naive_baseline_by_family": {
+    "top_state_for_cause": 0.308,
+    "top_cause_state_year": 0.308,
+    "peak_year_state": 0.231,
+    "human_share_state_year": 0.154,
+    "largest_fire_size_span": 0.154,
+    "count_county_year": 0.077,
+    "count_cause_state_year": 0.077,
+    "acres_state_year": 0.077,
+    "count_season_window": 0.077,
+    "largest_fire_name": 0.077,
+    "count_size_class_span": 0.077,
+    "count_state_year": 0.077
+  },
+  "naive_baseline_overall": 0.141,
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 2,
+  "mean_tool_calls": 1.776,
+  "max_tool_calls": 8,
+  "tokens_in": 752500,
+  "tokens_out": 79386
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_minimax.minimax-m2.5-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.

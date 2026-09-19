@@ -1,0 +1,81 @@
+=== pilot bedrock:amazon.nova-micro-v1:0 14:38:56
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:amazon.nova-micro-v1:0/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_movi
+{"run": "bedrock:amazon.nova-micro-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.7, "mae_norm": 0.12765052212118794, "within_25pct": 0.8, "median_abs_log_ratio": 0.06107338883336898, "mae_norm_
+=== pilot bedrock:us.meta.llama3-3-70b-instruct-v1:0 14:39:22
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/bare", "items": 10, "parsed": 10, "mae": 23.6, "mae_norm": 0.19066570263874832, "within_25pct": 0.7, "median_abs_log_ratio": 0.09451547228673932, "m
+{"run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.1278950208510537, "within_25pct": 0.8, "median_abs_log_ratio": 0.045950143911580234
+=== pilot bedrock:us.meta.llama3-1-70b-instruct-v1:0 14:39:49
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/bare", "items": 10, "parsed": 10, "mae": 11.6, "mae_norm": 0.10298952813583753, "within_25pct": 0.9, "median_abs_log_ratio": 0.05829696114504257, "m
+{"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.2, "mae_norm": 0.12740561957964533, "within_25pct": 0.8, "median_abs_log_ratio": 0.04542726552479059
+=== pilot bedrock:mistral.mistral-small-2402-v1:0 14:40:21
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/bare", "items": 10, "parsed": 10, "mae": 33.1, "mae_norm": 0.3801225193532454, "within_25pct": 0.6, "median_abs_log_ratio": 0.17690891425098715, "mae_n
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/grounded", "items": 10, "parsed": 10, "mae": 17.1, "mae_norm": 0.13425605564434723, "within_25pct": 0.8, "median_abs_log_ratio": 0.05698064821521269, "
+=== pilot bedrock:mistral.devstral-2-123b 14:40:55
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:mistral.devstral-2-123b/bare", "items": 10, "parsed": 10, "mae": 21.8, "mae_norm": 0.13837379466254962, "within_25pct": 0.9, "median_abs_log_ratio": 0.10714343386453813, "mae_norm_on_
+{"run": "bedrock:mistral.devstral-2-123b/grounded", "items": 10, "parsed": 10, "mae": 17.3, "mae_norm": 0.1508388280444124, "within_25pct": 0.7, "median_abs_log_ratio": 0.056125822412268656, "mae_norm
+=== pilot bedrock:qwen.qwen3-32b-v1:0 14:41:28
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:qwen.qwen3-32b-v1:0/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_
+{"run": "bedrock:qwen.qwen3-32b-v1:0/grounded", "items": 10, "parsed": 10, "mae": 14.7, "mae_norm": 0.12516246508188927, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on
+=== pilot bedrock:qwen.qwen3-next-80b-a3b 14:41:56
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/bare", "items": 10, "parsed": 10, "mae": 10.2, "mae_norm": 0.07747595612118278, "within_25pct": 0.9, "median_abs_log_ratio": 0.03221913776788156, "mae_norm_on_
+{"run": "bedrock:qwen.qwen3-next-80b-a3b/grounded", "items": 10, "parsed": 10, "mae": 16.3, "mae_norm": 0.14189688503857925, "within_25pct": 0.8, "median_abs_log_ratio": 0.041387990550716375, "mae_nor
+=== pilot bedrock:qwen.qwen3-coder-30b-a3b-v1:0 14:42:31
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_
+{"run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/grounded", "items": 10, "parsed": 10, "mae": 15.5, "mae_norm": 0.1282980417308059, "within_25pct": 0.8, "median_abs_log_ratio": 0.043502158605476834, "ma
+=== pilot bedrock:deepseek.v3.2 14:42:57
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:deepseek.v3.2/bare", "items": 10, "parsed": 10, "mae": 19.0, "mae_norm": 0.14072430328519642, "within_25pct": 0.8, "median_abs_log_ratio": 0.05204597679614399, "mae_norm_on_moving_day
+{"run": "bedrock:deepseek.v3.2/grounded", "items": 10, "parsed": 10, "mae": 15.5, "mae_norm": 0.12969518671095148, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_movin
+=== pilot bedrock:openai.gpt-oss-120b-1:0 14:43:27
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:openai.gpt-oss-120b-1:0/bare", "items": 10, "parsed": 10, "mae": 9.6, "mae_norm": 0.10137408416027571, "within_25pct": 0.9, "median_abs_log_ratio": 0.07650970305328045, "mae_norm_on_m
+{"run": "bedrock:openai.gpt-oss-120b-1:0/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_nor
+=== pilot bedrock:openai.gpt-oss-20b-1:0 14:43:57
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:openai.gpt-oss-20b-1:0/bare", "items": 10, "parsed": 10, "mae": 17.6, "mae_norm": 0.09548500752655548, "within_25pct": 0.9, "median_abs_log_ratio": 0.046022963906053344, "mae_norm_on_
+{"run": "bedrock:openai.gpt-oss-20b-1:0/grounded", "items": 10, "parsed": 10, "mae": 15.5, "mae_norm": 0.12911421480153157, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm
+=== pilot bedrock:zai.glm-5 14:44:43
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:zai.glm-5/bare", "items": 10, "parsed": 10, "mae": 14.4, "mae_norm": 0.11882610553862356, "within_25pct": 0.9, "median_abs_log_ratio": 0.05167913575564091, "mae_norm_on_moving_days": 
+{"run": "bedrock:zai.glm-5/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "mae_norm_on_moving_da
+=== pilot bedrock:zai.glm-4.7 14:45:39
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:zai.glm-4.7/bare", "items": 10, "parsed": 10, "mae": 11.3, "mae_norm": 0.10134863253391549, "within_25pct": 0.9, "median_abs_log_ratio": 0.05706391489744586, "mae_norm_on_moving_days"
+{"run": "bedrock:zai.glm-4.7/grounded", "items": 10, "parsed": 10, "mae": 17.0, "mae_norm": 0.13448414320248622, "within_25pct": 0.8, "median_abs_log_ratio": 0.05811572248248227, "mae_norm_on_moving_d
+=== pilot bedrock:zai.glm-4.7-flash 14:46:05
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:zai.glm-4.7-flash/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_da
+{"run": "bedrock:zai.glm-4.7-flash/grounded", "items": 10, "parsed": 10, "mae": 15.5, "mae_norm": 0.13151637979518344, "within_25pct": 0.8, "median_abs_log_ratio": 0.04588451292748459, "mae_norm_on_mo
+=== pilot bedrock:minimax.minimax-m2.5 14:46:36
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:minimax.minimax-m2.5/bare", "items": 10, "parsed": 2, "mae": 10.0, "mae_norm": 0.22627213811205368, "within_25pct": 0.5, "median_abs_log_ratio": 0.9381817071792063, "mae_norm_on_movin
+{"run": "bedrock:minimax.minimax-m2.5/grounded", "items": 10, "parsed": 8, "mae": 15.0, "mae_norm": 0.10085756551134221, "within_25pct": 0.875, "median_abs_log_ratio": 0.04244619200390512, "mae_norm_o
+=== pilot bedrock:moonshot.kimi-k2-thinking 14:49:38
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:moonshot.kimi-k2-thinking/bare", "items": 10, "parsed": 2, "mae": 19.0, "mae_norm": 0.22937625754527163, "within_25pct": 0.5, "median_abs_log_ratio": 0.24212299298063936, "mae_norm_on
+{"run": "bedrock:moonshot.kimi-k2-thinking/grounded", "items": 10, "parsed": 3, "mae": 19.333333333333332, "mae_norm": 0.049632001381922725, "within_25pct": 1.0, "median_abs_log_ratio": 0.043894193557
+=== pilot bedrock:nvidia.nemotron-super-3-120b 14:51:32
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:nvidia.nemotron-super-3-120b/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_o
+{"run": "bedrock:nvidia.nemotron-super-3-120b/grounded", "items": 10, "parsed": 10, "mae": 15.4, "mae_norm": 0.12875621957480127, "within_25pct": 0.8, "median_abs_log_ratio": 0.046342178863328656, "ma
+=== pilot bedrock:us.meta.llama3-1-8b-instruct-v1:0 14:51:56
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/bare", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_n
+{"run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/grounded", "items": 10, "parsed": 10, "mae": 26.2, "mae_norm": 0.17987440765898857, "within_25pct": 0.7, "median_abs_log_ratio": 0.11813610038667732,
+=== pilot bedrock:mistral.mixtral-8x7b-instruct-v0:1 14:52:17
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:mistral.mixtral-8x7b-instruct-v0:1/bare", "items": 10, "parsed": 0, "errors": 10, "tokens_in": 0, "tokens_out": 0}
+{"run": "bedrock:mistral.mixtral-8x7b-instruct-v0:1/grounded", "items": 10, "parsed": 0, "errors": 10, "tokens_in": 0, "tokens_out": 0}
+=== pilot bedrock:us.deepseek.r1-v1:0 14:52:38
+baseline: {"run": "persistence", "items": 10, "parsed": 10, "mae": 14.2, "mae_norm": 0.082732197908305, "within_25pct": 0.9, "median_abs_log_ratio": 0.0344964357434758, "mae_norm_on_moving_days": 0.23
+{"run": "bedrock:us.deepseek.r1-v1:0/bare", "items": 10, "parsed": 6, "mae": 13.166666666666666, "mae_norm": 0.14510123978898018, "within_25pct": 0.8333333333333334, "median_abs_log_ratio": 0.10269471
+{"run": "bedrock:us.deepseek.r1-v1:0/grounded", "items": 10, "parsed": 6, "mae": 14.666666666666666, "mae_norm": 0.10657972894785632, "within_25pct": 0.8333333333333334, "median_abs_log_ratio": 0.0373
+PILOT DONE 14:53:40

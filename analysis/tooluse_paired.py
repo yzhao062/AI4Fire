@@ -25,17 +25,10 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT))
 import cluster_uncertainty as cu  # noqa: E402
 import run_tooluse as rt  # noqa: E402
+import models
+from models import add_model_args, resolve_models
 
 TASK = ROOT / "task-tooluse"
-# response-file stems, the file-safe spellings run_tooluse.py writes
-MODELS = {
-    "bedrock_qwen.qwen3-vl-235b-a22b": "Qwen3-VL",
-    "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0": "Llama 4 Maverick",
-    "claude-opus-4.8": "claude-opus-4.8",
-    "claude-opus-5": "claude-opus-5",
-    "gemini-3.1-pro": "gemini-3.1-pro",
-    "gpt-6-astra": "gpt-6-astra",
-}
 CONDITIONS = ["bare", "tool"]
 
 
@@ -70,12 +63,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--resamples", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=20260915)
+    ap.add_argument("--out", type=pathlib.Path, default=HERE / "tooluse_paired.json")
+    add_model_args(ap, default_tier="core")
     args = ap.parse_args()
+    selected_models = resolve_models(args, task="tooluse", default_tier="core")
     items = [json.loads(l) for l in (TASK / "items.jsonl").read_text(encoding="utf-8").splitlines()]
     by_id = {i["item_id"]: i for i in items}
     naive_by_fam, naive_overall = rt.load_naive_baseline()
     out = {"naive_baseline_overall": naive_overall, "naive_baseline_by_family": naive_by_fam, "models": {}}
-    for stem, name in MODELS.items():
+    for m in selected_models:
+        stem, name = m.stem, m.label
         files = {c: TASK / ("responses-%s-%s.jsonl" % (stem, c)) for c in CONDITIONS}
         if not all(p.exists() for p in files.values()):
             print("%s: arm files missing, skipped" % name)
@@ -126,8 +123,8 @@ def main():
                   % (fam, n, len(allfam), rec["tool_errors"][fam]["predicted_zero"], rec["tool_errors"][fam]["abstained"], rec["tool_errors"][fam]["code_like_answer"],
                      rec["tool_errors"][fam]["filtered_on_discovery_date"], rec["tool_errors"][fam]["family_used_doy"]))
         out["models"][name] = rec
-    (HERE / "tooluse_paired.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
-    print("\nwrote", HERE / "tooluse_paired.json")
+    args.out.write_text(json.dumps(out, indent=1), encoding="utf-8")
+    print("\nwrote", args.out)
 
 
 if __name__ == "__main__":

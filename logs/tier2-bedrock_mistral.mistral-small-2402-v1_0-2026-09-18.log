@@ -1,0 +1,27 @@
+=== chain bedrock:mistral.mistral-small-2402-v1:0 start 2026-09-18 14:56:23
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/bare", "items": 300, "parsed": 300, "mae": 30.28, "mae_norm": 0.4908733890352496, "within_25pct": 0.49, "median_abs_log_ratio": 0.2350828478754323, "mae_norm_on_moving_days": 0.6503346486159743, "beats_persistence_share": 0.15, "errors": 0, "tokens_in": 114445, "tokens_out": 14399}
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/grounded", "items": 300, "parsed": 300, "mae": 28.093333333333334, "mae_norm": 1.9579303527687666, "within_25pct": 0.59, "median_abs_log_ratio": 0.17995014013179006, "mae_norm_on_moving_days": 0.43155176362175934, "beats_persistence_share": 0.22333333333333333, "errors": 0, "tokens_in": 190617, "tokens_out": 20097}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 14:59:58
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.4011997152833497, "f1_fire": 0.49783549783549785, "f1_no_fire": 0.25161290322580643, "positive_rate_called": 0.8575129533678757, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 549866}
+{"run": "bedrock:mistral.mistral-small-2402-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.4068158340219633, "f1_fire": 0.5435897435897435, "f1_no_fire": 0.5340314136125655, "positive_rate_called": 0.6709844559585493, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 660168}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:04:22
+  "parse_failures": 107,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 0,
+  "mean_tool_calls": 0.0,
+  "max_tool_calls": 0,
+  "tokens_in": 276611,
+  "tokens_out": 28911
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_mistral.mistral-small-2402-v1_0-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:mistral.mistral-small-2402-v1:0 DONE 2026-09-18 15:08:16

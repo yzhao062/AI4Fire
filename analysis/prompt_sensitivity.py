@@ -27,11 +27,12 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT))
 import cluster_uncertainty as cu  # noqa: E402
 import run_mesogeos as rm  # noqa: E402
+import models
+from models import add_model_args, resolve_models
 
 TASK = ROOT / "task-mesogeos"
 # response-file stems; the Bedrock stems are the file-safe spellings run_mesogeos.py writes
-MODELS = ["claude-opus-4.8", "claude-opus-5", "gemini-3.1-pro", "gpt-6-astra",
-          "bedrock_qwen.qwen3-vl-235b-a22b", "bedrock_us.meta.llama4-maverick-17b-instruct-v1_0"]
+MODELS = [m.stem for m in models.models(tier="core")]
 VARIANTS = ["p0", "p1", "p2"]
 
 
@@ -81,11 +82,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--resamples", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=20260915)
+    ap.add_argument("--out", type=pathlib.Path, default=HERE / "prompt_sensitivity.json")
+    add_model_args(ap)
     args = ap.parse_args()
     items = [json.loads(l) for l in (TASK / "items.jsonl").read_text(encoding="utf-8").splitlines()]
     items = [i for i in items if i["split"] == "test" and i.get("fold", 0) == 0]
     out = {}
-    for model in MODELS:
+    selected_models = [m.stem for m in resolve_models(args)]
+    for model in selected_models:
         by_variant = {}
         for v in VARIANTS:
             path = TASK / ("responses-%s-bare%s.jsonl" % (model, "" if v == "p0" else "-" + v))
@@ -115,7 +119,7 @@ def main():
                   % (v, len(ids), k, d_auprc, lo_a, hi_a, d_f1, lo_f, hi_f, rho, changed))
             out[model][v] = {"items": len(ids), "blocks": k, "d_auprc": d_auprc, "d_auprc_ci": [lo_a, hi_a],
                              "d_f1": d_f1, "d_f1_ci": [lo_f, hi_f], "spearman": float(rho), "calls_changed": changed}
-    (HERE / "prompt_sensitivity.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
+    args.out.write_text(json.dumps(out, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":

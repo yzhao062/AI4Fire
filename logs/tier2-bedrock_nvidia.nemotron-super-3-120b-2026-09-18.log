@@ -1,0 +1,27 @@
+=== chain bedrock:nvidia.nemotron-super-3-120b start 2026-09-18 15:14:40
+
+baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.756666666666666, "mae_norm": 0.14646676565487057, "within_25pct": 0.78, "median_abs_log_ratio": 0.045296569329133826, "mae_norm_on_moving_days": 0.3367067151767701, "beats_persistence_share": 0.0}
+{"run": "bedrock:nvidia.nemotron-super-3-120b/bare", "items": 300, "parsed": 300, "mae": 13.623333333333333, "mae_norm": 0.1495179055107578, "within_25pct": 0.7833333333333333, "median_abs_log_ratio": 0.04616477583309351, "mae_norm_on_moving_days": 0.33166655963165087, "beats_persistence_share": 0.016666666666666666, "errors": 0, "tokens_in": 113743, "tokens_out": 20017}
+{"run": "bedrock:nvidia.nemotron-super-3-120b/grounded", "items": 300, "parsed": 300, "mae": 19.723333333333333, "mae_norm": 0.24313382421913568, "within_25pct": 0.6966666666666667, "median_abs_log_ratio": 0.12066008604162326, "mae_norm_on_moving_days": 0.3659103798697711, "beats_persistence_share": 0.21333333333333335, "errors": 0, "tokens_in": 186315, "tokens_out": 18713}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+--- mesogeos 15:27:56
+test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
+{"run": "bedrock:nvidia.nemotron-super-3-120b/bare", "items": 386, "parsed": 385, "auprc": 0.5289656882221261, "f1_fire": 0.5967741935483871, "f1_no_fire": 0.8084291187739464, "positive_rate_called": 0.3064935064935065, "positive_rate_true": 0.33766233766233766, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 537900}
+{"run": "bedrock:nvidia.nemotron-super-3-120b/grounded", "items": 386, "parsed": 384, "auprc": 0.49007929060322936, "f1_fire": 0.6012269938650306, "f1_no_fire": 0.7058823529411765, "positive_rate_called": 0.5078125, "positive_rate_true": 0.3411458333333333, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 645114}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+--- tooluse 15:33:09
+  "parse_failures": 1,
+  "tool_failures": 0,
+  "errors": 0,
+  "abstentions": 5,
+  "mean_tool_calls": 1.583,
+  "max_tool_calls": 8,
+  "tokens_in": 835301,
+  "tokens_out": 24724
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_nvidia.nemotron-super-3-120b-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+=== chain bedrock:nvidia.nemotron-super-3-120b DONE 2026-09-18 15:40:53

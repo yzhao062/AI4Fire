@@ -1,0 +1,25 @@
+=== chain bedrock:moonshotai.kimi-k2.5 start 2026-09-18 14:19:41
+bedrock:moonshotai.kimi-k2.5 allocation rc=0 319s
+bedrock:moonshotai.kimi-k2.5 mesogeos rc=0 319s
+bedrock:moonshotai.kimi-k2.5 figlib rc=0 195s
+ALL DONE
+--- tooluse 14:33:34
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 2,
+  "abstentions": 0,
+  "mean_tool_calls": 1.487,
+  "max_tool_calls": 8,
+  "tokens_in": 574361,
+  "tokens_out": 20416
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshotai.kimi-k2.5-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+--- wildfirevqa 14:38:23
+items: 408 | images 390 | categories {'Classification': 72, 'Cross-Modal Reasoning': 48, 'Distribution and Segmentation': 96, 'Flight Planning': 48, 'Localization and Direction': 48, 'Presence and Detection': 96}
+{"run": "bedrock:moonshotai.kimi-k2.5/bare", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.5833333333333334, "accuracy_parsed_only": 0.5833333333333334, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.681, "Cross-Modal Reasoning": 0.521, "Distribution and Segmentation": 0.448, "Flight Planning": 0.5, "Localization and Direction": 0.583, "Presence and Detection": 0.719}, "accuracy_by_question": {"CL1": 0.667, "CL2": 0.917, "CL3": 0.5, "CL4": 0.583, "CL5": 0.667, "CL6": 0.75, "CMR1": 0.583, "CMR2": 0.667, "CMR3": 0.583, "CMR4": 0.25, "DS1": 0.167, "DS2": 0.167, "DS3": 0.083, "DS4": 0.667, "DS5": 0.667, "DS6": 0.417, "DS7": 0.667, "DS8": 0.75, "FP1": 0.917, "FP2": 0.0, "FP3": 0.333, "FP4": 0.75, "LD1": 0.583, "LD2": 0.333, "LD3": 0.583, "LD4": 0.833, "PD1": 0.75, "PD2": 1.0, "PD3": 0.917, "PD4": 0.75, "PD5": 0.833, "PD6": 0.583, "PD7": 0.417, "PD8": 0.5}, "accuracy_closed_form_items": 0.5833333333333334, "accuracy_other_items": 0.5833333333333334, "applicability_mean": 0.7724264705882352, "accuracy_applicability_ge_0.5": 0.5966386554621849, "accuracy_applicability_lt_0.5": 0.49019607843137253, "items_applicability_lt_0.5": 51, "failures": {}, "tokens_in": 527160, "tokens_out": 7845}
+{"run": "bedrock:moonshotai.kimi-k2.5/grounded", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.6127450980392157, "accuracy_parsed_only": 0.6127450980392157, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.708, "Cross-Modal Reasoning": 0.729, "Distribution and Segmentation": 0.49, "Flight Planning": 0.479, "Localization and Direction": 0.542, "Presence and Detection": 0.708}, "accuracy_by_question": {"CL1": 0.833, "CL2": 0.917, "CL3": 0.667, "CL4": 0.667, "CL5": 0.583, "CL6": 0.583, "CMR1": 0.667, "CMR2": 0.75, "CMR3": 0.583, "CMR4": 0.917, "DS1": 0.167, "DS2": 0.167, "DS3": 0.083, "DS4": 0.583, "DS5": 0.75, "DS6": 0.417, "DS7": 0.833, "DS8": 0.917, "FP1": 0.833, "FP2": 0.0, "FP3": 0.333, "FP4": 0.75, "LD1": 0.5, "LD2": 0.333, "LD3": 0.5, "LD4": 0.833, "PD1": 0.75, "PD2": 1.0, "PD3": 0.833, "PD4": 0.75, "PD5": 0.833, "PD6": 0.583, "PD7": 0.417, "PD8": 0.5}, "accuracy_closed_form_items": 0.875, "accuracy_other_items": 0.5777777777777777, "applicability_mean": 0.8278186274509803, "accuracy_applicability_ge_0.5": 0.6288659793814433, "accuracy_applicability_lt_0.5": 0.3, "items_applicability_lt_0.5": 20, "failures": {}, "tokens_in": 587136, "tokens_out": 9302}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\scores.json
+=== chain bedrock:moonshotai.kimi-k2.5 DONE 2026-09-18 14:44:10

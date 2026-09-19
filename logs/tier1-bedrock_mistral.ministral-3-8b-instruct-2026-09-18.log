@@ -1,0 +1,25 @@
+=== chain bedrock:mistral.ministral-3-8b-instruct start 2026-09-18 14:19:41
+bedrock:mistral.ministral-3-8b-instruct allocation rc=0 153s
+bedrock:mistral.ministral-3-8b-instruct mesogeos rc=0 171s
+bedrock:mistral.ministral-3-8b-instruct figlib rc=0 220s
+ALL DONE
+--- tooluse 14:28:45
+  "parse_failures": 0,
+  "tool_failures": 0,
+  "errors": 5,
+  "abstentions": 5,
+  "mean_tool_calls": 1.506,
+  "max_tool_calls": 8,
+  "tokens_in": 666801,
+  "tokens_out": 20431
+}
+Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_mistral.ministral-3-8b-instruct-tool.jsonl
+
+Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+--- wildfirevqa 14:30:12
+items: 408 | images 390 | categories {'Classification': 72, 'Cross-Modal Reasoning': 48, 'Distribution and Segmentation': 96, 'Flight Planning': 48, 'Localization and Direction': 48, 'Presence and Detection': 96}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/bare", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.5147058823529411, "accuracy_parsed_only": 0.5147058823529411, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.681, "Cross-Modal Reasoning": 0.5, "Distribution and Segmentation": 0.448, "Flight Planning": 0.438, "Localization and Direction": 0.375, "Presence and Detection": 0.573}, "accuracy_by_question": {"CL1": 0.75, "CL2": 0.917, "CL3": 0.583, "CL4": 0.583, "CL5": 0.667, "CL6": 0.583, "CMR1": 0.5, "CMR2": 0.417, "CMR3": 0.5, "CMR4": 0.583, "DS1": 0.417, "DS2": 0.167, "DS3": 0.083, "DS4": 0.583, "DS5": 0.5, "DS6": 0.333, "DS7": 0.583, "DS8": 0.917, "FP1": 0.833, "FP2": 0.0, "FP3": 0.25, "FP4": 0.667, "LD1": 0.417, "LD2": 0.333, "LD3": 0.083, "LD4": 0.667, "PD1": 0.667, "PD2": 0.917, "PD3": 0.917, "PD4": 0.833, "PD5": 0.167, "PD6": 0.417, "PD7": 0.167, "PD8": 0.5}, "accuracy_closed_form_items": 0.7083333333333334, "accuracy_other_items": 0.4888888888888889, "applicability_mean": 0.8311274509803922, "accuracy_applicability_ge_0.5": 0.5112781954887218, "accuracy_applicability_lt_0.5": 0.6666666666666666, "items_applicability_lt_0.5": 9, "failures": {}, "tokens_in": 541560, "tokens_out": 11279}
+{"run": "bedrock:mistral.ministral-3-8b-instruct/grounded", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.5147058823529411, "accuracy_parsed_only": 0.5147058823529411, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.694, "Cross-Modal Reasoning": 0.542, "Distribution and Segmentation": 0.365, "Flight Planning": 0.438, "Localization and Direction": 0.375, "Presence and Detection": 0.625}, "accuracy_by_question": {"CL1": 0.75, "CL2": 0.917, "CL3": 0.833, "CL4": 0.333, "CL5": 0.667, "CL6": 0.667, "CMR1": 0.5, "CMR2": 0.417, "CMR3": 0.5, "CMR4": 0.75, "DS1": 0.417, "DS2": 0.167, "DS3": 0.083, "DS4": 0.417, "DS5": 0.5, "DS6": 0.333, "DS7": 0.75, "DS8": 0.25, "FP1": 0.833, "FP2": 0.0, "FP3": 0.25, "FP4": 0.667, "LD1": 0.417, "LD2": 0.25, "LD3": 0.083, "LD4": 0.75, "PD1": 0.75, "PD2": 0.917, "PD3": 0.833, "PD4": 0.833, "PD5": 0.083, "PD6": 0.583, "PD7": 0.333, "PD8": 0.667}, "accuracy_closed_form_items": 0.625, "accuracy_other_items": 0.5, "applicability_mean": 0.8404411764705884, "accuracy_applicability_ge_0.5": 0.506426735218509, "accuracy_applicability_lt_0.5": 0.6842105263157895, "items_applicability_lt_0.5": 19, "failures": {}, "tokens_in": 613210, "tokens_out": 11320}
+
+wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\scores.json
+=== chain bedrock:mistral.ministral-3-8b-instruct DONE 2026-09-18 14:34:01

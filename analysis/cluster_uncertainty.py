@@ -512,6 +512,7 @@ def prepare_mesogeos(items, bare_rows, grounded_rows, cfg):
         "extra": {"positive cells scored": int(labels.sum())},
         "warn": "; ".join(warn) if warn else None,
         "selfcheck": (labels, score_b),
+        "kept": kept,  # the item ids actually scored, so a caller can match a comparator to this subset
     }
 
 

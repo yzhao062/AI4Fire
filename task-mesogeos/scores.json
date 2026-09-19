@@ -406,5 +406,991 @@
   },
   "errors": 0,
   "tokens_in": 418154
+ },
+ {
+  "run": "bedrock:mistral.ministral-3-8b-instruct/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4672815639108898,
+  "f1_fire": 0.5268065268065268,
+  "f1_no_fire": 0.40816326530612246,
+  "positive_rate_called": 0.772020725388601,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 533654
+ },
+ {
+  "run": "bedrock:mistral.ministral-3-8b-instruct/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.41951141544753223,
+  "f1_fire": 0.5133928571428571,
+  "f1_no_fire": 0.3271604938271605,
+  "positive_rate_called": 0.8212435233160622,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 640868
+ },
+ {
+  "run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4728482343684144,
+  "f1_fire": 0.5511811023622047,
+  "f1_no_fire": 0.5626598465473146,
+  "positive_rate_called": 0.6476683937823834,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 444694
+ },
+ {
+  "run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4604573223332572,
+  "f1_fire": 0.5646437994722955,
+  "f1_no_fire": 0.5801526717557252,
+  "positive_rate_called": 0.6424870466321243,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 531092
+ },
+ {
+  "run": "bedrock:amazon.nova-lite-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.41730970309524074,
+  "f1_fire": 0.42857142857142855,
+  "f1_no_fire": 0.7864768683274022,
+  "positive_rate_called": 0.20466321243523317,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 543690
+ },
+ {
+  "run": "bedrock:amazon.nova-lite-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.377313377538021,
+  "f1_fire": 0.24390243902439024,
+  "f1_no_fire": 0.7960526315789473,
+  "positive_rate_called": 0.08549222797927461,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 664414
+ },
+ {
+  "run": "bedrock:mistral.mistral-large-3-675b-instruct/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4726619735040251,
+  "f1_fire": 0.5198237885462555,
+  "f1_no_fire": 0.31446540880503143,
+  "positive_rate_called": 0.8367875647668394,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 533654
+ },
+ {
+  "run": "bedrock:mistral.mistral-large-3-675b-instruct/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.44151631578007783,
+  "f1_fire": 0.5110132158590308,
+  "f1_no_fire": 0.3018867924528302,
+  "positive_rate_called": 0.8367875647668394,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 640868
+ },
+ {
+  "run": "bedrock:us.amazon.nova-2-lite-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4422034340685185,
+  "f1_fire": 0.358695652173913,
+  "f1_no_fire": 0.7993197278911565,
+  "positive_rate_called": 0.13730569948186527,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 445080
+ },
+ {
+  "run": "bedrock:us.amazon.nova-2-lite-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4775940429142722,
+  "f1_fire": 0.3389830508474576,
+  "f1_no_fire": 0.8033613445378152,
+  "positive_rate_called": 0.11917098445595854,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 531478
+ },
+ {
+  "run": "bedrock:amazon.nova-pro-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4766362692411993,
+  "f1_fire": 0.4292682926829268,
+  "f1_no_fire": 0.7936507936507936,
+  "positive_rate_called": 0.19170984455958548,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 543690
+ },
+ {
+  "run": "bedrock:amazon.nova-pro-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4794477274064803,
+  "f1_fire": 0.34285714285714286,
+  "f1_no_fire": 0.8073701842546064,
+  "positive_rate_called": 0.11398963730569948,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 664414
+ },
+ {
+  "run": "bedrock:moonshotai.kimi-k2.5/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5181783263450774,
+  "f1_fire": 0.6138613861386139,
+  "f1_no_fire": 0.7505330490405118,
+  "positive_rate_called": 0.44559585492227977,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 433886
+ },
+ {
+  "run": "bedrock:moonshotai.kimi-k2.5/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5288697665387498,
+  "f1_fire": 0.6148648648648649,
+  "f1_no_fire": 0.7605042016806722,
+  "positive_rate_called": 0.4274611398963731,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 520670
+ },
+ {
+  "run": "bedrock:amazon.nova-micro-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.33859482313751643,
+  "f1_fire": 0.0,
+  "f1_no_fire": 0.7956318252730109,
+  "positive_rate_called": 0.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 543690
+ },
+ {
+  "run": "bedrock:amazon.nova-micro-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3321539400505613,
+  "f1_fire": 0.0,
+  "f1_no_fire": 0.7956318252730109,
+  "positive_rate_called": 0.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 664414
+ },
+ {
+  "run": "bedrock:google.gemma-3-4b-it/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3467619768266934,
+  "f1_fire": 0.5067698259187621,
+  "f1_no_fire": 0.0,
+  "positive_rate_called": 1.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 535970
+ },
+ {
+  "run": "bedrock:google.gemma-3-4b-it/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.33859482313751643,
+  "f1_fire": 0.5067698259187621,
+  "f1_no_fire": 0.0,
+  "positive_rate_called": 1.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 643956
+ },
+ {
+  "run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4131690078968395,
+  "f1_fire": 0.5082508250825083,
+  "f1_no_fire": 0.6823027718550106,
+  "positive_rate_called": 0.44559585492227977,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 444308
+ },
+ {
+  "run": "bedrock:us.meta.llama3-3-70b-instruct-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.458184625351295,
+  "f1_fire": 0.5714285714285714,
+  "f1_no_fire": 0.7261146496815286,
+  "positive_rate_called": 0.44041450777202074,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 530706
+ },
+ {
+  "run": "bedrock:qwen.qwen3-32b-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.42852663887206616,
+  "f1_fire": 0.5219399538106235,
+  "f1_no_fire": 0.3893805309734513,
+  "positive_rate_called": 0.7823834196891192,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 532110
+ },
+ {
+  "run": "bedrock:qwen.qwen3-32b-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4583916836822007,
+  "f1_fire": 0.5133928571428571,
+  "f1_no_fire": 0.3271604938271605,
+  "positive_rate_called": 0.8212435233160622,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 639710
+ },
+ {
+  "run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4002100160484311,
+  "f1_fire": 0.3315508021390374,
+  "f1_no_fire": 0.7863247863247863,
+  "positive_rate_called": 0.14507772020725387,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 436588
+ },
+ {
+  "run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4265157809024691,
+  "f1_fire": 0.37320574162679426,
+  "f1_no_fire": 0.7673179396092362,
+  "positive_rate_called": 0.20207253886010362,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 522986
+ },
+ {
+  "run": "bedrock:mistral.mistral-small-2402-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4011997152833497,
+  "f1_fire": 0.49783549783549785,
+  "f1_no_fire": 0.25161290322580643,
+  "positive_rate_called": 0.8575129533678757,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 549866
+ },
+ {
+  "run": "bedrock:mistral.mistral-small-2402-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4068158340219633,
+  "f1_fire": 0.5435897435897435,
+  "f1_no_fire": 0.5340314136125655,
+  "positive_rate_called": 0.6709844559585493,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 660168
+ },
+ {
+  "run": "bedrock:mistral.devstral-2-123b/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5217841442351963,
+  "f1_fire": 0.5685279187817259,
+  "f1_no_fire": 0.5502645502645502,
+  "positive_rate_called": 0.6813471502590673,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 533654
+ },
+ {
+  "run": "bedrock:mistral.devstral-2-123b/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5220723380221205,
+  "f1_fire": 0.5728900255754475,
+  "f1_no_fire": 0.5616797900262467,
+  "positive_rate_called": 0.6735751295336787,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 640868
+ },
+ {
+  "run": "bedrock:google.gemma-3-12b-it/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.44619068858050204,
+  "f1_fire": 0.5067698259187621,
+  "f1_no_fire": 0.0,
+  "positive_rate_called": 1.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 535970
+ },
+ {
+  "run": "bedrock:google.gemma-3-12b-it/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3887020466777616,
+  "f1_fire": 0.5067698259187621,
+  "f1_no_fire": 0.0,
+  "positive_rate_called": 1.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 643956
+ },
+ {
+  "run": "bedrock:qwen.qwen3-next-80b-a3b/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.41583400196134424,
+  "f1_fire": 0.527027027027027,
+  "f1_no_fire": 0.3597560975609756,
+  "positive_rate_called": 0.810880829015544,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 530566
+ },
+ {
+  "run": "bedrock:qwen.qwen3-next-80b-a3b/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3905151832417107,
+  "f1_fire": 0.5191873589164786,
+  "f1_no_fire": 0.3525835866261398,
+  "positive_rate_called": 0.8082901554404145,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 638166
+ },
+ {
+  "run": "bedrock:google.gemma-3-27b-it/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5323327046233108,
+  "f1_fire": 0.5228215767634855,
+  "f1_no_fire": 0.20689655172413793,
+  "positive_rate_called": 0.9093264248704663,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 535970
+ },
+ {
+  "run": "bedrock:google.gemma-3-27b-it/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4663897636823393,
+  "f1_fire": 0.5150905432595574,
+  "f1_no_fire": 0.12363636363636364,
+  "positive_rate_called": 0.9481865284974094,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 643956
+ },
+ {
+  "run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3833056904453966,
+  "f1_fire": 0.4970414201183432,
+  "f1_no_fire": 0.03773584905660377,
+  "positive_rate_called": 0.9740932642487047,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 530566
+ },
+ {
+  "run": "bedrock:qwen.qwen3-coder-30b-a3b-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4085868984427886,
+  "f1_fire": 0.49696969696969695,
+  "f1_no_fire": 0.10108303249097472,
+  "positive_rate_called": 0.9430051813471503,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 638166
+ },
+ {
+  "run": "bedrock:deepseek.v3.2/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4693375117467366,
+  "f1_fire": 0.5809768637532133,
+  "f1_no_fire": 0.5744125326370757,
+  "positive_rate_called": 0.6683937823834197,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 438132
+ },
+ {
+  "run": "bedrock:deepseek.v3.2/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4392177366747177,
+  "f1_fire": 0.5691906005221932,
+  "f1_no_fire": 0.5758354755784062,
+  "positive_rate_called": 0.6528497409326425,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 525302
+ },
+ {
+  "run": "bedrock:zai.glm-4.7/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4937170163893615,
+  "f1_fire": 0.6296296296296297,
+  "f1_no_fire": 0.7321428571428571,
+  "positive_rate_called": 0.5,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 464551
+ },
+ {
+  "run": "bedrock:zai.glm-4.7/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.49626872173738434,
+  "f1_fire": 0.6211180124223602,
+  "f1_no_fire": 0.7288888888888889,
+  "positive_rate_called": 0.4948186528497409,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 558392
+ },
+ {
+  "run": "bedrock:zai.glm-4.7-flash/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.44392791737863807,
+  "f1_fire": 0.4675324675324675,
+  "f1_no_fire": 0.7726432532347505,
+  "positive_rate_called": 0.25906735751295334,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 464551
+ },
+ {
+  "run": "bedrock:zai.glm-4.7-flash/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4445927285203619,
+  "f1_fire": 0.5075757575757576,
+  "f1_no_fire": 0.7440944881889764,
+  "positive_rate_called": 0.344559585492228,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 558392
+ },
+ {
+  "run": "bedrock:openai.gpt-oss-120b-1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4479295401175529,
+  "f1_fire": 0.5150684931506849,
+  "f1_no_fire": 0.5651105651105651,
+  "positive_rate_called": 0.6062176165803109,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 455116
+ },
+ {
+  "run": "bedrock:openai.gpt-oss-120b-1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.460331587870646,
+  "f1_fire": 0.5016722408026756,
+  "f1_no_fire": 0.6849894291754757,
+  "positive_rate_called": 0.43523316062176165,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 541514
+ },
+ {
+  "run": "bedrock:zai.glm-5/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5696117595357721,
+  "f1_fire": 0.5606694560669456,
+  "f1_no_fire": 0.8030018761726079,
+  "positive_rate_called": 0.27979274611398963,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 464551
+ },
+ {
+  "run": "bedrock:zai.glm-5/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5656181707347603,
+  "f1_fire": 0.5577689243027888,
+  "f1_no_fire": 0.7869481765834933,
+  "positive_rate_called": 0.31088082901554404,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 558392
+ },
+ {
+  "run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.3335640548985484,
+  "f1_fire": 0.0,
+  "f1_no_fire": 0.7956318252730109,
+  "positive_rate_called": 0.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 436588
+ },
+ {
+  "run": "bedrock:us.meta.llama3-1-8b-instruct-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.32547042749119603,
+  "f1_fire": 0.0,
+  "f1_no_fire": 0.7956318252730109,
+  "positive_rate_called": 0.0,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 522986
+ },
+ {
+  "run": "bedrock:openai.gpt-oss-20b-1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.4377031416752456,
+  "f1_fire": 0.5241379310344828,
+  "f1_no_fire": 0.7136929460580913,
+  "positive_rate_called": 0.4119170984455959,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 455116
+ },
+ {
+  "run": "bedrock:openai.gpt-oss-20b-1:0/grounded",
+  "items": 386,
+  "parsed": 381,
+  "auprc": 0.3916107989877487,
+  "f1_fire": 0.3008849557522124,
+  "f1_no_fire": 0.7052238805970149,
+  "positive_rate_called": 0.25196850393700787,
+  "positive_rate_true": 0.34120734908136485,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 541514
+ },
+ {
+  "run": "bedrock:nvidia.nemotron-super-3-120b/bare",
+  "items": 386,
+  "parsed": 385,
+  "auprc": 0.5289656882221261,
+  "f1_fire": 0.5967741935483871,
+  "f1_no_fire": 0.8084291187739464,
+  "positive_rate_called": 0.3064935064935065,
+  "positive_rate_true": 0.33766233766233766,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 537900
+ },
+ {
+  "run": "bedrock:nvidia.nemotron-super-3-120b/grounded",
+  "items": 386,
+  "parsed": 384,
+  "auprc": 0.49007929060322936,
+  "f1_fire": 0.6012269938650306,
+  "f1_no_fire": 0.7058823529411765,
+  "positive_rate_called": 0.5078125,
+  "positive_rate_true": 0.3411458333333333,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 645114
+ },
+ {
+  "run": "bedrock:us.deepseek.r1-v1:0/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.47160123635822127,
+  "f1_fire": 0.5355648535564853,
+  "f1_no_fire": 0.24489795918367346,
+  "positive_rate_called": 0.8989637305699482,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 438518
+ },
+ {
+  "run": "bedrock:us.deepseek.r1-v1:0/grounded",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.46271136856151496,
+  "f1_fire": 0.5450643776824035,
+  "f1_no_fire": 0.30718954248366015,
+  "positive_rate_called": 0.8678756476683938,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 525688
+ },
+ {
+  "run": "bedrock:moonshot.kimi-k2-thinking/bare",
+  "items": 386,
+  "parsed": 386,
+  "auprc": 0.5599875306939496,
+  "f1_fire": 0.5497382198952879,
+  "f1_no_fire": 0.558974358974359,
+  "positive_rate_called": 0.6502590673575129,
+  "positive_rate_true": 0.3393782383419689,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 433357
+ },
+ {
+  "run": "bedrock:moonshot.kimi-k2-thinking/grounded",
+  "items": 386,
+  "parsed": 383,
+  "auprc": 0.510867171415265,
+  "f1_fire": 0.5308641975308642,
+  "f1_no_fire": 0.6561085972850679,
+  "positive_rate_called": 0.5065274151436031,
+  "positive_rate_true": 0.3394255874673629,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 520069
+ },
+ {
+  "run": "bedrock:minimax.minimax-m2.5/bare",
+  "items": 386,
+  "parsed": 312,
+  "auprc": 0.573750505765112,
+  "f1_fire": 0.5993485342019544,
+  "f1_no_fire": 0.61198738170347,
+  "positive_rate_called": 0.6378205128205128,
+  "positive_rate_true": 0.34615384615384615,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 435044
+ },
+ {
+  "run": "bedrock:minimax.minimax-m2.5/grounded",
+  "items": 386,
+  "parsed": 300,
+  "auprc": 0.4672379620169432,
+  "f1_fire": 0.5447761194029851,
+  "f1_no_fire": 0.6325301204819277,
+  "positive_rate_called": 0.5766666666666667,
+  "positive_rate_true": 0.31666666666666665,
+  "published_auprc": {
+   "LSTM": 0.853,
+   "Transformer": 0.856,
+   "GTN": 0.858
+  },
+  "errors": 0,
+  "tokens_in": 521828
  }
 ]
