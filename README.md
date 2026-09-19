@@ -109,6 +109,7 @@ python analysis/prompt_sensitivity.py      # the two prompt paraphrases against 
 python analysis/tooluse_paired.py          # tool against bare on the FPA-FOD tool-use task, paired and clustered by question family
 python analysis/retrieval_v2.py            # grounded runs under analogue rule v2 beside bare and rule v1, paired by incident
 python analysis/wildfirevqa_paired.py      # aerial question answering, grounded against bare, paired and clustered by frame, beside the majority and closed-form comparators
+python analysis/wildfirevqa_comparators.py # each aerial model against the majority reference and the majority-plus-closed-form hybrid, paired and clustered by frame
 python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
 python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
 python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum
