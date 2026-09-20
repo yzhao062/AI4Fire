@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI4Fire: Benchmark and Survey Architecture</title>
+<style>
+  :root {
+    --brand:          #8b2635;
+    --brand-dark:     #6a1824;
+    --brand-tint:     #fcf4f5;
+    --brand-tint-2:   #fae8eb;
+    --brand-border:   #e8c4ca;
+
+    --ink-title:      #111827;
+    --ink-body:       #374151;
+    --ink-muted:      #6b7280;
+
+    --card-bg:        #ffffff;
+    --card-border:    #e5e7eb;
+    --card-shadow:    rgba(0, 0, 0, 0.04);
+
+    --bare-bg:        #f8fafc;
+    --bare-border:    #cbd5e1;
+    --bare-accent:    #64748b;
+    --bare-tag-bg:    #e2e8f0;
+    --bare-tag-text:  #334155;
+
+    --grd-bg:         #fdf6f7;
+    --grd-border:     #f4d3d8;
+    --grd-accent:     #8b2635;
+    --grd-tag-bg:     #fae4e7;
+    --grd-tag-text:   #8b2635;
+
+    --comp-bg:        #f0fdf4;
+    --comp-border:    #bbf7d0;
+    --comp-accent:    #16a34a;
+    --comp-tag-bg:    #dcfce7;
+    --comp-tag-text:  #15803d;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  /* ── Main Canvas Sheet (1400px wide, compact card design) ────────── */
+  .sheet {
+    width: 1400px;
+    background: #ffffff;
+    border: 1px solid #d5d9df;
+    border-radius: 12px;
+    padding: 16px 20px 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ── Header Bar ─────────────────────────────────────────────────── */
+  .header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebecef;
+  }
+
+  .brand-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--brand);
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(139, 38, 53, 0.28);
+    flex-shrink: 0;
+  }
+
+  .brand-logo svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .brand-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--brand);
+    line-height: 1;
+  }
+
+  .brand-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--brand-tint-2);
+    color: var(--brand-dark);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--brand-border);
+  }
+
+  .brand-tagline {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    line-height: 1.2;
+  }
+
+  .stats-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .stat-chip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--ink-body);
+    white-space: nowrap;
+  }
+
+  .stat-chip b {
+    color: var(--brand);
+    font-weight: 700;
+  }
+
+  .stat-chip.brand-highlight {
+    background: var(--brand-tint);
+    border-color: var(--brand-border);
+    color: var(--brand-dark);
+  }
+
+  .stat-chip.comp-highlight {
+    background: var(--comp-bg);
+    border-color: var(--comp-border);
+    color: var(--comp-tag-text);
+  }
+
+  .stat-chip.comp-highlight b {
+    color: var(--comp-tag-text);
+    font-weight: 700;
+  }
+
+  /* ── 5 Task Columns Grid ────────────────────────────────────────── */
+  .tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .task-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 10px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    box-shadow: 0 1px 3px var(--card-shadow);
+  }
+
+  .task-header {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f1f2f4;
+    min-height: 62px;
+    justify-content: flex-start;
+  }
+
+  .task-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .task-num {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+
+  .task-source {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    background: #f3f4f6;
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .task-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink-title);
+    line-height: 1.2;
+  }
+
+  .task-scope {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    line-height: 1.25;
+  }
+
+  /* ── Condition & Comparator Blocks inside Task Cards ───────────── */
+  .block {
+    border-radius: 5px;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 11px;
+    line-height: 1.34;
+    flex: 1;
+  }
+
+  .block-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .block-label .pill {
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* Bare styling */
+  .block.bare {
+    background: var(--bare-bg);
+    border: 1px solid var(--bare-border);
+    border-left: 3px solid var(--bare-accent);
+    min-height: 58px;
+  }
+
+  .block.bare .pill {
+    background: var(--bare-tag-bg);
+    color: var(--bare-tag-text);
+  }
+
+  .block.bare .block-text {
+    color: var(--ink-body);
+  }
+
+  /* Grounded styling */
+  .block.grounded {
+    background: var(--grd-bg);
+    border: 1px solid var(--grd-border);
+    border-left: 3px solid var(--grd-accent);
+    min-height: 58px;
+  }
+
+  .block.grounded .pill {
+    background: var(--grd-tag-bg);
+    color: var(--grd-tag-text);
+  }
+
+  .block.grounded .block-text {
+    color: var(--ink-body);
+  }
+
+  .block.grounded .block-text b {
+    color: var(--brand);
+    font-weight: 600;
+  }
+
+  /* Comparator styling */
+  .block.comparator {
+    background: var(--comp-bg);
+    border: 1px solid var(--comp-border);
+    border-left: 3px solid var(--comp-accent);
+    min-height: 58px;
+  }
+
+  .block.comparator .pill {
+    background: var(--comp-tag-bg);
+    color: var(--comp-tag-text);
+  }
+
+  .block.comparator .block-text {
+    color: #14532d;
+  }
+
+  .block.comparator .block-text b {
+    color: #166534;
+    font-weight: 700;
+  }
+
+  /* ── Bottom Strip ────────────────────────────────────────────────── */
+  .footer-strip {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 9px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--ink-body);
+  }
+
+  .footer-lead {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-lead b {
+    color: var(--brand);
+    font-weight: 700;
+  }
+
+  .badge-repro {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: var(--ink-body);
+  }
+
+  .badge-repro code {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--brand);
+  }
+
+  .footer-vendors {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+
+  .vendors-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-right: 2px;
+  }
+
+  .vendor-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 10.5px;
+    color: var(--ink-body);
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet" id="sheet">
+
+  <!-- ── Header Bar ───────────────────────────────────────────────── -->
+  <div class="header-bar">
+    <div class="brand-group">
+      <div class="brand-logo" aria-hidden="true">
+        <!-- Flame Icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 23c-4.97 0-9-3.8-9-8.5 0-3.57 2.45-6.84 5.34-9.35.48-.42 1.23-.27 1.5.31.57 1.22 1.34 2.54 2.16 3.44.2.22.56.17.69-.1 1.05-2.22 1.63-4.52 1.31-6.8-.07-.53.51-.92.95-.63 3.65 2.44 6.05 6.64 6.05 10.63 0 6.07-4.03 11-9 11zm-1.2-4.5c2.32 0 4.2-1.79 4.2-4 0-1.26-.62-2.45-1.57-3.41-.22-.22-.61-.13-.71.16-.4 1.15-1.12 2.15-2.12 2.75-.24.15-.37.44-.3.71.21.84-.2 1.79-1.5 2.79-.22.17-.18.52.07.67.61.37 1.25.56 1.93.56z"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title-row">
+          <div class="brand-title">AI4Fire</div>
+          <span class="brand-badge">Survey &amp; Benchmark</span>
+        </div>
+        <div class="brand-tagline">Large Language Models and Agents on Fire Tasks</div>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-chip brand-highlight"><b>5</b> Wildfire Tasks</div>
+      <div class="stat-chip brand-highlight"><b>Bare</b> vs <b>Grounded</b></div>
+      <div class="stat-chip"><b>35</b> Models · <b>12</b> Vendors</div>
+      <div class="stat-chip"><b>77,644</b> Scored Responses</div>
+      <div class="stat-chip comp-highlight"><b>Non-LLM</b> Comparators</div>
+    </div>
+  </div>
+
+  <!-- ── 5 Task Columns Grid ──────────────────────────────────────── -->
+  <div class="tasks-grid">
+
+    <!-- Column 1: Allocation -->
+    <div class="task-card">
+      <div class="task-header">
+        <div class="task-meta">
+          <span class="task-num">Task 1</span>
+          <span class="task-source mono">ICS-209-PLUS</span>
+        </div>
+        <div class="task-name">Personnel Allocation</div>
+        <div class="task-scope">300 fire-days (incident filings)</div>
+      </div>
+
+      <div class="block bare">
+        <div class="block-label">
+          <span class="pill">Bare</span>
+          <span>Single Sit-Rep</span>
+        </div>
+        <div class="block-text">
+          23 report fields: personnel, acreage, fuel, management status.
+        </div>
+      </div>
+
+      <div class="block grounded">
+        <div class="block-label">
+          <span class="pill">Grounded</span>
+          <span>Analogue Fires</span>
+        </div>
+        <div class="block-text">
+          Retrieved historical analogue fire-days with past staffing decisions.
+        </div>
+      </div>
+
+      <div class="block comparator">
+        <div class="block-label">
+          <span class="pill">Comparator</span>
+          <span>Persistence &amp; GBDT</span>
+        </div>
+        <div class="block-text">
+          Persistence: <b>13.76 MAE</b>, 0.1465 norm MAE, 78.0% within 25%.
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Smoke Detection -->
+    <div class="task-card">
+      <div class="task-header">
+        <div class="task-meta">
+          <span class="task-num">Task 2</span>
+          <span class="task-source mono">FIgLib</span>
+        </div>
+        <div class="task-name">Smoke Detection</div>
+        <div class="task-scope">224 frames (196 paired)</div>
+      </div>
+
+      <div class="block bare">
+        <div class="block-label">
+          <span class="pill">Bare</span>
+          <span>Query Frame Only</span>
+        </div>
+        <div class="block-text">
+          Single camera frame evaluated without prior sequence context.
+        </div>
+      </div>
+
+      <div class="block grounded">
+        <div class="block-label">
+          <span class="pill">Grounded</span>
+          <span>Pre-Ignition Reference</span>
+        </div>
+        <div class="block-text">
+          Paired reference frame and temporal sequence context.
+        </div>
+      </div>
+
+      <div class="block comparator">
+        <div class="block-label">
+          <span class="pill">Comparator</span>
+          <span>Frame Difference</span>
+        </div>
+        <div class="block-text">
+          LOO-CV detector: <b>0.770 acc</b>, 0.920 recall, 0.429 FPR; 2 constants.
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 3: Fire Danger -->
+    <div class="task-card">
+      <div class="task-header">
+        <div class="task-meta">
+          <span class="task-num">Task 3</span>
+          <span class="task-source mono">Mesogeos Track A</span>
+        </div>
+        <div class="task-name">Fire Danger Forecast</div>
+        <div class="task-scope">386 Mediterranean cells</div>
+      </div>
+
+      <div class="block bare">
+        <div class="block-label">
+          <span class="pill">Bare</span>
+          <span>Tabular Drivers</span>
+        </div>
+        <div class="block-text">
+          24 numeric weather, vegetation, and topography indicators.
+        </div>
+      </div>
+
+      <div class="block grounded">
+        <div class="block-label">
+          <span class="pill">Grounded</span>
+          <span>Temporal &amp; Spatial</span>
+        </div>
+        <div class="block-text">
+          Multi-day driver trajectories and regional spatial context.
+        </div>
+      </div>
+
+      <div class="block comparator">
+        <div class="block-label">
+          <span class="pill">Comparator</span>
+          <span>Month Prior &amp; GBDT</span>
+        </div>
+        <div class="block-text">
+          Historical month prior baseline; trained GBDT and logistic fits.
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 4: Aerial QA -->
+    <div class="task-card">
+      <div class="task-header">
+        <div class="task-meta">
+          <span class="task-num">Task 4</span>
+          <span class="task-source mono">WildFireVQA</span>
+        </div>
+        <div class="task-name">Aerial Question Answering</div>
+        <div class="task-scope">408 items (390 FLAME 3 frames)</div>
+      </div>
+
+      <div class="block bare">
+        <div class="block-label">
+          <span class="pill">Bare</span>
+          <span>RGB Imagery</span>
+        </div>
+        <div class="block-text">
+          Standard visible-spectrum drone frame and question text.
+        </div>
+      </div>
+
+      <div class="block grounded">
+        <div class="block-label">
+          <span class="pill">Grounded</span>
+          <span>Thermal Infrared</span>
+        </div>
+        <div class="block-text">
+          Paired inferno-rendered thermal infrared image grounding.
+        </div>
+      </div>
+
+      <div class="block comparator">
+        <div class="block-label">
+          <span class="pill">Comparator</span>
+          <span>Majority &amp; Hybrid</span>
+        </div>
+        <div class="block-text">
+          Majority: <b>0.627 acc</b>; Hybrid closed-form: <b>0.664 acc</b>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 5: Tool Use -->
+    <div class="task-card">
+      <div class="task-header">
+        <div class="task-meta">
+          <span class="task-num">Task 5</span>
+          <span class="task-source mono">FPA-FOD 6th Ed.</span>
+        </div>
+        <div class="task-name">Fire Data Tool Use</div>
+        <div class="task-scope">156 items (214 MB SQLite DB)</div>
+      </div>
+
+      <div class="block bare">
+        <div class="block-label">
+          <span class="pill">Bare</span>
+          <span>Parametric Memory</span>
+        </div>
+        <div class="block-text">
+          Direct question answering without database query tools.
+        </div>
+      </div>
+
+      <div class="block grounded">
+        <div class="block-label">
+          <span class="pill">Grounded</span>
+          <span>SQL Query Tool</span>
+        </div>
+        <div class="block-text">
+          Iterative SQL execution via <span class="mono">query_fpafod</span> over full database.
+        </div>
+      </div>
+
+      <div class="block comparator">
+        <div class="block-label">
+          <span class="pill">Comparator</span>
+          <span>Best Constant Per Family</span>
+        </div>
+        <div class="block-text">
+          Best fixed answer per question family: <b>0.141 acc</b>.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Footer Strip ──────────────────────────────────────────────── -->
+  <div class="footer-strip">
+    <div class="footer-top">
+      <div class="footer-lead">
+        <span><b>Evaluation Coverage:</b> 35 models from 12 vendors (6 core models on 1,446 paired items; 16 full-capability ran all tasks).</span>
+      </div>
+      <div class="badge-repro">
+        <span>Verified offline:</span>
+        <code class="mono">python reproduce_tables.py</code>
+        <span>(2.5s execution)</span>
+      </div>
+    </div>
+
+    <div class="footer-vendors">
+      <span class="vendors-label">Vendors:</span>
+      <span class="vendor-pill">Anthropic</span>
+      <span class="vendor-pill">Google</span>
+      <span class="vendor-pill">OpenAI</span>
+      <span class="vendor-pill">Meta</span>
+      <span class="vendor-pill">Amazon</span>
+      <span class="vendor-pill">Mistral</span>
+      <span class="vendor-pill">Alibaba</span>
+      <span class="vendor-pill">Moonshot</span>
+      <span class="vendor-pill">DeepSeek</span>
+      <span class="vendor-pill">Z.AI</span>
+      <span class="vendor-pill">NVIDIA</span>
+      <span class="vendor-pill">MiniMax</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

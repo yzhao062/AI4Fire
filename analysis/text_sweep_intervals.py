@@ -50,7 +50,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    parser.add_argument("--repo", default=str(ROOT), help="fire-bench checkout root")
+    parser.add_argument("--repo", default=str(ROOT), help="AI4Fire checkout root")
     parser.add_argument(
         "--resamples",
         type=int,

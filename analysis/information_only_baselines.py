@@ -1,4 +1,4 @@
-"""Information-only baselines for the three fire-bench tasks (TMLR round-2, objection B).
+"""Information-only baselines for the three AI4Fire tasks (TMLR round-2, objection B).
 
 On each task the grounded arm is handed something extra. This script scores a trivial predictor that sees
 ONLY that extra thing, with no language model anywhere in the loop, and prints it beside every model run on
@@ -728,7 +728,7 @@ def main():
     args = ap.parse_args()
 
     repo = args.repo.resolve()
-    if not need(repo, "fire-bench repository root"):
+    if not need(repo, "AI4Fire repository root"):
         report_and_exit()
     sys.path.insert(0, str(repo))
 
@@ -743,7 +743,7 @@ def main():
         except Exception as exc:                       # an unimportable runner is a missing input, not a crash
             MISSING.append("%s  (imports, but raised: %s)" % (repo / (mod + ".py"), exc))
 
-    print("fire-bench repository: %s" % repo)
+    print("AI4Fire repository: %s" % repo)
     print("information-only baselines: a trivial rule that sees ONLY what the grounded arm was handed.")
     print("PROVISIONAL: every number below is recomputed from the responses-*.jsonl files present right now.")
 

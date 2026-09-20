@@ -850,7 +850,7 @@ def run_task(spec, cfg, problems):
 def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--repo", default=DEFAULT_REPO, help="fire-bench checkout to read")
+    parser.add_argument("--repo", default=DEFAULT_REPO, help="AI4Fire checkout to read")
     parser.add_argument("--resamples", type=int, default=20000,
                         help="bootstrap replicates per interval (clamped up to %d).  The default is high "
                              "because FIgLib has only 17 clusters, which makes the percentile tails noisy: "

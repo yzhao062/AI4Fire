@@ -1,7 +1,7 @@
-"""Characterise every item where a run produced no usable answer, across all three fire-bench tasks.
+"""Characterise every item where a run produced no usable answer, across all three AI4Fire tasks.
 
     python answer_failures.py
-    python answer_failures.py --root C:\\path\\to\\fire-bench --json out.json
+    python answer_failures.py --root C:\\path\\to\\AI4Fire --json out.json
 
 Answers the round-1 TMLR objection that the paper reports scores on answered items without reporting who
 failed to answer and whether the failures are random. A truncated or unparsable answer is a result: if

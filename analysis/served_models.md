@@ -44,7 +44,7 @@ gateway or API for each reported (task, model) pair, aggregated across bare and 
 | Section | Files | Responses | Files with one served identifier |
 |---|:---:|:---:|:---:|
 | reported | 36 | 10,752 | 36 of 36 |
-| tooluse | 66 | 10,296 | 66 of 66 |
+| tooluse | 78 | 12,168 | 78 of 78 |
 | wildfirevqa | 32 | 13,056 | 32 of 32 |
 | added_models | 60 | 17,920 | 60 of 60 |
 | text_models | 76 | 26,068 | 76 of 76 |
@@ -58,15 +58,15 @@ One row per model over the tool-use, aerial, and 2026-09-18 sweep sections; the 
 
 | Model | Tier | Path | Served identifier (calls) | Tasks in these sections |
 |---|:---:|:---:|---|---|
-| claude-opus-4.8 | core | Gateway | `claude-opus-4.8` (1,128) | tool use, aerial |
-| claude-opus-5 | core | Gateway | `claude-opus-5` (1,128) | tool use, aerial |
-| gemini-3.1-pro | core | Gateway | `gemini-3.1-pro` (1,128) | tool use, aerial |
-| gpt-6-astra | core | Gateway | `gpt-6-astra` (1,128) | tool use, aerial |
+| claude-opus-4.8 | core | Gateway | `claude-opus-4.8` (1,440) | tool use, aerial |
+| claude-opus-5 | core | Gateway | `claude-opus-5` (1,440) | tool use, aerial |
+| gemini-3.1-pro | core | Gateway | `gemini-3.1-pro` (1,440) | tool use, aerial |
+| gpt-6-astra | core | Gateway | `gpt-6-astra` (1,440) | tool use, aerial |
 | Nova Lite | added | Bedrock | `amazon.nova-lite-v1:0` (2,920) | allocation, fire danger, smoke, tool use, aerial |
 | Nova Pro | added | Bedrock | `amazon.nova-pro-v1:0` (2,920) | allocation, fire danger, smoke, tool use, aerial |
 | Nova 2 Lite | added | Bedrock | `us.amazon.nova-2-lite-v1:0` (2,920) | allocation, fire danger, smoke, tool use, aerial |
-| Qwen3-VL | core | Bedrock | `qwen.qwen3-vl-235b-a22b` (1,128) | tool use, aerial |
-| Llama 4 Maverick | core | Bedrock | `us.meta.llama4-maverick-17b-instruct-v1:0` (1,128) | tool use, aerial |
+| Qwen3-VL | core | Bedrock | `qwen.qwen3-vl-235b-a22b` (1,440) | tool use, aerial |
+| Llama 4 Maverick | core | Bedrock | `us.meta.llama4-maverick-17b-instruct-v1:0` (1,440) | tool use, aerial |
 | Llama 4 Scout | added | Bedrock | `us.meta.llama4-scout-17b-instruct-v1:0` (2,920) | allocation, fire danger, smoke, tool use, aerial |
 | Mistral Large 3 | added | Bedrock | `mistral.mistral-large-3-675b-instruct` (2,920) | allocation, fire danger, smoke, tool use, aerial |
 | Ministral 3 8B | added | Bedrock | `mistral.ministral-3-8b-instruct` (2,920) | allocation, fire danger, smoke, tool use, aerial |

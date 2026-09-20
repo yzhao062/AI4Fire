@@ -1,4 +1,4 @@
-"""Probe every Bedrock chat model on the fire-bench key for the three capabilities the five tasks need:
+"""Probe every Bedrock chat model on the project's Bedrock key for the three capabilities the five tasks need:
 plain text, image input (smoke detection and aerial question answering), and tool use (FPA-FOD tool use).
 
 Each probe is one tiny Converse call, so the whole sweep costs cents. Results go to
