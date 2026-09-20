@@ -6,7 +6,7 @@ analysis scripts, which live at https://github.com/yzhao062/AI4Fire and are repr
 from that checkout with `python reproduce_tables.py`.
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __all__ = ["TASKS", "REPOSITORY", "__version__"]
 
 REPOSITORY = "https://github.com/yzhao062/AI4Fire"
