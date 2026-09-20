@@ -1797,6 +1797,32 @@
         }
       },
       {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "fea9a930a2aa0594ccc83dab0bfb91cb3019fd1c37d3cb223d9e164a1103040e",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:38:24",
+          "latest": "2026-09-19T16:38:24",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "dc93fc1ffc59c9987a7084cb045d898860169cadfbdb34866243944d422bc5dd",
+        "served_model": [
+          "qwen.qwen3-vl-235b-a22b"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:50:20",
+          "latest": "2026-09-19T16:50:20",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-tooluse/responses-bedrock_qwen.qwen3-vl-235b-a22b-tool.jsonl",
         "row_count": 156,
         "sha256": "132235e8b10a41e58b23ba52e80eeb596a95f1b8b8615ff9166e0f78704bf3d2",
@@ -1897,6 +1923,32 @@
         "written": {
           "earliest": "2026-09-17T16:57:25",
           "latest": "2026-09-17T16:57:25",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "ccb969fb4b511dca4e24e0886ad95d2d9737b8eb7c02663f154beec2841f55c0",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:39:02",
+          "latest": "2026-09-19T16:39:02",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "4aa979774ccd92e197df36b77be64587796eeb6e9c6782aa8d857180952a8c23",
+        "served_model": [
+          "us.meta.llama4-maverick-17b-instruct-v1:0"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:50:58",
+          "latest": "2026-09-19T16:50:58",
           "source": "file mtime"
         }
       },
@@ -2031,6 +2083,32 @@
         }
       },
       {
+        "path": "task-tooluse/responses-claude-opus-4.8-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "a0ab683c65e11c187f9b5e7e36ad218be602611f9ac936beccc62b6e31beb63a",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:29:30",
+          "latest": "2026-09-19T16:29:30",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-4.8-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "f3136fd9a60568a39b58fee177916474a5465005aa7113a1f1b413f8566cd775",
+        "served_model": [
+          "claude-opus-4.8"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:40:44",
+          "latest": "2026-09-19T16:40:44",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-tooluse/responses-claude-opus-4.8-tool.jsonl",
         "row_count": 156,
         "sha256": "16c559579d7be0bf159dd1351f27554efad470c27b0ee2d81a92597dff47b339",
@@ -2053,6 +2131,32 @@
         "written": {
           "earliest": "2026-09-17T23:20:57",
           "latest": "2026-09-17T23:20:57",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-5-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "3466eb7473188d9a5a4161181bb506394d0092e68fcc6120321c869732edeb80",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:31:18",
+          "latest": "2026-09-19T16:31:18",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-claude-opus-5-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "94ff0d2f8d2c354ea7b47af6dc218787e87221d5b7c1eec5e6bee1e5e29bc5f4",
+        "served_model": [
+          "claude-opus-5"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:42:34",
+          "latest": "2026-09-19T16:42:34",
           "source": "file mtime"
         }
       },
@@ -2083,6 +2187,32 @@
         }
       },
       {
+        "path": "task-tooluse/responses-gemini-3.1-pro-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "c765d9aec5db42b4927c85cf33dadb2e34b097967b6f6a66344001a9fdb3d7f4",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:34:36",
+          "latest": "2026-09-19T16:34:36",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gemini-3.1-pro-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "c2e9159a20671fb0b021540031fe9efe4f52fa24d0030eb184097ad7d584b6c8",
+        "served_model": [
+          "gemini-3.1-pro"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:46:29",
+          "latest": "2026-09-19T16:46:29",
+          "source": "file mtime"
+        }
+      },
+      {
         "path": "task-tooluse/responses-gemini-3.1-pro-tool.jsonl",
         "row_count": 156,
         "sha256": "bb1380f7ab01ab4099cbc2a13f4bcd6bc071ce97515510c9da923b4d76f575c6",
@@ -2105,6 +2235,32 @@
         "written": {
           "earliest": "2026-09-17T23:37:07",
           "latest": "2026-09-17T23:37:07",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gpt-6-astra-tool-p1.jsonl",
+        "row_count": 156,
+        "sha256": "0a6589dd78f70a7d74ce68f93976c555ea574a86f58ca63585839797f5d98ef0",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:36:34",
+          "latest": "2026-09-19T16:36:34",
+          "source": "file mtime"
+        }
+      },
+      {
+        "path": "task-tooluse/responses-gpt-6-astra-tool-p2.jsonl",
+        "row_count": 156,
+        "sha256": "714a1289fdac5c234c1e8a656a4b89137a0aa013eaf0386aef944576f19d031f",
+        "served_model": [
+          "gpt-6-astra"
+        ],
+        "written": {
+          "earliest": "2026-09-19T16:48:29",
+          "latest": "2026-09-19T16:48:29",
           "source": "file mtime"
         }
       },
