@@ -710,9 +710,37 @@ def main():
                     help="re-run only the rows whose error field is set in the existing response file; keep the rest")
     ap.add_argument("--fake", nargs="?", const="clean", default=None, choices=["clean", "noisy"],
                     help="run against fake backend (clean or noisy)")
+    ap.add_argument("--items", type=pathlib.Path, default=None,
+                    help="path to items JSONL file (defaults to task-tooluse/items.jsonl)")
+    ap.add_argument("--variant", default=None,
+                    help="variant identifier (e.g. p1); if set, uses task-tooluse/items-<variant>.jsonl and writes responses-...-<variant>.jsonl")
     args = ap.parse_args()
 
-    allitems = [json.loads(line) for line in (TASK / "items.jsonl").read_text(encoding="utf-8").splitlines() if line]
+    variant_suffix = ""
+    if args.items:
+        p = pathlib.Path(args.items)
+        if p.is_absolute() and p.exists():
+            items_path = p
+        elif (S / p).exists():
+            items_path = S / p
+        elif (TASK / p).exists():
+            items_path = TASK / p
+        elif (TASK / p.name).exists():
+            items_path = TASK / p.name
+        else:
+            items_path = p.resolve()
+        m = re.search(r"-(p\d+)$", items_path.stem)
+        if m:
+            variant_suffix = f"-{m.group(1)}"
+        elif args.variant:
+            variant_suffix = f"-{args.variant}"
+    elif args.variant:
+        variant_suffix = f"-{args.variant}"
+        items_path = TASK / f"items-{args.variant}.jsonl"
+    else:
+        items_path = TASK / "items.jsonl"
+
+    allitems = [json.loads(line) for line in items_path.read_text(encoding="utf-8").splitlines() if line]
     items = allitems[:args.limit] if args.limit is not None else allitems
 
     if args.dry_run:
@@ -749,7 +777,7 @@ def main():
             # so the reported files and the score record hold model runs only.
             out_dir = TASK / "fake" if args.fake else TASK
             out_dir.mkdir(exist_ok=True)
-            out_file = out_dir / f"responses-{safe}-{cond}.jsonl"
+            out_file = out_dir / f"responses-{safe}-{cond}{variant_suffix}.jsonl"
 
             if args.retry_errors:
                 # Keep every row that returned an answer; re-run only the calls that raised.
@@ -766,7 +794,7 @@ def main():
                     rows = list(ex.map(process_one, items))
             out_file.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
 
-            run_key = f"{model}/{cond}"
+            run_key = f"{model}/{cond}{variant_suffix}"
             s = compute_summary(rows, run_key)
             summaries.append(s)
             print(json.dumps(s, indent=2))
