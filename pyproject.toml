@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai4fire"
+version = "0.0.1"
+description = "Task metadata and a lookup CLI for the AI4Fire wildfire benchmark for language models and agents"
+readme = { file = "PACKAGE.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { text = "BSD-2-Clause" }
+# Keep emails out of `authors`: setuptools routes any entry carrying one into
+# Author-email and the rest into Author, which splits the author list in two.
+authors = [
+    { name = "Yue Zhao" },
+    { name = "Xiyang Hu" },
+    { name = "Ruolin Li" },
+]
+maintainers = [
+    { name = "Yue Zhao", email = "yzhao010@usc.edu" },
+]
+keywords = ["wildfire", "benchmark", "evaluation", "language-models", "agents"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yzhao062/AI4Fire"
+Repository = "https://github.com/yzhao062/AI4Fire"
+
+[project.scripts]
+ai4fire = "ai4fire.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

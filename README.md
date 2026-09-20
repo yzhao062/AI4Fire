@@ -9,7 +9,7 @@
 Five wildfire tasks that score without a human in the loop. Every model runs twice, bare and grounded, and every task is scored beside a non-LLM comparator. The prompts, the raw responses, and the scripts that turn them into the paper's tables are all here.
 
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-8b2635.svg)](LICENSE)
-[![Tasks](https://img.shields.io/badge/Tasks-5-8b2635)](#the-five-tasks)
+[![PyPI](https://img.shields.io/pypi/v/ai4fire?color=8b2635&label=pypi%20%7C%20ai4fire)](https://pypi.org/project/ai4fire/)
 [![Models](https://img.shields.io/badge/Models-35_from_12_vendors-8b2635)](#reference)
 [![Responses](https://img.shields.io/badge/Scored_responses-77%2C644-8b2635)](#why-youd-use-this)
 [![Offline](https://img.shields.io/badge/Offline_reproduction-one_command-8b2635)](#quickstart)
@@ -40,6 +40,11 @@ python reproduce_tables.py
 
 That rebuilds every primary table in the paper from the stored responses. It reads only tracked
 files, needs no API key and no network, and exits non-zero if any expected model-arm is missing.
+
+> [!TIP]
+> `pip install ai4fire` installs the task inventory alone, as a `TASKS` tuple and an `ai4fire`
+> command. It is for looking up what the five tasks are without a clone; running the benchmark
+> still needs this repository.
 
 ## Why You'd Use This
 

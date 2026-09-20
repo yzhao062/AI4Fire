@@ -1,6 +1,6 @@
 # Raw sources: fetched by fetch_*.py or downloaded by hand; not redistributed here
 data/
-# FIgLib frames are served as-is with no formal license; items.jsonl carries a source_url per frame
+# FIgLib frames are CC BY-NC-ND 4.0; the NoDerivatives term is why they are not redistributed here
 task-figlib/images/
 task-figlib/images-1568/
 # Derived outputs and caches
@@ -13,3 +13,8 @@ task-tooluse/fake/
 # Local credentials (IEEE DataPort login for the FLAME 3 download); never committed
 .env
 task-wildfirevqa/pilot/
+
+# Packaging artifacts (the PyPI distribution is built from pyproject.toml + src/)
+build/
+dist/
+*.egg-info/
