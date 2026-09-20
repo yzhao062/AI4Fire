@@ -47,6 +47,6 @@ Running bedrock:minimax.minimax-m2.5 on bare condition (156 items, workers=4, fa
   "tokens_in": 204996,
   "tokens_out": 681895
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_minimax.minimax-m2.5-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_minimax.minimax-m2.5-bare.jsonl
 
-Completed 1 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 1 run(s). Updated <repo>\task-tooluse\scores.json.

@@ -2,4 +2,4 @@ test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "claude-opus-5/bare", "items": 386, "parsed": 386, "auprc": 0.7063850688717117, "f1_fire": 0.3048780487804878, "f1_no_fire": 0.8125, "positive_rate_called": 0.08549222797927461, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 521580}
 {"run": "gemini-3.1-pro/bare", "items": 386, "parsed": 386, "auprc": 0.7065909670344904, "f1_fire": 0.5784313725490197, "f1_no_fire": 0.8485915492957746, "positive_rate_called": 0.18911917098445596, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 532110}
 
-wrote C:\Users\yuezh\AppData\Local\Temp\claude\C--Users-yuezh-PycharmProjects-internal-writing\5298f142-9cba-41ca-a975-67b31eb2587b\scratchpad\prun-r7\exp-repeat\task-mesogeos\scores.json
+wrote <scratch>\<scratch-session>\5298f142-9cba-41ca-a975-67b31eb2587b\scratchpad\prun-r7\exp-repeat\task-mesogeos\scores.json

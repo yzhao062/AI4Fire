@@ -4,13 +4,13 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:zai.glm-4.7-flash/bare", "items": 300, "parsed": 300, "mae": 13.75, "mae_norm": 0.1462707962340169, "within_25pct": 0.78, "median_abs_log_ratio": 0.04414801161103778, "mae_norm_on_moving_days": 0.33548228778660316, "beats_persistence_share": 0.01, "errors": 0, "tokens_in": 98686, "tokens_out": 17036}
 {"run": "bedrock:zai.glm-4.7-flash/grounded", "items": 300, "parsed": 300, "mae": 22.05, "mae_norm": 0.27005895710637823, "within_25pct": 0.6733333333333333, "median_abs_log_ratio": 0.1313715620522644, "mae_norm_on_moving_days": 0.3705953347323426, "beats_persistence_share": 0.21, "errors": 0, "tokens_in": 159868, "tokens_out": 17926}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 15:13:28
 test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:zai.glm-4.7-flash/bare", "items": 386, "parsed": 386, "auprc": 0.44392791737863807, "f1_fire": 0.4675324675324675, "f1_no_fire": 0.7726432532347505, "positive_rate_called": 0.25906735751295334, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 464551}
 {"run": "bedrock:zai.glm-4.7-flash/grounded", "items": 386, "parsed": 386, "auprc": 0.4445927285203619, "f1_fire": 0.5075757575757576, "f1_no_fire": 0.7440944881889764, "positive_rate_called": 0.344559585492228, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 558392}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json
 --- tooluse 15:17:30
   "parse_failures": 0,
   "tool_failures": 0,
@@ -21,7 +21,7 @@ wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
   "tokens_in": 642278,
   "tokens_out": 21523
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_zai.glm-4.7-flash-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_zai.glm-4.7-flash-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.
 === chain bedrock:zai.glm-4.7-flash DONE 2026-09-18 15:20:00

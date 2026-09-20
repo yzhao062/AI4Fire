@@ -6,4 +6,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/bare", "items": 300, "parsed": 300, "mae": 18.57, "mae_norm": 0.2296911112791015, "within_25pct": 0.68, "median_abs_log_ratio": 0.10827736421809846, "mae_norm_on_moving_days": 0.37108770686435494, "beats_persistence_share": 0.12333333333333334, "errors": 0, "tokens_in": 106166, "tokens_out": 16298}
 {"run": "bedrock:us.meta.llama4-scout-17b-instruct-v1:0/grounded", "items": 300, "parsed": 300, "mae": 19.796666666666667, "mae_norm": 0.24561044943138777, "within_25pct": 0.6966666666666667, "median_abs_log_ratio": 0.11952950331005466, "mae_norm_on_moving_days": 0.3651790320706913, "beats_persistence_share": 0.20666666666666667, "errors": 0, "tokens_in": 165568, "tokens_out": 16343}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json

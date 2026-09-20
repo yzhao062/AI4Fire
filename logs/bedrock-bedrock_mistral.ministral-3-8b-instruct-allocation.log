@@ -6,4 +6,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:mistral.ministral-3-8b-instruct/bare", "items": 300, "parsed": 300, "mae": 16.856666666666666, "mae_norm": 0.20753571089323292, "within_25pct": 0.7366666666666667, "median_abs_log_ratio": 0.08059767032643869, "mae_norm_on_moving_days": 0.42225759755879794, "beats_persistence_share": 0.06666666666666667, "errors": 0, "tokens_in": 110443, "tokens_out": 17680}
 {"run": "bedrock:mistral.ministral-3-8b-instruct/grounded", "items": 300, "parsed": 300, "mae": 19.86, "mae_norm": 0.2502706608738629, "within_25pct": 0.69, "median_abs_log_ratio": 0.1281353047994557, "mae_norm_on_moving_days": 0.36451565492550697, "beats_persistence_share": 0.23333333333333334, "errors": 0, "tokens_in": 183015, "tokens_out": 17541}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json

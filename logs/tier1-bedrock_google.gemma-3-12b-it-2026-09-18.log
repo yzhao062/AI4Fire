@@ -6,13 +6,13 @@ ALL DONE
 --- tooluse 15:07:27
     return run_item(it, cond, model, key=key, fake=args.fake)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yuezh\PycharmProjects\fire-bench\run_tooluse.py", line 564, in run_item
+  File "<repo>\run_tooluse.py", line 564, in run_item
     res_text, meta = query_fpafod(sql_arg, return_meta=True)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yuezh\PycharmProjects\fire-bench\run_tooluse.py", line 215, in query_fpafod
+  File "<repo>\run_tooluse.py", line 215, in query_fpafod
     ok, err = validate_sql(sql)
               ^^^^^^^^^^^^^^^^^
-  File "C:\Users\yuezh\PycharmProjects\fire-bench\run_tooluse.py", line 114, in validate_sql
+  File "<repo>\run_tooluse.py", line 114, in validate_sql
     if not sql or not sql.strip():
                       ^^^^^^^^^
 AttributeError: 'dict' object has no attribute 'strip'
@@ -21,5 +21,5 @@ items: 408 | images 390 | categories {'Classification': 72, 'Cross-Modal Reasoni
 {"run": "bedrock:google.gemma-3-12b-it/bare", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.42892156862745096, "accuracy_parsed_only": 0.42892156862745096, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.542, "Cross-Modal Reasoning": 0.375, "Distribution and Segmentation": 0.219, "Flight Planning": 0.458, "Localization and Direction": 0.312, "Presence and Detection": 0.625}, "accuracy_by_question": {"CL1": 0.5, "CL2": 0.833, "CL3": 0.833, "CL4": 0.333, "CL5": 0.583, "CL6": 0.167, "CMR1": 0.5, "CMR2": 0.417, "CMR3": 0.417, "CMR4": 0.167, "DS1": 0.25, "DS2": 0.167, "DS3": 0.083, "DS4": 0.083, "DS5": 0.583, "DS6": 0.583, "DS7": 0.0, "DS8": 0.0, "FP1": 0.417, "FP2": 0.167, "FP3": 0.5, "FP4": 0.75, "LD1": 0.417, "LD2": 0.333, "LD3": 0.083, "LD4": 0.417, "PD1": 0.583, "PD2": 1.0, "PD3": 0.5, "PD4": 0.833, "PD5": 1.0, "PD6": 0.417, "PD7": 0.167, "PD8": 0.5}, "accuracy_closed_form_items": 0.16666666666666666, "accuracy_other_items": 0.4638888888888889, "applicability_mean": 0.8348039215686275, "accuracy_applicability_ge_0.5": 0.42892156862745096, "accuracy_applicability_lt_0.5": null, "items_applicability_lt_0.5": 0, "failures": {}, "tokens_in": 383112, "tokens_out": 10068}
 {"run": "bedrock:google.gemma-3-12b-it/grounded", "items": 408, "parsed": 408, "errors": 0, "accuracy": 0.4534313725490196, "accuracy_parsed_only": 0.4534313725490196, "majority_baseline_accuracy": 0.6274509803921569, "accuracy_by_category": {"Classification": 0.611, "Cross-Modal Reasoning": 0.521, "Distribution and Segmentation": 0.292, "Flight Planning": 0.354, "Localization and Direction": 0.312, "Presence and Detection": 0.583}, "accuracy_by_question": {"CL1": 0.583, "CL2": 0.75, "CL3": 0.833, "CL4": 0.583, "CL5": 0.667, "CL6": 0.25, "CMR1": 0.5, "CMR2": 0.417, "CMR3": 0.417, "CMR4": 0.75, "DS1": 0.25, "DS2": 0.167, "DS3": 0.083, "DS4": 0.167, "DS5": 0.5, "DS6": 0.583, "DS7": 0.333, "DS8": 0.25, "FP1": 0.167, "FP2": 0.083, "FP3": 0.417, "FP4": 0.75, "LD1": 0.417, "LD2": 0.417, "LD3": 0.083, "LD4": 0.333, "PD1": 0.583, "PD2": 1.0, "PD3": 0.667, "PD4": 0.833, "PD5": 0.833, "PD6": 0.25, "PD7": 0.0, "PD8": 0.5}, "accuracy_closed_form_items": 0.4791666666666667, "accuracy_other_items": 0.45, "applicability_mean": 0.8470588235294119, "accuracy_applicability_ge_0.5": 0.4534313725490196, "accuracy_applicability_lt_0.5": null, "items_applicability_lt_0.5": 0, "failures": {}, "tokens_in": 452314, "tokens_out": 10049}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\scores.json
+wrote <repo>\task-wildfirevqa\scores.json
 === chain bedrock:google.gemma-3-12b-it DONE 2026-09-18 15:13:08

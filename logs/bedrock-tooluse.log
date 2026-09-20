@@ -47,7 +47,7 @@ Running bedrock:qwen.qwen3-vl-235b-a22b on bare condition (156 items, workers=4,
   "tokens_in": 216796,
   "tokens_out": 38080
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare.jsonl
 
 Running bedrock:qwen.qwen3-vl-235b-a22b on tool condition (156 items, workers=4, fake=None)...
 {
@@ -97,7 +97,7 @@ Running bedrock:qwen.qwen3-vl-235b-a22b on tool condition (156 items, workers=4,
   "tokens_in": 514116,
   "tokens_out": 11994
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_qwen.qwen3-vl-235b-a22b-tool.jsonl
 
 Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on bare condition (156 items, workers=4, fake=None)...
 {
@@ -147,7 +147,7 @@ Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on bare condition (156
   "tokens_in": 204659,
   "tokens_out": 35385
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare.jsonl
 
 Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on tool condition (156 items, workers=4, fake=None)...
 {
@@ -197,6 +197,6 @@ Running bedrock:us.meta.llama4-maverick-17b-instruct-v1:0 on tool condition (156
   "tokens_in": 483797,
   "tokens_out": 9129
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-tool.jsonl
 
-Completed 4 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 4 run(s). Updated <repo>\task-tooluse\scores.json.

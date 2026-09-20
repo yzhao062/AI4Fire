@@ -81,5 +81,5 @@ Panel (d) Fire data tool use (FPA-FOD): accuracy diff, tool minus bare [95% CI],
   Gemma 3 12B       -0.0577 [-0.1218, +0.0000]   incl 0 (Gray)
   Gemma 3 4B        -0.0577 [-0.1218, +0.0000]   incl 0 (Gray)
 ==============================================================================================================
-Generated C:\Users\yuezh\PycharmProjects\fire-bench\figures\grounding_effects_sweep.pdf
-Generated C:\Users\yuezh\PycharmProjects\fire-bench\figures\grounding_effects_sweep.png
+Generated <repo>\figures\grounding_effects_sweep.pdf
+Generated <repo>\figures\grounding_effects_sweep.png

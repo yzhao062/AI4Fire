@@ -1,7 +1,7 @@
 ============================================================================================================================
 CLUSTER-ROBUST UNCERTAINTY FOR THE BARE-AGAINST-GROUNDED CONTRAST   (TMLR round-1 objection A)
 ============================================================================================================================
-repo      : C:\Users\yuezh\PycharmProjects\fire-bench
+repo      : <repo>
 bootstrap : 20000 replicates per interval, 95% percentile, base seed 20260915
 pairing   : each contrast is scored only on the items BOTH conditions answered, and one
             resampled index set is scored under both conditions, which keeps it paired
@@ -100,16 +100,16 @@ FIgLib  |  primary metric: recall on smoke  |  resampling unit: fire, derived fr
 ----------------------------------------------------------------------------------------------------------------------------
 allocation  |  primary metric: normalised MAE  |  resampling unit: incident (incident_id from items.jsonl)
 ----------------------------------------------------------------------------------------------------------------------------
-  warning: task-allocation: arm 'baseline-gbdt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-grounded.jsonl is missing
-  warning: task-allocation: arm 'baseline-gbdt-analogue' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-analogue-grounded.jsonl is missing
-  warning: task-allocation: arm 'baseline-gbdt-count' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-gbdt-count-grounded.jsonl is missing
-  warning: task-allocation: arm 'baseline-ridge' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-baseline-ridge-grounded.jsonl is missing
-  warning: task-allocation: arm 'bedrock_qwen.qwen3-vl-235b-a22b-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare-v2.jsonl is missing
-  warning: task-allocation: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare-v2.jsonl is missing
-  warning: task-allocation: arm 'claude-opus-4.8-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-claude-opus-4.8-bare-v2.jsonl is missing
-  warning: task-allocation: arm 'claude-opus-5-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-claude-opus-5-bare-v2.jsonl is missing
-  warning: task-allocation: arm 'gemini-3.1-pro-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-gemini-3.1-pro-bare-v2.jsonl is missing
-  warning: task-allocation: arm 'gpt-6-astra-v2' has only the grounded condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\responses-gpt-6-astra-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'baseline-gbdt' has only the bare condition, <repo>\task-allocation\responses-baseline-gbdt-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-gbdt-analogue' has only the bare condition, <repo>\task-allocation\responses-baseline-gbdt-analogue-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-gbdt-count' has only the bare condition, <repo>\task-allocation\responses-baseline-gbdt-count-grounded.jsonl is missing
+  warning: task-allocation: arm 'baseline-ridge' has only the bare condition, <repo>\task-allocation\responses-baseline-ridge-grounded.jsonl is missing
+  warning: task-allocation: arm 'bedrock_qwen.qwen3-vl-235b-a22b-v2' has only the grounded condition, <repo>\task-allocation\responses-bedrock_qwen.qwen3-vl-235b-a22b-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-v2' has only the grounded condition, <repo>\task-allocation\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'claude-opus-4.8-v2' has only the grounded condition, <repo>\task-allocation\responses-claude-opus-4.8-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'claude-opus-5-v2' has only the grounded condition, <repo>\task-allocation\responses-claude-opus-5-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'gemini-3.1-pro-v2' has only the grounded condition, <repo>\task-allocation\responses-gemini-3.1-pro-bare-v2.jsonl is missing
+  warning: task-allocation: arm 'gpt-6-astra-v2' has only the grounded condition, <repo>\task-allocation\responses-gpt-6-astra-bare-v2.jsonl is missing
   cluster structure on the largest arm (bedrock_amazon.nova-lite-v1_0): 245 incidents over 300 paired items, mean 1.22 and max 2 items per incident, 37% of items share their incident with a neighbour
 
   PAIRED CONTRAST   diff = bare minus grounded in normalised MAE; grounded helps when diff > 0
@@ -232,22 +232,22 @@ allocation  |  primary metric: normalised MAE  |  resampling unit: incident (inc
 ----------------------------------------------------------------------------------------------------------------------------
 Mesogeos  |  primary metric: average precision  |  resampling unit: spatial-temporal block, 1.00 deg cell x calendar month
 ----------------------------------------------------------------------------------------------------------------------------
-  warning: task-mesogeos: arm 'baseline-gbdt-prompt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-gbdt-prompt-grounded.jsonl is missing
-  warning: task-mesogeos: arm 'baseline-gbdt-window' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-gbdt-window-grounded.jsonl is missing
-  warning: task-mesogeos: arm 'baseline-logit-prompt' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-logit-prompt-grounded.jsonl is missing
-  warning: task-mesogeos: arm 'baseline-logit-window' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-baseline-logit-window-grounded.jsonl is missing
-  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p2.jsonl is missing
-  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p2.jsonl is missing
-  warning: task-mesogeos: arm 'claude-opus-4.8-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-4.8-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'claude-opus-4.8-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-4.8-grounded-p2.jsonl is missing
-  warning: task-mesogeos: arm 'claude-opus-5-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-5-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'claude-opus-5-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-claude-opus-5-grounded-p2.jsonl is missing
-  warning: task-mesogeos: arm 'gemini-3.1-pro-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gemini-3.1-pro-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'gemini-3.1-pro-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gemini-3.1-pro-grounded-p2.jsonl is missing
-  warning: task-mesogeos: arm 'gpt-6-astra-p1' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gpt-6-astra-grounded-p1.jsonl is missing
-  warning: task-mesogeos: arm 'gpt-6-astra-p2' has only the bare condition, C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\responses-gpt-6-astra-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-gbdt-prompt' has only the bare condition, <repo>\task-mesogeos\responses-baseline-gbdt-prompt-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-gbdt-window' has only the bare condition, <repo>\task-mesogeos\responses-baseline-gbdt-window-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-logit-prompt' has only the bare condition, <repo>\task-mesogeos\responses-baseline-logit-prompt-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'baseline-logit-window' has only the bare condition, <repo>\task-mesogeos\responses-baseline-logit-window-grounded.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p1' has only the bare condition, <repo>\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_qwen.qwen3-vl-235b-a22b-p2' has only the bare condition, <repo>\task-mesogeos\responses-bedrock_qwen.qwen3-vl-235b-a22b-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p1' has only the bare condition, <repo>\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-p2' has only the bare condition, <repo>\task-mesogeos\responses-bedrock_us.meta.llama4-maverick-17b-instruct-v1_0-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-4.8-p1' has only the bare condition, <repo>\task-mesogeos\responses-claude-opus-4.8-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-4.8-p2' has only the bare condition, <repo>\task-mesogeos\responses-claude-opus-4.8-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-5-p1' has only the bare condition, <repo>\task-mesogeos\responses-claude-opus-5-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'claude-opus-5-p2' has only the bare condition, <repo>\task-mesogeos\responses-claude-opus-5-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'gemini-3.1-pro-p1' has only the bare condition, <repo>\task-mesogeos\responses-gemini-3.1-pro-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'gemini-3.1-pro-p2' has only the bare condition, <repo>\task-mesogeos\responses-gemini-3.1-pro-grounded-p2.jsonl is missing
+  warning: task-mesogeos: arm 'gpt-6-astra-p1' has only the bare condition, <repo>\task-mesogeos\responses-gpt-6-astra-grounded-p1.jsonl is missing
+  warning: task-mesogeos: arm 'gpt-6-astra-p2' has only the bare condition, <repo>\task-mesogeos\responses-gpt-6-astra-grounded-p2.jsonl is missing
   cluster structure on the largest arm (bedrock_amazon.nova-lite-v1_0): 352 blocks over 386 paired items, mean 1.10 and max 4 items per block, 16% of items share their block with a neighbour
   metric check: average precision matches sklearn to 1e-9 on the live data
 

@@ -6,4 +6,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:moonshotai.kimi-k2.5/bare", "items": 300, "parsed": 300, "mae": 14.82, "mae_norm": 0.17320404408959228, "within_25pct": 0.75, "median_abs_log_ratio": 0.058432170069655474, "mae_norm_on_moving_days": 0.3401492793854767, "beats_persistence_share": 0.03333333333333333, "errors": 0, "tokens_in": 99680, "tokens_out": 21510}
 {"run": "bedrock:moonshotai.kimi-k2.5/grounded", "items": 300, "parsed": 300, "mae": 19.92, "mae_norm": 0.25444593335483146, "within_25pct": 0.6866666666666666, "median_abs_log_ratio": 0.11724088282998776, "mae_norm_on_moving_days": 0.36858877422753883, "beats_persistence_share": 0.20333333333333334, "errors": 0, "tokens_in": 159382, "tokens_out": 24290}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json

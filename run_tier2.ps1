@@ -9,8 +9,8 @@
 #        pwsh -File run_tier2.ps1 -Chain <bedrock:id> -Tasks 3|2   (internal: one chain in the foreground)
 param([string]$Chain = '', [int]$Tasks = 3, [switch]$Pilot, [int]$MaxParallel = 7)
 $ErrorActionPreference = 'Continue'
-$py = 'C:\Users\yuezh\miniforge3\envs\py312\python.exe'
-$root = 'C:\Users\yuezh\PycharmProjects\fire-bench'
+$py = if ($env:PYTHON) { $env:PYTHON } else { 'python' }
+$root = $PSScriptRoot
 # Standard cap (1,536 output tokens, the benchmark cap). Mixtral 8x7B is out: it rejects system messages.
 $withTools = @(
     'amazon.nova-micro-v1:0', 'us.meta.llama3-3-70b-instruct-v1:0', 'us.meta.llama3-1-70b-instruct-v1:0',

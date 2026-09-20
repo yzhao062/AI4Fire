@@ -4,11 +4,11 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:us.deepseek.r1-v1:0/bare", "items": 300, "parsed": 300, "mae": 14.686666666666667, "mae_norm": 0.1732282235681267, "within_25pct": 0.77, "median_abs_log_ratio": 0.07438095723283822, "mae_norm_on_moving_days": 0.3286516243336227, "beats_persistence_share": 0.13666666666666666, "errors": 0, "tokens_in": 96684, "tokens_out": 338827}
 {"run": "bedrock:us.deepseek.r1-v1:0/grounded", "items": 300, "parsed": 300, "mae": 20.416666666666668, "mae_norm": 0.26048826767925504, "within_25pct": 0.6833333333333333, "median_abs_log_ratio": 0.12275022920774308, "mae_norm_on_moving_days": 0.36799619484301593, "beats_persistence_share": 0.21666666666666667, "errors": 0, "tokens_in": 156086, "tokens_out": 548595}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 15:46:32
 test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:us.deepseek.r1-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.47160123635822127, "f1_fire": 0.5355648535564853, "f1_no_fire": 0.24489795918367346, "positive_rate_called": 0.8989637305699482, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 438518}
 {"run": "bedrock:us.deepseek.r1-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.46271136856151496, "f1_fire": 0.5450643776824035, "f1_no_fire": 0.30718954248366015, "positive_rate_called": 0.8678756476683938, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 525688}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json
 === chain bedrock:us.deepseek.r1-v1:0 DONE 2026-09-18 16:13:31

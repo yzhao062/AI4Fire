@@ -23,7 +23,6 @@ P1_PATH = TASK / "items-p1.jsonl"
 # Schema discovery: look for sqlite database, fallback to known schema from build_items_tooluse / run_tooluse
 DB_PATHS = [
     ROOT / "data" / "tooluse" / "FPA_FOD_20221014.sqlite",
-    pathlib.Path(r"C:\Users\yuezh\PycharmProjects\fire-bench\data\tooluse\FPA_FOD_20221014.sqlite"),
 ]
 
 FALLBACK_COLUMNS = [

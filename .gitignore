@@ -5,7 +5,6 @@ task-figlib/images/
 task-figlib/images-1568/
 # Derived outputs and caches
 analysis/*.json
-analysis/.analogue-pool-cache.json
 __pycache__/
 *.pyc
 .idea/

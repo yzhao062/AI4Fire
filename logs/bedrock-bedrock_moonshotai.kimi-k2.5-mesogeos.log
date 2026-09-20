@@ -2,4 +2,4 @@ test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:moonshotai.kimi-k2.5/bare", "items": 386, "parsed": 386, "auprc": 0.5181783263450774, "f1_fire": 0.6138613861386139, "f1_no_fire": 0.7505330490405118, "positive_rate_called": 0.44559585492227977, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 433886}
 {"run": "bedrock:moonshotai.kimi-k2.5/grounded", "items": 386, "parsed": 386, "auprc": 0.5288697665387498, "f1_fire": 0.6148648648648649, "f1_no_fire": 0.7605042016806722, "positive_rate_called": 0.4274611398963731, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 520670}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json

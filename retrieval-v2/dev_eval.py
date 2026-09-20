@@ -29,8 +29,8 @@ import sys
 import numpy as np
 import pandas as pd
 
-FIRE_BENCH = pathlib.Path(r"C:\Users\yuezh\PycharmProjects\fire-bench")
 HERE = pathlib.Path(__file__).resolve().parent
+FIRE_BENCH = HERE.parent
 SIT = FIRE_BENCH / "data" / "ics209" / "ics209plus-wildfire" / "ics209-plus-wf_sitreps_1999to2020.csv"
 K = 6
 ACRE_EDGES = [100, 1000, 5000, 20000, 100000]

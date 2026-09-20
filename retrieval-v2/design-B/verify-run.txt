@@ -30,4 +30,4 @@ timing: slowest variant 14.1s (harness loop included)
   report day before 2015                   n=526  v1 nMAE 0.228  nn_pers_chg nMAE 0.191  diff -0.037
   report day 2015 or later (California)    n= 73  v1 nMAE 0.205  nn_pers_chg nMAE 0.190  diff -0.015
   nn_pers_chg draws: 4.85 distinct incidents per item, 44% of drawn rows in the item's v1 band, 100% in its personnel band
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\retrieval-v2\design-B\results.txt and C:\Users\yuezh\PycharmProjects\fire-bench\retrieval-v2\design-B\results.json
+wrote <repo>\retrieval-v2\design-B\results.txt and <repo>\retrieval-v2\design-B\results.json

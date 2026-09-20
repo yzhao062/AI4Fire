@@ -5,19 +5,26 @@ import os
 import re
 import httpx
 
-BASE = "http://35.226.229.248:4000/v1"
+BASE = os.environ.get("NAIRR_GATEWAY_URL")
+
+
+def get_base():
+    base = os.environ.get("NAIRR_GATEWAY_URL") or BASE
+    if not base:
+        raise SystemExit("set NAIRR_GATEWAY_URL first; gateway endpoint is required for model calls; see README.md")
+    return base.rstrip("/")
 
 
 def load_key():
     """Return the gateway key from NAIRR_GATEWAY_KEY. The key never appears in this repository or in any log."""
     key = os.environ.get("NAIRR_GATEWAY_KEY")
     if not key:
-        raise SystemExit("set NAIRR_GATEWAY_KEY first; see ai-research-resources/nairr-pilot/README.md")
+        raise SystemExit("set NAIRR_GATEWAY_KEY first; see README.md")
     return key
 
 
 def models(key):
-    r = httpx.get(BASE + "/models", headers={"Authorization": "Bearer " + key}, timeout=30)
+    r = httpx.get(get_base() + "/models", headers={"Authorization": "Bearer " + key}, timeout=30)
     r.raise_for_status()
     return sorted(d["id"] for d in r.json()["data"])
 
@@ -91,7 +98,7 @@ def chat(key, model, messages, temperature=0, max_tokens=512, timeout=180):
     else:
         body["temperature"] = temperature
         body["max_tokens"] = max_tokens
-    r = httpx.post(BASE + "/chat/completions", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
+    r = httpx.post(get_base() + "/chat/completions", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
     r.raise_for_status()
     d = r.json()
     return d["choices"][0]["message"]["content"], d.get("usage", {}), d.get("model", model)
@@ -412,7 +419,7 @@ def gateway_call_tools(key, model, messages, tools=None, temperature=0, max_toke
     else:
         body["temperature"] = temperature
         body["max_tokens"] = max_tokens
-    r = httpx.post(BASE + "/chat/completions", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
+    r = httpx.post(get_base() + "/chat/completions", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
     r.raise_for_status()
     d = r.json()
     msg = d["choices"][0]["message"]
@@ -453,7 +460,7 @@ def gateway_call_tools_responses(key, model, messages, tools=None, max_tokens=51
         body["tools"] = [{"type": "function", "name": t["function"]["name"], "description": t["function"].get("description", ""),
                           "parameters": t["function"].get("parameters", {})} for t in tools]
         body["tool_choice"] = "auto"
-    r = httpx.post(BASE + "/responses", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
+    r = httpx.post(get_base() + "/responses", headers={"Authorization": "Bearer " + key}, json=body, timeout=timeout)
     r.raise_for_status()
     d = r.json()
     out = d.get("output", []) or []

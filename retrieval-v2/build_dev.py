@@ -20,8 +20,8 @@ import sys
 import numpy as np
 import pandas as pd
 
-FIRE_BENCH = pathlib.Path(r"C:\Users\yuezh\PycharmProjects\fire-bench")
 HERE = pathlib.Path(__file__).resolve().parent
+FIRE_BENCH = HERE.parent
 D = FIRE_BENCH / "data" / "ics209" / "ics209plus-wildfire"
 COLS = ["INCIDENT_ID", "INCIDENT_NAME", "POO_STATE", "START_YEAR", "REPORT_TO_DATE", "TOTAL_PERSONNEL", "ACRES",
         "NEW_ACRES", "PCT_CONTAINED_COMPLETED", "EST_IM_COST_TO_DATE", "PROJECTED_FINAL_IM_COST", "GROWTH_POTENTIAL",

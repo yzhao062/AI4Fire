@@ -47,7 +47,7 @@ Running bedrock:moonshot.kimi-k2-thinking on bare condition (156 items, workers=
   "tokens_in": 201577,
   "tokens_out": 251786
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-bare.jsonl
 
 Running bedrock:moonshot.kimi-k2-thinking on tool condition (156 items, workers=4, fake=None)...
 {
@@ -97,6 +97,6 @@ Running bedrock:moonshot.kimi-k2-thinking on tool condition (156 items, workers=
   "tokens_in": 803333,
   "tokens_out": 100154
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_moonshot.kimi-k2-thinking-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.

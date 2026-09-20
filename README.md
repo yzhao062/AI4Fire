@@ -89,40 +89,78 @@ tests/                 pytest: the tool-use harness against the reference querie
 
 ## Reproducing the paper's numbers
 
-Every table starts from the stored responses, so nothing below calls a model.
+### Quick Start: Reproduce Primary Tables in One Command
 
+The primary results tables of the paper across all five wildfire tasks can be regenerated in a single command directly from the tracked model responses (`task-*/responses-*.jsonl`). No API keys, credentials, GPU, or raw data downloads are required:
+
+```bash
+python reproduce_tables.py
 ```
+
+This runs offline in under 3 seconds and reproduces the numbers for all 36 reported core model runs across:
+- **Daily Personnel Allocation:** Table MAE, normalized error, share within 25%, and fraction beating persistence comparator (13.76 MAE, 0.1465 norm MAE).
+- **Wildfire Smoke Detection:** Frame accuracy, recall, false positive rate, and sequences detected (out of 28 positive sequences).
+- **Fire Danger Forecasting:** AUPRC, fire-class F1, call rate, and omitted answer counts.
+- **Aerial Question Answering:** Overall accuracy, closed-form 48-item subset, other 360 items, and non-LLM majority (0.6275) and hybrid (0.6642) comparators.
+- **Fire Data Tool Use:** Accuracy, abstentions, and mean tool calls for bare and tool-augmented arms.
+
+To reproduce results for the expanded 16 full-capability models from the Bedrock sweep:
+```bash
+python reproduce_tables.py --tier all
+# or
+python table_rows_new_models.py --tier all
+```
+
+### Detailed Analysis Scripts (Offline, No Raw Data Downloads)
+
+The following scripts evaluate stored model responses without calling any external models or requiring raw source downloads:
+
+```bash
+# Task-specific scoring and table generation
 python table_rows_allocation.py            # allocation table: MAE, normalized error, split columns, within-25% share
 python analyze_allocation_all.py           # stable and moving days, false move, missed move, direction
 python copy_agreement.py                   # how often a grounded prediction equals the displayed analogue rule
 python score_mesogeos_all.py               # AUPRC, fire-class F1, call rate, omitted answers, per run
-python month_prior.py                      # the calendar-month prior fit on the training years
-python repeat_stats.py                     # repeat runs against their first runs (incl. the temperature-zero Mesogeos repeats of claude-opus-5 and gemini-3.1-pro)
-python analysis/figlib_paired.py           # smoke detection on the 196 items both conditions answered
-python analysis/cluster_uncertainty.py     # 95 percent cluster bootstrap intervals (20,000 resamples, seed 20260915)
-python analysis/information_only_baselines.py   # persistence, analogue-only, climatology, and last-day rules
-python analysis/answer_failures.py         # rows with no usable answer, by task and run
-python analysis/served_models.py           # served_model values, counts, and date ranges of every response file in the manifest
-python table_rows_new_models.py --tier all  # the rows of the three results tables for the sixteen full-capability models
-python analysis/calibration_mesogeos.py    # decision consistency, ECE, Brier and its Murphy terms, reliability tables, per run
-python analysis/prompt_sensitivity.py      # the two prompt paraphrases against the paper's prompt, paired block bootstrap (six models)
-python analysis/tooluse_paired.py          # tool against bare on the FPA-FOD tool-use task, paired and clustered by question family
-python analysis/retrieval_v2.py            # grounded runs under analogue rule v2 beside bare and rule v1, paired by incident
-python analysis/wildfirevqa_paired.py      # aerial question answering, grounded against bare, paired and clustered by frame, beside the majority and closed-form comparators
-python analysis/wildfirevqa_comparators.py # each aerial model against the majority reference and the majority-plus-closed-form hybrid, paired and clustered by frame
-python baselines/mesogeos_trained.py       # boosted and logistic classifiers on the prompt's numbers; writes responses-baseline-*.jsonl
-python baselines/allocation_trained.py     # boosted and ridge regressors on the report fields; writes responses-baseline-*.jsonl
-python build_manifest.py --check           # verify every file in manifest-v1.json against its recorded checksum
-python -m pytest tests                     # the tool-use harness and the Gemma tool_code adapter
-python figures/make_grounding_effects.py   # grounded minus bare on the four run tasks, with the cluster intervals
-python figures/make_survey_landscape.py    # the 138 kept works by kind and task category, and models tested
-python figures/make_allocation_analogues.py   # copies of the displayed analogue median; spread of the next-day ratio
-python figures/make_figlib_timeline.py     # smoke detection accuracy by time since the plume, bare and grounded
-python figures/make_calibration.py         # reliability diagrams per model beside the calendar-month prior
-python figures/make_prompt_sensitivity.py  # stated probabilities under the paper's prompt against two paraphrases
+python repeat_stats.py                     # run-to-run variation across repeat runs
+python table_rows_new_models.py --tier all # results tables for all sixteen full-capability models
+
+# Paired and bootstrap uncertainty analyses (all use stable seed 20260915, 20,000 resamples)
+python analysis/figlib_paired.py           # smoke detection paired analysis (196 common items)
+python analysis/tooluse_paired.py          # tool use paired tool-minus-bare accuracy with 12-family bootstrap
+python analysis/wildfirevqa_paired.py      # aerial QA paired grounded-vs-bare with 390-frame bootstrap
+python analysis/wildfirevqa_comparators.py # aerial models against majority and hybrid comparators
+python analysis/calibration_mesogeos.py    # ECE, Brier score, Murphy reliability and resolution terms
+python analysis/prompt_sensitivity.py      # fire danger prompt paraphrases (p1, p2) against p0
+python analysis/cluster_uncertainty.py     # 95% cluster bootstrap intervals across tasks
+python analysis/retrieval_v2.py            # grounded runs under analogue rule v2 beside bare and rule v1
+python analysis/answer_failures.py         # unparseable/omitted answer counts by task and model
+python analysis/served_models.py           # audit of distinct served_model strings and timestamps
+
+# Integrity checks and tests
+python build_manifest.py --check           # verify all 330+ files against SHA-256 hashes in manifest-v1.json
+python -m pytest tests                     # test tool-use harness and Gemma tool_code adapter (25 passed, 2 skipped)
+
+# Figures (each prints its numbers beside paper values and renders PDF/PNG)
+python figures/make_grounding_effects.py   # Figure: grounded minus bare across four tasks with cluster CIs
+python figures/make_survey_landscape.py    # Figure: 138 kept literature works by taxonomy category
+python figures/make_allocation_analogues.py# Figure: analogue copy rates and next-day staffing ratios
+python figures/make_figlib_timeline.py     # Figure: smoke detection accuracy by minutes since plume
+python figures/make_calibration.py         # Figure: fire danger reliability diagrams vs month prior
+python figures/make_prompt_sensitivity.py  # Figure: stated probabilities under prompt paraphrases
 ```
 
-Each figure script reads the same files as the analysis script it follows. Before writing the figure it prints every number it draws beside the paper's, with a match flag per row. `make_allocation_analogues.py` rebuilds the analogue pool from the SIT record, which takes about half a minute.
+*Note on offline execution*: `copy_agreement.py`, `analysis/retrieval_v2.py`, and `figures/make_allocation_analogues.py` utilize the precomputed analogue pool cache shipped at `analysis/.analogue-pool-cache.json`, enabling immediate offline execution without re-indexing the raw historical ICS-209-PLUS database.
+
+### Scripts Requiring Raw Upstream Data (`data/`)
+
+The following specialized scripts train new non-LLM baseline models or compute empirical priors from raw multi-year historical records. They require raw upstream data to be fetched into `data/` using the respective fetch scripts:
+
+```bash
+python month_prior.py                      # fits calendar-month prior on raw 2006-2019 NetCDF files (data/mesogeos/)
+python analysis/information_only_baselines.py # fits historical persistence and climatology rules
+python baselines/mesogeos_trained.py       # trains boosted trees & logistic regression on raw Mesogeos drivers
+python baselines/allocation_trained.py     # trains boosted regressors on raw 30,869 ICS-209-PLUS fire-days
+```
 
 ### Reported runs
 
@@ -144,9 +182,15 @@ The 36 reported response files (three tasks x six models x two conditions) are l
 
 ## Running a model
 
-`gw.py` reads `NAIRR_GATEWAY_KEY` for the gateway and uses the standard AWS credential chain, or `AWS_BEARER_TOKEN_BEDROCK`, for Bedrock. No key appears in this repository or in any log.
+Gateway models require two environment variables:
+- `NAIRR_GATEWAY_URL`: the base URL of the NAIRR gateway endpoint (e.g. `http://<gateway-host>:<port>/v1`). A run that needs the gateway and lacks this variable will fail with a clear message naming the variable.
+- `NAIRR_GATEWAY_KEY`: the authorization bearer key for the gateway.
 
-```
+Bedrock models use the standard AWS credential chain, or `AWS_BEARER_TOKEN_BEDROCK`. No key or internal endpoint appears in this repository or in any log.
+
+Running offline analyses, tests, and table reproduction from stored responses does not require either variable.
+
+```bash
 python run_allocation.py --models claude-opus-5 claude-opus-4.8
 python run_figlib.py --models gemini-3.1-pro --workers 2
 python run_mesogeos.py --models bedrock:qwen.qwen3-vl-235b-a22b
@@ -161,6 +205,44 @@ A runner rewrites one condition file at the end of that condition, so a killed r
 
 The grounded allocation prompt shows retrieved analogues, each a consecutive pair of fire-days from another incident with the staffing on both days. The first version of the eligibility rule required only the analogue's input day to precede the item's target day, which let one item of 300 see an outcome filed on the item's own target day. The rule now requires both days to precede the item's report day (`analogues()` in `run_allocation.py`). `check_b4_draws.py` shows that the corrected rule changes exactly one item's draw; `rerun_allocation_item.py` re-queried that item on all five models and `splice_b4.py` moved the rows into the response files. The replaced rows are in `task-allocation/b4-rerun/replaced-rows.jsonl`.
 
+## Data Sources, Licensing, and Withheld Data Rationale
+
+### Upstream Sources and Terms
+
+AI4Fire benchmarks models across five wildfire data sources. Each source was verified directly on its distribution portal:
+
+1. **Daily Personnel Allocation — ICS-209-PLUS**:
+   - *Source*: St. Denis et al. (2023), archived on figshare (DOI: [10.6084/m9.figshare.22303135](https://doi.org/10.6084/m9.figshare.22303135)).
+   - *License*: **CC BY 4.0**.
+   - *Contents*: Daily situation report filings (1999–2020) filtered by strict temporal precedence.
+
+2. **Wildfire Smoke Detection — FIgLib**:
+   - *Source*: HPWREN (High Performance Wireless Research and Education Network), UC San Diego (Dewangan et al., 2022).
+   - *License*: **CC BY-NC-ND 4.0**, per HPWREN's data-use conditions (<https://www.hpwren.ucsd.edu/cc.html>). The NonCommercial term requires a separate licence from UC San Diego for commercial use, and the NoDerivatives term covers derived image products, so this repository redistributes neither the frames nor features computed from them.
+   - *Release mechanism*: Raw image files are withheld from this repository. The repository provides sequence identifiers, frame metadata, labels, and exact download URLs in the item manifest (`task-figlib/items.jsonl`), alongside an automated fetcher (`build_items_figlib.py`).
+
+3. **Fire Danger Forecasting — Mesogeos Track A**:
+   - *Source*: Kondylatos et al. (2023), archived on Zenodo (DOI: [10.5281/zenodo.7473331](https://doi.org/10.5281/zenodo.7473331)).
+   - *License*: **CC BY 4.0**.
+   - *Contents*: Evaluated on the published 2021–2022 temporal holdout using 24 runnable weather, vegetation, and topography features. Downloadable via `fetch_mesogeos.py`.
+
+4. **Temperature-Grounded Aerial QA — WildFireVQA & FLAME 3**:
+   - *Source*: Habibpour et al. (2026), hosted on Hugging Face (`mobiiin/WildFire_VQA`), paired with FLAME 3 aerial imagery.
+   - *License*: **Apache-2.0 / CC BY 4.0**. Notice of license discrepancy: the Hugging Face repository metadata records `Apache-2.0` (`"license": "https://choosealicense.com/licenses/apache-2.0/"`), while the dataset card prose under Dataset Summary explicitly specifies `CC-BY-4.0` (`License: CC-BY-4.0`). FLAME 3 thermal and RGB imagery is licensed under **CC BY 4.0** via IEEE DataPort open access and Kaggle mirror. Downloadable via `fetch_flame3.py` and `match_flame3.py`.
+
+5. **Fire Data Tool Use — FPA-FOD**:
+   - *Source*: USDA Forest Service Research Data Archive (Short, 2022, 6th Edition, DOI: [10.2737/RDS-2013-0009.6](https://doi.org/10.2737/RDS-2013-0009.6)).
+   - *License*: **US Government Public Domain / Open Data** ("can be used without additional permissions or fees; citation is required"). Downloadable via `fetch_fpafod.py` into a 214 MB SQLite database.
+
+### Why Raw Data is Withheld from Git
+
+Raw source datasets (the `data/` directory and raw image folders under `task-figlib/images*`) are intentionally omitted from this Git repository:
+- **Redistribution Terms**: FIgLib frames are CC BY-NC-ND 4.0, so third-party redistribution of the raw camera JPEGs and of derivatives of them is restricted; users download frames directly from UCSD HPWREN using the URLs in the item manifest.
+- **Repository Size**: Raw sources exceed 50 GB across full Mesogeos NetCDF rasters, FLAME 3 aerial video/thermal frames, and multi-decade FPA-FOD/ICS-209-PLUS databases.
+- **Self-Contained Evaluation**: Every evaluation prompt, question, reference answer, and item metadata is fully preserved in the tracked `task-*/items.jsonl` files. All model outputs are tracked in `task-*/responses-*.jsonl`. Furthermore, `analysis/.analogue-pool-cache.json` is shipped so that analogue-based analysis and figures run immediately without needing the multi-gigabyte raw ICS-209-PLUS database. For researchers seeking to retrain baselines or download original rasters from scratch, automated fetch scripts (`fetch_*.py`) and item builders (`build_items_*.py`) are provided.
+
 ## License
 
-The code is under the BSD 2-Clause License (`LICENSE`). The stored responses are model outputs over items derived from the sources above, each under its own terms; the item manifests carry the identifiers needed to rebuild every prompt from the source data.
+- **Benchmark Code & Harness**: Released under the **BSD 2-Clause License** (see [LICENSE](LICENSE)). This covers the evaluation harnesses, prompt construction scripts, scoring scripts, analysis pipelines, and figure generators.
+- **Task Manifests & Prompts**: BSD 2-Clause covers our original contributions: the prompt templates, the item construction, and the manifest format. Questions, options, and other content imported from a source dataset retain that source's terms and are not relicensed here. WildFireVQA is the unresolved case: its Hugging Face metadata records Apache-2.0 while its dataset card specifies CC BY 4.0, and our BSD grant replaces neither.
+- **Stored Model Responses**: Stored outputs from proprietary and open-weight models are released for academic research and reproducibility verification under the terms of their respective upstream input datasets.

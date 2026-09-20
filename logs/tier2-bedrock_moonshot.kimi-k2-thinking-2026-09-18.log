@@ -4,5 +4,5 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:moonshot.kimi-k2-thinking/bare", "items": 300, "parsed": 300, "mae": 16.386666666666667, "mae_norm": 0.1929250332565359, "within_25pct": 0.72, "median_abs_log_ratio": 0.11347365654051259, "mae_norm_on_moving_days": 0.3224599176567751, "beats_persistence_share": 0.28, "errors": 0, "tokens_in": 99293, "tokens_out": 816742}
 {"run": "bedrock:moonshot.kimi-k2-thinking/grounded", "items": 300, "parsed": 300, "mae": 19.51, "mae_norm": 0.2525702093387978, "within_25pct": 0.7033333333333334, "median_abs_log_ratio": 0.1219815895482999, "mae_norm_on_moving_days": 0.36228351321958774, "beats_persistence_share": 0.23, "errors": 0, "tokens_in": 158944, "tokens_out": 876727}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 16:40:44

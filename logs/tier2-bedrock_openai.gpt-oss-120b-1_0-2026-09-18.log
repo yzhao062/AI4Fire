@@ -4,13 +4,13 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:openai.gpt-oss-120b-1:0/bare", "items": 300, "parsed": 300, "mae": 14.72, "mae_norm": 0.1661081934064325, "within_25pct": 0.7866666666666666, "median_abs_log_ratio": 0.08398185601226962, "mae_norm_on_moving_days": 0.29132112219427614, "beats_persistence_share": 0.28, "errors": 0, "tokens_in": 116265, "tokens_out": 85637}
 {"run": "bedrock:openai.gpt-oss-120b-1:0/grounded", "items": 300, "parsed": 300, "mae": 19.673333333333332, "mae_norm": 0.24249724079312818, "within_25pct": 0.6966666666666667, "median_abs_log_ratio": 0.1219815895482999, "mae_norm_on_moving_days": 0.36441112104934625, "beats_persistence_share": 0.22, "errors": 0, "tokens_in": 175967, "tokens_out": 50609}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 15:08:23
 test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:openai.gpt-oss-120b-1:0/bare", "items": 386, "parsed": 386, "auprc": 0.4479295401175529, "f1_fire": 0.5150684931506849, "f1_no_fire": 0.5651105651105651, "positive_rate_called": 0.6062176165803109, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 455116}
 {"run": "bedrock:openai.gpt-oss-120b-1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.460331587870646, "f1_fire": 0.5016722408026756, "f1_no_fire": 0.6849894291754757, "positive_rate_called": 0.43523316062176165, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 541514}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json
 --- tooluse 15:18:07
   "parse_failures": 1,
   "tool_failures": 0,
@@ -21,7 +21,7 @@ wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
   "tokens_in": 559105,
   "tokens_out": 41924
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_openai.gpt-oss-120b-1_0-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_openai.gpt-oss-120b-1_0-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.
 === chain bedrock:openai.gpt-oss-120b-1:0 DONE 2026-09-18 15:21:02

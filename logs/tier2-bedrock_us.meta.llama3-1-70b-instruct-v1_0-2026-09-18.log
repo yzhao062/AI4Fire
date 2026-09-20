@@ -4,13 +4,13 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/bare", "items": 300, "parsed": 300, "mae": 15.726666666666667, "mae_norm": 0.20457190026800176, "within_25pct": 0.7366666666666667, "median_abs_log_ratio": 0.08731400305634401, "mae_norm_on_moving_days": 0.3254032100610177, "beats_persistence_share": 0.16, "errors": 0, "tokens_in": 100040, "tokens_out": 15375}
 {"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/grounded", "items": 300, "parsed": 300, "mae": 19.86, "mae_norm": 0.2570644108398923, "within_25pct": 0.69, "median_abs_log_ratio": 0.1219815895482999, "mae_norm_on_moving_days": 0.36450822997691934, "beats_persistence_share": 0.22, "errors": 0, "tokens_in": 160042, "tokens_out": 16752}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 14:59:38
 test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.4002100160484311, "f1_fire": 0.3315508021390374, "f1_no_fire": 0.7863247863247863, "positive_rate_called": 0.14507772020725387, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 436588}
 {"run": "bedrock:us.meta.llama3-1-70b-instruct-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.4265157809024691, "f1_fire": 0.37320574162679426, "f1_no_fire": 0.7673179396092362, "positive_rate_called": 0.20207253886010362, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 522986}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json
 --- tooluse 15:02:30
   "parse_failures": 0,
   "tool_failures": 0,
@@ -21,7 +21,7 @@ wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
   "tokens_in": 220858,
   "tokens_out": 4576
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_us.meta.llama3-1-70b-instruct-v1_0-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.
 === chain bedrock:us.meta.llama3-1-70b-instruct-v1:0 DONE 2026-09-18 15:03:27

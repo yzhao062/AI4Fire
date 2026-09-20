@@ -276,4 +276,4 @@ Bin          |  Count |  Weight | Mean Pred p | Obs Fire Rate | Gap |p - y|
 (0.8, 0.9]   |      0 |   0.000 |           - |             - |           -
 (0.9, 1.0]   |      0 |   0.000 |           - |             - |           -
 
-Wrote full structured calibration data to C:\Users\yuezh\PycharmProjects\fire-bench\analysis\calibration_mesogeos.json
+Wrote full structured calibration data to <repo>\analysis\calibration_mesogeos.json

@@ -27,4 +27,4 @@ Best HGB window: lr=0.05, max_iter=200 -> Val AUPRC = 0.8768
 Paired contrast (gbdt-prompt minus gemini-3.1-pro bare):
   Difference in AUPRC = +0.154, 95% Cluster CI = [+0.084, +0.227]
 
-Wrote full metrics and configuration to C:\Users\yuezh\PycharmProjects\fire-bench\baselines\mesogeos_trained.json
+Wrote full metrics and configuration to <repo>\baselines\mesogeos_trained.json

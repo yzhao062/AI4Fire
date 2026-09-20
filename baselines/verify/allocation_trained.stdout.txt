@@ -43,4 +43,4 @@ gbdt-analogue               13.03  0.1447   0.480  0.0352  0.3185   0.027   0.94
   gbdt-analogue vs persistence: point diff = -0.0017 | 95% CI: [-0.0075, +0.0043]
   gbdt vs claude-opus-4.8-bare: point diff = -0.0128 | 95% CI: [-0.0281, +0.0008]
 
-Wrote results to C:\Users\yuezh\PycharmProjects\fire-bench\baselines\allocation_trained.json
+Wrote results to <repo>\baselines\allocation_trained.json

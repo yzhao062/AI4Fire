@@ -139,6 +139,7 @@ def test_parser_ten_strings():
     assert p == 100 and not a and f is None
 
 
+@pytest.mark.skipif(not rtu.DB.exists(), reason="Requires FPA-FOD SQLite database (data/tooluse/FPA_FOD_20221014.sqlite); run fetch_fpafod.py first")
 def test_fake_clean_run():
     # Run fake clean on both bare and tool conditions
     cmd = [sys.executable, "run_tooluse.py", "--fake", "--models", "fake", "--conditions", "bare", "tool"]
@@ -163,6 +164,7 @@ def test_fake_clean_run():
     assert sum(1 for r in bare_rows if r.get("abstained") is True) == 156
 
 
+@pytest.mark.skipif(not rtu.DB.exists(), reason="Requires FPA-FOD SQLite database (data/tooluse/FPA_FOD_20221014.sqlite); run fetch_fpafod.py first")
 def test_fake_noisy_run():
     # Run fake noisy on both bare and tool conditions
     cmd = [sys.executable, "run_tooluse.py", "--fake", "noisy", "--models", "fake", "--conditions", "bare", "tool"]

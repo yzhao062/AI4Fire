@@ -7,8 +7,8 @@
 #        pwsh -File run_tier1.ps1 -Chain <bedrock:id>   (internal: runs one chain in the foreground)
 param([string]$Chain = '')
 $ErrorActionPreference = 'Continue'
-$py = 'C:\Users\yuezh\miniforge3\envs\py312\python.exe'
-$root = 'C:\Users\yuezh\PycharmProjects\fire-bench'
+$py = if ($env:PYTHON) { $env:PYTHON } else { 'python' }
+$root = $PSScriptRoot
 $models = @(
     'bedrock:amazon.nova-lite-v1:0',
     'bedrock:amazon.nova-pro-v1:0',

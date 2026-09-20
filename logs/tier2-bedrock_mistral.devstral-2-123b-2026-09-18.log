@@ -4,13 +4,13 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "bedrock:mistral.devstral-2-123b/bare", "items": 300, "parsed": 300, "mae": 15.203333333333333, "mae_norm": 0.17941821398189758, "within_25pct": 0.7333333333333333, "median_abs_log_ratio": 0.09043339116113744, "mae_norm_on_moving_days": 0.30590033067545375, "beats_persistence_share": 0.14333333333333334, "errors": 0, "tokens_in": 110443, "tokens_out": 13385}
 {"run": "bedrock:mistral.devstral-2-123b/grounded", "items": 300, "parsed": 300, "mae": 18.376666666666665, "mae_norm": 0.23726520222763403, "within_25pct": 0.7033333333333334, "median_abs_log_ratio": 0.10771361732403636, "mae_norm_on_moving_days": 0.3677818134192037, "beats_persistence_share": 0.19, "errors": 0, "tokens_in": 183015, "tokens_out": 15757}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
 --- mesogeos 15:00:18
 test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:mistral.devstral-2-123b/bare", "items": 386, "parsed": 386, "auprc": 0.5217841442351963, "f1_fire": 0.5685279187817259, "f1_no_fire": 0.5502645502645502, "positive_rate_called": 0.6813471502590673, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 533654}
 {"run": "bedrock:mistral.devstral-2-123b/grounded", "items": 386, "parsed": 386, "auprc": 0.5220723380221205, "f1_fire": 0.5728900255754475, "f1_no_fire": 0.5616797900262467, "positive_rate_called": 0.6735751295336787, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 640868}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json
 --- tooluse 15:04:41
   "parse_failures": 0,
   "tool_failures": 0,
@@ -21,7 +21,7 @@ wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
   "tokens_in": 552074,
   "tokens_out": 13168
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_mistral.devstral-2-123b-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_mistral.devstral-2-123b-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.
 === chain bedrock:mistral.devstral-2-123b DONE 2026-09-18 15:09:17

@@ -6,3 +6,6 @@ httpx
 boto3
 botocore
 pillow
+matplotlib
+kaggle
+pytest

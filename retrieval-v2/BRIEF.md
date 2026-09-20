@@ -23,7 +23,7 @@ runs happen afterwards, by the coordinator, and cost money, so the frozen rule m
 
 ## What is already built (do not modify these files)
 
-Directory `C:\Users\yuezh\AppData\Local\Temp\claude\C--Users-yuezh-PycharmProjects-internal-writing\5298f142-9cba-41ca-a975-67b31eb2587b\scratchpad\exp\wf\`:
+Directory `<scratch>\<scratch-session>\5298f142-9cba-41ca-a975-67b31eb2587b\scratchpad\exp\wf\`:
 
 - `dev-items.jsonl`: 599 development items from 520 incidents that started before 2015 or in
   California, built exactly like the evaluation items (`build_dev.py` shows how), each with the
@@ -51,12 +51,12 @@ Directory `C:\Users\yuezh\AppData\Local\Temp\claude\C--Users-yuezh-PycharmProjec
   On the 300 test items the harness reproduces the paper exactly (nMAE 0.249, the two IQRs, and all
   300 stored draws), so a rule that scores here will transfer.
 
-The AI4Fire repository is at `C:\Users\yuezh\PycharmProjects\fire-bench` (read it, never write to it):
+The AI4Fire repository is at `<repo>` (read it, never write to it):
 `run_allocation.py` holds the pool, the rule, the prompt, and the scorer; `task-allocation/items-v1.jsonl`
 the 300 test items. Do not evaluate any candidate on the 300 test items; the judge and the
 implementer will, once, for the frozen rule only.
 
-Python: `C:\Users\yuezh\miniforge3\envs\py312\python.exe` (numpy, pandas, scikit-learn). A harness run
+Python: `<home>\miniforge3\envs\py312\python.exe` (numpy, pandas, scikit-learn). A harness run
 takes about 25 seconds (pool construction dominates; build the pool once and evaluate many rules).
 
 ## Constraints every candidate must satisfy

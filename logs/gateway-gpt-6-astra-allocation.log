@@ -6,4 +6,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "gpt-6-astra/bare", "items": 300, "parsed": 300, "mae": 14.546666666666667, "mae_norm": 0.16143818466939616, "within_25pct": 0.8, "median_abs_log_ratio": 0.06713384787345691, "mae_norm_on_moving_days": 0.30988423444599955, "beats_persistence_share": 0.21666666666666667, "errors": 0, "tokens_in": 97965, "tokens_out": 23532}
 {"run": "gpt-6-astra/grounded", "items": 300, "parsed": 300, "mae": 18.036666666666665, "mae_norm": 0.21955146888722113, "within_25pct": 0.7466666666666667, "median_abs_log_ratio": 0.10170087430722885, "mae_norm_on_moving_days": 0.3557035115367402, "beats_persistence_share": 0.25, "errors": 0, "tokens_in": 157667, "tokens_out": 25715}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json

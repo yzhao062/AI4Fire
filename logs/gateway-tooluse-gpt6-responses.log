@@ -47,6 +47,6 @@ Running gpt-6-astra on tool condition (156 items, workers=4, fake=None)...
   "tokens_in": 465241,
   "tokens_out": 11171
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-gpt-6-astra-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-gpt-6-astra-tool.jsonl
 
-Completed 1 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 1 run(s). Updated <repo>\task-tooluse\scores.json.

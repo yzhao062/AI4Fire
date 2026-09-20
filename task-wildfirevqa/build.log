@@ -61,4 +61,4 @@ per question id: majority share on the pool, and share of the 12 sampled items i
   PD7   Presence and Detection       |opts|=3  pool majority 0.598 (No fire)  sampled 8/12
   PD8   Presence and Detection       |opts|=4  pool majority 0.997 (0)  sampled 12/12  <-- near-degenerate
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-wildfirevqa\items.jsonl (681203 bytes)
+wrote <repo>\task-wildfirevqa\items.jsonl (681203 bytes)

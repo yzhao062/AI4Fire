@@ -60,9 +60,18 @@ VARIANT_SECTIONS = {
 }
 
 
+def _open_path(p):
+    path = pathlib.Path(p)
+    if os.name == "nt":
+        resolved = str(path.resolve())
+        if not resolved.startswith("\\\\?\\"):
+            return pathlib.Path("\\\\?\\" + resolved)
+    return path
+
+
 def sha256(path):
     h = hashlib.sha256()
-    with open(path, "rb") as fh:
+    with open(_open_path(path), "rb") as fh:
         for chunk in iter(lambda: fh.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
@@ -70,9 +79,10 @@ def sha256(path):
 
 def rows_of(path):
     """Rows of a .jsonl file; a .json or .txt supporting file has no rows and returns an empty list."""
+    path = pathlib.Path(path)
     if path.suffix != ".jsonl":
         return []
-    with open(path, encoding="utf-8") as fh:
+    with open(_open_path(path), encoding="utf-8") as fh:
         return [json.loads(line) for line in fh if line.strip()]
 
 
@@ -80,7 +90,7 @@ def describe(rel):
     path = ROOT / rel
     rows = rows_of(path)
     served = sorted({r["served_model"] for r in rows if r.get("served_model")})
-    stamp = datetime.datetime.fromtimestamp(path.stat().st_mtime).replace(microsecond=0).isoformat()
+    stamp = datetime.datetime.fromtimestamp(_open_path(path).stat().st_mtime).replace(microsecond=0).isoformat()
     return {"row_count": len(rows) if path.suffix == ".jsonl" else None, "sha256": sha256(path), "served_model": served,
             "written": {"earliest": stamp, "latest": stamp, "source": "file mtime"}}
 

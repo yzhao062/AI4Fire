@@ -1,7 +1,7 @@
 ============================================================================================================================
 CLUSTER-ROBUST UNCERTAINTY FOR THE BARE-AGAINST-GROUNDED CONTRAST   (TMLR round-1 objection A)
 ============================================================================================================================
-repo      : C:\Users\yuezh\PycharmProjects\fire-bench
+repo      : <repo>
 bootstrap : 20000 replicates per interval, 95% percentile, base seed 20260915
 pairing   : each contrast is scored only on the items BOTH conditions answered, and one
             resampled index set is scored under both conditions, which keeps it paired

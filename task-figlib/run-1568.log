@@ -5,4 +5,4 @@ buckets: {"before 25 min or more": 56, "before 10 to 25 min": 39, "after 0 to 10
 {"run": "claude-opus-4.8/bare", "items": 224, "parsed": 224, "accuracy": 0.7857142857142857, "recall_on_smoke": 0.5714285714285714, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.464, "after 10 to 25 min": 0.596, "after 25 min or more": 0.622, "before 0 to 10 min": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "23 of 28", "median_detection_offset_seconds": 301.0, "errors": 0, "tokens_in": 501760, "tokens_out": 11205}
 {"run": "claude-opus-4.8/grounded", "items": 196, "parsed": 196, "accuracy": 0.7806122448979592, "recall_on_smoke": 0.6160714285714286, "false_positive_rate": 0.0, "accuracy_by_bucket": {"after 0 to 10 min": 0.464, "after 10 to 25 min": 0.66, "after 25 min or more": 0.676, "before 0 to 10 min": 1.0, "before 10 to 25 min": 1.0, "before 25 min or more": 1.0}, "sequences_detected": "23 of 28", "median_detection_offset_seconds": 301.0, "errors": 0, "tokens_in": 862792, "tokens_out": 9713}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\scores.json
+wrote <repo>\task-figlib\scores.json

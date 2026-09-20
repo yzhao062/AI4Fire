@@ -8,4 +8,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "claude-opus-4.8/bare", "items": 300, "parsed": 300, "mae": 14.533333333333333, "mae_norm": 0.1595408513073635, "within_25pct": 0.8066666666666666, "median_abs_log_ratio": 0.06646742033849286, "mae_norm_on_moving_days": 0.31472134064504975, "beats_persistence_share": 0.26666666666666666, "errors": 0, "tokens_in": 134332, "tokens_out": 19099}
 {"run": "claude-opus-4.8/grounded", "items": 300, "parsed": 300, "mae": 15.533333333333333, "mae_norm": 0.1690778090441386, "within_25pct": 0.7733333333333333, "median_abs_log_ratio": 0.09162076003015471, "mae_norm_on_moving_days": 0.30428249000720237, "beats_persistence_share": 0.30666666666666664, "errors": 0, "tokens_in": 215029, "tokens_out": 21962}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json

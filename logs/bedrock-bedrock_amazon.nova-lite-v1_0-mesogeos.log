@@ -2,4 +2,4 @@ test items in folds [0]: 386 | positive rate 0.339 | climatology months 12
 {"run": "bedrock:amazon.nova-lite-v1:0/bare", "items": 386, "parsed": 386, "auprc": 0.41730970309524074, "f1_fire": 0.42857142857142855, "f1_no_fire": 0.7864768683274022, "positive_rate_called": 0.20466321243523317, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 543690}
 {"run": "bedrock:amazon.nova-lite-v1:0/grounded", "items": 386, "parsed": 386, "auprc": 0.377313377538021, "f1_fire": 0.24390243902439024, "f1_no_fire": 0.7960526315789473, "positive_rate_called": 0.08549222797927461, "positive_rate_true": 0.3393782383419689, "published_auprc": {"LSTM": 0.853, "Transformer": 0.856, "GTN": 0.858}, "errors": 0, "tokens_in": 664414}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\scores.json
+wrote <repo>\task-mesogeos\scores.json

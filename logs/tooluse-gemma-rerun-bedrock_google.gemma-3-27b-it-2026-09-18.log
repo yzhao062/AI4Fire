@@ -47,6 +47,6 @@ Running bedrock:google.gemma-3-27b-it on tool condition (156 items, workers=4, f
   "tokens_in": 520871,
   "tokens_out": 10058
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_google.gemma-3-27b-it-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_google.gemma-3-27b-it-tool.jsonl
 
-Completed 1 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 1 run(s). Updated <repo>\task-tooluse\scores.json.

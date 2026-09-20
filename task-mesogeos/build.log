@@ -25,4 +25,4 @@ MODIS lst_day day count AUPRC 0.5002
 published baselines     AUPRC LSTM 0.853, Transformer 0.856, GTN 0.858
 A model scores against the 0.332 floor and the 0.621 best trivial strategy, under a 0.858 ceiling.
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-mesogeos\items.jsonl 22835570 bytes
+wrote <repo>\task-mesogeos\items.jsonl 22835570 bytes

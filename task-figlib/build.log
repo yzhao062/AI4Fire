@@ -115,4 +115,4 @@ frames to fetch: 224
 items: 112 | smoke 0 | no smoke 112 | sequences 28 | fires 17
 stored: 11.8 MB
 dates: 2026-01-28 to 2026-09-09
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-figlib\items.jsonl
+wrote <repo>\task-figlib\items.jsonl

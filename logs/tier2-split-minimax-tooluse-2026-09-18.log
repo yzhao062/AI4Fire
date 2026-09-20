@@ -47,7 +47,7 @@ Running bedrock:minimax.minimax-m2.5 on bare condition (156 items, workers=4, fa
   "tokens_in": 204996,
   "tokens_out": 606236
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_minimax.minimax-m2.5-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_minimax.minimax-m2.5-bare.jsonl
 
 Running bedrock:minimax.minimax-m2.5 on tool condition (156 items, workers=4, fake=None)...
 {
@@ -97,6 +97,6 @@ Running bedrock:minimax.minimax-m2.5 on tool condition (156 items, workers=4, fa
   "tokens_in": 752500,
   "tokens_out": 79386
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-bedrock_minimax.minimax-m2.5-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-bedrock_minimax.minimax-m2.5-tool.jsonl
 
-Completed 2 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 2 run(s). Updated <repo>\task-tooluse\scores.json.

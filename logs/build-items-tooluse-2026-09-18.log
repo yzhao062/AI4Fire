@@ -76,5 +76,5 @@ which items a model could answer from memory, with no tool:
   items where it is not: 118 (76%)
   of the 13 largest_fire_name items, 3 have an answer row that belongs to a complex or carries no MTBS_ID, so the database's answer need not be the incident the public record names
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\items.jsonl 333861 bytes
+wrote <repo>\task-tooluse\items.jsonl 333861 bytes
 items.jsonl sha256: e5ac617999b3202c4a3e737938e0c949

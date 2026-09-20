@@ -35,8 +35,13 @@ else:
     bare_paths = sorted(TASK.glob("responses-*-bare.jsonl"))
 
 items = ra.sample_items()
-pool = ra.build_pool({i["incident_id"] for i in items})
-flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
+cache_path = root_dir / "analysis" / ".analogue-pool-cache.json"
+if cache_path.exists():
+    cache_data = json.loads(cache_path.read_text(encoding="utf-8"))
+    flat = {k: (v[0], v[1]) for k, v in cache_data.get("flat", {}).items()}
+else:
+    pool = ra.build_pool({i["incident_id"] for i in items})
+    flat = {r["analogue_id"]: (r["today"], r["next"]) for rows in pool.values() for r in rows}
 for path in grounded_paths:
     rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
     if not args.manifest and len(rows) < 100:

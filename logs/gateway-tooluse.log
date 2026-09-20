@@ -47,7 +47,7 @@ Running claude-opus-4.8 on bare condition (156 items, workers=4, fake=None)...
   "tokens_in": 343022,
   "tokens_out": 6822
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-claude-opus-4.8-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-claude-opus-4.8-bare.jsonl
 
 Running claude-opus-4.8 on tool condition (156 items, workers=4, fake=None)...
 {
@@ -97,7 +97,7 @@ Running claude-opus-4.8 on tool condition (156 items, workers=4, fake=None)...
   "tokens_in": 933508,
   "tokens_out": 31356
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-claude-opus-4.8-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-claude-opus-4.8-tool.jsonl
 
 Running claude-opus-5 on bare condition (156 items, workers=4, fake=None)...
 {
@@ -147,7 +147,7 @@ Running claude-opus-5 on bare condition (156 items, workers=4, fake=None)...
   "tokens_in": 343022,
   "tokens_out": 67518
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-claude-opus-5-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-claude-opus-5-bare.jsonl
 
 Running claude-opus-5 on tool condition (156 items, workers=4, fake=None)...
 {
@@ -197,7 +197,7 @@ Running claude-opus-5 on tool condition (156 items, workers=4, fake=None)...
   "tokens_in": 878790,
   "tokens_out": 29274
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-claude-opus-5-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-claude-opus-5-tool.jsonl
 
 Running gemini-3.1-pro on bare condition (156 items, workers=4, fake=None)...
 {
@@ -247,7 +247,7 @@ Running gemini-3.1-pro on bare condition (156 items, workers=4, fake=None)...
   "tokens_in": 229100,
   "tokens_out": 184437
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-gemini-3.1-pro-bare.jsonl
+Saved responses to <repo>\task-tooluse\responses-gemini-3.1-pro-bare.jsonl
 
 Running gemini-3.1-pro on tool condition (156 items, workers=4, fake=None)...
 {
@@ -297,6 +297,6 @@ Running gemini-3.1-pro on tool condition (156 items, workers=4, fake=None)...
   "tokens_in": 763524,
   "tokens_out": 76592
 }
-Saved responses to C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\responses-gemini-3.1-pro-tool.jsonl
+Saved responses to <repo>\task-tooluse\responses-gemini-3.1-pro-tool.jsonl
 
-Completed 6 run(s). Updated C:\Users\yuezh\PycharmProjects\fire-bench\task-tooluse\scores.json.
+Completed 6 run(s). Updated <repo>\task-tooluse\scores.json.

@@ -20,7 +20,7 @@ URL = "https://www.fs.usda.gov/rds/archive/products/RDS-2013-0009.6/RDS-2013-000
 D = pathlib.Path(__file__).parent / "data" / "tooluse"
 D.mkdir(parents=True, exist_ok=True)
 ZIP = D / "RDS-2013-0009.6_Data_Format4_SQLITE.zip"
-UA = {"User-Agent": "fire-bench/0.1 (TMLR benchmark construction; fortis@usc.edu)"}
+UA = {"User-Agent": "fire-bench/0.1 (AI4Fire benchmark; research evaluation)"}
 
 if not ZIP.exists():
     t0 = time.time()

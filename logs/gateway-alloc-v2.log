@@ -8,4 +8,4 @@ baseline: {"run": "persistence", "items": 300, "parsed": 300, "mae": 13.75666666
 {"run": "gemini-3.1-pro/grounded-v2", "items": 300, "parsed": 300, "mae": 15.493333333333334, "mae_norm": 0.16641807351607038, "within_25pct": 0.7866666666666666, "median_abs_log_ratio": 0.07987795238431192, "mae_norm_on_moving_days": 0.30964998932500787, "beats_persistence_share": 0.22, "errors": 0, "tokens_in": 180677, "tokens_out": 142232}
 {"run": "gpt-6-astra/grounded-v2", "items": 300, "parsed": 300, "mae": 15.75, "mae_norm": 0.17580708719589686, "within_25pct": 0.7733333333333333, "median_abs_log_ratio": 0.07480194072021128, "mae_norm_on_moving_days": 0.3117017425362379, "beats_persistence_share": 0.27, "errors": 0, "tokens_in": 155654, "tokens_out": 23802}
 
-wrote C:\Users\yuezh\PycharmProjects\fire-bench\task-allocation\scores.json
+wrote <repo>\task-allocation\scores.json
