@@ -19,6 +19,7 @@ Five wildfire tasks that score without a human in the loop. Every model runs twi
 [Why](#why-youd-use-this) &nbsp;•&nbsp;
 [How It Works](#how-it-works) &nbsp;•&nbsp;
 [Examples](#what-this-looks-like) &nbsp;•&nbsp;
+[Reproduce Offline](#reproduce-offline) &nbsp;•&nbsp;
 [Tasks](#the-five-tasks) &nbsp;•&nbsp;
 [Data and Licensing](#reference)
 
@@ -27,7 +28,7 @@ Five wildfire tasks that score without a human in the loop. Every model runs twi
 ![AI4Fire: five wildfire tasks, run bare and grounded across a registry of 35 models from twelve vendors, each task scored against a non-LLM comparator.](docs/hero.png)
 
 > [!NOTE]
-> **The full execution record behind the paper.** Every prompt, item manifest, raw model response, item score, and analysis script behind the paper *AI4Fire: Large Language Models and Agents on Fire Tasks* is in this repository. One command rebuilds all five task tables from the stored responses, offline, with no credentials. Maintained by [Yue Zhao](https://yzhao062.github.io), USC CS faculty and author of [PyOD](https://github.com/yzhao062/pyod) (9.8k★ · 38M+ downloads · ~12k citations), with Xiyang Hu (ASU) and Ruolin Li (USC).
+> **The full execution record behind the paper.** Every prompt, item manifest, raw model response, item score, and analysis script behind the paper *AI4Fire: Evaluating Large Language Models and Agents on Wildfire Tasks* is in this repository. One command rebuilds all five task tables from the stored responses, offline, with no credentials. Maintained by [Yue Zhao](https://yzhao062.github.io), USC CS faculty and author of [PyOD](https://github.com/yzhao062/pyod) (9.8k★ · 38M+ downloads · ~12k citations), with Xiyang Hu (ASU), Zuobin Xiong (UNLV), and Ruolin Li (USC).
 
 ## Quickstart
 
@@ -157,9 +158,34 @@ AI4Fire/
 └── gw.py                       # Unified calling gateway for NAIRR endpoints and Bedrock models
 ```
 
-### Offline Table Reproduction
+## Reproduce Offline
 
-This terminal capture shows `python reproduce_tables.py` verifying stored model responses and reproducing primary paper tables in 2.5 seconds without network calls.
+Recomputing the paper's reported numbers from stored responses requires **no model or API calls**, no credentials, and no external data downloads. A single command scores all reported core model runs and checks assertions:
+
+```bash
+python reproduce_tables.py
+```
+
+To recompute results across all 16 full-capability models in the Bedrock sweep, pass `--tier all`:
+
+```bash
+python reproduce_tables.py --tier all
+```
+
+### What It Checks
+- **Task 1: Daily Personnel Allocation** (ICS-209-PLUS, 300 items): MAE, Normalized MAE (normalized by fire mean), within-25% tolerance rate, and beats-persistence rate against the persistence comparator and trained regressor.
+- **Task 2: Wildfire Smoke Detection** (FIgLib, 196 paired items): Accuracy, recall on smoke, false-positive rate (FPR), and sequences detected (out of 28 sequences) compared against baseline detectors.
+- **Task 3: Fire Danger Forecasting** (Mesogeos Track A, 386 items): Area Under Precision-Recall Curve (AUPRC), fire-class F1, call rate, and omitted answer count.
+- **Task 4: Aerial Question Answering** (WildFireVQA, 408 items): Overall accuracy, closed-form accuracy (48 items), and other accuracy (360 items) against majority (0.6275) and majority + closed-form (0.6642) baselines.
+- **Task 5: Fire Data Tool Use** (FPA-FOD, 156 items): Exact-match accuracy, abstained counts, and mean SQL tool calls.
+- **Coverage Assertion**: Checks that all 60 expected model-arms (6 core models &times; 2 conditions across 5 tasks) are present with non-empty responses.
+
+### Runtime and Environment
+- **Runtime**: **~0.90 to 2.5 seconds** total runtime.
+- **Verification Guarantee**: Exits 0 on exact reproduction of published numbers or non-zero if any number diverges.
+- **Figure Reproduction**: Publication figure generation from stored responses can be checked with `python figures/check_reproduction.py`.
+
+### Execution Output Sample
 
 ```console
 $ python reproduce_tables.py
@@ -471,7 +497,7 @@ AI4Fire benchmarks models across five wildfire data sources. Each source was ver
 
 | Task | Source | License | Distribution and Access |
 |---|---|---|---|
-| Daily Personnel Allocation | ICS-209-PLUS (St. Denis et al., 2023) | CC BY 4.0 | Archived on Figshare (DOI: [10.6084/m9.figshare.22303135](https://doi.org/10.6084/m9.figshare.22303135)). Daily situation report filings (1999–2020) filtered by strict temporal precedence. |
+| Daily Personnel Allocation | ICS-209-PLUS (St. Denis et al., 2023) | CC BY 4.0 | Archived on Figshare (DOI: [10.6084/m9.figshare.19858927.v3](https://doi.org/10.6084/m9.figshare.19858927.v3)). Daily situation report filings (1999–2020) filtered by strict temporal precedence. |
 | Wildfire Smoke Detection | FIgLib (Dewangan et al., 2022) | CC BY-NC-ND 4.0 | HPWREN, UC San Diego (<https://www.hpwren.ucsd.edu/cc.html>). Raw frames withheld; URLs in manifest (`task-figlib/items.jsonl`), downloaded via `build_items_figlib.py`. |
 | Fire Danger Forecasting | Mesogeos Track A (Kondylatos et al., 2023) | CC BY 4.0 | Archived on Zenodo (DOI: [10.5281/zenodo.7473331](https://doi.org/10.5281/zenodo.7473331)). Evaluated on 2021–2022 holdout with 24 features; downloaded via `fetch_mesogeos.py`. |
 | Aerial Question Answering | WildFireVQA (Habibpour et al., 2026) and FLAME 3 | Apache-2.0 / CC BY 4.0 (discrepancy) | WildFireVQA on Hugging Face (`mobiiin/WildFire_VQA`). FLAME 3 imagery on IEEE DataPort and Kaggle (CC BY 4.0). Downloaded via `fetch_flame3.py` and `match_flame3.py`. |
@@ -480,7 +506,7 @@ AI4Fire benchmarks models across five wildfire data sources. Each source was ver
 #### Source Details and Licensing Notices
 
 1. **Daily Personnel Allocation (ICS-209-PLUS)**:
-   - *Source*: St. Denis et al. (2023), archived on Figshare (DOI: [10.6084/m9.figshare.22303135](https://doi.org/10.6084/m9.figshare.22303135)).
+   - *Source*: St. Denis et al. (2023), archived on Figshare (DOI: [10.6084/m9.figshare.19858927.v3](https://doi.org/10.6084/m9.figshare.19858927.v3)).
    - *License*: **CC BY 4.0**.
    - *Contents*: Daily situation report filings (1999–2020) filtered by strict temporal precedence.
 
@@ -520,8 +546,8 @@ The paper is under review. Until it appears, cite this repository.
 
 ```bibtex
 @misc{zhao2026ai4fire,
-  title  = {{AI4Fire}: Large Language Models and Agents on Fire Tasks},
-  author = {Zhao, Yue and Hu, Xiyang and Li, Ruolin},
+  title  = {{AI4Fire}: Evaluating Large Language Models and Agents on Wildfire Tasks},
+  author = {Zhao, Yue and Hu, Xiyang and Xiong, Zuobin and Li, Ruolin},
   year   = {2026},
   note   = {Code and evaluation record},
   url    = {https://github.com/yzhao062/AI4Fire}

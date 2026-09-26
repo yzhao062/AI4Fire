@@ -14,6 +14,7 @@ license = { text = "BSD-2-Clause" }
 authors = [
     { name = "Yue Zhao" },
     { name = "Xiyang Hu" },
+    { name = "Zuobin Xiong" },
     { name = "Ruolin Li" },
 ]
 maintainers = [

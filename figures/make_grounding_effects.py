@@ -397,12 +397,14 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path | None, out_png: P
                 zorder=5
             )
 
+    y_anchor = (y_pos[0] - 0.55) if n_models > 0 else 0.0
     ax_a.plot([], [], marker="o", markersize=4.5, color=COLOR_CORAL, linestyle="-", linewidth=1.2, label="Recall gain")
     ax_a.plot([], [], marker="^", markersize=4.0, markerfacecolor=COLOR_MINT, markeredgecolor=COLOR_MINT_EDGE,
                markeredgewidth=0.8, linestyle="None", label="FPR change")
     ax_a.legend(
-        loc="upper right", frameon=False, fontsize=6.2, handletextpad=0.3, handlelength=1.2,
-        borderaxespad=0.4, labelcolor=COLOR_TEXT
+        loc="upper right", bbox_to_anchor=(0.265, y_anchor), bbox_transform=ax_a.transData,
+        frameon=False, fontsize=6.2, handletextpad=0.25, handlelength=1.0,
+        borderaxespad=0.0, borderpad=0.0, labelcolor=COLOR_TEXT
     )
 
     # Panel (b): Personnel allocation
@@ -432,16 +434,13 @@ def plot_grounding_effects(records: list[dict], out_pdf: Path | None, out_png: P
             ax_b.plot([v2_lo, v2_hi], [y_v2, y_v2], color=col_v2, linewidth=1.3, zorder=3, solid_capstyle="round")
             ax_b.plot(v2_pt, y_v2, marker="s", markersize=3.9, color=col_v2, zorder=4)
 
-    if n_models > 0 and records[0]["alloc_v1"] is not None:
-        top_y = y_pos[0]
-        ax_b.text(
-            0.046, top_y + v_offset, "v1",
-            fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
-        )
-        ax_b.text(
-            0.046, top_y - v_offset, "v2",
-            fontsize=6.2, verticalalignment="center", color=COLOR_SUBTITLE, fontweight="bold"
-        )
+    ax_b.plot([], [], marker="o", markersize=4.3, color=COLOR_GRAY, linestyle="-", linewidth=1.3, label="v1")
+    ax_b.plot([], [], marker="s", markersize=3.9, color=COLOR_GRAY, linestyle="-", linewidth=1.3, label="v2")
+    ax_b.legend(
+        loc="upper right", bbox_to_anchor=(0.165, y_anchor), bbox_transform=ax_b.transData,
+        frameon=False, fontsize=6.2, handletextpad=0.25, handlelength=1.0,
+        borderaxespad=0.0, borderpad=0.0, labelcolor=COLOR_TEXT
+    )
 
     # Panel (c): Fire danger
     ax_c = axes[2]
