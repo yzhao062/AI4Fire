@@ -417,6 +417,7 @@ All paired and bootstrap uncertainty analyses use stable seed `20260915` and 20,
 | `python analysis/figlib_timing.py` | Smoke detection by reference-to-target gap: the gap design, pooled recall changes at each smoke offset, and the frame-difference detector at matched false-positive counts (added 2026-09-26; about 10 seconds). Needs the FIgLib frames that `build_items_figlib.py` downloads. |
 | `python analysis/wildfirevqa_label_source.py` | Aerial QA by label source and by applicability, with Holm adjustment, two-way resampling, and the audit of 14 hotspot references (added 2026-09-26; about 1 minute). It backs the label-source table; `analysis/wildfirevqa_strata.py` still backs the crossed-design table. Source-pool counts need the raw release under `data/wildfirevqa/` and are skipped without it. |
 | `python analysis/reasoning_tokens.py` | Reasoning tokens the providers report per model, task, and arm, and the responses near the output cap, with whether each reached the answer format its prompt asks for (added 2026-09-26; under a second). |
+| `python analysis/wildfirevqa_ceiling.py` | Aerial QA: a clipped thermal maximum in the released values (187.424 C on 67 FLAME 3 fire frames) and the labels the release gives those frames, and the reading each grounded miss on the 48 closed-form items matches (added 2026-09-26; about 20 seconds). The ceiling blocks need the FLAME 3 Celsius TIFFs and the raw release under `data/` (or `--data`) and are skipped without them. |
 
 #### Integrity Checks and Tests
 
