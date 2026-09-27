@@ -4,7 +4,8 @@ Selection rule, published with the item set:
   - wildfire incidents whose point of origin is outside California, to keep distance from the most reported fires
   - start year 2015 to 2020
   - a run of at least 10 consecutive calendar days of situation reports, each with a positive personnel count
-  - at most 6 items per incident, evenly spaced over the run, so that a long fire does not dominate
+  - at most 6 items per qualifying run, evenly spaced over the run, so that a long fire does not dominate; an incident
+    with several runs can contribute more (run_allocation.py later scores at most 2 per incident)
 The target is TOTAL_PERSONNEL on day t+1, which is what incident command filed, not what the fire needed.
 """
 import json

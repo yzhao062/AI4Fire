@@ -13,6 +13,7 @@ regenerated after any file is rewritten.
 
     python build_manifest.py            # rewrite manifest-v1.json in place
     python build_manifest.py --check    # exit 1 if any recorded checksum differs from the file on disk
+                                        # (a CRLF checksum also matches the same file checked out with LF endings)
 """
 import argparse
 import datetime
@@ -77,6 +78,23 @@ def sha256(path):
     return h.hexdigest()
 
 
+def sha256_crlf(path):
+    """SHA-256 of an LF-only file with its line endings written as CRLF, else None.
+
+    The recorded checksums come from a Windows checkout, where git writes text files with CRLF endings; a macOS or
+    Linux checkout of the same commit has LF endings, so its bytes hash differently although the content is the same.
+    """
+    data = _open_path(path).read_bytes()
+    if b"\r\n" in data or b"\n" not in data:
+        return None
+    return hashlib.sha256(data.replace(b"\n", b"\r\n")).hexdigest()
+
+
+def drifted(recorded, path, digest):
+    """A recorded checksum matches neither the file on disk nor its CRLF form."""
+    return bool(recorded) and recorded != digest and recorded != sha256_crlf(path)
+
+
 def rows_of(path):
     """Rows of a .jsonl file; a .json or .txt supporting file has no rows and returns an empty list."""
     path = pathlib.Path(path)
@@ -103,18 +121,18 @@ def main():
     drift = []
     for entry in m["reported"]:
         d = describe(entry["path"])
-        if entry.get("sha256") and entry["sha256"] != d["sha256"]:
+        if drifted(entry.get("sha256"), ROOT / entry["path"], d["sha256"]):
             drift.append(entry["path"])
         entry.update(d)
     for entry in m["supporting"] + m["excluded_from_reported"]:
         d = describe(entry["path"])
-        if entry.get("sha256") and entry["sha256"] != d["sha256"]:
+        if drifted(entry.get("sha256"), ROOT / entry["path"], d["sha256"]):
             drift.append(entry["path"])
         entry["row_count"], entry["sha256"] = d["row_count"], d["sha256"]
     for archive in m["historic"]:
         for entry in archive["files"]:
             digest = sha256(ROOT / entry["path"])
-            if entry.get("sha256") and entry["sha256"] != digest:
+            if drifted(entry.get("sha256"), ROOT / entry["path"], digest):
                 drift.append(entry["path"])
             entry["sha256"] = digest
     for section, (reason, patterns) in VARIANT_SECTIONS.items():
@@ -123,7 +141,7 @@ def main():
         entries = []
         for rel in files:
             d = describe(rel)
-            if old.get(rel) and old[rel] != d["sha256"]:
+            if drifted(old.get(rel), ROOT / rel, d["sha256"]):
                 drift.append(rel)
             entries.append({"path": rel, **d})
         m[section] = {"reason": reason, "files": entries}

@@ -76,14 +76,13 @@ def bucket(offset):
 
 
 def resolve_image_path(img_rel, img_dirs):
-    p = pathlib.Path(img_rel)
-    name = p.name
+    name = pathlib.PureWindowsPath(img_rel).name  # items.jsonl may store Windows separators
     for base in img_dirs:
         cand = base / name
         if cand.exists():
             return cand
     for base in img_dirs:
-        parent_cand = base.parent / img_rel
+        parent_cand = base.parent / pathlib.PureWindowsPath(img_rel).as_posix()
         if parent_cand.exists():
             return parent_cand
     raise FileNotFoundError("Image %s not found in candidate paths: %r" % (img_rel, [str(d) for d in img_dirs]))

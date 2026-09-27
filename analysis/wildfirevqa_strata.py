@@ -20,6 +20,12 @@ Two facts drive the reading:
 The overall arm contrast, grounded minus bare, holds under all three. The model-against-reference
 contrasts do not, so the script prints them as sensitive rather than picking the flattering one.
 
+The paper's label-source and applicability table (tab:aerial-strata) and the text around it come
+from wildfirevqa_label_source.py, which draws the intervals of these strata with its own seed tags,
+so they come from different Monte Carlo streams than the stratified blocks here. The pooled blocks
+(all items, the hybrid reference, and the arm contrast) still back the crossed-design table
+tab:wildfirevqa-clustering and the hybrid-reference intervals quoted beside it.
+
 Usage:
     python analysis/wildfirevqa_strata.py
     python analysis/wildfirevqa_strata.py --resamples 20000 --seed 20260915

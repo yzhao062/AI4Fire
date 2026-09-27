@@ -413,6 +413,10 @@ All paired and bootstrap uncertainty analyses use stable seed `20260915` and 20,
 | `python analysis/served_models.py` | Audit of distinct `served_model` strings and timestamps. |
 | `python analysis/figlib_baseline.py` | Non-LLM comparators for smoke detection (added 2026-09-19). |
 | `python analysis/small_cluster_correction.py` | Finite-cluster degrees-of-freedom corrections for small-cluster tasks (added 2026-09-19). |
+| `python analysis/recalibration_mesogeos.py` | Fire danger probabilities rescored after an odds shift to the sample positive rate and after cross-fitted isotonic recalibration, with the Brier decomposition, a chance band for ECE, and 20 fold draws (added 2026-09-26; about 4 minutes). The fold split uses seed 7, and the fold-draw check uses 10,000 resamples per draw. Its month-prior check reads `data/mesogeos/` and is skipped without it. |
+| `python analysis/figlib_timing.py` | Smoke detection by reference-to-target gap: the gap design, pooled recall changes at each smoke offset, and the frame-difference detector at matched false-positive counts (added 2026-09-26; about 10 seconds). Needs the FIgLib frames that `build_items_figlib.py` downloads. |
+| `python analysis/wildfirevqa_label_source.py` | Aerial QA by label source and by applicability, with Holm adjustment, two-way resampling, and the audit of 14 hotspot references (added 2026-09-26; about 1 minute). It backs the label-source table; `analysis/wildfirevqa_strata.py` still backs the crossed-design table. Source-pool counts need the raw release under `data/wildfirevqa/` and are skipped without it. |
+| `python analysis/reasoning_tokens.py` | Reasoning tokens the providers report per model, task, and arm, and the responses near the output cap, with whether each reached the answer format its prompt asks for (added 2026-09-26; under a second). |
 
 #### Integrity Checks and Tests
 

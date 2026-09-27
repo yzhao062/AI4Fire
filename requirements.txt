@@ -1,7 +1,7 @@
 numpy
 pandas
 scipy
-scikit-learn
+scikit-learn>=1.6
 httpx
 boto3
 botocore
