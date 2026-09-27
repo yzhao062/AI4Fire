@@ -1,0 +1,12 @@
+items: 386 | positive rate 0.339 | Base rate: in this evaluation sample, 33.9 percent of items had a wildfire of at least 30 hectares start on the target date.
+gemini-3.1-pro: 772 calls to make, 0 already stored
+gemini-3.1-pro: 100/772 | errors 0 | 170 s
+gemini-3.1-pro: 200/772 | errors 0 | 340 s
+gemini-3.1-pro: 300/772 | errors 0 | 504 s
+gemini-3.1-pro: 400/772 | errors 0 | 665 s
+gemini-3.1-pro: 500/772 | errors 0 | 835 s
+gemini-3.1-pro: 600/772 | errors 0 | 992 s
+gemini-3.1-pro: 700/772 | errors 0 | 1145 s
+gemini-3.1-pro: 772/772 | errors 0 | 1257 s
+{"run": "gemini-3.1-pro/bare-baserate", "items": 386, "parsed": 386, "auprc": 0.6936613795370402, "f1_fire": 0.6302521008403361, "f1_no_fire": 0.8352059925093633, "positive_rate_called": 0.2772020725388601, "positive_rate_true": 0.3393782383419689, "errors": 0}
+{"run": "gemini-3.1-pro/grounded-baserate", "items": 386, "parsed": 386, "auprc": 0.6893810136091828, "f1_fire": 0.6234817813765182, "f1_no_fire": 0.8228571428571428, "positive_rate_called": 0.3005181347150259, "positive_rate_true": 0.3393782383419689, "errors": 0}

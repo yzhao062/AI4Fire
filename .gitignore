@@ -3,6 +3,9 @@ data/
 # FIgLib frames are CC BY-NC-ND 4.0; the NoDerivatives term is why they are not redistributed here
 task-figlib/images/
 task-figlib/images-1568/
+# The rerun's references and masked copies are derivatives of those frames, so they stay local too
+task-figlib-masked/reference-1568/
+task-figlib-masked/masked-1568/
 # Derived outputs and caches
 analysis/*.json
 __pycache__/

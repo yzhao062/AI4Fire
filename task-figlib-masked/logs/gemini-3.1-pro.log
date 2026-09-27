@@ -1,0 +1,11 @@
+items: 168 | smoke 84 | conditions ['bare', 'grounded']
+gemini-3.1-pro: 336 calls to make, 0 already stored
+gemini-3.1-pro: 50/336 | errors 0 | 58 s
+gemini-3.1-pro: 100/336 | errors 0 | 118 s
+gemini-3.1-pro: 150/336 | errors 0 | 172 s
+gemini-3.1-pro: 200/336 | errors 0 | 226 s
+gemini-3.1-pro: 250/336 | errors 0 | 279 s
+gemini-3.1-pro: 300/336 | errors 0 | 330 s
+gemini-3.1-pro: 336/336 | errors 0 | 372 s
+{"run": "gemini-3.1-pro/bare", "rows": 168, "parsed": 168, "errors": 0, "recall": 0.595, "false_positive_rate": 0.0}
+{"run": "gemini-3.1-pro/grounded", "rows": 168, "parsed": 168, "errors": 0, "recall": 0.726, "false_positive_rate": 0.012}

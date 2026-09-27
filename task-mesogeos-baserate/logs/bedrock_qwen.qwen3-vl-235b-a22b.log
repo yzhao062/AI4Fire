@@ -1,0 +1,12 @@
+items: 386 | positive rate 0.339 | Base rate: in this evaluation sample, 33.9 percent of items had a wildfire of at least 30 hectares start on the target date.
+bedrock:qwen.qwen3-vl-235b-a22b: 772 calls to make, 0 already stored
+bedrock:qwen.qwen3-vl-235b-a22b: 100/772 | errors 0 | 58 s
+bedrock:qwen.qwen3-vl-235b-a22b: 200/772 | errors 0 | 112 s
+bedrock:qwen.qwen3-vl-235b-a22b: 300/772 | errors 0 | 164 s
+bedrock:qwen.qwen3-vl-235b-a22b: 400/772 | errors 0 | 225 s
+bedrock:qwen.qwen3-vl-235b-a22b: 500/772 | errors 0 | 280 s
+bedrock:qwen.qwen3-vl-235b-a22b: 600/772 | errors 0 | 335 s
+bedrock:qwen.qwen3-vl-235b-a22b: 700/772 | errors 0 | 389 s
+bedrock:qwen.qwen3-vl-235b-a22b: 772/772 | errors 0 | 428 s
+{"run": "bedrock:qwen.qwen3-vl-235b-a22b/bare-baserate", "items": 386, "parsed": 386, "auprc": 0.5328757104769127, "f1_fire": 0.551219512195122, "f1_no_fire": 0.49171270718232046, "positive_rate_called": 0.7227979274611399, "positive_rate_true": 0.3393782383419689, "errors": 0}
+{"run": "bedrock:qwen.qwen3-vl-235b-a22b/grounded-baserate", "items": 386, "parsed": 386, "auprc": 0.5028103863116092, "f1_fire": 0.5320665083135392, "f1_no_fire": 0.43874643874643876, "positive_rate_called": 0.7512953367875648, "positive_rate_true": 0.3393782383419689, "errors": 0}

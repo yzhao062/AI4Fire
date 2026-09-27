@@ -1,0 +1,12 @@
+items: 386 | positive rate 0.339 | Base rate: in this evaluation sample, 33.9 percent of items had a wildfire of at least 30 hectares start on the target date.
+claude-opus-4.8: 772 calls to make, 0 already stored
+claude-opus-4.8: 100/772 | errors 0 | 46 s
+claude-opus-4.8: 200/772 | errors 0 | 88 s
+claude-opus-4.8: 300/772 | errors 0 | 134 s
+claude-opus-4.8: 400/772 | errors 0 | 176 s
+claude-opus-4.8: 500/772 | errors 0 | 218 s
+claude-opus-4.8: 600/772 | errors 0 | 261 s
+claude-opus-4.8: 700/772 | errors 0 | 302 s
+claude-opus-4.8: 772/772 | errors 0 | 334 s
+{"run": "claude-opus-4.8/bare-baserate", "items": 386, "parsed": 386, "auprc": 0.6067085389442988, "f1_fire": 0.5816733067729084, "f1_no_fire": 0.7984644913627639, "positive_rate_called": 0.31088082901554404, "positive_rate_true": 0.3393782383419689, "errors": 0}
+{"run": "claude-opus-4.8/grounded-baserate", "items": 386, "parsed": 386, "auprc": 0.5809343121233264, "f1_fire": 0.6105263157894737, "f1_no_fire": 0.7720739219712526, "positive_rate_called": 0.39896373056994816, "positive_rate_true": 0.3393782383419689, "errors": 0}

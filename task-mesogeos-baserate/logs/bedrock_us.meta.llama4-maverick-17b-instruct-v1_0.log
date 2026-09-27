@@ -1,0 +1,12 @@
+items: 386 | positive rate 0.339 | Base rate: in this evaluation sample, 33.9 percent of items had a wildfire of at least 30 hectares start on the target date.
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 772 calls to make, 0 already stored
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 100/772 | errors 0 | 19 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 200/772 | errors 0 | 36 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 300/772 | errors 0 | 74 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 400/772 | errors 0 | 132 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 500/772 | errors 0 | 214 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 600/772 | errors 0 | 259 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 700/772 | errors 0 | 275 s
+bedrock:us.meta.llama4-maverick-17b-instruct-v1:0: 772/772 | errors 0 | 287 s
+{"run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/bare-baserate", "items": 386, "parsed": 386, "auprc": 0.528564515469696, "f1_fire": 0.5532994923857868, "f1_no_fire": 0.5343915343915344, "positive_rate_called": 0.6813471502590673, "positive_rate_true": 0.3393782383419689, "errors": 0}
+{"run": "bedrock:us.meta.llama4-maverick-17b-instruct-v1:0/grounded-baserate", "items": 386, "parsed": 386, "auprc": 0.5034946703056095, "f1_fire": 0.5038560411311054, "f1_no_fire": 0.4960835509138381, "positive_rate_called": 0.6683937823834197, "positive_rate_true": 0.3393782383419689, "errors": 0}

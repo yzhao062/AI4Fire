@@ -1,0 +1,12 @@
+items: 386 | positive rate 0.339 | Base rate: in this evaluation sample, 33.9 percent of items had a wildfire of at least 30 hectares start on the target date.
+gpt-6-astra: 772 calls to make, 0 already stored
+gpt-6-astra: 100/772 | errors 0 | 91 s
+gpt-6-astra: 200/772 | errors 0 | 185 s
+gpt-6-astra: 300/772 | errors 0 | 267 s
+gpt-6-astra: 400/772 | errors 0 | 354 s
+gpt-6-astra: 500/772 | errors 0 | 436 s
+gpt-6-astra: 600/772 | errors 0 | 516 s
+gpt-6-astra: 700/772 | errors 0 | 600 s
+gpt-6-astra: 772/772 | errors 0 | 658 s
+{"run": "gpt-6-astra/bare-baserate", "items": 386, "parsed": 386, "auprc": 0.6829761156484294, "f1_fire": 0.5877192982456141, "f1_no_fire": 0.8272058823529411, "positive_rate_called": 0.25129533678756477, "positive_rate_true": 0.3393782383419689, "errors": 0}
+{"run": "gpt-6-astra/grounded-baserate", "items": 386, "parsed": 386, "auprc": 0.6495195428267714, "f1_fire": 0.5225225225225225, "f1_no_fire": 0.8072727272727273, "positive_rate_called": 0.23575129533678757, "positive_rate_true": 0.3393782383419689, "errors": 0}
