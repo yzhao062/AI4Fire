@@ -28,7 +28,7 @@ Five wildfire tasks that score without a human in the loop. Every model runs twi
 ![AI4Fire: five wildfire tasks, run bare and grounded across a registry of 35 models from twelve vendors, each task scored against a non-LLM comparator.](docs/hero.png)
 
 > [!NOTE]
-> **The full execution record behind the paper.** Every prompt, item manifest, raw model response, item score, and analysis script behind the paper *AI4Fire: Evaluating Large Language Models and Agents on Wildfire Tasks* is in this repository. One command rebuilds all five task tables from the stored responses, offline, with no credentials. Maintained by [Yue Zhao](https://yzhao062.github.io), USC CS faculty and author of [PyOD](https://github.com/yzhao062/pyod) (9.8k★ · 38M+ downloads · ~12k citations), with Xiyang Hu (ASU), Zuobin Xiong (UNLV), and Ruolin Li (USC).
+> **The full execution record behind the paper.** Every prompt, item manifest, raw model response, item score, and analysis script behind the paper *AI4Fire: Evaluating Large Language Models on Wildfire Tasks* is in this repository. One command rebuilds all five task tables from the stored responses, offline, with no credentials. Maintained by [Yue Zhao](https://yzhao062.github.io), USC CS faculty and author of [PyOD](https://github.com/yzhao062/pyod) (9.8k★ · 38M+ downloads · ~12k citations), with Xiyang Hu (ASU), Zuobin Xiong (UNLV), and Ruolin Li (USC).
 
 ## Quickstart
 
@@ -555,7 +555,7 @@ The paper is under review. Until it appears, cite this repository.
 
 ```bibtex
 @misc{zhao2026ai4fire,
-  title  = {{AI4Fire}: Evaluating Large Language Models and Agents on Wildfire Tasks},
+  title  = {{AI4Fire}: Evaluating Large Language Models on Wildfire Tasks},
   author = {Zhao, Yue and Hu, Xiyang and Xiong, Zuobin and Li, Ruolin},
   year   = {2026},
   note   = {Code and evaluation record},
